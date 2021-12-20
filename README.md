@@ -1,6 +1,6 @@
 ## CoinAlpha Design System Manager
 
-Bootstrapped with https://github.com/ben-rogerson/twin.examples/react-emotion
+Bootstrapped with https://github.com/ben-rogerson/twin.examples/tree/master/react-emotion
 
 Work in progress!
 
