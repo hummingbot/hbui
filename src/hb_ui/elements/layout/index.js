@@ -1,5 +1,5 @@
 import React from 'react'
-import tw, { styled } from 'twin.macro'
+import tw, { css, styled } from 'twin.macro'
 import {
   phone,
   phone_max,
@@ -15,61 +15,33 @@ import {
   hd_min
 } from '../../constants/media-queries'
 
-export const Section = styled.div((props) => ({
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  backgroundColor: props.backgroundColor ? props.backgroundColor : ''
-}))
+export const Section = styled.div(() => [
+  css`
+    // outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+  `,
+  tw`w-full`
+])
 
-export const Container = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '90%',
-  padding: '0',
-  WebkitTransition: 'width 0.3s ease-out',
-  MozTransition: 'width 0.3s ease-out',
-  Otransition: 'width 0.3s ease-out',
-  transition: 'width 0.3s ease-out'
-})
+export const Container = styled.div(() => [
+  css`
+    // outline: 1px solid blue;
+    align-self: center;
+  `,
+  tw`w-[calc(100% - 20px)] md:w-11/12 2xl:w-8/12`
+])
 
-export const ContainerShort = styled(Container)({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '80%',
-  maxWidth: '1000px',
-  padding: '0'
-})
+export const ContainerRow = styled(Container)`
+  display: flex;
+`
 
-export const Content = styled.div(
-  {
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%'
-  },
-  (props) => [tw`p-8`]
-)
-
-export const ContentCentered = styled(Content)({
-  alignItems: 'center'
-})
-
-export const ContentSmall = styled(Content)({
-  padding: '20px',
-  [desktop_max]: {
-    padding: '16px'
-  },
-  [tablet_max]: {
-    padding: '12px'
-  },
-  [phablet_max]: {
-    padding: '10px'
-  },
-  [phone_max]: {
-    padding: '8px'
-  }
-})
+export const PaddingBox = styled.div(() => [
+  css`
+    // outline: 1px solid yellow;
+  `,
+  tw`p-4 md:p-8 lg:p-12`
+])
 
 export const WhiteBox = styled.div({
   background: 'white',
@@ -84,19 +56,6 @@ export const WhiteBoxRound = styled(WhiteBox)({
   [phone_max]: { borderRadius: '3px' }
 })
 
-export const FlexDiv = styled.div({
-  display: 'flex'
-})
-
-export const HorizontalGroup = styled.div({
-  display: 'grid',
-  justifyItems: 'center',
-  gridGap: '10px',
-  gridAutoFlow: 'column',
-  alignItems: 'center',
-  width: 'auto',
-  margin: '0 auto'
-})
 
 export const DivHdMin = styled.div({ [desktop_max]: { display: 'none' } })
 export const DivDesktopMin = styled.div({ [tablet_max]: { display: 'none' } })

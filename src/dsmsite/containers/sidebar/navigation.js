@@ -1,4 +1,5 @@
 import navigationComponents from './navigation_components'
+import guidelinesComponents from './navigation_guidelines'
 
 const home = {
   link: '/',
@@ -11,6 +12,7 @@ const gettingStarted = {
 const guidelines = {
   link: '/guidelines',
   title: 'Guidelines',
+  subItems: guidelinesComponents
 }
 const designTokens = {
   link: '/design-tokens',

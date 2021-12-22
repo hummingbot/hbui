@@ -10,6 +10,7 @@ import TextInput from '../../../hb_ui/components/inputs/TextInput'
 import HummingbotLogo from '../../../ui_svgs/HummingbotLogo'
 import TriangleRight from '../../../ui_svgs/TriangleRight'
 import { P } from '../../../hb_ui/elements/typography'
+import { desktop_max } from '../../../hb_ui/constants/media-queries'
 import navigation from './navigation'
 
 import { ThemeToggle } from "../../../styles"
@@ -20,21 +21,14 @@ const {
 
 function DSMSidebar() {
   let location = useLocation()
-  const [searchValue, setSearchValue] = useState('');
   const [currentSection, setCurrentSection] = useState(location.pathname);
   return (
     <Sidebar>
       <PaddingBox>
         <SidebarBrand>
           <HummingbotLogo />
-          <P isMedium>Hummingbot Design System</P>
+          <P isMedium>CoinAlpha DSM</P>
         </SidebarBrand>
-        <br />
-        <TextInput
-          value={searchValue}
-          placeholder='Search'
-          onChange={(e) => setSearchValue(e.target.value)}
-        />
       </PaddingBox>
       <br />
       <br />
@@ -60,6 +54,7 @@ function DSMSidebar() {
           </div>
         )}
         <br />
+        <br />
         <div tw="h-full flex justify-center items-center">
           <ThemeToggle />
         </div>
@@ -72,10 +67,12 @@ export default DSMSidebar
 
 const Sidebar = styled.div(() => [
   css`
-    width: 380px;
     height: 100vh;
+    ${[desktop_max]} {
+      opacity: 0;
+    }
   `,
-  tw`bg-white dark:(bg-black)`
+  tw`bg-primary w-[0] md:w-[270px]`
 ])
 
 const PaddingBox = styled.div({
@@ -120,7 +117,9 @@ const SidebarNavItem = styled(NavLink)({
       color: green_primary
     }
   }
-})
+}, [
+  tw`text-black dark:(text-white)`
+])
 
 const SubSidebarNavItem = styled(SidebarNavItem)({
   borderLeft: 'none !important',

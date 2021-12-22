@@ -7,7 +7,7 @@ import {
 } from '../../constants/media-queries'
 import {
   black,
-  primary,
+  green_primary,
 } from '../../constants/colors'
 
 export const textStyle = {
@@ -16,7 +16,7 @@ export const textStyle = {
   color: black,
   fontWeight: '400',
   '& a': {
-    color: primary,
+    color: green_primary,
     textDecoration: 'underline',
   },
 }
@@ -35,16 +35,25 @@ const sharedTransforms = props => [
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
   props.isWhite && css`color: white`,
-  // props.colorPrimary && css`color: ${primary};`,
 ]
 
 export const P = styled.p({
     ...textStyle,
   },
   props => [
-    tw`text-lg`,
+    tw`text-base md:text-lg`,
     tw`leading-snug`,
-    tw`pb-1`,
+    textColor
+  ],
+  sharedTransforms
+)
+
+export const Body = styled.p({
+    ...textStyle,
+  },
+  props => [
+    tw`pb-1 md:pb-8 text-lg md:text-xl`,
+    tw`leading-relaxed`,
     textColor
   ],
   sharedTransforms
@@ -54,7 +63,7 @@ export const H6 = styled.h6({
     ...textStyle,
   },
   props => [
-    tw`text-xl`,
+    tw`text-lg md:text-xl lg:text-2xl`,
     tw`leading-snug`,
     textColor
   ],
@@ -65,7 +74,7 @@ export const H5 = styled.h5({
     ...textStyle,
   },
   props => [
-    tw`text-2xl`,
+    tw`text-xl md:text-2xl lg:text-3xl`,
     tw`leading-tight`,
     textColor
   ],
@@ -76,7 +85,7 @@ export const H4 = styled.h4({
     ...textStyle,
   },
   props => [
-    tw`text-3xl`,
+    tw`text-2xl md:text-3xl lg:text-4xl`,
     tw`leading-tight`,
     textColor
   ],
@@ -87,7 +96,7 @@ export const H3 = styled.h3({
     ...textStyle,
   },
   props => [
-    tw`text-4xl`,
+    tw`text-3xl md:text-4xl lg:text-5xl`,
     tw`leading-none`,
     textColor
   ],
@@ -98,7 +107,7 @@ export const H2 = styled.h2({
     ...textStyle,
   },
   props => [
-    tw`text-5xl`,
+    tw`text-4xl md:text-5xl lg:text-6xl`,
     tw`leading-none`,
     textColor
   ],
@@ -109,7 +118,7 @@ export const H1 = styled.h1({
     ...textStyle,
   },
   props => [
-    tw`text-6xl`,
+    tw`text-5xl md:text-6xl lg:text-7xl`,
     tw`leading-none`,
     textColor
   ],
@@ -117,5 +126,5 @@ export const H1 = styled.h1({
 )
 
 export const PrimaryColor = styled.span({
-  color: primary
+  color: green_primary
 })

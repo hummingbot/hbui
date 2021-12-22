@@ -1,3 +1,7 @@
+const typography = {
+  link: '/components/Typography',
+  title: 'Typography',
+}
 const button = {
   link: '/components/button',
   title: 'Button',
@@ -8,6 +12,7 @@ const input = {
 }
 
 module.exports = [
+  typography,
   button,
   input,
 ]

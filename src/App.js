@@ -1,5 +1,5 @@
 import React from 'react'
-import { styled } from 'twin.macro'
+import tw, { css, styled } from 'twin.macro'
 import {
   BrowserRouter,
   Routes,
@@ -16,6 +16,8 @@ import DesignTokens from './dsmsite/containers/pages/designtokens/DesignTokens'
 import Components from './dsmsite/containers/pages/components/Components'
 import Button from './dsmsite/containers/pages/components/button/Button'
 import Input from './dsmsite/containers/pages/components/input/Input'
+import Typography from './dsmsite/containers/pages/components/typography/Typography'
+import Colors from './dsmsite/containers/pages/guidelines/colors/Colors'
 import Downloads from './dsmsite/containers/pages/downloads/Downloads'
 import FAQ from './dsmsite/containers/pages/faq/FAQ'
 
@@ -31,10 +33,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/getting-started" element={<GettingStarted />} />
               <Route path="/guidelines" element={<Guidelines />} />
+              <Route path="/guidelines/colors" element={<Colors  />} />
               <Route path="/design-tokens" element={<DesignTokens />} />
               <Route path="/components" element={<Components />} />
               <Route path="/components/button" element={<Button />} />
               <Route path="/components/input" element={<Input />} />
+              <Route path="/components/typography" element={<Typography />} />
               <Route path="/downloads" element={<Downloads />} />
               <Route path="/faq" element={<FAQ />} />
             </Routes>
@@ -54,8 +58,10 @@ const Layout = styled.div({
   overflow: 'hidden',
 })
 
-const Main = styled.div({
-  width: 'calc(100% - 380px)',
-  height: '100vh',
-  overflowY: 'scroll',
-})
+const Main = styled.div(() => [
+  css`
+    height: 100vh;
+    overflow-y: scroll;
+  `,
+  tw`bg-primary w-full`
+])
