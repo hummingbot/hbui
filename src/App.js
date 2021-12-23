@@ -14,9 +14,13 @@ import GettingStarted from './dsmsite/containers/pages/gettingstarted/GettingSta
 import Guidelines from './dsmsite/containers/pages/guidelines/Guidelines'
 import DesignTokens from './dsmsite/containers/pages/designtokens/DesignTokens'
 import Components from './dsmsite/containers/pages/components/Components'
-import Button from './dsmsite/containers/pages/components/button/Button'
+
+import Elements from './dsmsite/containers/pages/elements/Elements'
+import Typography from './dsmsite/containers/pages/elements/typography/Typography'
+import ButtonElement from './dsmsite/containers/pages/elements/button/Button'
+
+import ButtonComponent from './dsmsite/containers/pages/components/button/Button'
 import Input from './dsmsite/containers/pages/components/input/Input'
-import Typography from './dsmsite/containers/pages/components/typography/Typography'
 import Colors from './dsmsite/containers/pages/guidelines/colors/Colors'
 import Downloads from './dsmsite/containers/pages/downloads/Downloads'
 import FAQ from './dsmsite/containers/pages/faq/FAQ'
@@ -35,10 +39,15 @@ function App() {
               <Route path="/guidelines" element={<Guidelines />} />
               <Route path="/guidelines/colors" element={<Colors  />} />
               <Route path="/design-tokens" element={<DesignTokens />} />
+              
+              <Route path="/elements" element={<Elements />} />
+              <Route path="/elements/typography" element={<Typography />} />
+              <Route path="/elements/button" element={<ButtonElement />} />
+              
               <Route path="/components" element={<Components />} />
-              <Route path="/components/button" element={<Button />} />
+              <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/input" element={<Input />} />
-              <Route path="/components/typography" element={<Typography />} />
+              
               <Route path="/downloads" element={<Downloads />} />
               <Route path="/faq" element={<FAQ />} />
             </Routes>

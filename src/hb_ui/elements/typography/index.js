@@ -128,3 +128,19 @@ export const H1 = styled.h1({
 export const PrimaryColor = styled.span({
   color: green_primary
 })
+
+export const LabelMicro = styled.p({
+    ...textStyle,
+  },
+  props => [
+    css`
+      color: #788187;
+      text-transform: uppercase;
+    `,
+    tw`text-xs`,
+    tw`leading-none`,
+    tw`text-secondary dark:(text-secondary)`,
+    textColor
+  ],
+  sharedTransforms
+)

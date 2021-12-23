@@ -1,5 +1,6 @@
 import navigationComponents from './navigation_components'
 import guidelinesComponents from './navigation_guidelines'
+import navigationElements from './navigation_elements'
 
 const home = {
   link: '/',
@@ -17,6 +18,11 @@ const guidelines = {
 const designTokens = {
   link: '/design-tokens',
   title: 'Design Tokens',
+}
+const elements = {
+  link: '/elements',
+  title: 'Elements',
+  subItems: navigationElements
 }
 const components = {
   link: '/components',
@@ -37,6 +43,7 @@ module.exports = [
   gettingStarted,
   guidelines,
   designTokens,
+  elements,
   components,
   downloads,
   faq
