@@ -12,6 +12,7 @@ function ButtonElement() {
     <div>
       <ShortHero
         title='Button'
+        subTitle='The Button element is used by the Button component'
       />
       <MainContent>
         <Body>Default states</Body>

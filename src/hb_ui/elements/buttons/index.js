@@ -11,17 +11,28 @@ export const Button = styled.button(({
   isWarning,
   isDanger,
   isDisabled,
-  isUppercase
+  isUppercase,
+  iconColor
   }) => [
   // Common button styles
-  tw`px-5 py-1.5 rounded-sm focus:outline-none`,
+  tw`flex`,
+  tw`px-4 py-1.5 rounded-sm focus:outline-none`,
   tw`transform transition-transform duration-75`,
   tw`hover:(scale-105)`,
   tw`font-medium`,
   tw`text-tertiary bg-tertiary`,
   css`
+    align-items: center;
     user-select: none;
     cursor: pointer;
+    .icon-before * {
+      margin-right: 10px;
+      fill: ${iconColor ? iconColor : 'auto'};
+    }
+    .icon-after {
+      margin-left: 10px;
+      fill: ${iconColor ? iconColor : 'auto'};
+    }
   `,
 
   // conditional styles

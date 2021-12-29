@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Button as ButtonElement } from '../../elements/buttons'
 
-export const Button = ({ label, iconBefore, iconAfter ...props }) => {
+export const Button = ({ label, iconBefore, iconAfter, ...props }) => {
   return (
     <ButtonElement
       type="button"
       {...props}
     >
-      {iconBefore}
+      {iconBefore && <span className='icon-before'>{iconBefore}</span>}
       {label}
-      {iconAfter}
+      {iconAfter && <span className='icon-after'>{iconAfter}</span>}
     </ButtonElement>
   )
 }
