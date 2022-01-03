@@ -1,5 +1,5 @@
 import React from 'react'
-import { ShortHero, MainContent } from '../../../elements/layout'
+import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import {
   Body
 } from '../../../../hb_ui/elements/typography'

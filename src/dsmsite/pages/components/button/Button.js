@@ -1,6 +1,6 @@
 import React from 'react'
+import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import { Body } from '../../../../hb_ui/elements/typography'
-import { ShortHero, MainContent } from '../../../elements/layout'
 import { Button as ButtonComponent } from '../../../../hb_ui/components/button'
 import DummyIcon from '../../../../ui_svgs/16x16/DummyIcon'
 

@@ -12,13 +12,19 @@ module.exports = {
         brand: "var(--bg-brand)",
         primary: "var(--bg-primary)",
         secondary: "var(--bg-secondary)",
-        tertiary: "var(--bg-tertiary)"
+        tertiary: "var(--bg-tertiary)",
+        quaternary: "var(--bg-quaternary)"
+      },
+      borderColor: {
+        brand: "var(--border-brand)",
+        primary: "var(--border-primary)",
       },
       textColor: {
         brand: "var(--text-brand)",
         primary: "var(--text-primary)",
         secondary: "var(--text-secondary)",
-        tertiary: "var(--text-tertiary)"
+        tertiary: "var(--text-tertiary)",
+        dim: "var(--text-dim)"
       },
       fillColor: {
         brand: "var(--fill-brand)",

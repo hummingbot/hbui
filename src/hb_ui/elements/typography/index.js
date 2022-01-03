@@ -35,14 +35,26 @@ const sharedTransforms = props => [
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
   props.isWhite && css`color: white`,
+  props.tightLineSpacing && css`line-height: 120% !important`,
 ]
+
+export const PSmall = styled.p({
+    ...textStyle,
+  },
+  props => [
+    tw`text-sm`,
+    tw`leading-tight`,
+    textColor
+  ],
+  sharedTransforms
+)
 
 export const P = styled.p({
     ...textStyle,
   },
   props => [
-    tw`text-base md:text-lg`,
-    tw`leading-snug`,
+    tw`text-base md:text-lg md:leading-tight`,
+    tw`leading-tight`,
     textColor
   ],
   sharedTransforms
@@ -134,13 +146,11 @@ export const LabelMicro = styled.p({
   },
   props => [
     css`
-      color: #788187;
       text-transform: uppercase;
     `,
     tw`text-xs`,
     tw`leading-none`,
-    tw`text-secondary dark:(text-secondary)`,
-    textColor
+    tw`text-dim dark:(text-dim)`
   ],
   sharedTransforms
 )

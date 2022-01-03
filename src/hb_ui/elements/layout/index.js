@@ -14,6 +14,9 @@ import {
   hd,
   hd_min
 } from '../../constants/media-queries'
+import {
+  greyscale_light_300
+} from '../../constants/colors'
 
 export const Section = styled.div(() => [
   css`
@@ -29,7 +32,7 @@ export const Container = styled.div(() => [
     // outline: 1px solid blue;
     align-self: center;
   `,
-  tw`w-[calc(100% - 20px)] md:w-11/12 2xl:w-8/12`
+  tw`w-[calc(100% - 20px)] md:w-11/12 xl:w-10/12 2xl:w-9/12`
 ])
 
 export const ContainerRow = styled(Container)`
@@ -132,33 +135,14 @@ export const MobileSpaceMaker = styled.div({
   }
 })
 
-export const Separator = (props) => {
-  let style = { marginTop: '50px', marginBottom: '30px', width: '100%' }
-  if (props.short) {
-    style = { marginTop: '10px', marginBottom: '30px', width: '100%' }
-  }
-  if (props.noMargin) {
-    style = { marginTop: '0', marginBottom: '0', width: '100%' }
-  }
-  return <hr style={style} />
-}
-
-export const SeparatorLine = styled.div({
-  backgroundColor: '#F2F2F2',
-  width: '100%',
-  height: '2px',
-  marginTop: '40px',
-  marginBottom: '40px',
-  [tablet_max]: {
-    marginTop: '30px',
-    marginBottom: '30px'
-  },
-  [phablet_max]: {
-    marginTop: '20px',
-    marginBottom: '20px'
-  },
-  [phone_max]: {
-    marginTop: '14px',
-    marginBottom: '14px'
-  }
-})
+export const Separator = styled.div(
+  props => [
+    css`
+      height: 1px;
+      width: 100%;
+      opacity: 0.5;
+      margin-top: 20px;
+    `,
+    tw`bg-quaternary dark:(bg-quaternary)`,
+  ]
+)

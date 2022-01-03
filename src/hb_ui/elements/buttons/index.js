@@ -17,9 +17,9 @@ export const Button = styled.button(({
   // Common button styles
   tw`flex`,
   tw`px-4 py-1.5 rounded-sm focus:outline-none`,
-  tw`transform transition-transform duration-75`,
-  tw`hover:(scale-105)`,
-  tw`font-medium`,
+  // tw`transform transition-transform duration-75`,
+  // tw`hover:(scale-105)`,
+  tw`font-normal`,
   tw`text-tertiary bg-tertiary`,
   css`
     align-items: center;

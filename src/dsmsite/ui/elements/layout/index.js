@@ -5,16 +5,16 @@ import {
   phablet_max,
   tablet_max,
   desktop_max,
-} from '../../../hb_ui/constants/media-queries'
+} from '../../../../hb_ui/constants/media-queries'
 import {
   Section,
   Container,
   PaddingBox,
-} from '../../../hb_ui/elements/layout'
+} from '../../../../hb_ui/elements/layout'
 import {
   H1,
   P,
-} from '../../../hb_ui/elements/typography'
+} from '../../../../hb_ui/elements/typography'
 
 export const ContentBlock = styled(Section)(({ backgroundColor }) => [
   css`
