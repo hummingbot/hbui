@@ -7,23 +7,23 @@ import {
 } from 'react-router-dom'
 import GlobalStyles from './styles/GlobalStyles'
 
-import DSMSidebar from './dsmsite/containers/sidebar/DSMSidebar'
+import DSMSidebar from './dsmsite/sidebar/DSMSidebar'
 
-import Home from './dsmsite/containers/pages/home/Home'
-import GettingStarted from './dsmsite/containers/pages/gettingstarted/GettingStarted'
-import Guidelines from './dsmsite/containers/pages/guidelines/Guidelines'
-import DesignTokens from './dsmsite/containers/pages/designtokens/DesignTokens'
-import Components from './dsmsite/containers/pages/components/Components'
+import Home from './dsmsite/pages/home/Home'
+import GettingStarted from './dsmsite/pages/gettingstarted/GettingStarted'
+import Guidelines from './dsmsite/pages/guidelines/Guidelines'
+import DesignTokens from './dsmsite/pages/designtokens/DesignTokens'
+import Components from './dsmsite/pages/components/Components'
 
-import Elements from './dsmsite/containers/pages/elements/Elements'
-import Typography from './dsmsite/containers/pages/elements/typography/Typography'
-import ButtonElement from './dsmsite/containers/pages/elements/button/Button'
+import Elements from './dsmsite/pages/elements/Elements'
+import Typography from './dsmsite/pages/elements/typography/Typography'
+import ButtonElement from './dsmsite/pages/elements/button/Button'
 
-import ButtonComponent from './dsmsite/containers/pages/components/button/Button'
-import Input from './dsmsite/containers/pages/components/input/Input'
-import Colors from './dsmsite/containers/pages/guidelines/colors/Colors'
-import Downloads from './dsmsite/containers/pages/downloads/Downloads'
-import FAQ from './dsmsite/containers/pages/faq/FAQ'
+import ButtonComponent from './dsmsite/pages/components/button/Button'
+import Input from './dsmsite/pages/components/input/Input'
+import Colors from './dsmsite/pages/guidelines/colors/Colors'
+import Downloads from './dsmsite/pages/downloads/Downloads'
+import FAQ from './dsmsite/pages/faq/FAQ'
 
 function App() {
   return (
