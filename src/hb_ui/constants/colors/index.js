@@ -29,7 +29,6 @@ module.exports = {
   greyscale_light_500: '#C9CDCF',
   greyscale_light_600: '#AEB4B7',
   greyscale_light_700: '#939B9F',
-  greyscale_light_800: '#868E93',
   greyscale_dark_100: '#788187',
   greyscale_dark_200: '#484D51',
   greyscale_dark_300: '#3E4347',
