@@ -30,7 +30,7 @@ function ButtonElement() {
         <Button isInfo>Info</Button>
         <br />
         <br />
-        <Button isWarning>Waning</Button>
+        <Button isWarning>Warning</Button>
         <br />
         <br />
         <Button isDanger>Danger</Button>
@@ -55,7 +55,7 @@ function ButtonElement() {
         <Button isInfo isDisabled>Info (disabled)</Button>
         <br />
         <br />
-        <Button isWarning isDisabled>Waning (disabled)</Button>
+        <Button isWarning isDisabled>Warning (disabled)</Button>
         <br />
         <br />
         <Button isDanger isDisabled>Danger (disabled)</Button>

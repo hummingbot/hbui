@@ -1,14 +1,15 @@
 const colors = require('./src/hb_ui/constants/colors')
+const breakpoints = require('./src/hb_ui/constants/media-queries/breakpoints')
 
 module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      'sm': '480px',
-      'md': '768px',
-      'lg': '976px',
-      'xl': '1440px',
-      '2xl': '1536px'
+      'sm': breakpoints.sm,
+      'md': breakpoints.md,
+      'lg': breakpoints.lg,
+      'xl': breakpoints.xl,
+      '2xl': breakpoints.xxl
     },
     spacing: {
       '1': '4px',
@@ -18,7 +19,7 @@ module.exports = {
       '5': '24px',
       '6': '32px',
       '7': '48px',
-      '8': '80px',
+      '8': '80px'
     },
     colors: {
       transparent: 'transparent',
