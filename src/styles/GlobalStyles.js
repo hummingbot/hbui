@@ -18,6 +18,7 @@ const customStyles = css`
 
     --border-brand: ${colors.green_primary};
     --border-primary: ${colors.greyscale_light_300};
+    --border-secondary: ${colors.greyscale_light_400};
 
     --text-brand: ${colors.green_primary};
     --text-primary: ${colors.greyscale_dark_700};
@@ -43,6 +44,7 @@ const customStyles = css`
 
     --border-brand: ${colors.green_primary};
     --border-primary: ${colors.greyscale_dark_400};
+    --border-secondary: ${colors.greyscale_dark_200};
 
     --text-brand: ${colors.green_primary};
     --text-primary: #ffffff;

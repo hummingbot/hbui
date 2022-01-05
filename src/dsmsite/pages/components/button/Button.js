@@ -1,5 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
+import CodeBlock from '../../../ui/components/CodeBlock'
 import { Body } from '../../../../hb_ui/elements/typography'
 import { Button as ButtonComponent } from '../../../../hb_ui/components/button'
 import DummyIcon from '../../../../ui_svgs/16x16/DummyIcon'
@@ -12,26 +13,32 @@ function Button() {
         subTitle='Button Component - To be used together with icons'
       />
       <MainContent>
-        <Body>Icon before</Body>
+        <Body>Button with icon before</Body>
         <ButtonComponent
           label='Button'
           iconBefore={<DummyIcon />}
         />
         <br />
+        <CodeBlock code="<ButtonComponent label='Button' iconBefore={<DummyIcon />} />" />
         <br />
-        <Body>Icon after</Body>
+        <br />
+        <Body>Button with icon after</Body>
         <ButtonComponent
           label='Button'
           iconAfter={<DummyIcon />}
         />
         <br />
+        <CodeBlock code="<ButtonComponent label='Button' iconAfter={<DummyIcon />} />" />
         <br />
-        <Body>Custom icon color</Body>
+        <br />
+        <Body>Button with custom icon color</Body>
         <ButtonComponent
           label='Button'
           iconBefore={<DummyIcon />}
           iconColor='#ff0000'
         />
+        <br />
+        <CodeBlock code="<ButtonComponent label='Button' iconBefore={<DummyIcon />} iconColor='#ff0000' />" />
       </MainContent>
     </div>
   )

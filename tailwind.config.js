@@ -49,7 +49,7 @@ module.exports = {
         400: colors.greyscale_light_400,
         500: colors.greyscale_light_500,
         600: colors.greyscale_light_600,
-        700: colors.greyscale_light_700,
+        700: colors.greyscale_light_700
       },
       'grey-dark': {
         100: colors.greyscale_dark_100,
@@ -58,7 +58,7 @@ module.exports = {
         400: colors.greyscale_dark_400,
         500: colors.greyscale_dark_500,
         600: colors.greyscale_dark_600,
-        700: colors.greyscale_dark_700,
+        700: colors.greyscale_dark_700
       },
     },
     fontFamily: {
@@ -82,6 +82,7 @@ module.exports = {
       borderColor: {
         brand: "var(--border-brand)",
         primary: "var(--border-primary)",
+        secondary: "var(--border-secondary)",
       },
       textColor: {
         brand: "var(--text-brand)",
