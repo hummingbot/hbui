@@ -13,13 +13,17 @@ function Button() {
         subTitle='Button Component - To be used together with icons'
       />
       <MainContent>
+        <Body>Import Button component (adjust path)</Body>
+        <CodeBlock code={codeImport} />
+        <br />
+        <br />
         <Body>Button with icon before</Body>
         <ButtonComponent
           label='Button'
           iconBefore={<DummyIcon />}
         />
         <br />
-        <CodeBlock code="<ButtonComponent label='Button' iconBefore={<DummyIcon />} />" />
+        <CodeBlock code={codeWithIconBefore} />
         <br />
         <br />
         <Body>Button with icon after</Body>
@@ -28,7 +32,7 @@ function Button() {
           iconAfter={<DummyIcon />}
         />
         <br />
-        <CodeBlock code="<ButtonComponent label='Button' iconAfter={<DummyIcon />} />" />
+        <CodeBlock code={codeWithIconAfter} />
         <br />
         <br />
         <Body>Button with custom icon color</Body>
@@ -38,10 +42,36 @@ function Button() {
           iconColor='#ff0000'
         />
         <br />
-        <CodeBlock code="<ButtonComponent label='Button' iconBefore={<DummyIcon />} iconColor='#ff0000' />" />
+        <CodeBlock code={codeWithCustomIconColor} />
       </MainContent>
     </div>
   )
 }
 
 export default Button
+
+const codeImport = String.raw
+`import { Button } from '../hb_ui/components/button'
+`;
+
+const codeWithIconBefore = String.raw
+`<Button
+  label='Button'
+  iconBefore={<DummyIcon />}
+/>
+`;
+
+const codeWithIconAfter = String.raw
+`<Button
+  label='Button'
+  iconAfter={<DummyIcon />}
+/>
+`;
+
+const codeWithCustomIconColor = String.raw
+`<Button
+  label='Button'
+  iconBefore={<DummyIcon />}
+  iconColor='#ff0000'
+/>
+`;
