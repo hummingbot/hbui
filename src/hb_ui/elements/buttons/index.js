@@ -1,5 +1,4 @@
-import tw, { css, styled, theme } from 'twin.macro'
-import { black } from '../../constants/colors'
+import tw, { css, styled } from 'twin.macro'
 
 export const Button = styled.button(({
   isPrimary,
@@ -16,20 +15,24 @@ export const Button = styled.button(({
   }) => [
   // Common button styles
   tw`flex`,
-  tw`px-4 py-2 rounded-sm focus:outline-none`,
-  // tw`transform transition-transform duration-75`,
+  tw`transition duration-150`,
+  tw`px-4 py-1 rounded-sm focus:outline-none`,
   // tw`hover:(scale-105)`,
+  tw`hover:bg-quaternary active:bg-grey-light-500`,
   tw`font-normal`,
   tw`text-tertiary bg-tertiary`,
   css`
+    min-width: 100px;
+    text-align: center;
     align-items: center;
+    justify-content: center;
     user-select: none;
     cursor: pointer;
-    .icon-before * {
+    .icon-before > * {
       margin-right: 10px;
       fill: ${iconColor ? iconColor : 'auto'};
     }
-    .icon-after {
+    .icon-after > * {
       margin-left: 10px;
       fill: ${iconColor ? iconColor : 'auto'};
     }
@@ -43,68 +46,42 @@ export const Button = styled.button(({
   ],
 
   isPrimary && !isGhost && [
-    tw`text-white bg-brand`,
-    // tw`hover:(bg-brand)`,
-    // tw`active:(bg-brand)`,
+    tw`text-white bg-brand hover:bg-green-hovered active:bg-green-active`,
   ],
 
   isInfo && !isGhost && [
-    css`
-      color: white;
-      background-color: ${theme`colors.info`};
-    `,
+    tw`text-white bg-blue hover:bg-blue-hovered active:bg-blue-active`,
   ],
 
   isWarning && !isGhost && [
-    css`
-      color: white;
-      background-color: ${theme`colors.warning`};
-    `,
+    tw`text-white bg-orange hover:bg-orange-hovered active:bg-orange-active`,
   ],
 
   isDanger && !isGhost && [
-    css`
-      color: white;
-      background-color: ${theme`colors.danger`};
-    `,
+    tw`text-white bg-red hover:bg-red-hovered active:bg-red-active`,
   ],
 
   isGhost && !isPrimary && !isInfo && !isWarning && !isDanger  && [
-    tw`text-black dark:text-white bg-transparent border border-2 border-black dark:border-white`,
+    tw`text-black dark:text-white bg-transparent border border-2 border-grey-dark-300 dark:border-grey-light-500 hover:bg-tertiary active:bg-quaternary`,
   ],
 
   isPrimary && isGhost && [
-    tw`text-brand bg-transparent`,
-    css`
-      border: 2px solid ${theme`colors.primary`};
-    `,
+    tw`text-brand bg-transparent border border-2 border-green hover:bg-green-superlight active:bg-green-light`,
   ],
 
   isInfo && isGhost && [
-    tw`text-blue bg-transparent`,
-    css`
-      border: 2px solid ${theme`colors.blue`};
-    `,
+    tw`text-blue bg-transparent border border-2 border-blue hover:bg-blue-superlight active:bg-blue-light`,
   ],
 
   isWarning && isGhost && [
-    tw`text-orange bg-transparent`,
-    css`
-      border: 2px solid ${theme`colors.orange`};
-    `,
+    tw`text-orange bg-transparent border border-2 border-orange hover:bg-orange-superlight active:bg-orange-light`,
   ],
 
   isDanger && isGhost && [
-    tw`text-red bg-transparent`,
-    css`
-      border: 2px solid ${theme`colors.red`};
-    `,
+    tw`text-red bg-transparent border border-2 border-red hover:bg-red-superlight active:bg-red-light`,
   ],
 
   isDisabled && [
-    css`
-      pointer-events: none !important;
-      opacity: 0.3 !important;
-    `,
+    tw`pointer-events-none opacity-30`,
   ],
 ])

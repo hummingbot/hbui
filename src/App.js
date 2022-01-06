@@ -18,6 +18,7 @@ import Components from './dsmsite/pages/components/Components'
 import Elements from './dsmsite/pages/elements/Elements'
 import Typography from './dsmsite/pages/elements/typography/Typography'
 import ButtonElement from './dsmsite/pages/elements/button/Button'
+import GhostButtonElement from './dsmsite/pages/elements/button/GhostButton'
 
 import ButtonComponent from './dsmsite/pages/components/button/Button'
 import Input from './dsmsite/pages/components/input/Input'
@@ -43,6 +44,7 @@ function App() {
               <Route path="/elements" element={<Elements />} />
               <Route path="/elements/typography" element={<Typography />} />
               <Route path="/elements/button" element={<ButtonElement />} />
+              <Route path="/elements/ghostbutton" element={<GhostButtonElement />} />
               
               <Route path="/components" element={<Components />} />
               <Route path="/components/button" element={<ButtonComponent />} />

@@ -8,11 +8,11 @@ import {
   Button
 } from '../../../../hb_ui/elements/buttons'
 
-function ButtonElement() {
+function GhostButtonElement() {
   return (
     <div>
       <ShortHero
-        title='Button'
+        title='Button (Ghost)'
         subTitle='The Button element is used by the Button component. Use the Button element directly when no icon is necessary or for custom scenarios.'
       />
       <MainContent>
@@ -20,60 +20,62 @@ function ButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Regular variant</Body>
+        <Body>Ghost variant</Body>
         <br />
-        <Button>Default</Button>
+        <Button isGhost>Default</Button>
         <br />
-        <CodeBlock code={codeDefault} />
-        <br />
-        <br />
-        <Button isPrimary>Primary</Button>
-        <br />
-        <CodeBlock code={codePrimary} />
+        <CodeBlock code={codeGhostDefault} />
         <br />
         <br />
-        <Button isInfo>Info</Button>
+        <Button isPrimary isGhost>Primary</Button>
         <br />
-        <CodeBlock code={codeInfo} />
-        <br />
-        <br />
-        <Button isWarning>Warning</Button>
-        <br />
-        <CodeBlock code={codeWarning} />
+        <CodeBlock code={codeGhostPrimary} />
         <br />
         <br />
-        <Button isDanger>Danger</Button>
+        <Button isInfo isGhost>Info</Button>
         <br />
-        <CodeBlock code={codeDanger} />
-        <br />
-        <br />
+        <CodeBlock code={codeGhostInfo} />
         <br />
         <br />
-        <Body>Regular variant (disabled)</Body>
+        <Button isWarning isGhost>Warning</Button>
         <br />
-        <Button isDisabled>Default (disabled)</Button>
-        <br />
-        <CodeBlock code={codeDefaultDisabled} />
+        <CodeBlock code={codeGhostWarning} />
         <br />
         <br />
-        <Button isPrimary isDisabled>Primary (disabled)</Button>
+        <Button isDanger isGhost>Danger</Button>
         <br />
-        <CodeBlock code={codePrimaryDisabled} />
-        <br />
-        <br />
-        <Button isInfo isDisabled>Info (disabled)</Button>
-        <br />
-        <CodeBlock code={codeInfoDisabled} />
+        <CodeBlock code={codeGhostDanger} />
         <br />
         <br />
-        <Button isWarning isDisabled>Warning (disabled)</Button>
-        <br />
-        <CodeBlock code={codeWarningDisabled} />
         <br />
         <br />
-        <Button isDanger isDisabled>Danger (disabled)</Button>
         <br />
-        <CodeBlock code={codeDangerDisabled} />
+        <br />
+        <Body>Ghost variant (disabled)</Body>
+        <br />
+        <Button isDisabled isGhost>Default (disabled)</Button>
+        <br />
+        <CodeBlock code={codeGhostDefaultDisabled} />
+        <br />
+        <br />
+        <Button isDisabled isPrimary isGhost>Primary (disabled)</Button>
+        <br />
+        <CodeBlock code={codeGhostPrimaryDisabled} />
+        <br />
+        <br />
+        <Button isDisabled isInfo isGhost>Info (disabled)</Button>
+        <br />
+        <CodeBlock code={codeGhostInfoDisabled} />
+        <br />
+        <br />
+        <Button isDisabled isWarning isGhost>Warning (disabled)</Button>
+        <br />
+        <CodeBlock code={codeGhostWarningDisabled} />
+        <br />
+        <br />
+        <Button isDisabled isDanger isGhost>Danger (disabled)</Button>
+        <br />
+        <CodeBlock code={codeGhostDangerDisabled} />
         <br />
         <br />
       </MainContent>
@@ -81,78 +83,11 @@ function ButtonElement() {
   )
 }
 
-export default ButtonElement
+export default GhostButtonElement
 
 const codeImport = String.raw
 `import { Button } from '../hb_ui/elements/button'
 `;
-
-// regular variant, disabled
-
-const codeDefault = String.raw
-`<Button>
-  Default
-</Button>
-`;
-
-const codePrimary = String.raw
-`<Button isPrimary>
-  Primary
-</Button>
-`;
-
-const codeInfo = String.raw
-`<Button isInfo>
-  Info
-</Button>
-`;
-
-const codeWarning = String.raw
-`<Button isWarning>
-  Warning
-</Button>
-`;
-
-const codeDanger = String.raw
-`<Button isDanger>
-  Danger
-</Button>
-`;
-
-// regular variant, disabled
-
-const codeDefaultDisabled = String.raw
-`<Button isDisabled>
-  Default (disabled)
-</Button>
-`;
-
-const codePrimaryDisabled = String.raw
-`<Button isPrimary isDisabled>
-  Primary (disabled)
-</Button>
-`;
-
-const codeInfoDisabled = String.raw
-`<Button isInfo isDisabled>
-  Info (disabled)
-</Button>
-`;
-
-const codeWarningDisabled = String.raw
-`<Button isWarning isDisabled>
-  Warning (disabled)
-</Button>
-`;
-
-const codeDangerDisabled = String.raw
-`<Button isDanger isDisabled>
-  Danger (disabled)
-</Button>
-`;
-
-
-
 
 // ghost variant
 
