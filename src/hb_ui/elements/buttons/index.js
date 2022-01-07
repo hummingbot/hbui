@@ -15,7 +15,7 @@ export const Button = styled.button(({
   }) => [
   // Common button styles
   tw`flex`,
-  tw`transition duration-150`,
+  tw`transition duration-100`,
   tw`px-4 py-1 rounded-sm focus:outline-none`,
   // tw`hover:(scale-105)`,
   tw`hover:bg-quaternary active:bg-grey-light-500`,
@@ -59,6 +59,10 @@ export const Button = styled.button(({
 
   isDanger && !isGhost && [
     tw`text-white bg-red hover:bg-red-hovered active:bg-red-active`,
+  ],
+
+  isGhost && [
+    tw`py-0.5`,
   ],
 
   isGhost && !isPrimary && !isInfo && !isWarning && !isDanger  && [
