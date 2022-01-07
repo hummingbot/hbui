@@ -1,5 +1,5 @@
 const colors = require('./src/hb_ui/constants/colors')
-const breakpoints = require('./src/hb_ui/constants/media-queries/breakpoints')
+// const breakpoints = require('./src/hb_ui/constants/media-queries/breakpoints')
 
 // Main Spacings
 //
@@ -12,15 +12,16 @@ const breakpoints = require('./src/hb_ui/constants/media-queries/breakpoints')
 // 12 (48px)
 // 20 (80px)
 
+
 module.exports = {
   darkMode: 'class',
   theme: {
     screens: {
-      'sm': breakpoints.sm,
-      'md': breakpoints.md,
-      'lg': breakpoints.lg,
-      'xl': breakpoints.xl,
-      '2xl': breakpoints.xxl
+      'sm': breakpoints.px.sm,
+      'md': breakpoints.px.md,
+      'lg': breakpoints.px.lg,
+      'xl': breakpoints.px.xl,
+      '2xl': breakpoints.px.xxl
     },
     colors: {
       transparent: 'transparent',
@@ -82,12 +83,12 @@ module.exports = {
       serif: ['Courier New', 'serif'],
     },
     extend: {
-      colors: {
-        primary: "var(--color-primary)",
-        info: "var(--color-info)",
-        warning: "var(--color-warning)",
-        danger: "var(--color-danger)"
-      },
+      // colors: {
+      //   primary: "var(--color-primary)",
+      //   info: "var(--color-info)",
+      //   warning: "var(--color-warning)",
+      //   danger: "var(--color-danger)"
+      // },
       backgroundColor: {
         brand: "var(--bg-brand)",
         primary: "var(--bg-primary)",
@@ -107,12 +108,12 @@ module.exports = {
         tertiary: "var(--text-tertiary)",
         dim: "var(--text-dim)"
       },
-      fillColor: {
-        brand: "var(--fill-brand)",
-        primary: "var(--fill-primary)",
-        secondary: "var(--fill-secondary)",
-        tertiary: "var(--fill-tertiary)"
-      },
+      // fillColor: {
+      //   brand: "var(--fill-brand)",
+      //   primary: "var(--fill-primary)",
+      //   secondary: "var(--fill-secondary)",
+      //   tertiary: "var(--fill-tertiary)"
+      // },
     }
   },
   plugins: [],

@@ -13,8 +13,14 @@ const ghostbutton = {
   title: 'Button (Ghost)',
 }
 
+const input = {
+  link: '/elements/input',
+  title: 'Input',
+}
+
 module.exports = [
   typography,
   button,
   ghostbutton,
+  input,
 ]
