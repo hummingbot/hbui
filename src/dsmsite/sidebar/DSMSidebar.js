@@ -66,13 +66,13 @@ function DSMSidebar() {
 export default DSMSidebar
 
 const Sidebar = styled.div(() => [
+  tw`bg-primary w-[0] md:w-[270px]`,
   css`
     height: 100vh;
     ${[desktop_max]} {
       opacity: 0;
     }
-  `,
-  tw`bg-primary w-[0] md:w-[270px]`
+  `
 ])
 
 const PaddingBox = styled.div({

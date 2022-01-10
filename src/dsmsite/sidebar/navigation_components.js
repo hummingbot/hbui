@@ -3,8 +3,8 @@ const button = {
   title: 'Button',
 }
 const input = {
-  link: '/components/input',
-  title: 'Inputs',
+  link: '/components/text-input',
+  title: 'TextInput',
 }
 
 module.exports = [

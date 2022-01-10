@@ -4,7 +4,7 @@ import { PSmall, LabelMicro } from '../../../hb_ui/elements/typography'
 
 const PageIndex = ({ title, items }) => {
   return (
-    <Root tw='border-l border-primary'>
+    <Root>
       <LabelMicro>{title}</LabelMicro>
       <br />
       {items.map(item => 

@@ -32,7 +32,7 @@ export const Container = styled.div(() => [
     // outline: 1px solid blue;
     align-self: center;
   `,
-  tw`w-[calc(100% - 20px)] md:w-11/12 xl:w-10/12 2xl:w-9/12`
+  tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-9/12`
 ])
 
 export const ContainerRow = styled(Container)`
@@ -43,7 +43,7 @@ export const PaddingBox = styled.div(() => [
   css`
     // outline: 1px solid yellow;
   `,
-  tw`p-4 md:p-8 lg:p-12`
+  tw`py-4 md:py-8 lg:py-12`
 ])
 
 export const WhiteBox = styled.div({

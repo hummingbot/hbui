@@ -21,7 +21,7 @@ function ColorCard({title, description, hex, rgb}) {
         <PSmall isBold className='title'>{title}</PSmall>
         <PSmall>{description}</PSmall>
       </div>
-      <div tw='col-span-12 md:col-span-3'>
+      <div tw='col-span-12 lg:col-span-3'>
         <Button
           label={`HEX (${hex})`}
           iconAfter={<Copy />}

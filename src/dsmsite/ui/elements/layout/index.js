@@ -1,12 +1,6 @@
 import React from 'react'
 import tw, { styled, theme, css } from 'twin.macro'
 import {
-  phone_max,
-  phablet_max,
-  tablet_max,
-  desktop_max,
-} from '../../../../hb_ui/constants/media-queries'
-import {
   Section,
   Container,
   PaddingBox,
@@ -37,11 +31,11 @@ export const MainContentBody = styled.div(() => [
 ])
 
 export const MainContentSidebar = styled.div(() => [
-  tw`w-[0] md:w-2/12`
+  tw`hidden md:block md:w-2/12`
 ])
 
 export const ShortHeroPaddingBox = styled(PaddingBox)(() => [
-  tw`p-4 py-20 md:py-28 lg:py-32`
+  tw`py-20 md:py-28 lg:py-32`
 ])
 
 export function MainContent({ children }) {

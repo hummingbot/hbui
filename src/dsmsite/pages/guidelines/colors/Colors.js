@@ -120,7 +120,6 @@ function Colors() {
             <br />
           </MainContentBody>
           <MainContentSidebar>
-            <LabelMicro></LabelMicro>
             <PageIndex
               title='On this page'
               items={index}

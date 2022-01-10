@@ -13,17 +13,19 @@ import {
 export const textStyle = {
   fontFamily: 'Satoshi, sans-serif',
   margin: '0',
-  color: black,
-  fontWeight: '400',
+  // color: black,
+  // fontWeight: '400',
   '& a': {
     color: green_primary,
     textDecoration: 'underline',
   },
 }
 
-const textColor = tw`text-black dark:(text-white)`
+// const textColor = 
 
 const sharedTransforms = props => [
+  tw`text-black dark:(text-white)`,
+  tw`m-0 font-normal`,
   props.isSmall && tw`text-sm`,
   props.isUnderline && tw`underline`,
   props.isUppercase && tw`uppercase`,
@@ -38,101 +40,74 @@ const sharedTransforms = props => [
   props.tightLineSpacing && css`line-height: 120% !important`,
 ]
 
-export const PSmall = styled.p({
-    ...textStyle,
-  },
+export const PSmall = styled.p({},
   props => [
     tw`text-sm`,
-    tw`leading-tight`,
-    textColor
+    tw`leading-tight`
   ],
   sharedTransforms
 )
 
-export const P = styled.p({
-    ...textStyle,
-  },
+export const P = styled.p({},
   props => [
     tw`text-base md:text-lg md:leading-tight`,
-    tw`leading-tight`,
-    textColor
+    tw`leading-tight`
   ],
   sharedTransforms
 )
 
-export const Body = styled.p({
-    ...textStyle,
-  },
+export const Body = styled.p({},
   props => [
     tw`pb-1 md:pb-8 text-lg md:text-xl`,
-    tw`leading-relaxed`,
-    textColor
+    tw`leading-relaxed`
   ],
   sharedTransforms
 )
 
-export const H6 = styled.h6({
-    ...textStyle,
-  },
+export const H6 = styled.h6({},
   props => [
     tw`text-lg md:text-xl lg:text-2xl`,
-    tw`leading-snug`,
-    textColor
+    tw`leading-snug`
   ],
   sharedTransforms
 )
 
-export const H5 = styled.h5({
-    ...textStyle,
-  },
+export const H5 = styled.h5({},
   props => [
     tw`text-xl md:text-2xl lg:text-3xl`,
-    tw`leading-tight`,
-    textColor
+    tw`leading-tight`
   ],
   sharedTransforms
 )
 
-export const H4 = styled.h4({
-    ...textStyle,
-  },
+export const H4 = styled.h4({},
   props => [
     tw`text-2xl md:text-3xl lg:text-4xl`,
-    tw`leading-tight`,
-    textColor
+    tw`leading-tight`
   ],
   sharedTransforms
 )
 
-export const H3 = styled.h3({
-    ...textStyle,
-  },
+export const H3 = styled.h3({},
   props => [
     tw`text-3xl md:text-4xl lg:text-5xl`,
-    tw`leading-none`,
-    textColor
+    tw`leading-none`
   ],
   sharedTransforms
 )
 
-export const H2 = styled.h2({
-    ...textStyle,
-  },
+export const H2 = styled.h2({},
   props => [
     tw`text-4xl md:text-5xl lg:text-6xl`,
-    tw`leading-none`,
-    textColor
+    tw`leading-none`
   ],
   sharedTransforms
 )
 
-export const H1 = styled.h1({
-    ...textStyle,
-  },
+export const H1 = styled.h1({},
   props => [
     tw`text-5xl md:text-6xl lg:text-7xl`,
-    tw`leading-none`,
-    textColor
+    tw`leading-none`
   ],
   sharedTransforms
 )
@@ -141,16 +116,14 @@ export const PrimaryColor = styled.span({
   color: green_primary
 })
 
-export const LabelMicro = styled.p({
-    ...textStyle,
-  },
+export const LabelMicro = styled.p({},
   props => [
+    tw`text-xs`,
+    tw`leading-none`,
+    tw`text-dim dark:(text-dim)`,
     css`
       text-transform: uppercase;
     `,
-    tw`text-xs`,
-    tw`leading-none`,
-    tw`text-dim dark:(text-dim)`
   ],
   sharedTransforms
 )

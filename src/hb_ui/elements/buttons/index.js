@@ -18,7 +18,7 @@ export const Button = styled.button(({
   tw`transition duration-100`,
   tw`px-4 py-1 rounded-sm focus:outline-none`,
   // tw`hover:(scale-105)`,
-  tw`hover:bg-quaternary active:bg-grey-light-500`,
+  tw`hover:bg-quaternary active:bg-grey-dark-100`,
   tw`font-normal`,
   tw`text-tertiary bg-tertiary`,
   css`
