@@ -144,7 +144,7 @@ const codeDefault = String.raw
   label='Field Label'
   placeholder='Placeholder'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -156,7 +156,7 @@ const codeValid = String.raw
   label='Field Label'
   placeholder='Placeholder'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -168,7 +168,7 @@ const codeWarning = String.raw
   label='Field Label'
   placeholder='Placeholder'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -180,7 +180,7 @@ const codeInvalid = String.raw
   label='Field Label'
   placeholder='Placeholder'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -192,7 +192,7 @@ const codeRequired = String.raw
   label='Field Label'
   placeholder='Placeholder'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -210,7 +210,7 @@ const codeDefaultExtendedLabel = String.raw
   placeholder='Placeholder'
   extendedLabel='Extended Label'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -223,7 +223,7 @@ const codeValidExtendedLabel = String.raw
   placeholder='Placeholder'
   extendedLabel='Extended Label'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -236,7 +236,7 @@ const codeWarningExtendedLabel = String.raw
   placeholder='Placeholder'
   extendedLabel='Extended Label'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;
 
@@ -249,6 +249,6 @@ const codeInvalidExtendedLabel = String.raw
   placeholder='Placeholder'
   extendedLabel='Extended Label'
   value={inputValue}
-  onChange={(e) => setInputValue(e.target.value)}
+  onChange={yourChangeHandler}
 />
 `;

@@ -143,4 +143,3 @@ const ExtendedLabel = styled.div(({
     }
   `,
 ])
-

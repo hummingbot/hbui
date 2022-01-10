@@ -7,11 +7,9 @@ export const TextInput = styled.input(({
   label,
   inputFocused,
   }) => [
-  // Common button styles
   tw`flex w-full`,
   tw`transition duration-100`,
   tw`px-4 py-2.5 rounded-sm focus:outline-none`,
-  // tw`hover:(scale-105)`,
   tw`bg-primary`,
   tw`font-normal text-primary`,
   tw`border border-2 border-secondary focus:border-blue`,
