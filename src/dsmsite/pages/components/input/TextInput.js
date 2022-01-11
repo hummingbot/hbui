@@ -5,7 +5,7 @@ import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../hb_ui/components/input/TextInput'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
-function Input() {
+function TextInputPage() {
   const [inputValue, setInputValue] = useState('');
   return (
     <div>
@@ -135,7 +135,7 @@ function Input() {
   )
 }
 
-export default Input
+export default TextInputPage
 
 const codeDefault = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'

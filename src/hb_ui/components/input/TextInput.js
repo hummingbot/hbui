@@ -7,7 +7,7 @@ import CheckIcon from '../../../ui_svgs/notifications/CheckIcon'
 import WarningIcon from '../../../ui_svgs/notifications/WarningIcon'
 import ErrorIcon from '../../../ui_svgs/notifications/ErrorIcon'
 
- const TextInput = ({ value, label, onChange, required, extendedLabel, ...props }) => {
+const TextInput = ({ value, label, onChange, required, extendedLabel, ...props }) => {
   const [inputFocused, setInputFocused] = useState(false);
   const stateIcon = getStateIcon(props)
   return (

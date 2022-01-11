@@ -6,7 +6,6 @@ import {
 import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../hb_ui/elements/typography'
 import colors from '../../hb_ui/constants/colors'
-import TextInput from '../../hb_ui/components/inputs/TextInput'
 import HummingbotLogo from '../../ui_svgs/HummingbotLogo'
 import TriangleRight from '../../ui_svgs/TriangleRight'
 import { P } from '../../hb_ui/elements/typography'
