@@ -28,11 +28,11 @@ export const Button = styled.button(({
     justify-content: center;
     user-select: none;
     cursor: pointer;
-    .icon-before > * {
+    .icon-before * {
       margin-right: 10px;
       fill: ${iconColor ? iconColor : 'auto'};
     }
-    .icon-after > * {
+    .icon-after * {
       margin-left: 10px;
       fill: ${iconColor ? iconColor : 'auto'};
     }
