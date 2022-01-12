@@ -13,11 +13,9 @@ export const Button = styled.button(({
   isGhost,
   iconColor
   }) => [
-  // Common button styles
   tw`flex`,
   tw`transition duration-100`,
   tw`px-4 py-1 rounded-sm focus:outline-none`,
-  // tw`hover:(scale-105)`,
   tw`hover:bg-quaternary active:bg-grey-dark-100`,
   tw`font-normal`,
   tw`text-tertiary bg-tertiary`,
@@ -37,14 +35,11 @@ export const Button = styled.button(({
       fill: ${iconColor ? iconColor : 'auto'};
     }
   `,
-
-  // conditional styles
   isUppercase && [
     css`
       text-transform: uppercase;
     `,
   ],
-
   isPrimary && !isGhost && [
     tw`text-white bg-brand hover:bg-green-hovered active:bg-green-active`,
   ],
@@ -64,7 +59,6 @@ export const Button = styled.button(({
   isGhost && [
     tw`py-0.5`,
   ],
-
   isGhost && !isPrimary && !isInfo && !isWarning && !isDanger  && [
     tw`text-black dark:text-white bg-transparent border border-2 border-grey-dark-300 dark:border-grey-light-500 hover:bg-tertiary active:bg-quaternary`,
   ],

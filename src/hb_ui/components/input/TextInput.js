@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import tw, { css, styled, theme } from 'twin.macro'
-import { black, greyscale_light_400 } from '../../constants/colors'
 import { TextInput as TextInputElement } from '../../elements/input'
 import CheckIcon from '../../../ui_svgs/notifications/CheckIcon'
 import WarningIcon from '../../../ui_svgs/notifications/WarningIcon'
@@ -11,11 +10,12 @@ const TextInput = ({ value, onChange, required, bottomLabel, ...props }) => {
   const [inputFocused, setInputFocused] = useState(false);
   const stateIcon = getStateIcon(props)
   const placeholder = props.placeholder
+  const hasValue = value && value !== '' && typeof value === 'string' && value.length > 0
   if (!placeholder) {
     console.error('TextInput Component: A placeholder value is required')
   }
   return (
-    <Root inputFocused={inputFocused} placeholder={placeholder} {...props}>
+    <Root hasValue={hasValue} inputFocused={inputFocused} placeholder={placeholder} {...props}>
       { placeholder && 
         <PlaceholderLabel
           className='placeholder-label' 
@@ -26,8 +26,8 @@ const TextInput = ({ value, onChange, required, bottomLabel, ...props }) => {
       }
       <TextInputElement
         type="text"
-        inputFocused
         required
+        inputFocused
         onFocus={() => setInputFocused(true)}
         onBlur={() => setInputFocused(false)}
         value={value}
@@ -47,18 +47,20 @@ export default TextInput
 
 TextInput.propTypes = {
   value: PropTypes.string,
-  changeHandler: PropTypes.func,
-  isSmall: PropTypes.bool,
-  isLarge: PropTypes.bool,
-  isDisabled: PropTypes.bool,
+  onChange: PropTypes.func,
+  required: PropTypes.bool,
+  isValid: PropTypes.bool,
+  isWarning: PropTypes.bool,
+  isInvalid: PropTypes.bool,
 }
 
 TextInput.defaultProps = {
   value: '',
-  changeHandler: null,
-  isSmall: false,
-  isLarge: false,
-  isDisabled: false,
+  onChange: null,
+  required: false,
+  isValid: false,
+  isWarning: false,
+  isInvalid: false,
 }
 
 const getStateIcon = (props) => {
@@ -69,10 +71,11 @@ const getStateIcon = (props) => {
 }
 
 const Root = styled.div(({
-  inputFocused,
+  hasValue,
   isValid,
   isInvalid,
   isWarning,
+  inputFocused,
   placeholder
 }) => [
   tw`relative`,
@@ -82,13 +85,13 @@ const Root = styled.div(({
       left: 8px;
     }
   `,
-  inputFocused && placeholder && css`
+  hasValue && placeholder && css`
     .placeholder-label {
       opacity: 1;
       top: -10px;
     }
   `,
-  inputFocused && placeholder && css`
+  hasValue && inputFocused && placeholder && css`
     .placeholder-label {
       color: ${theme('colors.blue')};
     }
