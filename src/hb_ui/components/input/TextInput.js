@@ -7,32 +7,37 @@ import CheckIcon from '../../../ui_svgs/notifications/CheckIcon'
 import WarningIcon from '../../../ui_svgs/notifications/WarningIcon'
 import ErrorIcon from '../../../ui_svgs/notifications/ErrorIcon'
 
-const TextInput = ({ value, label, onChange, required, extendedLabel, ...props }) => {
+const TextInput = ({ value, onChange, required, bottomLabel, ...props }) => {
   const [inputFocused, setInputFocused] = useState(false);
   const stateIcon = getStateIcon(props)
+  const placeholder = props.placeholder
+  if (!placeholder) {
+    console.error('TextInput Component: A placeholder value is required')
+  }
   return (
-    <Root label={label} inputFocused={inputFocused} {...props}>
-      <Label
-        className='label' 
-        {...props}
-      >
-        {label}{required && <span tw='text-red ml-1'>*</span>}
-      </Label>
+    <Root inputFocused={inputFocused} placeholder={placeholder} {...props}>
+      { placeholder && 
+        <PlaceholderLabel
+          className='placeholder-label' 
+          {...props}
+        >
+          {placeholder}{required && <span tw='text-red ml-1'>*</span>}
+        </PlaceholderLabel>
+      }
       <TextInputElement
         type="text"
         inputFocused
         required
         onFocus={() => setInputFocused(true)}
         onBlur={() => setInputFocused(false)}
-        label={label}
         value={value}
         onChange={onChange}
         {...props}
       />
-      { extendedLabel &&
-        <ExtendedLabel {...props}>
-          {stateIcon} {extendedLabel}
-        </ExtendedLabel>
+      { bottomLabel &&
+        <BottomLabel {...props}>
+          {stateIcon} {bottomLabel}
+        </BottomLabel>
       }
     </Root>
   )
@@ -63,49 +68,54 @@ const getStateIcon = (props) => {
   return null
 }
 
-const Root = styled.span(({
+const Root = styled.div(({
   inputFocused,
   isValid,
   isInvalid,
   isWarning,
-  label
+  placeholder
 }) => [
-  inputFocused && label && css`
-    .label {
+  tw`relative`,
+  placeholder && css`
+    .placeholder-label {
+      top: 0px;
+      left: 8px;
+    }
+  `,
+  inputFocused && placeholder && css`
+    .placeholder-label {
+      opacity: 1;
+      top: -10px;
+    }
+  `,
+  inputFocused && placeholder && css`
+    .placeholder-label {
       color: ${theme('colors.blue')};
     }
   `,
-  isValid && label && css`
-    .label {
+  isValid && placeholder && css`
+    .placeholder-label {
       color: ${theme('colors.green')};
     }
   `,
-  isInvalid && label && css`
-    .label {
+  isInvalid && placeholder && css`
+    .placeholder-label {
       color: ${theme('colors.red')};
     }
   `,
-  isWarning && label && css`
-    .label {
+  isWarning && placeholder && css`
+    .placeholder-label {
       color: ${theme('colors.orange')};
-    }
-  `,
-
-  label && css`
-    .label {
-      position: relative;
-      top: 11px;
-      left: 8px;
     }
   `,
 ])
 
-const Label = styled.span(({
+const PlaceholderLabel = styled.span(({
   isValid,
   isInvalid,
   isWarning,
 }) => [
-  tw`bg-primary font-medium text-primary text-xs px-2 py-0.5 pointer-events-none focus:outline-none focus:text-blue`,
+  tw`transition-all absolute duration-200 opacity-0 bg-primary font-medium text-primary text-xs px-2 py-0.5 pointer-events-none focus:outline-none focus:text-blue`,
   isValid && [
     tw`text-green focus:text-green`
   ],
@@ -115,14 +125,9 @@ const Label = styled.span(({
   isWarning && [
     tw`text-orange focus:text-orange`
   ],
-  css`
-    position: relative;
-    top: 11px;
-    left: 8px;
-  `,
 ])
 
-const ExtendedLabel = styled.div(({
+const BottomLabel = styled.div(({
   isValid,
   isInvalid,
   isWarning,

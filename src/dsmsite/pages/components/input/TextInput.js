@@ -15,9 +15,9 @@ function TextInputPage() {
       />
       <MainContent>
         <P>Default</P>
+        <br />
         <TextInput
-          label='Field Label'
-          placeholder='Placeholder'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -26,10 +26,10 @@ function TextInputPage() {
         <br />
         <br />
         <P>Valid</P>
+        <br />
         <TextInput
           isValid
-          label='Field Label'
-          placeholder='Placeholder'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -38,10 +38,10 @@ function TextInputPage() {
         <br />
         <br />
         <P>Warning</P>
+        <br />
         <TextInput
           isWarning
-          label='Field Label'
-          placeholder='Placeholder'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -50,10 +50,10 @@ function TextInputPage() {
         <br />
         <br />
         <P>Error</P>
+        <br />
         <TextInput
           isInvalid
-          label='Field Label'
-          placeholder='Placeholder'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -62,10 +62,10 @@ function TextInputPage() {
         <br />
         <br />
         <P>Mandatory</P>
+        <br />
         <TextInput
           required
-          label='Field Label'
-          placeholder='Placeholder'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -78,10 +78,10 @@ function TextInputPage() {
         <br />
         <br />
         <P>Extended label: Default</P>
+        <br />
         <TextInput
-          label='Field Label'
-          extendedLabel='Extended Label'
-          placeholder='Placeholder'
+          bottomLabel='Bottom Label'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -90,11 +90,11 @@ function TextInputPage() {
         <br />
         <br />
         <P>Extended label: Valid</P>
+        <br />
         <TextInput
           isValid
-          label='Field Label'
-          extendedLabel='Extended Label'
-          placeholder='Placeholder'
+          bottomLabel='Bottom Label'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -103,11 +103,11 @@ function TextInputPage() {
         <br />
         <br />
         <P>Extended label: Warning</P>
+        <br />
         <TextInput
           isWarning
-          label='Field Label'
-          extendedLabel='Extended Label'
-          placeholder='Placeholder'
+          bottomLabel='Bottom Label'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -116,11 +116,11 @@ function TextInputPage() {
         <br />
         <br />
         <P>Extended label: Invalid</P>
+        <br />
         <TextInput
           isInvalid
-          label='Field Label'
-          extendedLabel='Extended Label'
-          placeholder='Placeholder'
+          bottomLabel='Bottom Label'
+          placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -141,8 +141,7 @@ const codeDefault = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
-  label='Field Label'
-  placeholder='Placeholder'
+  placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -153,8 +152,7 @@ const codeValid = String.raw
 
 <TextInput
   isValid
-  label='Field Label'
-  placeholder='Placeholder'
+  placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -165,8 +163,7 @@ const codeWarning = String.raw
 
 <TextInput
   isWarning
-  label='Field Label'
-  placeholder='Placeholder'
+  placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -177,8 +174,7 @@ const codeInvalid = String.raw
 
 <TextInput
   isInvalid
-  label='Field Label'
-  placeholder='Placeholder'
+  placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -189,8 +185,7 @@ const codeRequired = String.raw
 
 <TextInput
   required
-  label='Field Label'
-  placeholder='Placeholder'
+  placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -206,9 +201,8 @@ const codeDefaultExtendedLabel = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
-  label='Field Label'
-  placeholder='Placeholder'
-  extendedLabel='Extended Label'
+  placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -219,9 +213,8 @@ const codeValidExtendedLabel = String.raw
 
 <TextInput
   isValid
-  label='Field Label'
-  placeholder='Placeholder'
-  extendedLabel='Extended Label'
+  placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -232,9 +225,8 @@ const codeWarningExtendedLabel = String.raw
 
 <TextInput
   isWarning
-  label='Field Label'
-  placeholder='Placeholder'
-  extendedLabel='Extended Label'
+  placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
@@ -245,9 +237,8 @@ const codeInvalidExtendedLabel = String.raw
 
 <TextInput
   isInvalid
-  label='Field Label'
-  placeholder='Placeholder'
-  extendedLabel='Extended Label'
+  placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />

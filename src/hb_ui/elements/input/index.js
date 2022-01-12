@@ -4,8 +4,6 @@ export const TextInput = styled.input(({
   isValid,
   isInvalid,
   isWarning,
-  label,
-  inputFocused,
   }) => [
   tw`flex w-full`,
   tw`transition duration-100`,
