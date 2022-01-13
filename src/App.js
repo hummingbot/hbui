@@ -5,18 +5,18 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
-import GlobalStyles from './styles/GlobalStyles'
 
+import GlobalStyles from './styles/GlobalStyles'
 import DSMSidebar from './dsmsite/sidebar/DSMSidebar'
 
 // pages
-import Home from './dsmsite/pages/home/Home'
-import GettingStarted from './dsmsite/pages/gettingstarted/GettingStarted'
-import Guidelines from './dsmsite/pages/guidelines/Guidelines'
-import DesignTokens from './dsmsite/pages/designtokens/DesignTokens'
-import Elements from './dsmsite/pages/elements/Elements'
-import Components from './dsmsite/pages/components/Components'
-import Downloads from './dsmsite/pages/downloads/Downloads'
+import Home from './dsmsite/pages/home'
+import GettingStarted from './dsmsite/pages/gettingstarted'
+import Guidelines from './dsmsite/pages/guidelines'
+import DesignTokens from './dsmsite/pages/designtokens'
+import Elements from './dsmsite/pages/elements'
+import Components from './dsmsite/pages/components'
+import Downloads from './dsmsite/pages/downloads'
 import FAQ from './dsmsite/pages/faq/FAQ'
 
 // elements
@@ -28,6 +28,7 @@ import InputElement from './dsmsite/pages/elements/input/Input'
 // components
 import ButtonComponent from './dsmsite/pages/components/button/Button'
 import TextInput from './dsmsite/pages/components/input/TextInput'
+import Spinner from './dsmsite/pages/components/spinner/Spinner'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
@@ -57,6 +58,7 @@ function App() {
               
               <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/text-input" element={<TextInput />} />
+              <Route path="/components/spinner" element={<Spinner />} />
               
               <Route path="/guidelines/colors" element={<Colors  />} />
             </Routes>

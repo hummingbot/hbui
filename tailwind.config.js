@@ -83,6 +83,12 @@ module.exports = {
         primary: "var(--border-primary)",
         secondary: "var(--border-secondary)",
       },
+      fillColor: {
+        brand: "var(--fill-brand)",
+        primary: "var(--fill-primary)",
+        secondary: "var(--fill-secondary)",
+        tertiary: "var(--fill-tertiary)"
+      },
       textColor: {
         brand: "var(--text-brand)",
         primary: "var(--text-primary)",
