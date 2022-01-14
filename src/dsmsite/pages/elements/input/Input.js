@@ -1,14 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import {
-  H6,
-  P,
-} from '../../../../hb_ui/elements/typography'
+import { H6, P } from '../../../../hb_ui/elements/typography'
 import { TextInput } from '../../../../hb_ui/elements/input'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function InputElementPage() {
+  const [inputValue, setInputValue] = useState('');
   return (
     <div>
       <ShortHero
@@ -27,32 +25,59 @@ function InputElementPage() {
         <P>Default</P>
         <br />
         <GridComponent
-          element={<TextInput defaultValue='' placeholder='Placeholder' />}
           code={codeDefault}
+          element={
+            <TextInput
+              onChange={(e) => setInputValue(e.target.value)}
+              value={inputValue}
+              placeholder='Placeholder'
+            />
+          }
         />
         <br />
         <br />
         <P>Valid</P>
         <br />
         <GridComponent
-          element={<TextInput defaultValue='' placeholder='Placeholder' isValid />}
           code={codeValid}
+          element={
+            <TextInput
+              onChange={(e) => setInputValue(e.target.value)}
+              isValid
+              value={inputValue}
+              placeholder='Placeholder'
+            />
+          }
         />
         <br />
         <br />
         <P>Invalid</P>
         <br />
         <GridComponent
-          element={<TextInput defaultValue='' placeholder='Placeholder' isInvalid />}
           code={codeInvalid}
+          element={
+            <TextInput
+              onChange={(e) => setInputValue(e.target.value)}
+              isInvalid
+              value={inputValue}
+              placeholder='Placeholder'
+            />
+          }
         />
         <br />
         <br />
         <P>Warning</P>
         <br />
         <GridComponent
-          element={<TextInput defaultValue='' placeholder='Placeholder' isWarning />}
           code={codeWarning}
+          element={
+            <TextInput
+              onChange={(e) => setInputValue(e.target.value)}
+              isWarning
+              value={inputValue}
+              placeholder='Placeholder'
+            />
+          }
         />
         <br />
         <br />
@@ -71,6 +96,7 @@ const codeDefault = String.raw
 `<TextInput
   defaultValue=''
   placeholder='Placeholder'
+  onChange={(e) => setInputValue(e.target.value)}
 />
 `;
 
@@ -79,6 +105,7 @@ const codeValid = String.raw
   isValid
   defaultValue=''
   placeholder='Placeholder'
+  onChange={(e) => setInputValue(e.target.value)}
 />
 `;
 
@@ -87,6 +114,7 @@ const codeInvalid = String.raw
   isInvalid
   defaultValue=''
   placeholder='Placeholder'
+  onChange={(e) => setInputValue(e.target.value)}
 />
 `;
 
@@ -95,6 +123,7 @@ const codeWarning = String.raw
   isWarning
   defaultValue=''
   placeholder='Placeholder'
+  onChange={(e) => setInputValue(e.target.value)}
 />
 `;
 
