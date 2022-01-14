@@ -64,19 +64,19 @@ export const Button = styled.button(({
   ],
 
   isPrimary && isGhost && [
-    tw`text-brand bg-transparent border border-2 border-green hover:bg-green-superlight active:bg-green-light`,
+    tw`text-brand bg-transparent border border-2 border-green hover:bg-green/10 active:bg-green/20`,
   ],
 
   isInfo && isGhost && [
-    tw`text-blue bg-transparent border border-2 border-blue hover:bg-blue-superlight active:bg-blue-light`,
+    tw`text-blue bg-transparent border border-2 border-blue hover:bg-blue/10 active:bg-blue/20`,
   ],
 
   isWarning && isGhost && [
-    tw`text-orange bg-transparent border border-2 border-orange hover:bg-orange-superlight active:bg-orange-light`,
+    tw`text-orange bg-transparent border border-2 border-orange hover:bg-orange/10 active:bg-orange/20`,
   ],
 
   isDanger && isGhost && [
-    tw`text-red bg-transparent border border-2 border-red hover:bg-red-superlight active:bg-red-light`,
+    tw`text-red bg-transparent border border-2 border-red hover:bg-red/10 active:bg-red/20`,
   ],
 
   isDisabled && [
