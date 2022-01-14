@@ -25,6 +25,18 @@ function TextInputPage() {
         <CodeBlock code={codeDefault} />
         <br />
         <br />
+        <P>Custom top label</P>
+        <br />
+        <TextInput
+          customTopLabel='Custom Top Label'
+          placeholder='Placeholder Text'
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+        />
+        <br />
+        <CodeBlock code={codeCustomTopLabel} />
+        <br />
+        <br />
         <P>Valid</P>
         <br />
         <TextInput
@@ -141,6 +153,17 @@ const codeDefault = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
+  placeholder='Placeholder Text'
+  value={inputValue}
+  onChange={yourChangeHandler}
+/>
+`;
+
+const codeCustomTopLabel = String.raw
+`import TextInput from '../hb_ui/components/input/TextInput'
+
+<TextInput
+  customTopLabel='Custom Top Label'
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}

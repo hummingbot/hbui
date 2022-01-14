@@ -4,12 +4,8 @@ import {
   H6,
   P,
 } from '../../../../hb_ui/elements/typography'
-import {
-  Input
-} from '../../../../hb_ui/elements/input'
-import {
-  Separator
-} from '../../../../hb_ui/elements/layout'
+import { TextInput } from '../../../../hb_ui/elements/input'
+import { Separator } from '../../../../hb_ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function InputElementPage() {
@@ -31,7 +27,7 @@ function InputElementPage() {
         <P>Default</P>
         <br />
         <GridComponent
-          element={<Input defaultValue='' placeholder='Placeholder' />}
+          element={<TextInput defaultValue='' placeholder='Placeholder' />}
           code={codeDefault}
         />
         <br />
@@ -39,7 +35,7 @@ function InputElementPage() {
         <P>Valid</P>
         <br />
         <GridComponent
-          element={<Input defaultValue='' placeholder='Placeholder' isValid />}
+          element={<TextInput defaultValue='' placeholder='Placeholder' isValid />}
           code={codeValid}
         />
         <br />
@@ -47,7 +43,7 @@ function InputElementPage() {
         <P>Invalid</P>
         <br />
         <GridComponent
-          element={<Input defaultValue='' placeholder='Placeholder' isInvalid />}
+          element={<TextInput defaultValue='' placeholder='Placeholder' isInvalid />}
           code={codeInvalid}
         />
         <br />
@@ -55,7 +51,7 @@ function InputElementPage() {
         <P>Warning</P>
         <br />
         <GridComponent
-          element={<Input defaultValue='' placeholder='Placeholder' isWarning />}
+          element={<TextInput defaultValue='' placeholder='Placeholder' isWarning />}
           code={codeWarning}
         />
         <br />
@@ -72,14 +68,14 @@ const codeImport = String.raw
 `;
 
 const codeDefault = String.raw
-`<Input
+`<TextInput
   defaultValue=''
   placeholder='Placeholder'
 />
 `;
 
 const codeValid = String.raw
-`<Input
+`<TextInput
   isValid
   defaultValue=''
   placeholder='Placeholder'
@@ -87,7 +83,7 @@ const codeValid = String.raw
 `;
 
 const codeInvalid = String.raw
-`<Input
+`<TextInput
   isInvalid
   defaultValue=''
   placeholder='Placeholder'
@@ -95,7 +91,7 @@ const codeInvalid = String.raw
 `;
 
 const codeWarning = String.raw
-`<Input
+`<TextInput
   isWarning
   defaultValue=''
   placeholder='Placeholder'

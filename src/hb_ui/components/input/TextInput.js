@@ -6,7 +6,7 @@ import CheckIcon from '../../../ui_svgs/notifications/CheckIcon'
 import WarningIcon from '../../../ui_svgs/notifications/WarningIcon'
 import ErrorIcon from '../../../ui_svgs/notifications/ErrorIcon'
 
-const TextInput = ({ value, onChange, required, bottomLabel, ...props }) => {
+const TextInput = ({ value, onChange, required, customTopLabel, bottomLabel, ...props }) => {
   const [inputFocused, setInputFocused] = useState(false);
   const stateIcon = getStateIcon(props)
   const placeholder = props.placeholder
@@ -14,18 +14,19 @@ const TextInput = ({ value, onChange, required, bottomLabel, ...props }) => {
   if (!placeholder) {
     console.error('TextInput Component: A placeholder value is required')
   }
+  const labelValue = customTopLabel || placeholder
   return (
     <Root hasValue={hasValue} inputFocused={inputFocused} placeholder={placeholder} {...props}>
-      { placeholder && 
+      { labelValue && 
         <PlaceholderLabel
-          className='placeholder-label' 
+          className='top-label' 
           {...props}
         >
-          {placeholder}{required && <span tw='text-red ml-1'>*</span>}
+          {labelValue}{required && <span tw='text-red ml-1'>*</span>}
         </PlaceholderLabel>
       }
       <TextInputElement
-        type="text"
+        type='text'
         required
         inputFocused
         onFocus={() => setInputFocused(true)}
@@ -47,6 +48,7 @@ export default TextInput
 
 TextInput.propTypes = {
   value: PropTypes.string,
+  customTopLabel: PropTypes.string,
   onChange: PropTypes.func,
   required: PropTypes.bool,
   isValid: PropTypes.bool,
@@ -56,6 +58,7 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   value: '',
+  customTopLabel: '',
   onChange: null,
   required: false,
   isValid: false,
@@ -75,39 +78,38 @@ const Root = styled.div(({
   isValid,
   isInvalid,
   isWarning,
-  inputFocused,
-  placeholder
+  inputFocused
 }) => [
   tw`relative`,
-  placeholder && css`
-    .placeholder-label {
+  css`
+    .top-label {
       top: 0px;
       left: 8px;
     }
   `,
-  hasValue && placeholder && css`
-    .placeholder-label {
+  hasValue && css`
+    .top-label {
       opacity: 1;
       top: -10px;
     }
   `,
-  hasValue && inputFocused && placeholder && css`
-    .placeholder-label {
+  hasValue && inputFocused && css`
+    .top-label {
       color: ${theme('colors.blue')};
     }
   `,
-  isValid && placeholder && css`
-    .placeholder-label {
+  isValid && css`
+    .top-label {
       color: ${theme('colors.green')};
     }
   `,
-  isInvalid && placeholder && css`
-    .placeholder-label {
+  isInvalid && css`
+    .top-label {
       color: ${theme('colors.red')};
     }
   `,
-  isWarning && placeholder && css`
-    .placeholder-label {
+  isWarning && css`
+    .top-label {
       color: ${theme('colors.orange')};
     }
   `,

@@ -15,7 +15,7 @@ const ghostbutton = {
 
 const input = {
   link: '/elements/input',
-  title: 'Input',
+  title: 'TextInput',
 }
 
 module.exports = [
