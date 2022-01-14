@@ -29,6 +29,7 @@ import InputElement from './dsmsite/pages/elements/input/Input'
 import ButtonComponent from './dsmsite/pages/components/button/Button'
 import TextInput from './dsmsite/pages/components/input/TextInput'
 import Spinner from './dsmsite/pages/components/spinner/Spinner'
+import Callout from './dsmsite/pages/components/callout/Callout'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
@@ -59,6 +60,7 @@ function App() {
               <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/text-input" element={<TextInput />} />
               <Route path="/components/spinner" element={<Spinner />} />
+              <Route path="/components/callout" element={<Callout />} />
               
               <Route path="/guidelines/colors" element={<Colors  />} />
             </Routes>

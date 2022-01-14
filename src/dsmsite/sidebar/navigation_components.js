@@ -10,9 +10,14 @@ const spinner = {
   link: '/components/spinner',
   title: 'Spinner',
 }
+const callout = {
+  link: '/components/callout',
+  title: 'Callout',
+}
 
 module.exports = [
   button,
   input,
   spinner,
+  callout,
 ]
