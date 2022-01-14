@@ -83,5 +83,5 @@ const Main = styled.div(() => [
     height: 100vh;
     overflow-y: scroll;
   `,
-  tw`bg-primary w-full`
+  tw`bg-secondary w-full`
 ])
