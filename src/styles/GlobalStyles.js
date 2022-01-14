@@ -56,6 +56,7 @@ const customStyles = css`
     --fill-primary: #ffffff;
     --fill-secondary: ${colors.greyscale_light_200};
     --fill-tertiary: ${colors.greyscale_light_400};
+  }
   body {
     -webkit-tap-highlight-color: ${colors.yellow};
     ${tw`antialiased`}
