@@ -49,6 +49,21 @@ function ButtonElement() {
         <br />
         <br />
         <br />
+        <Body>Large variants</Body>
+        <br />
+        <br />
+        <Button isLarge>Large</Button>
+        <br />
+        <CodeBlock code={codeLarge} />
+        <br />
+        <br />
+        <Button isExtraLarge>Extra large</Button>
+        <br />
+        <CodeBlock code={codeExtraLarge} />
+        <br />
+        <br />
+        <br />
+        <br />
         <Body>Regular variant (disabled)</Body>
         <br />
         <Button isDisabled>Default (disabled)</Button>
@@ -148,6 +163,22 @@ const codeWarningDisabled = String.raw
 const codeDangerDisabled = String.raw
 `<Button isDanger isDisabled>
   Danger (disabled)
+</Button>
+`;
+
+
+
+// large variants
+
+const codeLarge = String.raw
+`<Button isLarge>
+  Large
+</Button>
+`;
+
+const codeExtraLarge = String.raw
+`<Button isExtraLarge>
+  Extra large
 </Button>
 `;
 

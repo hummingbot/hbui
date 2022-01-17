@@ -5,6 +5,7 @@ export const Button = styled.button(({
   isInfo,
   isSmall,
   isLarge,
+  isExtraLarge,
   isSuccess,
   isWarning,
   isDanger,
@@ -17,8 +18,9 @@ export const Button = styled.button(({
   tw`transition duration-100`,
   tw`px-4 py-1 rounded-sm focus:outline-none`,
   tw`hover:bg-quaternary active:bg-grey-dark-100`,
-  tw`font-normal`,
+  tw`font-medium`,
   tw`text-tertiary bg-tertiary`,
+  tw`text-base`,
   css`
     min-width: 100px;
     text-align: center;
@@ -39,6 +41,12 @@ export const Button = styled.button(({
     css`
       text-transform: uppercase;
     `,
+  ],
+  isLarge && [
+    tw`px-8 py-2 text-lg`,
+  ],
+  isExtraLarge && [
+    tw`px-16 py-4 text-2xl`,
   ],
   isPrimary && !isGhost && [
     tw`text-white bg-brand hover:bg-green-hovered active:bg-green-active`,
