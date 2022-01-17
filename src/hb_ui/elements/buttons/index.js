@@ -16,7 +16,7 @@ export const Button = styled.button(({
   }) => [
   tw`flex`,
   tw`transition duration-100`,
-  tw`px-4 py-1 rounded-sm focus:outline-none`,
+  tw`px-4 py-1 lg:px-8 lg:py-1.5 rounded-sm focus:outline-none`,
   tw`hover:bg-quaternary active:bg-grey-dark-100`,
   tw`font-medium`,
   tw`text-tertiary bg-tertiary`,
@@ -43,10 +43,10 @@ export const Button = styled.button(({
     `,
   ],
   isLarge && [
-    tw`px-8 py-2 text-lg`,
+    tw`px-10 py-2.5 text-lg lg:text-xl lg:px-14 lg:py-3`,
   ],
   isExtraLarge && [
-    tw`px-16 py-4 text-2xl`,
+    tw`px-14 py-4 text-xl lg:text-2xl lg:px-16 lg:py-5`,
   ],
   isPrimary && !isGhost && [
     tw`text-white bg-brand hover:bg-green-hovered active:bg-green-active`,
