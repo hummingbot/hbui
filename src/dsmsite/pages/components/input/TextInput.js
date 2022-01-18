@@ -11,7 +11,7 @@ function TextInputPage() {
     <div>
       <ShortHero
         title='TextInput'
-        subTitle='The TextInput component extends the funcitonality of the TextInput element with additional labels.'
+        subTitle='The TextInput component extends the functionality of the TextInput element with additional labels.'
       />
       <MainContent>
         <P>Default</P>
