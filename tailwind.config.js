@@ -96,6 +96,7 @@ module.exports = {
         brand: "var(--border-brand)",
         primary: "var(--border-primary)",
         secondary: "var(--border-secondary)",
+        tertiary: "var(--border-tertiary)",
       },
       fillColor: {
         brand: "var(--fill-brand)",

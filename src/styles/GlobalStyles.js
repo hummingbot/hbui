@@ -17,8 +17,9 @@ const customStyles = css`
     --bg-quaternary: ${colors.greyscale_light_400};
 
     --border-brand: ${colors.green_primary};
-    --border-primary: ${colors.greyscale_light_300};
-    --border-secondary: ${colors.greyscale_light_400};
+    --border-primary: ${colors.greyscale_light_200};
+    --border-secondary: ${colors.greyscale_light_300};
+    --border-tertiary: ${colors.greyscale_light_400};
 
     --text-brand: ${colors.green_primary};
     --text-primary: ${colors.greyscale_dark_700};
@@ -45,6 +46,7 @@ const customStyles = css`
     --border-brand: ${colors.green_primary};
     --border-primary: ${colors.greyscale_dark_400};
     --border-secondary: ${colors.greyscale_dark_200};
+    --border-tertiary: ${colors.greyscale_dark_100};
 
     --text-brand: ${colors.green_primary};
     --text-primary: #ffffff;
