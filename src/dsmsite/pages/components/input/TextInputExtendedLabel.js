@@ -6,7 +6,7 @@ import TextInput from '../../../../hb_ui/components/input/TextInput'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
-function TextInputPage() {
+function TextInputExtendedLabel() {
   const [inputValue, setInputValue] = useState('');
   return (
     <div>
@@ -17,51 +17,57 @@ function TextInputPage() {
         <Separator />
         <br />
         <br />
-        <P>Default</P>
+        <P>Extended label: Default</P>
         <br />
         <TextInput
+          bottomLabel='Bottom Label'
           placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <br />
-        <CodeBlock code={codeDefault} />
+        <CodeBlock code={codeDefaultExtendedLabel} />
         <br />
         <br />
-        <P>Valid</P>
+        <P>Extended label: Valid</P>
         <br />
         <TextInput
           isValid
+          bottomLabel='Bottom Label'
           placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <br />
-        <CodeBlock code={codeValid} />
+        <CodeBlock code={codeValidExtendedLabel} />
         <br />
         <br />
-        <P>Warning</P>
+        <P>Extended label: Warning</P>
         <br />
         <TextInput
           isWarning
+          bottomLabel='Bottom Label'
           placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <br />
-        <CodeBlock code={codeWarning} />
+        <CodeBlock code={codeWarningExtendedLabel} />
         <br />
         <br />
-        <P>Error</P>
+        <P>Extended label: Invalid</P>
         <br />
         <TextInput
           isInvalid
+          bottomLabel='Bottom Label'
           placeholder='Placeholder Text'
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
         <br />
-        <CodeBlock code={codeInvalid} />
+        <CodeBlock code={codeInvalidExtendedLabel} />
+        <br />
+        <br />
         <br />
         <br />
       </MainContent>
@@ -69,57 +75,51 @@ function TextInputPage() {
   )
 }
 
-export default TextInputPage
+export default TextInputExtendedLabel
 
-const codeDefault = String.raw
+
+const codeDefaultExtendedLabel = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
 `;
 
-const codeCustomTopLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
-
-<TextInput
-  customTopLabel='Custom Top Label'
-  placeholder='Placeholder Text'
-  value={inputValue}
-  onChange={yourChangeHandler}
-/>
-`;
-
-const codeValid = String.raw
+const codeValidExtendedLabel = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isValid
   placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
 `;
 
-const codeWarning = String.raw
+const codeWarningExtendedLabel = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isWarning
   placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />
 `;
 
-const codeInvalid = String.raw
+const codeInvalidExtendedLabel = String.raw
 `import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isInvalid
   placeholder='Placeholder Text'
+  bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
 />

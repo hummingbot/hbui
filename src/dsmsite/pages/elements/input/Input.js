@@ -4,13 +4,15 @@ import { H6, P } from '../../../../hb_ui/elements/typography'
 import { TextInput } from '../../../../hb_ui/elements/input'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 
 function InputElementPage() {
   const [inputValue, setInputValue] = useState('');
   return (
     <div>
       <ShortHero
-        title='Input'
+        title='TextInput'
+        subTitle='The TextInput element is used by the TextInput component. Use the TextInput element directly for custom scenarios.'
       />
       <MainContent>
         <P>Import input element (verify path)</P>
@@ -24,7 +26,7 @@ function InputElementPage() {
         <br />
         <P>Default</P>
         <br />
-        <GridComponent
+        <CodeGridComponent
           code={codeDefault}
           element={
             <TextInput
@@ -38,7 +40,7 @@ function InputElementPage() {
         <br />
         <P>Valid</P>
         <br />
-        <GridComponent
+        <CodeGridComponent
           code={codeValid}
           element={
             <TextInput
@@ -53,7 +55,7 @@ function InputElementPage() {
         <br />
         <P>Invalid</P>
         <br />
-        <GridComponent
+        <CodeGridComponent
           code={codeInvalid}
           element={
             <TextInput
@@ -68,7 +70,7 @@ function InputElementPage() {
         <br />
         <P>Warning</P>
         <br />
-        <GridComponent
+        <CodeGridComponent
           code={codeWarning}
           element={
             <TextInput
@@ -126,19 +128,3 @@ const codeWarning = String.raw
   onChange={(e) => setInputValue(e.target.value)}
 />
 `;
-
-// <div tw='invisible md:visible md:col-span-8'>
-
-
-const GridComponent = ({element, code}) => {
-  return (
-    <div tw='grid grid-cols-10 gap-8'>
-      <div tw='col-span-10 md:col-span-4'>
-        {element}
-      </div>
-      <div tw='col-span-10 md:col-span-6'>
-        <CodeBlock code={code} />
-      </div>
-    </div>
-  )
-}

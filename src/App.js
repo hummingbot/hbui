@@ -31,6 +31,9 @@ import InputElement from './dsmsite/pages/elements/input/Input'
 // components
 import ButtonComponent from './dsmsite/pages/components/button/Button'
 import TextInput from './dsmsite/pages/components/input/TextInput'
+import TextInputCustomLabel from './dsmsite/pages/components/input/TextInputCustomLabel'
+import TextInputExtendedLabel from './dsmsite/pages/components/input/TextInputExtendedLabel'
+import TextInputRequired from './dsmsite/pages/components/input/TextInputRequired'
 import ChipComponent from './dsmsite/pages/components/chip/Chip'
 import Spinner from './dsmsite/pages/components/spinner/Spinner'
 import Callout from './dsmsite/pages/components/callout/Callout'
@@ -67,6 +70,9 @@ function App() {
               <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/chip" element={<ChipComponent />} />
               <Route path="/components/text-input" element={<TextInput />} />
+              <Route path="/components/text-input/custom-label" element={<TextInputCustomLabel />} />
+              <Route path="/components/text-input/extended-label" element={<TextInputExtendedLabel />} />
+              <Route path="/components/text-input/required" element={<TextInputRequired />} />
               <Route path="/components/spinner" element={<Spinner />} />
               <Route path="/components/callout" element={<Callout />} />
               
