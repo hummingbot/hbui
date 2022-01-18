@@ -51,7 +51,7 @@ module.exports = {
   greyscale_dark_600: '#1E2224',
   greyscale_dark_700: '#151819',
   /* Green */
-  green_100: '#E6F9FA',
+  green_50:  '#E6F9FA',
   green_100: '#B0ECF0',
   green_200: '#8AE3E8',
   green_300: '#54D6DE',
@@ -60,5 +60,16 @@ module.exports = {
   green_600: '#00B1BB',
   green_700: '#008A92',
   green_800: '#006B71',
-  green_900: '#005157'
+  green_900: '#005157',
+  /* Blue */
+  blue_50:  '#EAF4FF',
+  blue_100: '#BFDCFF',
+  blue_200: '#A0CBFF',
+  blue_300: '#75B3FF',
+  blue_400: '#5AA4FF',
+  blue_500: '#318DFF',
+  blue_600: '#2D80E8',
+  blue_700: '#2364B5',
+  blue_800: '#1B4E8C',
+  blue_900: '#153B6B'
 }
