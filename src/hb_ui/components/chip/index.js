@@ -20,23 +20,31 @@ export const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
 
 export const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
   tw`flex`,
-  // isUppercase && [
-  //   css`
-  //     text-transform: uppercase;
-  //   `,
-  // ],
-  // isDisabled && [
-  //   tw`pointer-events-none opacity-30`,
-  // ],
+  css`
+    a.active {
+      ${tw`bg-tertiary`};
+    }
+  `,
+  isUppercase && [
+    css`
+      a {
+        text-transform: uppercase;
+      }
+    `,
+  ],
+  isDisabled && [
+    tw`pointer-events-none opacity-30`,
+  ],
 ])
 
 export const ChipElement = styled(NavLink)(({}) => [
   tw`flex`,
   tw`transition duration-100`,
-  tw`px-4 py-1 lg:px-8 lg:py-1.5 rounded-sm focus:outline-none`,
-  tw`hover:bg-quaternary active:bg-grey-dark-100`,
+  tw`px-4 py-1 lg:px-8 lg:py-1.5 rounded focus:outline-none`,
+  tw`bg-transparent hover:bg-tertiary active:bg-quaternary`,
+  // tw`bg-transparent border border-primary border-2 hover:bg-tertiary active:bg-quaternary`,
   tw`font-medium`,
-  tw`text-tertiary bg-tertiary`,
+  tw`text-tertiary`,
   tw`text-base`,
   css`
     min-width: 100px;

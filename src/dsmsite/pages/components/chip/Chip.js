@@ -1,12 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import {
-  Body
-} from '../../../../hb_ui/elements/typography'
-import {
-  Chip
-} from '../../../../hb_ui/components/chip'
+import { Body } from '../../../../hb_ui/elements/typography'
+import { Chip } from '../../../../hb_ui/components/chip'
 
 function ChipElement() {
   return (
@@ -20,14 +16,18 @@ function ChipElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Regular variant</Body>
-        <br />
-        <Chip to='/test' label='Default'/>
+        <Body>Default state</Body>
+        <Chip to='/' label='Default'/>
         <br />
         <CodeBlock code={codeDefault} />
         <br />
+        <Body>Active state</Body>
+        <Chip to='/components/chip' label='Active'/>
         <br />
-        <Chip to='/test2' label='Disabled' isDisabled/>
+        <CodeBlock code={codeActive} />
+        <br />
+        <Body>Disabled state</Body>
+        <Chip to='/components/chip' label='Disabled' isDisabled/>
         <br />
         <CodeBlock code={codeDisabled} />
         <br />
@@ -44,13 +44,23 @@ const codeImport = String.raw
 `;
 
 const codeDefault = String.raw
-`<Chip>
-  Default
-</Chip>
+`<Chip
+  to='/'
+  label='Default'
+/>
+`;
+
+const codeActive = String.raw
+`<Chip
+  to='/components/chip'
+  label='Active'
+/>
 `;
 
 const codeDisabled = String.raw
-`<Chip isDisabled>
-  Default (disabled)
-</Chip>
+`<Chip
+  isDisabled
+  to='/components/chip'
+  label='Disabled'
+/>
 `;
