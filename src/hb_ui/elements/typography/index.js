@@ -116,6 +116,10 @@ export const PrimaryColor = styled.span({
   color: green_primary
 })
 
+export const Bold = styled.span({
+  fontWeight: 'bold'
+})
+
 export const LabelMicro = styled.p({},
   props => [
     tw`text-xs`,
