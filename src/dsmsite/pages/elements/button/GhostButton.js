@@ -1,6 +1,7 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, H5 } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
@@ -13,9 +14,6 @@ function GhostButtonElement() {
       <MainContent>
         { navigation }
         <br />
-        <br />
-        <H5>Ghost variant</H5>
-        <br />
         <Separator />
         <br />
         <br />
@@ -23,31 +21,44 @@ function GhostButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Ghost variant</Body>
-        <br />
-        <Button isGhost>Default</Button>
-        <br />
-        <CodeBlock code={codeGhostDefault} />
-        <br />
-        <br />
-        <Button isPrimary isGhost>Primary</Button>
-        <br />
-        <CodeBlock code={codeGhostPrimary} />
+        <CodeGridComponent
+          code={codeGhostDefault}
+          element={
+            <Button isGhost>Default</Button>
+          }
+        />
         <br />
         <br />
-        <Button isInfo isGhost>Info</Button>
-        <br />
-        <CodeBlock code={codeGhostInfo} />
-        <br />
-        <br />
-        <Button isWarning isGhost>Warning</Button>
-        <br />
-        <CodeBlock code={codeGhostWarning} />
+        <CodeGridComponent
+          code={codeGhostPrimary}
+          element={
+            <Button isPrimary isGhost>Primary</Button>
+          }
+        />
         <br />
         <br />
-        <Button isDanger isGhost>Danger</Button>
+        <CodeGridComponent
+          code={codeGhostInfo}
+          element={
+            <Button isInfo isGhost>Info</Button>
+          }
+        />
         <br />
-        <CodeBlock code={codeGhostDanger} />
+        <br />
+        <CodeGridComponent
+          code={codeGhostWarning}
+          element={
+            <Button isWarning isGhost>Warning</Button>
+          }
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeGhostDanger}
+          element={
+            <Button isDanger isGhost>Danger</Button>
+          }
+        />
         <br />
         <br />
       </MainContent>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, H5 } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
@@ -13,9 +14,6 @@ function ButtonElement() {
       <MainContent>
         { navigation }
         <br />
-        <br />
-        <H5>Disabled state</H5>
-        <br />
         <Separator />
         <br />
         <br />
@@ -23,21 +21,28 @@ function ButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Regular variant (disabled)</Body>
-        <br />
-        <Button isPrimary isDisabled>Regular (disabled)</Button>
-        <br />
-        <CodeBlock code={codeDefaultDisabled} />
-        <br />
-        <br />
-        <Button isInfo isGhost isDisabled>Ghost (disabled)</Button>
-        <br />
-        <CodeBlock code={codePrimaryDisabled} />
+        <CodeGridComponent
+          code={codeDefaultDisabled}
+          element={
+            <Button isPrimary isDisabled>Regular (disabled)</Button>
+          }
+        />
         <br />
         <br />
-        <Button isWarning isLarge isDisabled>Large (disabled)</Button>
+        <CodeGridComponent
+          code={codePrimaryDisabled}
+          element={
+            <Button isInfo isGhost isDisabled>Ghost (disabled)</Button>
+          }
+        />
         <br />
-        <CodeBlock code={codeInfoDisabled} />
+        <br />
+        <CodeGridComponent
+          code={codeInfoDisabled}
+          element={
+            <Button isWarning isLarge isDisabled>Large (disabled)</Button>
+          }
+        />
         <br />
         <br />
       </MainContent>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, H5 } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
@@ -13,9 +14,6 @@ function ButtonElement() {
       <MainContent>
         { navigation }
         <br />
-        <br />
-        <H5>Large variant</H5>
-        <br />
         <Separator />
         <br />
         <br />
@@ -23,14 +21,20 @@ function ButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Button isLarge>Large</Button>
+        <CodeGridComponent
+          code={codeLarge}
+          element={
+            <Button isLarge>Large</Button>
+          }
+        />
         <br />
-        <CodeBlock code={codeLarge} />
         <br />
-        <br />
-        <Button isExtraLarge>Extra large</Button>
-        <br />
-        <CodeBlock code={codeExtraLarge} />
+        <CodeGridComponent
+          code={codeExtraLarge}
+          element={
+            <Button isExtraLarge>Extra large</Button>
+          }
+        />
         <br />
         <br />
       </MainContent>

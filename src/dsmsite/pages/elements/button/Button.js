@@ -1,6 +1,7 @@
 import React from 'react'
 import { MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, H5 } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
@@ -13,9 +14,6 @@ function ButtonElement() {
       <MainContent>
         { navigation }
         <br />
-        <br />
-        <H5>Regular variant</H5>
-        <br />
         <Separator />
         <br />
         <br />
@@ -23,31 +21,44 @@ function ButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Regular variant</Body>
-        <br />
-        <Button>Default</Button>
-        <br />
-        <CodeBlock code={codeDefault} />
-        <br />
-        <br />
-        <Button isPrimary>Primary</Button>
-        <br />
-        <CodeBlock code={codePrimary} />
+        <CodeGridComponent
+          code={codeDefault}
+          element={
+            <Button>Default</Button>
+          }
+        />
         <br />
         <br />
-        <Button isInfo>Info</Button>
-        <br />
-        <CodeBlock code={codeInfo} />
-        <br />
-        <br />
-        <Button isWarning>Warning</Button>
-        <br />
-        <CodeBlock code={codeWarning} />
+        <CodeGridComponent
+          code={codePrimary}
+          element={
+            <Button isPrimary>Primary</Button>
+          }
+        />
         <br />
         <br />
-        <Button isDanger>Danger</Button>
+        <CodeGridComponent
+          code={codeInfo}
+          element={
+            <Button isInfo>Info</Button>
+          }
+        />
         <br />
-        <CodeBlock code={codeDanger} />
+        <br />
+        <CodeGridComponent
+          code={codeWarning}
+          element={
+            <Button isWarning>Warning</Button>
+          }
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeDanger}
+          element={
+            <Button isDanger>Danger</Button>
+          }
+        />
         <br />
         <br />
       </MainContent>
