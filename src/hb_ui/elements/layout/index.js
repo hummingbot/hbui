@@ -51,6 +51,15 @@ export const WhiteBox = styled.div({
   boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.25)'
 })
 
+export const ButtonsRow = styled.div({
+  '& > *': {
+    marginRight: '10px'
+  },
+  '& > *:last-child': {
+    marginRight: '0'
+  },
+})
+
 export const WhiteBoxRound = styled(WhiteBox)({
   borderRadius: '7px',
   [desktop_max]: { borderRadius: '6px' },
