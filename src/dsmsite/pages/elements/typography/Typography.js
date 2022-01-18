@@ -18,6 +18,7 @@ function Typography() {
     <div>
       <ShortHero
         title='Typography'
+        subTitle='Use the typography elements directly. They are all responsive by default and will ensure typographic consistency.'
       />
       <MainContent>
         <LabelMicro><PrimaryColor>Label Micro</PrimaryColor> The quick brown fox jumps over the lazy dog</LabelMicro>
