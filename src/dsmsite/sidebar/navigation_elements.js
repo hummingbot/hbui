@@ -8,11 +8,6 @@ const button = {
   title: 'Button',
 }
 
-const ghostbutton = {
-  link: '/elements/ghostbutton',
-  title: 'Button (Ghost)',
-}
-
 const input = {
   link: '/elements/input',
   title: 'TextInput',
@@ -21,6 +16,5 @@ const input = {
 module.exports = [
   typography,
   button,
-  ghostbutton,
   input,
 ]

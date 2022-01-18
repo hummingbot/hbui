@@ -1,5 +1,5 @@
 import React from 'react'
-import { MainContent } from '../../../ui/elements/layout'
+import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { Body, H5 } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
@@ -14,7 +14,7 @@ function ButtonElement() {
         { navigation }
         <br />
         <br />
-        <H5>Regular variant</H5>
+        <H5>Disabled state</H5>
         <br />
         <Separator />
         <br />
@@ -23,31 +23,21 @@ function ButtonElement() {
         <CodeBlock code={codeImport} />
         <br />
         <br />
-        <Body>Regular variant</Body>
+        <Body>Regular variant (disabled)</Body>
         <br />
-        <Button>Default</Button>
+        <Button isPrimary isDisabled>Regular (disabled)</Button>
         <br />
-        <CodeBlock code={codeDefault} />
-        <br />
-        <br />
-        <Button isPrimary>Primary</Button>
-        <br />
-        <CodeBlock code={codePrimary} />
+        <CodeBlock code={codeDefaultDisabled} />
         <br />
         <br />
-        <Button isInfo>Info</Button>
+        <Button isInfo isGhost isDisabled>Ghost (disabled)</Button>
         <br />
-        <CodeBlock code={codeInfo} />
-        <br />
-        <br />
-        <Button isWarning>Warning</Button>
-        <br />
-        <CodeBlock code={codeWarning} />
+        <CodeBlock code={codePrimaryDisabled} />
         <br />
         <br />
-        <Button isDanger>Danger</Button>
+        <Button isWarning isLarge isDisabled>Large (disabled)</Button>
         <br />
-        <CodeBlock code={codeDanger} />
+        <CodeBlock code={codeInfoDisabled} />
         <br />
         <br />
       </MainContent>
@@ -61,32 +51,20 @@ const codeImport = String.raw
 `import { Button } from '../hb_ui/elements/button'
 `;
 
-const codeDefault = String.raw
-`<Button>
-  Default
+const codeDefaultDisabled = String.raw
+`<Button isPrimary isDisabled>
+  Regular (disabled)
 </Button>
 `;
 
-const codePrimary = String.raw
-`<Button isPrimary>
-  Primary
+const codePrimaryDisabled = String.raw
+`<Button isInfo isGhost isDisabled>
+  Ghost (disabled)
 </Button>
 `;
 
-const codeInfo = String.raw
-`<Button isInfo>
-  Info
-</Button>
-`;
-
-const codeWarning = String.raw
-`<Button isWarning>
-  Warning
-</Button>
-`;
-
-const codeDanger = String.raw
-`<Button isDanger>
-  Danger
+const codeInfoDisabled = String.raw
+`<Button isWarning isLarge isDisabled>
+  Large (disabled)
 </Button>
 `;
