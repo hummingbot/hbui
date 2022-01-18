@@ -14,6 +14,7 @@ import Home from './dsmsite/pages/home'
 import GettingStarted from './dsmsite/pages/gettingstarted'
 import Guidelines from './dsmsite/pages/guidelines'
 import DesignTokens from './dsmsite/pages/designtokens'
+import Code from './dsmsite/pages/code'
 import Elements from './dsmsite/pages/elements'
 import Components from './dsmsite/pages/components'
 import Downloads from './dsmsite/pages/downloads'
@@ -47,6 +48,7 @@ function App() {
               <Route path="/getting-started" element={<GettingStarted />} />
               <Route path="/guidelines" element={<Guidelines />} />
               <Route path="/design-tokens" element={<DesignTokens />} />
+              <Route path="/code" element={<Code />} />
               <Route path="/downloads" element={<Downloads />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/elements" element={<Elements />} />
