@@ -1,17 +1,17 @@
 import React from 'react'
 import { P } from '../../../hb_ui/elements/typography'
-import { ShortHero, MainContent } from '../../ui/elements/layout'
+import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 
 function Downloads() {
   return (
-    <div>
+    <PageRoot>
       <ShortHero
         title='Downloads'
       />
       <MainContent>
         <P>Downloads content</P>
       </MainContent>
-    </div>
+    </PageRoot>
   )
 }
 
