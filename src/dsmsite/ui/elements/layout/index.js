@@ -18,11 +18,16 @@ export const ContentBlock = styled(Section)(({ backgroundColor }) => [
   `,
 ])
 
+export const PageRoot = styled(Section)(() => [
+  css`
+    min-height: 100vh;
+  `,
+])
+
 export const MainContentElement = styled(Section)(() => [
   css`
     text-align: left;
     width: 100%;
-    min-height: 100vh;
   `,
 ])
 
