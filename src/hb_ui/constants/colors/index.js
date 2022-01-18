@@ -9,6 +9,7 @@ module.exports = {
   green_superlight: '#e6f9fa',
   green_dark_1: '#355C6A',
   green_dark_2: '#404C5C',
+
   red: '#EB5757',
   red_hovered: '#d64f4f',
   red_active: '#a73e3e',
@@ -33,6 +34,7 @@ module.exports = {
   magenta: '#E549FF',
   black: '#000000',
   custom_black: '#06101A',
+  /* Greyscale Light */
   greyscale_light_100: '#FAFAFA',
   greyscale_light_200: '#F1F3F3',
   greyscale_light_300: '#E9EBEC',
@@ -40,11 +42,23 @@ module.exports = {
   greyscale_light_500: '#C9CDCF',
   greyscale_light_600: '#AEB4B7',
   greyscale_light_700: '#939B9F',
+  /* Greyscale Dark */
   greyscale_dark_100: '#788187',
   greyscale_dark_200: '#484D51',
   greyscale_dark_300: '#3E4347',
   greyscale_dark_400: '#323639',
   greyscale_dark_500: '#282C2F',
   greyscale_dark_600: '#1E2224',
-  greyscale_dark_700: '#151819'
+  greyscale_dark_700: '#151819',
+  /* Green */
+  green_100: '#E6F9FA',
+  green_100: '#B0ECF0',
+  green_200: '#8AE3E8',
+  green_300: '#54D6DE',
+  green_400: '#33CED8',
+  green_500: '#00C2CE',
+  green_600: '#00B1BB',
+  green_700: '#008A92',
+  green_800: '#006B71',
+  green_900: '#005157'
 }
