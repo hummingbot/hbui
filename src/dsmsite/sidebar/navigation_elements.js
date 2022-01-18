@@ -4,7 +4,7 @@ const typography = {
 }
 
 const button = {
-  link: '/elements/Button',
+  link: '/elements/button',
   title: 'Button',
 }
 

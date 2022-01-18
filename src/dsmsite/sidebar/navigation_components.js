@@ -2,6 +2,10 @@ const button = {
   link: '/components/button',
   title: 'Button',
 }
+const chip = {
+  link: '/components/chip',
+  title: 'Chip',
+}
 const input = {
   link: '/components/text-input',
   title: 'TextInput',
@@ -17,6 +21,7 @@ const callout = {
 
 module.exports = [
   button,
+  chip,
   input,
   spinner,
   callout,
