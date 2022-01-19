@@ -15,6 +15,9 @@ function GhostButtonElement() {
         { navigation }
         <br />
         <br />
+        <Separator />
+        <br />
+        <br />
         <P>The <Bold>ghost</Bold> button variant should be used in special scenarios, where it should be more subtle. It can be displayed with <Bold>success</Bold>, <Bold>info</Bold>, <Bold>warning</Bold>, and <Bold>danger</Bold> styles.</P>
         <br />
         <P>The button element is <Bold>responsive</Bold> and will automatically adopt a smaller or larger size depending on the viewport width.</P>

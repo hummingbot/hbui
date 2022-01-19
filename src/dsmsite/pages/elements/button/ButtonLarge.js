@@ -15,6 +15,9 @@ function ButtonElement() {
         { navigation }
         <br />
         <br />
+        <Separator />
+        <br />
+        <br />
         <P>The <Bold>large</Bold> and <Bold>extra large</Bold> are <Bold>options</Bold> available in all variants to be used should be used in special scenarios, where larger buttons are ideal.</P>
         <br />
         <P>They use the same button element therefore they are also <Bold>responsive</Bold>.</P>
