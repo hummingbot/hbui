@@ -36,53 +36,59 @@ const getStateIcon = (type) => {
 const Root = styled.div(({
   type
 }) => [
-  tw`border-solid border-l-4 border-grey-light-400 border-r border-b border-t`,
+  tw`rounded border-solid border-l-8 border-r border-b border-t border-grey-light-400 bg-grey-light-200 dark:bg-grey-light-100/20`,
   css`
     svg {
-      margin-right: 8px;
+      margin-right: 10px;
     }
   `,
   type === 'success' && [
-    tw`border-green-ui-100`
+    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/20`
   ],
   type === 'info' && [
-    tw`border-blue-ui-100`
+    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/20`
   ],
   type === 'danger' && [
-    tw`border-red-ui-100`
+    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/20`
   ],
   type === 'warning' && [
-    tw`border-orange-ui-100`
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`
   ],
   type === 'tip' && [
-    tw`border-purple-ui-100`
+    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/20`
   ],
   type === 'bug' && [
-    tw`border-orange-ui-100`
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`
+  ],
+  type === 'note' && [
+    tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/20`
   ],
 ])
 
 const Header = styled.div(({
   type
 }) => [
-  tw`flex items-center bg-grey-light-200 dark:bg-white/10 font-medium text-lg text-grey-dark-700 dark:text-grey-light-500 px-6 py-4`,
+  tw`flex items-center font-medium text-lg text-grey-dark-700 dark:text-grey-light-500 pt-4 px-4 `,
   type === 'success' && [
-    tw`bg-green-ui-100/20 dark:bg-green/10 text-green dark:text-green focus:text-green`
+    tw`text-green-ui-500 dark:text-green-ui-400 focus:text-green-ui-400`
   ],
   type === 'info' && [
-    tw`bg-blue/10 dark:bg-blue/10 text-blue dark:text-blue focus:text-blue`
+    tw`text-blue-ui-500 dark:text-blue-ui-300 focus:text-blue-ui-400`
   ],
   type === 'danger' && [
-    tw`bg-red/10 dark:bg-red/10 text-red dark:text-red focus:text-red`
+    tw`text-red-ui-500 dark:text-red-ui-400 focus:text-red-ui-400`
   ],
   type === 'warning' && [
-    tw`bg-orange/10 dark:bg-orange/10 text-orange dark:text-orange focus:text-orange`
+    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`
   ],
   type === 'tip' && [
-    tw`bg-purple/10 dark:bg-purple/10 text-purple dark:text-purple focus:text-purple`
+    tw`text-purple-ui-500 dark:text-purple-ui-100 focus:text-purple-ui-100`
   ],
   type === 'bug' && [
-    tw`bg-orange-active/10 dark:bg-orange-active/5 text-orange-active dark:text-orange-hovered focus:text-orange-active`
+    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`
+  ],
+    type === 'note' && [
+    tw`text-grey-dark-700 dark:text-white focus:text-white`
   ],
 ])
 
@@ -92,5 +98,5 @@ const Text = styled.div(({
   isDanger,
   isWarning,
 }) => [
-  tw`font-medium text-primary px-6 py-4`,
+  tw`font-medium text-grey-dark-200 dark:text-white px-4 pb-4 pt-2`,
 ])
