@@ -1,5 +1,5 @@
 import React from 'react'
-import { P } from '../../../hb_ui/elements/typography'
+import { P, Bold } from '../../../hb_ui/elements/typography'
 import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 
 function Components() {
@@ -9,7 +9,7 @@ function Components() {
         title='Components'
       />
       <MainContent>
-        <P>Components content</P>
+        <P><Bold>Components</Bold> are more complex structures that will often use Elements as building blocks, and may include JavaScript logic.</P>
       </MainContent>
     </PageRoot>
   )
