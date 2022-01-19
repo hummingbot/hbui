@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { P } from '../../../../hb_ui/elements/typography'
+import { P, Bold } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../hb_ui/components/input/TextInput'
@@ -13,6 +13,9 @@ function TextInputExtendedLabel() {
       { hero }
       <MainContent>
         { navigation }
+        <br />
+        <br />
+        <P>This variant takes an <Bold>extended label</Bold> which appears <Bold>below</Bold>. It can be displayed with <Bold>success</Bold>, <Bold>info</Bold>, <Bold>warning</Bold>, and <Bold>danger</Bold> styles.</P>
         <br />
         <Separator />
         <br />

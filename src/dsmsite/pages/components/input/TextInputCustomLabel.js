@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { P } from '../../../../hb_ui/elements/typography'
+import { P, Bold } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../hb_ui/components/input/TextInput'
@@ -13,6 +13,11 @@ function TextInputCustomLabel() {
       { hero }
       <MainContent>
         { navigation }
+        <br />
+        <br />
+        <P>This variant takes a <Bold>custom label</Bold> as <Bold>label</Bold> instead of the <Bold>placeholder</Bold>, which in this cases works in the standard way, and has no <Bold>extended label</Bold> below.</P>
+        <br />
+        <P>Try writing in the input below to see the label in action.</P>
         <br />
         <Separator />
         <br />

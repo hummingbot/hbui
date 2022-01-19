@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { P } from '../../../../hb_ui/elements/typography'
+import { P, Bold } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../hb_ui/components/input/TextInput'
@@ -13,6 +13,11 @@ function TextInputRequired() {
       { hero }
       <MainContent>
         { navigation }
+        <br />
+        <br />
+        <P>The <Bold>required</Bold> variant show a <Bold>red wildcard</Bold> next to the label.</P>
+        <br />
+        <P>Try writing in the input below to see the wildcard next to the label.</P>
         <br />
         <Separator />
         <br />

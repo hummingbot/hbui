@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { P } from '../../../../hb_ui/elements/typography'
+import { P, Bold } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../hb_ui/components/input/TextInput'
@@ -13,6 +13,11 @@ function TextInputPage() {
       { hero }
       <MainContent>
         { navigation }
+        <br />
+        <br />
+        <P>The <Bold>regular</Bold> variant uses the same value for <Bold>placeholder</Bold> and <Bold>label</Bold>, and has no <Bold>extended label</Bold> below.</P>
+        <br />
+        <P>Try writing in one of the inputs to see the label in action.</P>
         <br />
         <Separator />
         <br />
