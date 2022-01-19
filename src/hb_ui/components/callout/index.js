@@ -36,38 +36,38 @@ const getStateIcon = (type) => {
 const Root = styled.div(({
   type
 }) => [
-  tw`border-solid border-l-4 border-grey-light-700`,
+  tw`border-solid border-l-4 border-grey-light-400 border-r border-b border-t`,
   css`
     svg {
-      margin-right: 6px;
+      margin-right: 8px;
     }
   `,
   type === 'success' && [
-    tw`border-green`
+    tw`border-green-ui-100`
   ],
   type === 'info' && [
-    tw`border-blue`
+    tw`border-blue-ui-100`
   ],
   type === 'danger' && [
-    tw`border-red`
+    tw`border-red-ui-100`
   ],
   type === 'warning' && [
-    tw`border-orange`
+    tw`border-orange-ui-100`
   ],
   type === 'tip' && [
-    tw`border-purple`
+    tw`border-purple-ui-100`
   ],
   type === 'bug' && [
-    tw`border-orange-active`
+    tw`border-orange-ui-100`
   ],
 ])
 
 const Header = styled.div(({
   type
 }) => [
-  tw`flex items-center bg-black/5 dark:bg-white/10 font-semibold text-sm text-grey-dark-200 dark:text-grey-light-500 uppercase px-6 py-4`,
+  tw`flex items-center bg-grey-light-200 dark:bg-white/10 font-medium text-lg text-grey-dark-700 dark:text-grey-light-500 px-6 py-4`,
   type === 'success' && [
-    tw`bg-green/10 dark:bg-green/10 text-green dark:text-green focus:text-green`
+    tw`bg-green-ui-100/20 dark:bg-green/10 text-green dark:text-green focus:text-green`
   ],
   type === 'info' && [
     tw`bg-blue/10 dark:bg-blue/10 text-blue dark:text-blue focus:text-blue`
@@ -92,5 +92,5 @@ const Text = styled.div(({
   isDanger,
   isWarning,
 }) => [
-  tw`bg-primary dark:bg-black/20 font-medium text-primary px-6 py-4`,
+  tw`font-medium text-primary px-6 py-4`,
 ])
