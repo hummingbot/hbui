@@ -79,6 +79,78 @@ module.exports = {
         600: colors.greyscale_dark_600,
         700: colors.greyscale_dark_700
       },
+      'green-ui': {
+        50: colors.green_ui_50,
+        100: colors.green_ui_100,
+        200: colors.green_ui_200,
+        300: colors.green_ui_300,
+        400: colors.green_ui_400,
+        500: colors.green_ui_500,
+        600: colors.green_ui_600,
+        700: colors.green_ui_700,
+        800: colors.green_ui_800,
+        900: colors.green_ui_900
+      },
+      'blue-ui': {
+        50: colors.blue_ui_50,
+        100: colors.blue_ui_100,
+        200: colors.blue_ui_200,
+        300: colors.blue_ui_300,
+        400: colors.blue_ui_400,
+        500: colors.blue_ui_500,
+        600: colors.blue_ui_600,
+        700: colors.blue_ui_700,
+        800: colors.blue_ui_800,
+        900: colors.blue_ui_900
+      },
+        'red-ui': {
+        50: colors.red_ui_50,
+        100: colors.red_ui_100,
+        200: colors.red_ui_200,
+        300: colors.red_ui_300,
+        400: colors.red_ui_400,
+        500: colors.red_ui_500,
+        600: colors.red_ui_600,
+        700: colors.red_ui_700,
+        800: colors.red_ui_800,
+        900: colors.red_ui_900
+      },
+        'orange-ui': {
+        50: colors.orange_ui_50,
+        100: colors.orange_ui_100,
+        200: colors.orange_ui_200,
+        300: colors.orange_ui_300,
+        400: colors.orange_ui_400,
+        500: colors.orange_ui_500,
+        600: colors.orange_ui_600,
+        700: colors.orange_ui_700,
+        800: colors.orange_ui_800,
+        900: colors.orange_ui_900
+      },
+        'yellow-ui': {
+        50: colors.yellow_ui_50,
+        100: colors.yellow_ui_100,
+        200: colors.yellow_ui_200,
+        300: colors.yellow_ui_300,
+        400: colors.yellow_ui_400,
+        500: colors.yellow_ui_500,
+        600: colors.yellow_ui_600,
+        700: colors.yellow_ui_700,
+        800: colors.yellow_ui_800,
+        900: colors.yellow_ui_900
+      },
+        'purple-ui': {
+        50: colors.purple_ui_50,
+        100: colors.purple_ui_100,
+        200: colors.purple_ui_200,
+        300: colors.purple_ui_300,
+        400: colors.purple_ui_400,
+        500: colors.purple_ui_500,
+        600: colors.purple_ui_600,
+        700: colors.purple_ui_700,
+        800: colors.purple_ui_800,
+        900: colors.purple_ui_900
+      },
     },
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],
