@@ -2,7 +2,7 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
-import { Body, H5 } from '../../../../hb_ui/elements/typography'
+import { Body, P, H5, Bold } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
 import { hero, navigation } from './shared'
@@ -13,6 +13,11 @@ function ButtonElement() {
       { hero }
       <MainContent>
         { navigation }
+        <br />
+        <br />
+        <P>The <Bold>large</Bold> and <Bold>extra large</Bold> are <Bold>options</Bold> available in all variants to be used should be used in special scenarios, where larger buttons are ideal.</P>
+        <br />
+        <P>They use the same button element therefore they are also <Bold>responsive</Bold>.</P>
         <br />
         <Separator />
         <br />
