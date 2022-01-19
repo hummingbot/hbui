@@ -9,7 +9,7 @@ function Downloads() {
         title='Downloads'
       />
       <MainContent>
-        <P>Downloads content</P>
+        <P>Page under development!</P>
       </MainContent>
     </PageRoot>
   )

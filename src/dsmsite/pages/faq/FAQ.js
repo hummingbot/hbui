@@ -9,7 +9,7 @@ function FAQ() {
         title='FAQ'
       />
       <MainContent>
-        <P>FAQ content</P>
+        <P>Page under development!</P>
       </MainContent>
     </PageRoot>
   )
