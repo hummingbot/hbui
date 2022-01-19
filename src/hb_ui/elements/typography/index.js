@@ -37,6 +37,7 @@ const sharedTransforms = props => [
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
   props.isWhite && css`color: white`,
+  props.isBrandColor && css`color: ${green_primary} !important`,
   props.tightLineSpacing && css`line-height: 120% !important`,
 ]
 
