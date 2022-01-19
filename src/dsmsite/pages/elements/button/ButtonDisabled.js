@@ -15,6 +15,9 @@ function ButtonElement() {
         { navigation }
         <br />
         <br />
+        <Separator />
+        <br />
+        <br />
         <P>The <Bold>disabled</Bold> button variant is an <Bold>option</Bold> available in all variants, to be used when, for example, a user needs to fill out a form before submitting.</P>
         <br />
         <Separator />
