@@ -9,7 +9,7 @@ function DesignTokens() {
         title='Design Tokens'
       />
       <MainContent>
-        <P>Design Tokens content</P>
+        <P>Page under development!</P>
       </MainContent>
     </PageRoot>
   )

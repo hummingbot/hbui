@@ -9,7 +9,7 @@ function GettingStarted() {
         title='Getting Started'
       />
       <MainContent>
-        <P>Getting Started content</P>
+        <P>Page under development!</P>
       </MainContent>
     </PageRoot>
   )

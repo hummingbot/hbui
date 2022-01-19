@@ -9,7 +9,7 @@ function Guidelines() {
         title='Guidelines'
       />
       <MainContent>
-        <P>Guidelines content</P>
+        <P>Page under development!</P>
       </MainContent>
     </PageRoot>
   )
