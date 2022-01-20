@@ -32,29 +32,6 @@ const Root = styled.div(({
 }) => [
   tw`flex inline-flex overflow-hidden rounded bg-grey-dark-100/10 dark:bg-white/10`,
   tw`mb-4`,
-  // css`
-  //   svg {
-  //     margin-right: 8px;
-  //   }
-  // `,
-  // type === 'success' && [
-  //   tw`border-green-ui-100`
-  // ],
-  // type === 'info' && [
-  //   tw`border-blue-ui-100`
-  // ],
-  // type === 'danger' && [
-  //   tw`border-red-ui-100`
-  // ],
-  // type === 'warning' && [
-  //   tw`border-orange-ui-100`
-  // ],
-  // type === 'tip' && [
-  //   tw`border-purple-ui-100`
-  // ],
-  // type === 'bug' && [
-  //   tw`border-orange-ui-100`
-  // ],
 ])
 
 const IconBox = styled.div(({
