@@ -30,7 +30,7 @@ const getStateIcon = (type) => {
 const Root = styled.div(({
   type
 }) => [
-  tw`flex inline-flex overflow-hidden rounded bg-grey-dark-100/10 dark:bg-white/10`,
+  tw`shadow-xl dark:shadow-xl flex inline-flex overflow-hidden rounded bg-white dark:bg-grey-dark-500`,
   tw`mb-4`,
   // css`
   //   svg {
@@ -60,21 +60,21 @@ const Root = styled.div(({
 const IconBox = styled.div(({
   type
 }) => [
-  tw`flex bg-grey-dark-500 items-center px-3 py-3`,
+  tw`flex bg-grey-dark-200 items-center px-3 py-3`,
   type === 'success' && [
-    tw`bg-green`
+    tw`bg-green-ui-500`
   ],
   type === 'info' && [
-    tw`bg-blue`
+    tw`bg-blue-ui-500`
   ],
   type === 'danger' && [
-    tw`bg-red`
+    tw`bg-red-ui-500`
   ],
   type === 'warning' && [
-    tw`bg-orange`
+    tw`bg-orange-ui-500`
   ],
 ])
 
 const Text = styled.div(({}) => [
-  tw`flex font-medium text-primary items-center px-4`,
+  tw`flex font-medium text-grey-dark-200 dark:text-white items-center px-4`,
 ])
