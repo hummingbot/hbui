@@ -68,7 +68,8 @@ module.exports = {
         400: colors.greyscale_light_400,
         500: colors.greyscale_light_500,
         600: colors.greyscale_light_600,
-        700: colors.greyscale_light_700
+        700: colors.greyscale_light_700,
+        800: colors.greyscale_light_800,
       },
       'grey-dark': {
         100: colors.greyscale_dark_100,
