@@ -5,9 +5,7 @@ import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 function GettingStarted() {
   return (
     <PageRoot>
-      <ShortHero
-        title='Getting Started'
-      />
+      <ShortHero title="Getting Started" />
       <MainContent>
         <P>Page under development!</P>
       </MainContent>

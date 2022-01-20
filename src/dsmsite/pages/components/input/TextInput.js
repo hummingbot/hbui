@@ -7,15 +7,19 @@ import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
 function TextInputPage() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('')
   return (
     <div>
-      { hero }
+      {hero}
       <MainContent>
-        { navigation }
+        {navigation}
         <br />
         <br />
-        <P>The <Bold>regular</Bold> variant uses the same value for <Bold>placeholder</Bold> and <Bold>label</Bold>, and has no <Bold>extended label</Bold> below.</P>
+        <P>
+          The <Bold>regular</Bold> variant uses the same value for{' '}
+          <Bold>placeholder</Bold> and <Bold>label</Bold>, and has no{' '}
+          <Bold>extended label</Bold> below.
+        </P>
         <br />
         <P>Try writing in one of the inputs to see the label in action.</P>
         <br />
@@ -25,9 +29,9 @@ function TextInputPage() {
         <P>Default</P>
         <br />
         <TextInput
-          placeholder='Placeholder Text'
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeDefault} />
@@ -37,9 +41,9 @@ function TextInputPage() {
         <br />
         <TextInput
           isValid
-          placeholder='Placeholder Text'
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeValid} />
@@ -49,9 +53,9 @@ function TextInputPage() {
         <br />
         <TextInput
           isWarning
-          placeholder='Placeholder Text'
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeWarning} />
@@ -61,9 +65,9 @@ function TextInputPage() {
         <br />
         <TextInput
           isInvalid
-          placeholder='Placeholder Text'
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeInvalid} />
@@ -76,18 +80,16 @@ function TextInputPage() {
 
 export default TextInputPage
 
-const codeDefault = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeDefault = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeCustomTopLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeCustomTopLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   customTopLabel='Custom Top Label'
@@ -95,10 +97,9 @@ const codeCustomTopLabel = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeValid = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeValid = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isValid
@@ -106,10 +107,9 @@ const codeValid = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeWarning = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeWarning = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isWarning
@@ -117,10 +117,9 @@ const codeWarning = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeInvalid = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeInvalid = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isInvalid
@@ -128,4 +127,4 @@ const codeInvalid = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`

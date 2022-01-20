@@ -5,9 +5,7 @@ import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 function DesignTokens() {
   return (
     <PageRoot>
-      <ShortHero
-        title='Design Tokens'
-      />
+      <ShortHero title="Design Tokens" />
       <MainContent>
         <P>Page under development!</P>
       </MainContent>

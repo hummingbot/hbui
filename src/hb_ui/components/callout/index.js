@@ -14,15 +14,17 @@ const Callout = ({ title, text, type, ...props }) => {
   const stateIcon = getStateIcon(type)
   return (
     <Root type={type} {...props}>
-      <Header type={type}>{stateIcon} {title}</Header>
-      <Text className='text'>{text}</Text>
+      <Header type={type}>
+        {stateIcon} {title}
+      </Header>
+      <Text className="text">{text}</Text>
     </Root>
   )
 }
 
 export default Callout
 
-const getStateIcon = (type) => {
+const getStateIcon = type => {
   if (type === 'success') return <CheckIcon />
   if (type === 'warning') return <WarningIcon />
   if (type === 'danger') return <ErrorIcon />
@@ -33,9 +35,7 @@ const getStateIcon = (type) => {
   return null
 }
 
-const Root = styled.div(({
-  type
-}) => [
+const Root = styled.div(({ type }) => [
   tw`rounded border-solid border-l-8 border-r border-b border-t border-grey-light-400 bg-grey-light-200 dark:bg-grey-light-100/20`,
   css`
     svg {
@@ -43,60 +43,51 @@ const Root = styled.div(({
     }
   `,
   type === 'success' && [
-    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/20`
+    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/20`,
   ],
   type === 'info' && [
-    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/20`
+    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/20`,
   ],
   type === 'danger' && [
-    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/20`
+    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/20`,
   ],
   type === 'warning' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`,
   ],
   type === 'tip' && [
-    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/20`
+    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/20`,
   ],
   type === 'bug' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`,
   ],
   type === 'note' && [
-    tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/20`
+    tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/20`,
   ],
 ])
 
-const Header = styled.div(({
-  type
-}) => [
+const Header = styled.div(({ type }) => [
   tw`flex items-center font-medium text-lg text-grey-dark-700 dark:text-grey-light-500 pt-4 px-4 `,
   type === 'success' && [
-    tw`text-green-ui-500 dark:text-green-ui-400 focus:text-green-ui-400`
+    tw`text-green-ui-500 dark:text-green-ui-400 focus:text-green-ui-400`,
   ],
   type === 'info' && [
-    tw`text-blue-ui-500 dark:text-blue-ui-300 focus:text-blue-ui-400`
+    tw`text-blue-ui-500 dark:text-blue-ui-300 focus:text-blue-ui-400`,
   ],
   type === 'danger' && [
-    tw`text-red-ui-500 dark:text-red-ui-400 focus:text-red-ui-400`
+    tw`text-red-ui-500 dark:text-red-ui-400 focus:text-red-ui-400`,
   ],
   type === 'warning' && [
-    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`
+    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`,
   ],
   type === 'tip' && [
-    tw`text-purple-ui-500 dark:text-purple-ui-100 focus:text-purple-ui-100`
+    tw`text-purple-ui-500 dark:text-purple-ui-100 focus:text-purple-ui-100`,
   ],
   type === 'bug' && [
-    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`
+    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`,
   ],
-    type === 'note' && [
-    tw`text-grey-dark-700 dark:text-white focus:text-white`
-  ],
+  type === 'note' && [tw`text-grey-dark-700 dark:text-white focus:text-white`],
 ])
 
-const Text = styled.div(({
-  isSuccess,
-  isInfo,
-  isDanger,
-  isWarning,
-}) => [
+const Text = styled.div(({ isSuccess, isInfo, isDanger, isWarning }) => [
   tw`font-medium text-grey-dark-200 dark:text-white px-4 pb-4 pt-2`,
 ])

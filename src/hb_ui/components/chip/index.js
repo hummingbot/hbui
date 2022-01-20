@@ -4,14 +4,8 @@ import tw, { css, styled } from 'twin.macro'
 
 const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
   return (
-    <ChipRoot
-      isUppercase={isUppercase}
-      isDisabled={isDisabled}
-    >
-      <ChipElement
-        to={to}
-        {...props}
-      >
+    <ChipRoot isUppercase={isUppercase} isDisabled={isDisabled}>
+      <ChipElement to={to} {...props}>
         {label}
       </ChipElement>
     </ChipRoot>
@@ -20,7 +14,7 @@ const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
 
 export default Chip
 
-const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
+const ChipRoot = styled.span(({ isUppercase, isDisabled }) => [
   tw`flex`,
   css`
     a.active {
@@ -34,9 +28,7 @@ const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
       }
     `,
   ],
-  isDisabled && [
-    tw`pointer-events-none opacity-30`,
-  ],
+  isDisabled && [tw`pointer-events-none opacity-30`],
 ])
 
 const ChipElement = styled(NavLink)(({}) => [

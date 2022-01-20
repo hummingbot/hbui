@@ -10,11 +10,13 @@ function SpinnerPage() {
   return (
     <div>
       <ShortHero
-        title='Spinner'
-        subTitle='Versatile SVG-based spinner component to use in loading scenarios'
+        title="Spinner"
+        subTitle="Versatile SVG-based spinner component to use in loading scenarios"
       />
       <MainContent>
-        <Body>Default color: black & white. Custom colors: green, red, orange, blue. </Body>
+        <Body>
+          Default color: black & white. Custom colors: green, red, orange, blue.{' '}
+        </Body>
         <Separator />
         <br />
         <br />
@@ -26,31 +28,21 @@ function SpinnerPage() {
         <br />
         <br />
         <Body>Custom: red, 50px radius</Body>
-        <Spinner
-          color='red'
-          radius={50}
-        />
+        <Spinner color="red" radius={50} />
         <br />
         <br />
         <CodeBlock code={codeSpinnerRed} />
         <br />
         <br />
         <Body>Custom: green, 40px radius</Body>
-        <Spinner
-          color='green'
-          radius={40}
-        />
+        <Spinner color="green" radius={40} />
         <br />
         <br />
         <CodeBlock code={codeSpinnerGreen} />
         <br />
         <br />
         <Body>Custom: blue, centered, 30px radius</Body>
-        <Spinner
-          center
-          color='blue'
-          radius={30}
-        />
+        <Spinner center color="blue" radius={30} />
         <br />
         <br />
         <CodeBlock code={codeSpinnerBlue} />
@@ -61,38 +53,34 @@ function SpinnerPage() {
 
 export default SpinnerPage
 
-const codeSpinnerDefault = String.raw
-`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerDefault = String.raw`import Spinner from '../hb_ui/components/spinner'
 
 <Spinner
   radius={50}
 />
-`;
+`
 
-const codeSpinnerRed = String.raw
-`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerRed = String.raw`import Spinner from '../hb_ui/components/spinner'
 
 <Spinner
   color='red'
   radius={50}
 />
-`;
+`
 
-const codeSpinnerGreen = String.raw
-`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerGreen = String.raw`import Spinner from '../hb_ui/components/spinner'
 
 <Spinner
   color='green'
   radius={40}
 />
-`;
+`
 
-const codeSpinnerBlue = String.raw
-`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerBlue = String.raw`import Spinner from '../hb_ui/components/spinner'
 
 <Spinner
   center
   color='blue'
   radius={30}
 />
-`;
+`

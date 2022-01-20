@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function NoteIcon() {
   return (
@@ -18,7 +18,7 @@ function NoteIcon() {
         d="M13 3H3v1h10V3zM13 6H3v1h10V6zM13 9H3v1h10V9zM13 12H3v1h10v-1z"
       ></path>
     </svg>
-  );
+  )
 }
 
-export default NoteIcon;
+export default NoteIcon

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function TailwindLogo() {
   return (
@@ -22,7 +22,7 @@ function TailwindLogo() {
         clipRule="evenodd"
       ></path>
     </svg>
-  );
+  )
 }
 
-export default TailwindLogo;
+export default TailwindLogo

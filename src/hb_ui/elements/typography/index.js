@@ -22,7 +22,7 @@ export const textStyle = {
   },
 }
 
-// const textColor = 
+// const textColor =
 
 const sharedTransforms = props => [
   tw`text-black dark:(text-white)`,
@@ -37,108 +37,100 @@ const sharedTransforms = props => [
   props.isPulsing && tw`animate-pulse`,
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
-  props.isWhite && css`color: white`,
-  props.isBrandColor && css`color: ${green_primary} !important`,
-  props.tightLineSpacing && css`line-height: 120% !important`,
+  props.isWhite &&
+    css`
+      color: white;
+    `,
+  props.isBrandColor &&
+    css`
+      color: ${green_primary} !important;
+    `,
+  props.tightLineSpacing &&
+    css`
+      line-height: 120% !important;
+    `,
 ]
 
-export const PSmall = styled.p({},
-  props => [
-    tw`text-sm`,
-    tw`leading-tight`
-  ],
-  sharedTransforms
+export const PSmall = styled.p(
+  {},
+  props => [tw`text-sm`, tw`leading-tight`],
+  sharedTransforms,
 )
 
-export const P = styled.p({},
-  props => [
-    tw`text-base md:text-lg md:leading-tight`,
-    tw`leading-tight`
-  ],
-  sharedTransforms
+export const P = styled.p(
+  {},
+  props => [tw`text-base md:text-lg md:leading-tight`, tw`leading-tight`],
+  sharedTransforms,
 )
 
-export const Body = styled.p({},
-  props => [
-    tw`pb-1 md:pb-8 text-lg md:text-xl`,
-    tw`leading-relaxed`
-  ],
-  sharedTransforms
+export const Body = styled.p(
+  {},
+  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`, tw`leading-relaxed`],
+  sharedTransforms,
 )
 
-export const H6 = styled.h6({},
-  props => [
-    tw`text-lg md:text-xl lg:text-2xl`,
-    tw`leading-snug`
-  ],
-  sharedTransforms
+export const H6 = styled.h6(
+  {},
+  props => [tw`text-lg md:text-xl lg:text-2xl`, tw`leading-snug`],
+  sharedTransforms,
 )
 
-export const H5 = styled.h5({},
-  props => [
-    tw`text-xl md:text-2xl lg:text-3xl`,
-    tw`leading-tight`
-  ],
-  sharedTransforms
+export const H5 = styled.h5(
+  {},
+  props => [tw`text-xl md:text-2xl lg:text-3xl`, tw`leading-tight`],
+  sharedTransforms,
 )
 
-export const H4 = styled.h4({},
-  props => [
-    tw`text-2xl md:text-3xl lg:text-4xl`,
-    tw`leading-tight`
-  ],
-  sharedTransforms
+export const H4 = styled.h4(
+  {},
+  props => [tw`text-2xl md:text-3xl lg:text-4xl`, tw`leading-tight`],
+  sharedTransforms,
 )
 
-export const H3 = styled.h3({},
-  props => [
-    tw`text-3xl md:text-4xl lg:text-5xl`,
-    tw`leading-none`
-  ],
-  sharedTransforms
+export const H3 = styled.h3(
+  {},
+  props => [tw`text-3xl md:text-4xl lg:text-5xl`, tw`leading-none`],
+  sharedTransforms,
 )
 
-export const H2 = styled.h2({},
-  props => [
-    tw`text-4xl md:text-5xl lg:text-6xl`,
-    tw`leading-none`
-  ],
-  sharedTransforms
+export const H2 = styled.h2(
+  {},
+  props => [tw`text-4xl md:text-5xl lg:text-6xl`, tw`leading-none`],
+  sharedTransforms,
 )
 
-export const H1 = styled.h1({},
-  props => [
-    tw`text-5xl md:text-6xl lg:text-7xl`,
-    tw`leading-none`
-  ],
-  sharedTransforms
+export const H1 = styled.h1(
+  {},
+  props => [tw`text-5xl md:text-6xl lg:text-7xl`, tw`leading-none`],
+  sharedTransforms,
 )
 
 export const PrimaryColor = styled.span({
-  color: green_primary
+  color: green_primary,
 })
 
 export const Bold = styled.span({
-  fontWeight: 'bold'
+  fontWeight: 'bold',
 })
 
 export const Red = styled.span({
-  color: red
+  color: red,
 })
 
 export const Blue = styled.span({
-  color: blue_bright
+  color: blue_bright,
 })
 
 export const Green = styled.span({
-  color: green_primary
+  color: green_primary,
 })
 
 export const Orange = styled.span({
-  color: orange
+  color: orange,
 })
 
-export const LabelMicro = styled.p({},
+export const LabelMicro = styled.p(
+  {},
   props => [
     tw`text-xs`,
     tw`leading-none`,
@@ -147,5 +139,5 @@ export const LabelMicro = styled.p({},
       text-transform: uppercase;
     `,
   ],
-  sharedTransforms
+  sharedTransforms,
 )

@@ -23,11 +23,4 @@ const snackbar = {
   title: 'Snackbar',
 }
 
-module.exports = [
-  button,
-  chip,
-  input,
-  spinner,
-  callout,
-  snackbar
-]
+module.exports = [button, chip, input, spinner, callout, snackbar]

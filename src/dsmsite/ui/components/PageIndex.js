@@ -7,11 +7,11 @@ const PageIndex = ({ title, items }) => {
     <Root>
       <LabelMicro>{title}</LabelMicro>
       <br />
-      {items.map(item => 
+      {items.map(item => (
         <a href={`#${item.id}`} key={item.id}>
-          <PSmall className='index-item'>{item.label}</PSmall>
+          <PSmall className="index-item">{item.label}</PSmall>
         </a>
-      )}
+      ))}
     </Root>
   )
 }
@@ -22,6 +22,6 @@ const Root = styled.div({
   paddingLeft: '20px',
   marginLeft: '20px',
   '& .index-item': {
-    marginBottom: '10px'
-  }
+    marginBottom: '10px',
+  },
 })

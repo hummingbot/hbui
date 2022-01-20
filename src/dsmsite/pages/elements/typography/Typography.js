@@ -10,7 +10,7 @@ import {
   H3,
   H2,
   H1,
-  LabelMicro
+  LabelMicro,
 } from '../../../../hb_ui/elements/typography'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
@@ -18,8 +18,8 @@ function Typography() {
   return (
     <div>
       <ShortHero
-        title='Typography'
-        subTitle='Use the typography elements directly. They are all responsive by default and will ensure typographic consistency.'
+        title="Typography"
+        subTitle="Use the typography elements directly. They are all responsive by default and will ensure typographic consistency."
       />
       <MainContent>
         <P isBrandColor>Label Micro</P>
@@ -92,50 +92,39 @@ function Typography() {
 
 export default Typography
 
-
-
-const codeLabelMicro = String.raw
-`import { LabelMicro } from '../hb_ui/elements/typography'
+const codeLabelMicro = String.raw`import { LabelMicro } from '../hb_ui/elements/typography'
 
 <LabelMicro>sdfsfsd</LabelMicro>
 `
-const codeParagraph = String.raw
-`import { P } from '../hb_ui/elements/typography'
+const codeParagraph = String.raw`import { P } from '../hb_ui/elements/typography'
 
 <P>The quick brown fox jumps over the lazy dog</P>
 `
-const codeBody = String.raw
-`import { Body } from '../hb_ui/elements/typography'
+const codeBody = String.raw`import { Body } from '../hb_ui/elements/typography'
 
 <Body>The quick brown fox jumps over the lazy dog</Body>
 `
-const codeH6 = String.raw
-`import { H5 } from '../hb_ui/elements/typography'
+const codeH6 = String.raw`import { H5 } from '../hb_ui/elements/typography'
 
 <H5>The quick brown fox jumps over the lazy dog</H5>
 `
-const codeH5 = String.raw
-`import { H4 } from '../hb_ui/elements/typography'
+const codeH5 = String.raw`import { H4 } from '../hb_ui/elements/typography'
 
 <H4>The quick brown fox jumps over the lazy dog</H4>
 `
-const codeH4 = String.raw
-`import { H4 } from '../hb_ui/elements/typography'
+const codeH4 = String.raw`import { H4 } from '../hb_ui/elements/typography'
 
 <H4>The quick brown fox jumps over the lazy dog</H4>
 `
-const codeH3 = String.raw
-`import { H3 } from '../hb_ui/elements/typography'
+const codeH3 = String.raw`import { H3 } from '../hb_ui/elements/typography'
 
 <H3>The quick brown fox jumps over the lazy dog</H3>
 `
-const codeH2 = String.raw
-`import { H2 } from '../hb_ui/elements/typography'
+const codeH2 = String.raw`import { H2 } from '../hb_ui/elements/typography'
 
 <H2>The quick brown fox jumps over the lazy dog</H2>
 `
-const codeH1 = String.raw
-`import { H1 } from '../hb_ui/elements/typography'
+const codeH1 = String.raw`import { H1 } from '../hb_ui/elements/typography'
 
 <H1>The quick brown fox jumps over the lazy dog</H1>
 `

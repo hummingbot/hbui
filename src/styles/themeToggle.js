@@ -1,19 +1,19 @@
-import React from "react"
-import "twin.macro"
+import React from 'react'
+import 'twin.macro'
 
-import { ThemeContext } from "./index.js"
+import { ThemeContext } from './index.js'
 
 const ThemeToggle = () => {
   const { theme, setTheme } = React.useContext(ThemeContext)
 
   function isDark() {
-    return theme === "dark"
+    return theme === 'dark'
   }
 
   return (
     <button
       tw="w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary"
-      onClick={() => setTheme(isDark() ? "light" : "dark")}
+      onClick={() => setTheme(isDark() ? 'light' : 'dark')}
     >
       {isDark() ? <Moon /> : <Sun />}
     </button>

@@ -13,8 +13,4 @@ const extendedPalette = {
   id: 'extended-palette',
 }
 
-module.exports = [
-  primaryColors,
-  secondaryColors,
-  extendedPalette
-]
+module.exports = [primaryColors, secondaryColors, extendedPalette]

@@ -3,6 +3,4 @@ const colors = {
   title: 'Colors',
 }
 
-module.exports = [
-  colors,
-]
+module.exports = [colors]

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function HummingbotLogo() {
   return (
@@ -19,7 +19,7 @@ function HummingbotLogo() {
       <path d="M6 12H10V16H6z"></path>
       <path d="M0 12H4V16H0z"></path>
     </svg>
-  );
+  )
 }
 
-export default HummingbotLogo;
+export default HummingbotLogo

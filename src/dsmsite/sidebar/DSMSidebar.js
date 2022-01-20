@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import {
-  NavLink,
-  useLocation,
-} from "react-router-dom";
+import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../hb_ui/elements/typography'
 import colors from '../../hb_ui/constants/colors'
@@ -12,15 +9,13 @@ import { P } from '../../hb_ui/elements/typography'
 import { desktop_max } from '../../hb_ui/constants/media-queries'
 import navigation from './navigation'
 
-import { ThemeToggle } from "../../styles"
+import { ThemeToggle } from '../../styles'
 
-const {
-  green_primary,
-} = colors
+const { green_primary } = colors
 
 function DSMSidebar() {
   let location = useLocation()
-  const [currentSection, setCurrentSection] = useState(location.pathname);
+  const [currentSection, setCurrentSection] = useState(location.pathname)
   return (
     <Sidebar>
       <PaddingBox>
@@ -32,26 +27,28 @@ function DSMSidebar() {
       <br />
       <br />
       <SidebarNav>
-        { navigation.map(navItem =>
+        {navigation.map(navItem => (
           <div key={navItem.title}>
             <SidebarNavItem
               onClick={() => setCurrentSection(navItem.link)}
-              to={navItem.link}>
-                <P>{navItem.title}</P>
-                {navItem.subItems && <TriangleRight />}
+              to={navItem.link}
+            >
+              <P>{navItem.title}</P>
+              {navItem.subItems && <TriangleRight />}
             </SidebarNavItem>
-            {currentSection.indexOf(navItem.link) > -1 && navItem.subItems &&
-              navItem.subItems.map(subItem =>
+            {currentSection.indexOf(navItem.link) > -1 &&
+              navItem.subItems &&
+              navItem.subItems.map(subItem => (
                 <SubSidebarNavItem
                   key={subItem.link}
                   onClick={() => setCurrentSection(subItem.link)}
-                  to={subItem.link}>
-                    <P>{subItem.title}</P>
+                  to={subItem.link}
+                >
+                  <P>{subItem.title}</P>
                 </SubSidebarNavItem>
-              )
-            }
+              ))}
           </div>
-        )}
+        ))}
         <br />
         <br />
         <div tw="h-full flex justify-center items-center">
@@ -71,7 +68,7 @@ const Sidebar = styled.div(() => [
     ${[desktop_max]} {
       opacity: 0;
     }
-  `
+  `,
 ])
 
 const PaddingBox = styled.div({
@@ -87,7 +84,7 @@ const SidebarBrand = styled.div({
   '& p': {
     marginLeft: '10px',
     padding: '0',
-  }
+  },
 })
 
 const SidebarNav = styled.nav({
@@ -96,29 +93,30 @@ const SidebarNav = styled.nav({
   width: '100%',
 })
 
-const SidebarNavItem = styled(NavLink)({
-  display: 'flex',
-  width: '100%',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginBottom: '4px',
-  paddingLeft: '20px',
-  paddingRight: '20px',
-  borderLeft: '4px solid transparent',
-  '&.active': {
-    borderLeft: `4px solid ${green_primary}`,
-    '& p': {
-      color: green_primary
-    }
+const SidebarNavItem = styled(NavLink)(
+  {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: '4px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    borderLeft: '4px solid transparent',
+    '&.active': {
+      borderLeft: `4px solid ${green_primary}`,
+      '& p': {
+        color: green_primary,
+      },
+    },
+    ':hover': {
+      '& p': {
+        color: green_primary,
+      },
+    },
   },
-  ':hover': {
-    '& p': {
-      color: green_primary
-    }
-  }
-}, [
-  tw`text-black dark:(text-white)`
-])
+  [tw`text-black dark:(text-white)`],
+)
 
 const SubSidebarNavItem = styled(SidebarNavItem)({
   borderLeft: 'none !important',

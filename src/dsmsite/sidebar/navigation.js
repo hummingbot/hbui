@@ -13,7 +13,7 @@ const gettingStarted = {
 const guidelines = {
   link: '/guidelines',
   title: 'Design guidelines',
-  subItems: guidelinesComponents
+  subItems: guidelinesComponents,
 }
 const designTokens = {
   link: '/design-tokens',
@@ -26,12 +26,12 @@ const code = {
 const elements = {
   link: '/elements',
   title: 'Elements',
-  subItems: navigationElements
+  subItems: navigationElements,
 }
 const components = {
   link: '/components',
   title: 'Components',
-  subItems: navigationComponents
+  subItems: navigationComponents,
 }
 const downloads = {
   link: '/downloads',
@@ -51,5 +51,5 @@ module.exports = [
   elements,
   components,
   downloads,
-  faq
+  faq,
 ]

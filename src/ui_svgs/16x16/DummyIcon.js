@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function DummyIcon() {
   return (
@@ -16,7 +16,7 @@ function DummyIcon() {
         clipRule="evenodd"
       ></path>
     </svg>
-  );
+  )
 }
 
-export default DummyIcon;
+export default DummyIcon

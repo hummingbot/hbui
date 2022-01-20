@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function TwinMacroLogo() {
   return (
@@ -46,7 +46,7 @@ function TwinMacroLogo() {
         </linearGradient>
       </defs>
     </svg>
-  );
+  )
 }
 
-export default TwinMacroLogo;
+export default TwinMacroLogo

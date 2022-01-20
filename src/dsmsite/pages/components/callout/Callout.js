@@ -6,12 +6,12 @@ import Callout from '../../../../hb_ui/components/callout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function TextInputPage() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('')
   return (
     <div>
       <ShortHero
-        title='Callout'
-        subTitle='The Callout component serves to convey highlighted information content of different types.'
+        title="Callout"
+        subTitle="The Callout component serves to convey highlighted information content of different types."
       />
       <MainContent>
         <Body>Import Callout component (adjust path):</Body>
@@ -21,8 +21,8 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          title='Default callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          title="Default callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeDefault} />
@@ -31,9 +31,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='success'
-          title='Success callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="success"
+          title="Success callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeSuccess} />
@@ -42,9 +42,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='info'
-          title='Info callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="info"
+          title="Info callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeInfo} />
@@ -53,9 +53,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='warning'
-          title='Warning callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="warning"
+          title="Warning callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeWarning} />
@@ -64,9 +64,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='danger'
-          title='Danger callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="danger"
+          title="Danger callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeDanger} />
@@ -75,9 +75,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='tip'
-          title='Tip callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="tip"
+          title="Tip callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeTip} />
@@ -86,9 +86,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='bug'
-          title='Bug callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="bug"
+          title="Bug callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeBug} />
@@ -97,9 +97,9 @@ function TextInputPage() {
         <br />
         <br />
         <Callout
-          type='note'
-          title='Note callout'
-          text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
+          type="note"
+          title="Note callout"
+          text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
         <br />
         <CodeBlock code={codeNote} />
@@ -112,69 +112,60 @@ function TextInputPage() {
 
 export default TextInputPage
 
-const codeImport = String.raw
-`import Callout from '../hb_ui/components/callout'
-`;
+const codeImport = String.raw`import Callout from '../hb_ui/components/callout'
+`
 
-const codeDefault = String.raw
-`<Callout
+const codeDefault = String.raw`<Callout
   title='Default callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeSuccess = String.raw
-`<Callout
+const codeSuccess = String.raw`<Callout
   type='success'
   title='Success callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeInfo = String.raw
-`<Callout
+const codeInfo = String.raw`<Callout
   type='info'
   title='Info callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeWarning = String.raw
-`<Callout
+const codeWarning = String.raw`<Callout
   type='warning'
   title='Warning callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeDanger = String.raw
-`<Callout
+const codeDanger = String.raw`<Callout
   type='danger'
   title='Danger callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeTip = String.raw
-`<Callout
+const codeTip = String.raw`<Callout
   type='tip'
   title='Tip callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeBug = String.raw
-`<Callout
+const codeBug = String.raw`<Callout
   type='bug'
   title='Bug callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`
 
-const codeNote = String.raw
-`<Callout
+const codeNote = String.raw`<Callout
   type='note'
   title='Note callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
-`;
+`

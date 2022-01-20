@@ -13,10 +13,10 @@ export const tablet = `@media only screen and (min-width: ${md}) and (max-width:
 export const desktop = `@media only screen and (min-width: ${lg}) and (max-width: ${xl})`
 export const hd = `@media only screen and (min-width: ${xl}) and (max-width: 1600px)`
 
-export const phone_max = `@media only screen and (max-width: ${sm-1})`
-export const phablet_max = `@media only screen and (max-width: ${md-1})`
-export const tablet_max = `@media only screen and (max-width: ${lg-1})`
-export const desktop_max = `@media only screen and (max-width: ${xl-1})`
+export const phone_max = `@media only screen and (max-width: ${sm - 1})`
+export const phablet_max = `@media only screen and (max-width: ${md - 1})`
+export const tablet_max = `@media only screen and (max-width: ${lg - 1})`
+export const desktop_max = `@media only screen and (max-width: ${xl - 1})`
 export const hd_max = `@media only screen and (max-width: 2559px)`
 
 export const phone_min = `@media only screen and (min-width: 0px)`

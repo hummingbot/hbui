@@ -7,15 +7,20 @@ import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
 function TextInputExtendedLabel() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('')
   return (
     <div>
-      { hero }
+      {hero}
       <MainContent>
-        { navigation }
+        {navigation}
         <br />
         <br />
-        <P>This variant takes an <Bold>extended label</Bold> which appears <Bold>below</Bold>. It can be displayed with <Bold>success</Bold>, <Bold>info</Bold>, <Bold>warning</Bold>, and <Bold>danger</Bold> styles.</P>
+        <P>
+          This variant takes an <Bold>extended label</Bold> which appears{' '}
+          <Bold>below</Bold>. It can be displayed with <Bold>success</Bold>,{' '}
+          <Bold>info</Bold>, <Bold>warning</Bold>, and <Bold>danger</Bold>{' '}
+          styles.
+        </P>
         <br />
         <Separator />
         <br />
@@ -23,10 +28,10 @@ function TextInputExtendedLabel() {
         <P>Extended label: Default</P>
         <br />
         <TextInput
-          bottomLabel='Bottom Label'
-          placeholder='Placeholder Text'
+          bottomLabel="Bottom Label"
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeDefaultExtendedLabel} />
@@ -36,10 +41,10 @@ function TextInputExtendedLabel() {
         <br />
         <TextInput
           isValid
-          bottomLabel='Bottom Label'
-          placeholder='Placeholder Text'
+          bottomLabel="Bottom Label"
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeValidExtendedLabel} />
@@ -49,10 +54,10 @@ function TextInputExtendedLabel() {
         <br />
         <TextInput
           isWarning
-          bottomLabel='Bottom Label'
-          placeholder='Placeholder Text'
+          bottomLabel="Bottom Label"
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeWarningExtendedLabel} />
@@ -62,10 +67,10 @@ function TextInputExtendedLabel() {
         <br />
         <TextInput
           isInvalid
-          bottomLabel='Bottom Label'
-          placeholder='Placeholder Text'
+          bottomLabel="Bottom Label"
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeInvalidExtendedLabel} />
@@ -80,9 +85,7 @@ function TextInputExtendedLabel() {
 
 export default TextInputExtendedLabel
 
-
-const codeDefaultExtendedLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeDefaultExtendedLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   placeholder='Placeholder Text'
@@ -90,10 +93,9 @@ const codeDefaultExtendedLabel = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeValidExtendedLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeValidExtendedLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isValid
@@ -102,10 +104,9 @@ const codeValidExtendedLabel = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeWarningExtendedLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeWarningExtendedLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isWarning
@@ -114,10 +115,9 @@ const codeWarningExtendedLabel = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`
 
-const codeInvalidExtendedLabel = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeInvalidExtendedLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   isInvalid
@@ -126,4 +126,4 @@ const codeInvalidExtendedLabel = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`

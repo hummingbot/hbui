@@ -19,7 +19,7 @@ const Snackbar = ({ label, type, ...props }) => {
 
 export default Snackbar
 
-const getStateIcon = (type) => {
+const getStateIcon = type => {
   if (type === 'success') return <SuccessIcon />
   if (type === 'warning') return <WarningIcon />
   if (type === 'danger') return <DangerIcon />
@@ -27,29 +27,17 @@ const getStateIcon = (type) => {
   return <DefaultIcon />
 }
 
-const Root = styled.div(({
-  type
-}) => [
+const Root = styled.div(({ type }) => [
   tw`flex inline-flex overflow-hidden rounded bg-grey-dark-100/10 dark:bg-white/10`,
   tw`mb-4`,
 ])
 
-const IconBox = styled.div(({
-  type
-}) => [
+const IconBox = styled.div(({ type }) => [
   tw`flex bg-grey-dark-500 items-center px-3 py-3`,
-  type === 'success' && [
-    tw`bg-green`
-  ],
-  type === 'info' && [
-    tw`bg-blue`
-  ],
-  type === 'danger' && [
-    tw`bg-red`
-  ],
-  type === 'warning' && [
-    tw`bg-orange`
-  ],
+  type === 'success' && [tw`bg-green`],
+  type === 'info' && [tw`bg-blue`],
+  type === 'danger' && [tw`bg-red`],
+  type === 'warning' && [tw`bg-orange`],
 ])
 
 const Text = styled.div(({}) => [

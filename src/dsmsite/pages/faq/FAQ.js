@@ -5,9 +5,7 @@ import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 function FAQ() {
   return (
     <PageRoot>
-      <ShortHero
-        title='FAQ'
-      />
+      <ShortHero title="FAQ" />
       <MainContent>
         <P>Page under development!</P>
       </MainContent>

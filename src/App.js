@@ -1,10 +1,6 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import GlobalStyles from './styles/GlobalStyles'
 import DSMSidebar from './dsmsite/sidebar/DSMSidebar'
@@ -63,28 +59,55 @@ function App() {
               <Route path="/faq" element={<FAQ />} />
               <Route path="/elements" element={<Elements />} />
               <Route path="/components" element={<Components />} />
-              
-              <Route path="/elements/layout-core" element={<LayoutCoreSingle />} />
-              <Route path="/elements/layout-core/sidebar" element={<LayoutCoreSidebar />} />
+
+              <Route
+                path="/elements/layout-core"
+                element={<LayoutCoreSingle />}
+              />
+              <Route
+                path="/elements/layout-core/sidebar"
+                element={<LayoutCoreSidebar />}
+              />
               {/*<Route path="/elements/layout-extra" element={<LayoutExtra />} />*/}
               <Route path="/elements/typography" element={<Typography />} />
-              <Route path="/elements/button" element={<ButtonElementRegular />} />
-              <Route path="/elements/button/ghost" element={<ButtonElementGhost />} />
-              <Route path="/elements/button/large" element={<ButtonElementLarge />} />
-              <Route path="/elements/button/disabled" element={<ButtonElementDisabled />} />
+              <Route
+                path="/elements/button"
+                element={<ButtonElementRegular />}
+              />
+              <Route
+                path="/elements/button/ghost"
+                element={<ButtonElementGhost />}
+              />
+              <Route
+                path="/elements/button/large"
+                element={<ButtonElementLarge />}
+              />
+              <Route
+                path="/elements/button/disabled"
+                element={<ButtonElementDisabled />}
+              />
               <Route path="/elements/text-input" element={<InputElement />} />
-              
+
               <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/chip" element={<ChipComponent />} />
               <Route path="/components/text-input" element={<TextInput />} />
-              <Route path="/components/text-input/custom-label" element={<TextInputCustomLabel />} />
-              <Route path="/components/text-input/extended-label" element={<TextInputExtendedLabel />} />
-              <Route path="/components/text-input/required" element={<TextInputRequired />} />
+              <Route
+                path="/components/text-input/custom-label"
+                element={<TextInputCustomLabel />}
+              />
+              <Route
+                path="/components/text-input/extended-label"
+                element={<TextInputExtendedLabel />}
+              />
+              <Route
+                path="/components/text-input/required"
+                element={<TextInputRequired />}
+              />
               <Route path="/components/spinner" element={<Spinner />} />
               <Route path="/components/callout" element={<Callout />} />
               <Route path="/components/snackbar" element={<Snackbar />} />
-              
-              <Route path="/guidelines/colors" element={<Colors  />} />
+
+              <Route path="/guidelines/colors" element={<Colors />} />
             </Routes>
           </Main>
         </Layout>
@@ -107,5 +130,5 @@ const Main = styled.div(() => [
     height: 100vh;
     overflow-y: scroll;
   `,
-  tw`bg-secondary w-full`
+  tw`bg-secondary w-full`,
 ])

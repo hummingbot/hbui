@@ -10,17 +10,25 @@ import { hero, navigation } from './shared'
 function GhostButtonElement() {
   return (
     <div>
-      { hero }
+      {hero}
       <MainContent>
-        { navigation }
+        {navigation}
         <br />
         <br />
         <Separator />
         <br />
         <br />
-        <P>The <Bold>ghost</Bold> button variant should be used in special scenarios, where it should be more subtle. It can be displayed with <Bold>success</Bold>, <Bold>info</Bold>, <Bold>warning</Bold>, and <Bold>danger</Bold> styles.</P>
+        <P>
+          The <Bold>ghost</Bold> button variant should be used in special
+          scenarios, where it should be more subtle. It can be displayed with{' '}
+          <Bold>success</Bold>, <Bold>info</Bold>, <Bold>warning</Bold>, and{' '}
+          <Bold>danger</Bold> styles.
+        </P>
         <br />
-        <P>The button element is <Bold>responsive</Bold> and will automatically adopt a smaller or larger size depending on the viewport width.</P>
+        <P>
+          The button element is <Bold>responsive</Bold> and will automatically
+          adopt a smaller or larger size depending on the viewport width.
+        </P>
         <br />
         <Separator />
         <br />
@@ -31,16 +39,16 @@ function GhostButtonElement() {
         <br />
         <CodeGridComponent
           code={codeGhostDefault}
-          element={
-            <Button isGhost>Default</Button>
-          }
+          element={<Button isGhost>Default</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeGhostPrimary}
           element={
-            <Button isPrimary isGhost>Primary</Button>
+            <Button isPrimary isGhost>
+              Primary
+            </Button>
           }
         />
         <br />
@@ -48,7 +56,9 @@ function GhostButtonElement() {
         <CodeGridComponent
           code={codeGhostInfo}
           element={
-            <Button isInfo isGhost>Info</Button>
+            <Button isInfo isGhost>
+              Info
+            </Button>
           }
         />
         <br />
@@ -56,7 +66,9 @@ function GhostButtonElement() {
         <CodeGridComponent
           code={codeGhostWarning}
           element={
-            <Button isWarning isGhost>Warning</Button>
+            <Button isWarning isGhost>
+              Warning
+            </Button>
           }
         />
         <br />
@@ -64,7 +76,9 @@ function GhostButtonElement() {
         <CodeGridComponent
           code={codeGhostDanger}
           element={
-            <Button isDanger isGhost>Danger</Button>
+            <Button isDanger isGhost>
+              Danger
+            </Button>
           }
         />
         <br />
@@ -76,32 +90,26 @@ function GhostButtonElement() {
 
 export default GhostButtonElement
 
-const codeImport = String.raw
-`import { Button } from '../hb_ui/elements/button'
-`;
+const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
+`
 
-const codeGhostDefault = String.raw
-`<Button isGhost>
+const codeGhostDefault = String.raw`<Button isGhost>
   Primary
 </Button>
-`;
-const codeGhostPrimary = String.raw
-`<Button isGhost isPrimary>
+`
+const codeGhostPrimary = String.raw`<Button isGhost isPrimary>
   Ghost
 </Button>
-`;
-const codeGhostInfo = String.raw
-`<Button isGhost isInfo>
+`
+const codeGhostInfo = String.raw`<Button isGhost isInfo>
   Info
 </Button>
-`;
-const codeGhostWarning = String.raw
-`<Button isGhost isWarning>
+`
+const codeGhostWarning = String.raw`<Button isGhost isWarning>
   Warning
 </Button>
-`;
-const codeGhostDanger = String.raw
-`<Button isGhost isDanger>
+`
+const codeGhostDanger = String.raw`<Button isGhost isDanger>
   Danger
 </Button>
-`;
+`

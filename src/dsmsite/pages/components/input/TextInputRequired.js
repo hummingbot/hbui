@@ -7,17 +7,22 @@ import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
 function TextInputRequired() {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState('')
   return (
     <div>
-      { hero }
+      {hero}
       <MainContent>
-        { navigation }
+        {navigation}
         <br />
         <br />
-        <P>The <Bold>required</Bold> variant show a <Bold>red wildcard</Bold> next to the label.</P>
+        <P>
+          The <Bold>required</Bold> variant show a <Bold>red wildcard</Bold>{' '}
+          next to the label.
+        </P>
         <br />
-        <P>Try writing in the input below to see the wildcard next to the label.</P>
+        <P>
+          Try writing in the input below to see the wildcard next to the label.
+        </P>
         <br />
         <Separator />
         <br />
@@ -26,9 +31,9 @@ function TextInputRequired() {
         <br />
         <TextInput
           required
-          placeholder='Placeholder Text'
+          placeholder="Placeholder Text"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <br />
         <CodeBlock code={codeRequired} />
@@ -41,8 +46,7 @@ function TextInputRequired() {
 
 export default TextInputRequired
 
-const codeRequired = String.raw
-`import TextInput from '../hb_ui/components/input/TextInput'
+const codeRequired = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
 
 <TextInput
   required
@@ -50,4 +54,4 @@ const codeRequired = String.raw
   value={inputValue}
   onChange={yourChangeHandler}
 />
-`;
+`

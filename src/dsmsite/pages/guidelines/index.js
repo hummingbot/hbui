@@ -5,9 +5,7 @@ import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 function Guidelines() {
   return (
     <PageRoot>
-      <ShortHero
-        title='Guidelines'
-      />
+      <ShortHero title="Guidelines" />
       <MainContent>
         <P>Page under development!</P>
       </MainContent>

@@ -4,13 +4,10 @@ import { Button as ButtonElement } from '../../elements/buttons'
 
 export const Button = ({ label, iconBefore, iconAfter, ...props }) => {
   return (
-    <ButtonElement
-      type="button"
-      {...props}
-    >
-      {iconBefore && <span className='icon-before'>{iconBefore}</span>}
+    <ButtonElement type="button" {...props}>
+      {iconBefore && <span className="icon-before">{iconBefore}</span>}
       {label}
-      {iconAfter && <span className='icon-after'>{iconAfter}</span>}
+      {iconAfter && <span className="icon-after">{iconAfter}</span>}
     </ButtonElement>
   )
 }

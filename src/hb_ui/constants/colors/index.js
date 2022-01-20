@@ -52,7 +52,7 @@ module.exports = {
   greyscale_dark_600: '#1E2224',
   greyscale_dark_700: '#151819',
   /* Green */
-  green_ui_50:  '#E6F9FA',
+  green_ui_50: '#E6F9FA',
   green_ui_100: '#B0ECF0',
   green_ui_200: '#8AE3E8',
   green_ui_300: '#54D6DE',
@@ -63,7 +63,7 @@ module.exports = {
   green_ui_800: '#006B71',
   green_ui_900: '#005157',
   /* Blue */
-  blue_ui_50:  '#EAF4FF',
+  blue_ui_50: '#EAF4FF',
   blue_ui_100: '#BFDCFF',
   blue_ui_200: '#A0CBFF',
   blue_ui_300: '#75B3FF',
@@ -74,7 +74,7 @@ module.exports = {
   blue_ui_800: '#1B4E8C',
   blue_ui_900: '#153B6B',
   /* Orange */
-  orange_ui_50:  '#FEF3E9',
+  orange_ui_50: '#FEF3E9',
   orange_ui_100: '#FADABC',
   orange_ui_200: '#F8C89C',
   orange_ui_300: '#F5AF6E',
@@ -85,7 +85,7 @@ module.exports = {
   orange_ui_800: '#844A15',
   orange_ui_900: '#653910',
   /* Red */
-  red_ui_50:  '#FDEEEE',
+  red_ui_50: '#FDEEEE',
   red_ui_100: '#F9CBCB',
   red_ui_200: '#F6B2B2',
   red_ui_300: '#F28E8E',
@@ -96,7 +96,7 @@ module.exports = {
   red_ui_800: '#813030',
   red_ui_900: '#632525',
   /* Yellow */
-  yellow_ui_50:  '#FFFBE8',
+  yellow_ui_50: '#FFFBE8',
   yellow_ui_100: '#FEF4B7',
   yellow_ui_200: '#FEEE94',
   yellow_ui_300: '#FDE764',
@@ -107,7 +107,7 @@ module.exports = {
   yellow_ui_800: '#8B780D',
   yellow_ui_900: '#6A5C0A',
   /* Purple */
-  purple_ui_50:  '#F1EEF9',
+  purple_ui_50: '#F1EEF9',
   purple_ui_100: '#D3CAED',
   purple_ui_200: '#BEB0E5',
   purple_ui_300: '#A08CD9',
@@ -116,5 +116,5 @@ module.exports = {
   purple_ui_600: '#674CB4',
   purple_ui_700: '#503B8D',
   purple_ui_800: '#3E2E6D',
-  purple_ui_900: '#2F2353'
+  purple_ui_900: '#2F2353',
 }

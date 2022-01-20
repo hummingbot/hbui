@@ -10,17 +10,24 @@ import { hero, navigation } from './shared'
 function ButtonElement() {
   return (
     <div>
-      { hero }
+      {hero}
       <MainContent>
-        { navigation }
+        {navigation}
         <br />
         <br />
         <Separator />
         <br />
         <br />
-        <P>The <Bold>large</Bold> and <Bold>extra large</Bold> are <Bold>options</Bold> available in all variants to be used should be used in special scenarios, where larger buttons are ideal.</P>
+        <P>
+          The <Bold>large</Bold> and <Bold>extra large</Bold> are{' '}
+          <Bold>options</Bold> available in all variants to be used should be
+          used in special scenarios, where larger buttons are ideal.
+        </P>
         <br />
-        <P>They use the same button element therefore they are also <Bold>responsive</Bold>.</P>
+        <P>
+          They use the same button element therefore they are also{' '}
+          <Bold>responsive</Bold>.
+        </P>
         <br />
         <Separator />
         <br />
@@ -31,17 +38,13 @@ function ButtonElement() {
         <br />
         <CodeGridComponent
           code={codeLarge}
-          element={
-            <Button isLarge>Large</Button>
-          }
+          element={<Button isLarge>Large</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeExtraLarge}
-          element={
-            <Button isExtraLarge>Extra large</Button>
-          }
+          element={<Button isExtraLarge>Extra large</Button>}
         />
         <br />
         <br />
@@ -52,18 +55,15 @@ function ButtonElement() {
 
 export default ButtonElement
 
-const codeImport = String.raw
-`import { Button } from '../hb_ui/elements/button'
-`;
+const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
+`
 
-const codeLarge = String.raw
-`<Button isLarge>
+const codeLarge = String.raw`<Button isLarge>
   Large
 </Button>
-`;
+`
 
-const codeExtraLarge = String.raw
-`<Button isExtraLarge>
+const codeExtraLarge = String.raw`<Button isExtraLarge>
   Extra large
 </Button>
-`;
+`
