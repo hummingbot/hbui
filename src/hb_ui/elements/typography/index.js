@@ -8,6 +8,9 @@ import {
 import {
   black,
   green_primary,
+  red,
+  blue_bright,
+  orange,
 } from '../../constants/colors'
 
 export const textStyle = {
@@ -117,6 +120,22 @@ export const PrimaryColor = styled.span({
 
 export const Bold = styled.span({
   fontWeight: 'bold'
+})
+
+export const Red = styled.span({
+  color: red
+})
+
+export const Blue = styled.span({
+  color: blue_bright
+})
+
+export const Green = styled.span({
+  color: green_primary
+})
+
+export const Orange = styled.span({
+  color: orange
 })
 
 export const LabelMicro = styled.p({},
