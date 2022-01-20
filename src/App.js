@@ -21,6 +21,8 @@ import Downloads from './dsmsite/pages/downloads'
 import FAQ from './dsmsite/pages/faq/FAQ'
 
 // elements
+import LayoutCore from './dsmsite/pages/elements/layout/LayoutCore'
+// import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
 import Typography from './dsmsite/pages/elements/typography/Typography'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
 import ButtonElementGhost from './dsmsite/pages/elements/button/GhostButton'
@@ -61,12 +63,14 @@ function App() {
               <Route path="/elements" element={<Elements />} />
               <Route path="/components" element={<Components />} />
               
+              <Route path="/elements/layout-core" element={<LayoutCore />} />
+              {/*<Route path="/elements/layout-extra" element={<LayoutExtra />} />*/}
               <Route path="/elements/typography" element={<Typography />} />
               <Route path="/elements/button" element={<ButtonElementRegular />} />
               <Route path="/elements/button/ghost" element={<ButtonElementGhost />} />
               <Route path="/elements/button/large" element={<ButtonElementLarge />} />
               <Route path="/elements/button/disabled" element={<ButtonElementDisabled />} />
-              <Route path="/elements/input" element={<InputElement />} />
+              <Route path="/elements/text-input" element={<InputElement />} />
               
               <Route path="/components/button" element={<ButtonComponent />} />
               <Route path="/components/chip" element={<ChipComponent />} />
