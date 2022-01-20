@@ -21,7 +21,8 @@ import Downloads from './dsmsite/pages/downloads'
 import FAQ from './dsmsite/pages/faq/FAQ'
 
 // elements
-import LayoutCore from './dsmsite/pages/elements/layout/LayoutCore'
+import LayoutCoreSingle from './dsmsite/pages/elements/layout/LayoutCoreSingle'
+import LayoutCoreSidebar from './dsmsite/pages/elements/layout/LayoutCoreSidebar'
 // import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
 import Typography from './dsmsite/pages/elements/typography/Typography'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
@@ -63,7 +64,8 @@ function App() {
               <Route path="/elements" element={<Elements />} />
               <Route path="/components" element={<Components />} />
               
-              <Route path="/elements/layout-core" element={<LayoutCore />} />
+              <Route path="/elements/layout-core/single" element={<LayoutCoreSingle />} />
+              <Route path="/elements/layout-core/sidebar" element={<LayoutCoreSidebar />} />
               {/*<Route path="/elements/layout-extra" element={<LayoutExtra />} />*/}
               <Route path="/elements/typography" element={<Typography />} />
               <Route path="/elements/button" element={<ButtonElementRegular />} />

@@ -1,5 +1,5 @@
 const layoutCore = {
-  link: '/elements/layout-core',
+  link: '/elements/layout-core/single',
   title: 'Layout (core)',
 }
 
