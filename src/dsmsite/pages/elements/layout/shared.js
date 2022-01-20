@@ -12,7 +12,7 @@ export const hero = (
 
 export const navigation = (
   <ButtonsRow style={{display: 'flex'}}>
-    <Chip end label='Single column' to='/elements/layout-core/single' />
+    <Chip end label='Single column' to='/elements/layout-core' />
     <Chip end label='Sidebar layout' to='/elements/layout-core/sidebar' />
   </ButtonsRow>
 )

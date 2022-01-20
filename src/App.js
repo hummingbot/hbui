@@ -64,7 +64,7 @@ function App() {
               <Route path="/elements" element={<Elements />} />
               <Route path="/components" element={<Components />} />
               
-              <Route path="/elements/layout-core/single" element={<LayoutCoreSingle />} />
+              <Route path="/elements/layout-core" element={<LayoutCoreSingle />} />
               <Route path="/elements/layout-core/sidebar" element={<LayoutCoreSidebar />} />
               {/*<Route path="/elements/layout-extra" element={<LayoutExtra />} />*/}
               <Route path="/elements/typography" element={<Typography />} />
