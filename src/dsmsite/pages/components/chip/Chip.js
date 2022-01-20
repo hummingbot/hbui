@@ -2,9 +2,9 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { Body } from '../../../../hb_ui/elements/typography'
-import { Chip } from '../../../../hb_ui/components/chip'
+import Chip from '../../../../hb_ui/components/chip'
 
-function ChipElement() {
+function ChipPage() {
   return (
     <div>
       <ShortHero
@@ -37,10 +37,10 @@ function ChipElement() {
   )
 }
 
-export default ChipElement
+export default ChipPage
 
 const codeImport = String.raw
-`import { Chip } from '../hb_ui/components/chip'
+`import Chip from '../hb_ui/components/chip'
 `;
 
 const codeDefault = String.raw

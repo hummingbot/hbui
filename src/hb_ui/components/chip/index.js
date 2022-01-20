@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import tw, { css, styled } from 'twin.macro'
 
-export const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
+const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
   return (
     <ChipRoot
       isUppercase={isUppercase}
@@ -18,7 +18,9 @@ export const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
   )
 }
 
-export const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
+export default Chip
+
+const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
   tw`flex`,
   css`
     a.active {
@@ -37,7 +39,7 @@ export const ChipRoot = styled.span(({isUppercase, isDisabled}) => [
   ],
 ])
 
-export const ChipElement = styled(NavLink)(({}) => [
+const ChipElement = styled(NavLink)(({}) => [
   tw`flex`,
   tw`transition duration-100`,
   tw`px-4 py-1 lg:px-8 lg:py-1.5 rounded focus:outline-none`,
