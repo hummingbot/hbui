@@ -132,17 +132,6 @@ function Layout() {
         <br />
         <CodeBlock code={codeSideBarLayout} />
         <br />
-        <Separator />
-        <br />
-        <br />
-        <P>PaddingBox</P>
-        <br />
-        <P>ButtonsRow</P>
-        <br />
-        <P>Separator</P>
-        <br />
-        <P>PageRoot</P>
-        <br />
         <br />
       </MainContent>
     </PageRoot>
