@@ -18,6 +18,10 @@ const callout = {
   link: '/components/callout',
   title: 'Callout',
 }
+const snackbar = {
+  link: '/components/snackbar',
+  title: 'Snackbar',
+}
 
 module.exports = [
   button,
@@ -25,4 +29,5 @@ module.exports = [
   input,
   spinner,
   callout,
+  snackbar
 ]

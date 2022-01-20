@@ -13,8 +13,6 @@ import {
 export const textStyle = {
   fontFamily: 'Satoshi, sans-serif',
   margin: '0',
-  // color: black,
-  // fontWeight: '400',
   '& a': {
     color: green_primary,
     textDecoration: 'underline',

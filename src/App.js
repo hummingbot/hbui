@@ -37,6 +37,7 @@ import TextInputRequired from './dsmsite/pages/components/input/TextInputRequire
 import ChipComponent from './dsmsite/pages/components/chip/Chip'
 import Spinner from './dsmsite/pages/components/spinner/Spinner'
 import Callout from './dsmsite/pages/components/callout/Callout'
+import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
@@ -75,6 +76,7 @@ function App() {
               <Route path="/components/text-input/required" element={<TextInputRequired />} />
               <Route path="/components/spinner" element={<Spinner />} />
               <Route path="/components/callout" element={<Callout />} />
+              <Route path="/components/snackbar" element={<Snackbar />} />
               
               <Route path="/guidelines/colors" element={<Colors  />} />
             </Routes>
