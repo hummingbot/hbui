@@ -40,10 +40,42 @@ export const ContainerRow = styled(Container)`
 `
 
 export const PaddingBox = styled.div(() => [
-  css`
-    // outline: 1px solid yellow;
-  `,
   tw`py-4 md:py-8 lg:py-12`
+])
+
+export const PageRoot = styled(Section)(() => [
+  css`
+    min-height: 100vh;
+  `,
+])
+
+// sidebar layout
+
+export const SBLRoot = styled.div(() => [
+  css`
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  `,
+])
+
+export const SBLRootContent = styled.div(() => [
+  css`
+    height: 100vh;
+    overflow-y: scroll;
+  `,
+  tw`bg-secondary w-full`
+])
+
+export const SBLRootSidebar = styled.div(() => [
+  tw`bg-primary w-[0] md:w-[270px]`,
+  css`
+    height: 100vh;
+    ${[desktop_max]} {
+      opacity: 0;
+    }
+  `
 ])
 
 export const WhiteBox = styled.div({

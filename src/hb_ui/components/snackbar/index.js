@@ -32,29 +32,6 @@ const Root = styled.div(({
 }) => [
   tw`shadow-xl dark:shadow-xl flex inline-flex overflow-hidden rounded bg-white dark:bg-grey-dark-500`,
   tw`mb-4`,
-  // css`
-  //   svg {
-  //     margin-right: 8px;
-  //   }
-  // `,
-  // type === 'success' && [
-  //   tw`border-green-ui-100`
-  // ],
-  // type === 'info' && [
-  //   tw`border-blue-ui-100`
-  // ],
-  // type === 'danger' && [
-  //   tw`border-red-ui-100`
-  // ],
-  // type === 'warning' && [
-  //   tw`border-orange-ui-100`
-  // ],
-  // type === 'tip' && [
-  //   tw`border-purple-ui-100`
-  // ],
-  // type === 'bug' && [
-  //   tw`border-orange-ui-100`
-  // ],
 ])
 
 const IconBox = styled.div(({
@@ -76,5 +53,10 @@ const IconBox = styled.div(({
 ])
 
 const Text = styled.div(({}) => [
+<<<<<<< HEAD
   tw`flex font-medium text-grey-dark-200 dark:text-white items-center px-4`,
 ])
+=======
+  tw`flex font-medium text-primary items-center px-4`,
+])
+>>>>>>> 3b28ef015bdd9895d4b20bd4734cb3c71675cf0e

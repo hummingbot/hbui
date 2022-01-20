@@ -1,5 +1,15 @@
+const layoutCore = {
+  link: '/elements/layout-core',
+  title: 'Layout (core)',
+}
+
+// const layoutExtra = {
+//   link: '/elements/layout-extra',
+//   title: 'Layout (extra)',
+// }
+
 const typography = {
-  link: '/elements/Typography',
+  link: '/elements/typography',
   title: 'Typography',
 }
 
@@ -9,11 +19,13 @@ const button = {
 }
 
 const input = {
-  link: '/elements/input',
+  link: '/elements/text-input',
   title: 'TextInput',
 }
 
 module.exports = [
+  layoutCore,
+  // layoutExtra,
   typography,
   button,
   input,
