@@ -36,32 +36,32 @@ const getStateIcon = type => {
 }
 
 const Root = styled.div(({ type }) => [
-  tw`rounded border-solid border-l-8 border-r border-b border-t border-grey-light-400 bg-grey-light-200 dark:bg-grey-light-100/20`,
+  tw`rounded border-solid border-l-8 border-r border-b border-t border-grey-light-400 bg-grey-light-200 dark:bg-grey-light-100/5`,
   css`
     svg {
       margin-right: 10px;
     }
   `,
   type === 'success' && [
-    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/20`,
+    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/10`,
   ],
   type === 'info' && [
-    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/20`,
+    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/10`,
   ],
   type === 'danger' && [
-    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/20`,
+    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/10`,
   ],
   type === 'warning' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`,
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/10`,
   ],
   type === 'tip' && [
-    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/20`,
+    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/10`,
   ],
   type === 'bug' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/20`,
+    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/10`,
   ],
   type === 'note' && [
-    tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/20`,
+    tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/5`,
   ],
 ])
 
