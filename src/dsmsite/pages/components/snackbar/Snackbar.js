@@ -9,7 +9,7 @@ function SnackbarPage() {
     <div>
       <ShortHero
         title="Snackbar"
-        subTitle="The Snackbar component is used to display notifications is various states."
+        subTitle="The Snackbar component is used to display notifications in various states."
       />
       <MainContent>
         <Body>Import Snackbar element (adjust path)</Body>
