@@ -49,33 +49,39 @@ function SnackbarPage() {
 
 export default SnackbarPage
 
-const codeImport = String.raw`import Snackbar from '../hb_ui/components/snackbar'
+const codeImport = String.raw
+`import Snackbar from '../hb_ui/components/snackbar'
 `
 
-const codeDefault = String.raw`<Snackbar
+const codeDefault = String.raw
+`<Snackbar
   label='Default'
 />
 `
 
-const codeSuccess = String.raw`<Snackbar
+const codeSuccess = String.raw
+`<Snackbar
   type='success'
   label='Success'
 />
 `
 
-const codeInfo = String.raw`<Snackbar
+const codeInfo = String.raw
+`<Snackbar
   type='info'
   label='Info'
 />
 `
 
-const codeWarning = String.raw`<Snackbar
+const codeWarning = String.raw
+`<Snackbar
   type='warning'
   label='Warning'
 />
 `
 
-const codeDanger = String.raw`<Snackbar
+const codeDanger = String.raw
+`<Snackbar
   type='danger'
   label='Danger'
 />
