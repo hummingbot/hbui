@@ -3,10 +3,10 @@ const layoutCore = {
   title: 'Layout (core)',
 }
 
-// const layoutExtra = {
-//   link: '/elements/layout-extra',
-//   title: 'Layout (extra)',
-// }
+const layoutExtra = {
+  link: '/elements/layout-extra',
+  title: 'Layout (extra)',
+}
 
 const typography = {
   link: '/elements/typography',
@@ -25,7 +25,7 @@ const input = {
 
 module.exports = [
   layoutCore,
-  // layoutExtra,
+  layoutExtra,
   typography,
   button,
   input,

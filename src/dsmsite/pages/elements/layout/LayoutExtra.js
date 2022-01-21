@@ -1,28 +1,8 @@
 import React from 'react'
-import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import {
-  P,
-  Body,
-  Bold,
-  H6,
-  H5,
-  Red,
-  Blue,
-  Green,
-} from '../../../../hb_ui/elements/typography'
-import {
-  red,
-  green_primary,
-  blue_bright,
-  purple,
-  orange
-} from '../../../../hb_ui/constants/colors'
-import {
-  PageRoot,
-  PaddingBox,
-  ButtonsRow,
-  Separator
-} from '../../../../hb_ui/elements/layout'
+import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
+import { P, H5 } from '../../../../hb_ui/elements/typography'
+import { ItemsRow, Separator } from '../../../../hb_ui/elements/layout'
+import { Button } from '../../../../hb_ui/elements/buttons'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function LayoutExtra() {
@@ -33,13 +13,31 @@ function LayoutExtra() {
         subTitle='Layout utilities.'
       />
       <MainContent>
-        <P>PaddingBox</P>
+        <H5>Separator</H5>
         <br />
-        <P>ButtonsRow</P>
+        <P>Standard separator to vertically separate parts of a layout:</P>
         <br />
-        <P>Separator</P>
+        <Separator />
         <br />
-        <P>PageRoot</P>
+        <br />
+        <CodeBlock code={codeSeparator} />
+        <br />
+        <br />
+        <br />
+        <H5>ItemsRow</H5>
+        <br />
+        <P>Use to place small items (such as buttons) inline and automatically have margins between them except after the last item.</P>
+        <br />
+        <br />
+        <ItemsRow>
+          <Button>Button</Button>
+          <Button>Button</Button>
+          <Button>Button</Button>
+          <Button>Button</Button>
+        </ItemsRow>
+        <br />
+        <br />
+        <CodeBlock code={codeItemsRow} />
         <br />
         <br />
       </MainContent>
@@ -49,16 +47,20 @@ function LayoutExtra() {
 
 export default LayoutExtra
 
+const codeSeparator = String.raw
+`import { Separator } from '../hb_ui/elements/layout'
 
-const codeSingleColumnLayout = String.raw
-`import { PageRoot, Section, Container } from '../hb_ui/elements/layout'
-import { P } from '../hb_ui/elements/typography'
+<Separator />
+`
 
-<PageRoot>
-  <Section>
-    <Container>
-      <P>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</P>
-    </Container>
-  </Section>
-</PageRoot>
+const codeItemsRow = String.raw
+`import { ItemsRow } from '../hb_ui/elements/layout'
+import { Button } from '../hb_ui/elements/buttons'
+
+<ItemsRow>
+  <Button>Button</Button>
+  <Button>Button</Button>
+  <Button>Button</Button>
+  <Button>Button</Button>
+</ItemsRow>
 `

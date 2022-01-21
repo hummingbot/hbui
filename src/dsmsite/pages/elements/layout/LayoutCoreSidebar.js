@@ -1,11 +1,10 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
+import CodeBlock from '../../../ui/components/CodeBlock'
 import {
   P,
-  Body,
   Bold,
   H6,
-  H5,
   Red,
   Blue,
   Green,
@@ -24,11 +23,8 @@ import {
   SBLRoot,
   SBLRootContent,
   SBLRootSidebar,
-  PaddingBox,
-  ButtonsRow,
-  Separator,
+  Separator
 } from '../../../../hb_ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
 function LayoutCoreSidebar() {

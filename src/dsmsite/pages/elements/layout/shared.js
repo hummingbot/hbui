@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero } from '../../../ui/elements/layout'
-import { ButtonsRow } from '../../../../hb_ui/elements/layout'
+import { ItemsRow } from '../../../../hb_ui/elements/layout'
 import Chip from '../../../../hb_ui/components/chip'
 
 export const hero = (
@@ -11,8 +11,8 @@ export const hero = (
 )
 
 export const navigation = (
-  <ButtonsRow style={{ display: 'flex' }}>
+  <ItemsRow style={{ display: 'flex' }}>
     <Chip end label="Single column" to="/elements/layout-core" />
     <Chip end label="Sidebar layout" to="/elements/layout-core/sidebar" />
-  </ButtonsRow>
+  </ItemsRow>
 )

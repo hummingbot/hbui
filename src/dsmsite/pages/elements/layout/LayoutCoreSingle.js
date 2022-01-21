@@ -1,11 +1,10 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
+import CodeBlock from '../../../ui/components/CodeBlock'
 import {
   P,
-  Body,
   Bold,
   H6,
-  H5,
   Red,
   Blue,
   Green,
@@ -13,9 +12,7 @@ import {
 import {
   red,
   green_primary,
-  blue_bright,
-  purple,
-  orange,
+  blue_bright
 } from '../../../../hb_ui/constants/colors'
 import {
   PageRoot,
@@ -23,7 +20,6 @@ import {
   Container,
   Separator,
 } from '../../../../hb_ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
 function LayoutCoreSingle() {

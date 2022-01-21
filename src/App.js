@@ -19,7 +19,7 @@ import FAQ from './dsmsite/pages/faq/FAQ'
 // elements
 import LayoutCoreSingle from './dsmsite/pages/elements/layout/LayoutCoreSingle'
 import LayoutCoreSidebar from './dsmsite/pages/elements/layout/LayoutCoreSidebar'
-// import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
+import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
 import Typography from './dsmsite/pages/elements/typography/Typography'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
 import ButtonElementGhost from './dsmsite/pages/elements/button/GhostButton'
@@ -68,7 +68,7 @@ function App() {
                 path="/elements/layout-core/sidebar"
                 element={<LayoutCoreSidebar />}
               />
-              {/*<Route path="/elements/layout-extra" element={<LayoutExtra />} />*/}
+              <Route path="/elements/layout-extra" element={<LayoutExtra />} />
               <Route path="/elements/typography" element={<Typography />} />
               <Route
                 path="/elements/button"
