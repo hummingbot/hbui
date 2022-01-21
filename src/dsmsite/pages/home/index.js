@@ -1,13 +1,13 @@
 import React from 'react'
-import { P, Body } from '../../../hb_ui/elements/typography'
+import { Body } from '../../../hb_ui/elements/typography'
 import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 
 function Home() {
   return (
     <PageRoot>
-      <ShortHero title="Home" subTitle="Design system Home" />
+      <ShortHero title="Home" subTitle="Design system home" />
       <MainContent>
-        <P>Page under development!</P>
+        <Body>Page under development!</Body>
         <br />
         <Body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
