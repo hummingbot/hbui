@@ -65,13 +65,13 @@ const codeSuccess = String.raw`<Snackbar
 
 const codeInfo = String.raw`<Snackbar
   type='info'
-  label='Success'
+  label='Info'
 />
 `
 
 const codeWarning = String.raw`<Snackbar
   type='warning'
-  label='Success'
+  label='Warning'
 />
 `
 
