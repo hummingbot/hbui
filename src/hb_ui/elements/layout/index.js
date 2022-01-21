@@ -74,12 +74,8 @@ export const SBLRootSidebar = styled.div(() => [
   `,
 ])
 
-export const WhiteBox = styled.div({
-  background: 'white',
-  boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.25)',
-})
-
-export const ButtonsRow = styled.div({
+export const ItemsRow = styled.div({
+  display: 'flex',
   '& > *': {
     marginRight: '10px',
   },
@@ -88,13 +84,15 @@ export const ButtonsRow = styled.div({
   },
 })
 
-export const WhiteBoxRound = styled(WhiteBox)({
-  borderRadius: '7px',
-  [desktop_max]: { borderRadius: '6px' },
-  [tablet_max]: { borderRadius: '5px' },
-  [phablet_max]: { borderRadius: '4px' },
-  [phone_max]: { borderRadius: '3px' },
-})
+export const Separator = styled.div(props => [
+  css`
+    height: 1px;
+    width: 100%;
+    opacity: 0.5;
+    margin-top: 20px;
+  `,
+  tw`bg-quaternary dark:(bg-quaternary)`,
+])
 
 export const DivHdMin = styled.div({ [desktop_max]: { display: 'none' } })
 export const DivDesktopMin = styled.div({ [tablet_max]: { display: 'none' } })
@@ -170,13 +168,3 @@ export const MobileSpaceMaker = styled.div({
     height: '80px',
   },
 })
-
-export const Separator = styled.div(props => [
-  css`
-    height: 1px;
-    width: 100%;
-    opacity: 0.5;
-    margin-top: 20px;
-  `,
-  tw`bg-quaternary dark:(bg-quaternary)`,
-])
