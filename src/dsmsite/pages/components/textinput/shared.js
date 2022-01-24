@@ -14,11 +14,16 @@ export const navigation = (
   <ItemsRow style={{ display: 'flex' }}>
     <Chip end label="Regular" to="/components/text-input" />
     <Chip end label="Custom label" to="/components/text-input/custom-label" />
+    <Chip end label="Required" to="/components/text-input/required" />
     <Chip
       end
       label="Extended label"
       to="/components/text-input/extended-label"
     />
-    <Chip end label="Required" to="/components/text-input/required" />
+    <Chip
+      end
+      label="Prefix"
+      to="/components/text-input/prefix"
+    />
   </ItemsRow>
 )

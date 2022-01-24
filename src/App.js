@@ -29,10 +29,11 @@ import InputElement from './dsmsite/pages/elements/input/Input'
 
 // components
 import ButtonComponent from './dsmsite/pages/components/button/Button'
-import TextInput from './dsmsite/pages/components/input/TextInput'
-import TextInputCustomLabel from './dsmsite/pages/components/input/TextInputCustomLabel'
-import TextInputExtendedLabel from './dsmsite/pages/components/input/TextInputExtendedLabel'
-import TextInputRequired from './dsmsite/pages/components/input/TextInputRequired'
+import TextInput from './dsmsite/pages/components/textinput/TextInput'
+import TextInputCustomLabel from './dsmsite/pages/components/textinput/TextInputCustomLabel'
+import TextInputExtendedLabel from './dsmsite/pages/components/textinput/TextInputExtendedLabel'
+import TextInputRequired from './dsmsite/pages/components/textinput/TextInputRequired'
+import TextInputPrefix from './dsmsite/pages/components/textinput/TextInputPrefix'
 import ChipComponent from './dsmsite/pages/components/chip/Chip'
 import Spinner from './dsmsite/pages/components/spinner/Spinner'
 import Callout from './dsmsite/pages/components/callout/Callout'
@@ -102,6 +103,10 @@ function App() {
               <Route
                 path="/components/text-input/required"
                 element={<TextInputRequired />}
+              />
+              <Route
+                path="/components/text-input/prefix"
+                element={<TextInputPrefix />}
               />
               <Route path="/components/spinner" element={<Spinner />} />
               <Route path="/components/callout" element={<Callout />} />
