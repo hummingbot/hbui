@@ -12,6 +12,7 @@ const TextInput = ({
   required,
   customTopLabel,
   bottomLabel,
+  prefix,
   ...props
 }) => {
   const [inputFocused, setInputFocused] = useState(false)
@@ -25,6 +26,7 @@ const TextInput = ({
   const labelValue = customTopLabel || placeholder
   return (
     <Root
+      prefix={prefix}
       hasValue={hasValue}
       inputFocused={inputFocused}
       placeholder={placeholder}
@@ -36,9 +38,14 @@ const TextInput = ({
           {required && <span tw="text-red ml-1">*</span>}
         </PlaceholderLabel>
       )}
+      {prefix && (
+        <PrefixLabel className="prefix-label">
+          {prefix}
+        </PrefixLabel>
+      )}
       <TextInputElement
         type="text"
-        required
+        className='input-element'
         inputFocused
         onFocus={() => setInputFocused(true)}
         onBlur={() => setInputFocused(false)}
@@ -85,14 +92,29 @@ const getStateIcon = props => {
 }
 
 const Root = styled.div(
-  ({ hasValue, isValid, isInvalid, isWarning, inputFocused }) => [
+  ({ hasValue, isValid, isInvalid, isWarning, inputFocused, prefix, customPrefixPadding }) => [
     tw`relative`,
     css`
       .top-label {
         top: 0px;
         left: 8px;
       }
+      .prefix-label {
+        top: 12px;
+      }
     `,
+    prefix &&
+      css`
+        input {
+          padding-left: 60px;
+        }
+      `,
+    customPrefixPadding &&
+      css`
+        input {
+          padding-left: ${customPrefixPadding};
+        }
+      `,
     hasValue &&
       css`
         .top-label {
@@ -127,6 +149,10 @@ const Root = styled.div(
       `,
   ],
 )
+
+const PrefixLabel = styled.span(({}) => [
+  tw`absolute left-4 font-medium text-dim text-base pointer-events-none`,
+])
 
 const PlaceholderLabel = styled.span(({ isValid, isInvalid, isWarning }) => [
   tw`transition-all absolute duration-200 opacity-0 bg-primary font-medium text-primary text-xs px-2 py-0.5 pointer-events-none focus:outline-none focus:text-blue`,
