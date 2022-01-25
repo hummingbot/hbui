@@ -2,6 +2,7 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import {
   P,
+  PSmall,
   Body,
   PrimaryColor,
   H6,
@@ -34,6 +35,13 @@ function Typography() {
         <P>The quick brown fox jumps over the lazy dog</P>
         <br />
         <CodeBlock code={codeParagraph} />
+        <br />
+        <br />
+        <P isBrandColor>Paragraph (small)</P>
+        <br />
+        <PSmall>The quick brown fox jumps over the lazy dog</PSmall>
+        <br />
+        <CodeBlock code={codeParagraphSmall} />
         <br />
         <br />
         <P isBrandColor>Body</P>
@@ -99,6 +107,10 @@ const codeLabelMicro = String.raw`import { LabelMicro } from '../hb_ui/elements/
 const codeParagraph = String.raw`import { P } from '../hb_ui/elements/typography'
 
 <P>The quick brown fox jumps over the lazy dog</P>
+`
+const codeParagraphSmall = String.raw`import { PSmall } from '../hb_ui/elements/typography'
+
+<PSmall>The quick brown fox jumps over the lazy dog</PSmall>
 `
 const codeBody = String.raw`import { Body } from '../hb_ui/elements/typography'
 
