@@ -45,6 +45,18 @@ const sharedTransforms = props => [
     css`
       color: ${green_primary} !important;
     `,
+  props.isRed &&
+    css`
+      color: ${red} !important;
+    `,
+  props.isBlue &&
+    css`
+      color: ${blue_bright} !important;
+    `,
+  props.isOrange &&
+    css`
+      color: ${orange} !important;
+    `,
   props.tightLineSpacing &&
     css`
       line-height: 120% !important;
