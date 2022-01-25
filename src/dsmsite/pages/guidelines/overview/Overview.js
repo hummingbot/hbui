@@ -22,6 +22,7 @@ function DesignOverview() {
     <div>
       <ShortHero
         title='Design Guidelines'
+        boldTitle={true}
         bgImage={bgImage}
       />
       <MainContent>

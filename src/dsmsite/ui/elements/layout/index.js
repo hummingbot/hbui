@@ -58,12 +58,12 @@ export function MainContentRow({ children }) {
   )
 }
 
-export function ShortHero({ title, subTitle, bgImage }) {
+export function ShortHero({ title, subTitle, bgImage, boldTitle }) {
   return (
     <ContentBlock tw="bg-tertiary" style={{background: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'}}>
       <Container>
         <ShortHeroPaddingBox>
-          <H1>{title}</H1>
+          <H1 isBold={boldTitle}>{title}</H1>
           <P tw="py-4 lg:py-6 lg:w-3/5 xl:w-[500px]">{subTitle}</P>
         </ShortHeroPaddingBox>
       </Container>
