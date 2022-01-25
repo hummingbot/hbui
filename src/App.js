@@ -41,6 +41,7 @@ import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
+import DesignOverview from './dsmsite/pages/guidelines/overview/Overview'
 
 function App() {
   return (
@@ -113,6 +114,7 @@ function App() {
               <Route path="/components/snackbar" element={<Snackbar />} />
 
               <Route path="/guidelines/colors" element={<Colors />} />
+              <Route path="/guidelines/overview" element={<DesignOverview />} />
             </Routes>
           </Main>
         </Layout>

@@ -58,9 +58,9 @@ export function MainContentRow({ children }) {
   )
 }
 
-export function ShortHero({ title, subTitle }) {
+export function ShortHero({ title, subTitle, bgImage }) {
   return (
-    <ContentBlock tw="bg-tertiary">
+    <ContentBlock tw="bg-tertiary" style={{background: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'}}>
       <Container>
         <ShortHeroPaddingBox>
           <H1>{title}</H1>
