@@ -62,12 +62,9 @@ function DSMSidebar() {
 export default DSMSidebar
 
 const Sidebar = styled.div(() => [
-  tw`bg-primary w-[0] md:w-[270px]`,
+  tw`bg-primary z-10 transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
   css`
     height: 100vh;
-    ${[desktop_max]} {
-      opacity: 0;
-    }
   `,
 ])
 
