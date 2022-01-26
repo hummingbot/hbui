@@ -3,6 +3,9 @@ import tw, { css, styled } from 'twin.macro'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import GlobalStyles from './styles/GlobalStyles'
+import ScrollToTop from './dsmsite/system/ScrollToTop'
+
+// sidebar
 import DSMSidebar from './dsmsite/sidebar/DSMSidebar'
 
 // pages
@@ -48,76 +51,75 @@ function App() {
     <div>
       <GlobalStyles />
       <BrowserRouter>
-        <Layout>
-          <DSMSidebar />
-          <Main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/getting-started" element={<GettingStarted />} />
-              <Route path="/guidelines" element={<Guidelines />} />
-              <Route path="/design-tokens" element={<DesignTokens />} />
-              <Route path="/code" element={<Code />} />
-              <Route path="/downloads" element={<Downloads />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/elements" element={<Elements />} />
-              <Route path="/components" element={<Components />} />
+        <DSMSidebar />
+        <Main>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/getting-started" element={<GettingStarted />} />
+            <Route path="/guidelines" element={<Guidelines />} />
+            <Route path="/design-tokens" element={<DesignTokens />} />
+            <Route path="/code" element={<Code />} />
+            <Route path="/downloads" element={<Downloads />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/elements" element={<Elements />} />
+            <Route path="/components" element={<Components />} />
 
-              <Route
-                path="/elements/layout-core"
-                element={<LayoutCoreSingle />}
-              />
-              <Route
-                path="/elements/layout-core/sidebar"
-                element={<LayoutCoreSidebar />}
-              />
-              <Route path="/elements/layout-extra" element={<LayoutExtra />} />
-              <Route path="/elements/typography" element={<Typography />} />
-              <Route
-                path="/elements/button"
-                element={<ButtonElementRegular />}
-              />
-              <Route
-                path="/elements/button/ghost"
-                element={<ButtonElementGhost />}
-              />
-              <Route
-                path="/elements/button/large"
-                element={<ButtonElementLarge />}
-              />
-              <Route
-                path="/elements/button/disabled"
-                element={<ButtonElementDisabled />}
-              />
-              <Route path="/elements/text-input" element={<InputElement />} />
+            <Route
+              path="/elements/layout-core"
+              element={<LayoutCoreSingle />}
+            />
+            <Route
+              path="/elements/layout-core/sidebar"
+              element={<LayoutCoreSidebar />}
+            />
+            <Route path="/elements/layout-extra" element={<LayoutExtra />} />
+            <Route path="/elements/typography" element={<Typography />} />
+            <Route
+              path="/elements/button"
+              element={<ButtonElementRegular />}
+            />
+            <Route
+              path="/elements/button/ghost"
+              element={<ButtonElementGhost />}
+            />
+            <Route
+              path="/elements/button/large"
+              element={<ButtonElementLarge />}
+            />
+            <Route
+              path="/elements/button/disabled"
+              element={<ButtonElementDisabled />}
+            />
+            <Route path="/elements/text-input" element={<InputElement />} />
 
-              <Route path="/components/button" element={<ButtonComponent />} />
-              <Route path="/components/chip" element={<ChipComponent />} />
-              <Route path="/components/text-input" element={<TextInput />} />
-              <Route
-                path="/components/text-input/custom-label"
-                element={<TextInputCustomLabel />}
-              />
-              <Route
-                path="/components/text-input/extended-label"
-                element={<TextInputExtendedLabel />}
-              />
-              <Route
-                path="/components/text-input/required"
-                element={<TextInputRequired />}
-              />
-              <Route
-                path="/components/text-input/prefix"
-                element={<TextInputPrefix />}
-              />
-              <Route path="/components/spinner" element={<Spinner />} />
-              <Route path="/components/callout" element={<Callout />} />
-              <Route path="/components/snackbar" element={<Snackbar />} />
+            <Route path="/components/button" element={<ButtonComponent />} />
+            <Route path="/components/chip" element={<ChipComponent />} />
+            <Route path="/components/text-input" element={<TextInput />} />
+            <Route
+              path="/components/text-input/custom-label"
+              element={<TextInputCustomLabel />}
+            />
+            <Route
+              path="/components/text-input/extended-label"
+              element={<TextInputExtendedLabel />}
+            />
+            <Route
+              path="/components/text-input/required"
+              element={<TextInputRequired />}
+            />
+            <Route
+              path="/components/text-input/prefix"
+              element={<TextInputPrefix />}
+            />
+            <Route path="/components/spinner" element={<Spinner />} />
+            <Route path="/components/callout" element={<Callout />} />
+            <Route path="/components/snackbar" element={<Snackbar />} />
 
-              <Route path="/guidelines/colors" element={<Colors />} />
-              <Route path="/guidelines/overview" element={<DesignOverview />} />
-            </Routes>
-          </Main>
-        </Layout>
+            <Route path="/guidelines/colors" element={<Colors />} />
+            <Route path="/guidelines/overview" element={<DesignOverview />} />
+          </Routes>
+        </Main>
       </BrowserRouter>
     </div>
   )
@@ -127,15 +129,8 @@ export default App
 
 const Layout = styled.div({
   display: 'flex',
-  alignItems: 'center',
-  height: '100vh',
-  overflow: 'hidden',
 })
 
 const Main = styled.div(() => [
-  css`
-    height: 100vh;
-    overflow-y: scroll;
-  `,
-  tw`bg-secondary w-full`,
+  tw`bg-secondary transition-all w-full ml-0 md:w-[calc(100% - 270px)] md:ml-[270px]`,
 ])
