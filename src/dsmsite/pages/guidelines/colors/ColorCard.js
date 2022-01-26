@@ -8,7 +8,7 @@ import {
   MainContentSidebar,
 } from '../../../ui/elements/layout'
 import { Button } from '../../../../hb_ui/components/button'
-import Copy from '../../../../ui_svgs/16x16/Copy'
+import Copy from '../../../../hb_ui/svgs/16x16/Copy'
 
 function ColorCard({ title, description, hex, rgb }) {
   return (

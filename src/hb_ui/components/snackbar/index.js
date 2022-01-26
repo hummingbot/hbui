@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import tw, { css, styled, theme } from 'twin.macro'
-import SuccessIcon from '../../../ui_svgs/alerts/SuccessIcon'
-import WarningIcon from '../../../ui_svgs/alerts/WarningIcon'
-import DangerIcon from '../../../ui_svgs/alerts/DangerIcon'
-import InfoIcon from '../../../ui_svgs/alerts/InfoIcon'
-import DefaultIcon from '../../../ui_svgs/alerts/DefaultIcon'
+import SuccessIcon from '../../svgs/alerts/SuccessIcon'
+import WarningIcon from '../../svgs/alerts/WarningIcon'
+import DangerIcon from '../../svgs/alerts/DangerIcon'
+import InfoIcon from '../../svgs/alerts/InfoIcon'
+import DefaultIcon from '../../svgs/alerts/DefaultIcon'
 
 const Snackbar = ({ label, type, ...props }) => {
   const stateIcon = getStateIcon(type)

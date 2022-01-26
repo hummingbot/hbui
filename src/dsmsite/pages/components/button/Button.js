@@ -3,7 +3,7 @@ import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { Body } from '../../../../hb_ui/elements/typography'
 import { Button as ButtonComponent } from '../../../../hb_ui/components/button'
-import DummyIcon from '../../../../ui_svgs/16x16/DummyIcon'
+import DummyIcon from '../../../../hb_ui/svgs/16x16/DummyIcon'
 
 function Button() {
   return (
@@ -41,7 +41,7 @@ function Button() {
 export default Button
 
 const codeWithIconBefore = String.raw`import { Button } from '../hb_ui/components/button'
-import { DummyIcon } from '../ui_svgs/16x16/DummyIcon'
+import { DummyIcon } from '../svgs/16x16/DummyIcon'
 
 <Button
   label='Button'
@@ -50,7 +50,7 @@ import { DummyIcon } from '../ui_svgs/16x16/DummyIcon'
 `
 
 const codeWithIconAfter = String.raw`import { Button } from '../hb_ui/components/button'
-import { DummyIcon } from '../ui_svgs/16x16/DummyIcon'
+import { DummyIcon } from '../svgs/16x16/DummyIcon'
 
 <Button
   label='Button'
@@ -59,7 +59,7 @@ import { DummyIcon } from '../ui_svgs/16x16/DummyIcon'
 `
 
 const codeWithCustomIconColor = String.raw`import { Button } from '../hb_ui/components/button'
-import { DummyIcon } from '../ui_svgs/16x16/DummyIcon'
+import { DummyIcon } from '../svgs/16x16/DummyIcon'
 
 <Button
   label='Button'
