@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import {
   P,
@@ -79,7 +80,7 @@ function DesignOverview() {
         <Callout
           type='info'
           title='Download Brand Assets'
-          text='Get access to all the necessary formats so you can work with the correct brand requirements. Download.'
+          text={<span>Get access to all the necessary formats so you can work with the correct brand requirements. <Link to='/downloads'>Download</Link>.</span>}
         />
         <br />
         <br />
@@ -174,7 +175,7 @@ function DesignOverview() {
         <Callout
           type='info'
           title='Color Library'
-          text='These are the colors represented for the AlphaCoin brand. To learn more about the design system color library, see the full color section.'
+          text={<span>These are the colors represented for the AlphaCoin brand. To learn more about the design system color library, see the full <Link to='/guidelines/colors'>color section</Link>.</span>}
         />
         <br />
         <br />
@@ -213,7 +214,7 @@ function DesignOverview() {
         <Callout
           type='info'
           title='Typeface Asset'
-          text='You can download the font pack from the resources section.'
+          text={<span>You can download the font pack from the <Link to='/downloads#typography'>resources section</Link>.</span>}
         />
         <br />
         <br />

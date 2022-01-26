@@ -90,4 +90,9 @@ const Header = styled.div(({ type }) => [
 
 const Text = styled.div(({ isSuccess, isInfo, isDanger, isWarning }) => [
   tw`font-medium text-grey-dark-200 dark:text-white px-4 pb-4 pt-2`,
+  css`
+    a {
+      text-decoration: underline;
+    }
+  `,
 ])
