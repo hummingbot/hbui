@@ -127,10 +127,6 @@ function App() {
 
 export default App
 
-const Layout = styled.div({
-  display: 'flex',
-})
-
 const Main = styled.div(() => [
   tw`bg-secondary transition-all w-full ml-0 md:w-[calc(100% - 270px)] md:ml-[270px]`,
 ])
