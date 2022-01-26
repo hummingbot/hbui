@@ -13,17 +13,6 @@ import {
   orange,
 } from '../../constants/colors'
 
-export const textStyle = {
-  fontFamily: 'Satoshi, sans-serif',
-  margin: '0',
-  '& a': {
-    color: green_primary,
-    textDecoration: 'underline',
-  },
-}
-
-// const textColor =
-
 const sharedTransforms = props => [
   tw`text-black dark:(text-white)`,
   tw`m-0 font-normal`,
@@ -61,6 +50,11 @@ const sharedTransforms = props => [
     css`
       line-height: 120% !important;
     `,
+  css`
+    a {
+      text-decoration: underline;
+    }
+  `,
 ]
 
 export const PSmall = styled.p(
