@@ -24,6 +24,7 @@ import LayoutCoreSingle from './dsmsite/pages/elements/layout/LayoutCoreSingle'
 import LayoutCoreSidebar from './dsmsite/pages/elements/layout/LayoutCoreSidebar'
 import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
 import Typography from './dsmsite/pages/elements/typography/Typography'
+import TypographyTests from './dsmsite/pages/elements/typography/Tests'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
 import ButtonElementGhost from './dsmsite/pages/elements/button/GhostButton'
 import ButtonElementLarge from './dsmsite/pages/elements/button/ButtonLarge'
@@ -75,6 +76,7 @@ function App() {
             />
             <Route path="/elements/layout-extra" element={<LayoutExtra />} />
             <Route path="/elements/typography" element={<Typography />} />
+            <Route path="/elements/typography/tests" element={<TypographyTests />} />
             <Route
               path="/elements/button"
               element={<ButtonElementRegular />}
