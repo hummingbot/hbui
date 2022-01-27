@@ -26,7 +26,7 @@ function Tests() {
         <LabelMicro>The quick brown fox jumps over the lazy dog</LabelMicro>
         <br />
         <br />
-        <LabelMicro>Body element  (bigger P with margin)</LabelMicro>
+        <LabelMicro>P element</LabelMicro>
         <br />
         <P>Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.</P>
         <P>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis.</P>
