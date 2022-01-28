@@ -59,55 +59,55 @@ const sharedTransforms = props => [
 
 export const PSmall = styled.p(
   {},
-  props => [tw`text-sm`, tw`leading-tight`],
+  props => [tw`text-sm`, tw`leading-tight tracking-normal`],
   sharedTransforms,
 )
 
 export const P = styled.p(
   {},
-  props => [tw`text-base md:text-lg md:leading-tight`, tw`leading-tight`],
+  props => [tw`text-base md:text-base md:leading-normal`, tw`leading-normal`],
   sharedTransforms,
 )
 
 export const Body = styled.p(
   {},
-  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`, tw`leading-relaxed`],
+  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`, tw`leading-normal`],
   sharedTransforms,
 )
 
 export const H6 = styled.h6(
   {},
-  props => [tw`text-lg md:text-xl lg:text-2xl`, tw`leading-snug`],
+  props => [tw`text-lg md:text-xl lg:text-2xl`, tw`leading-tight`],
   sharedTransforms,
 )
 
 export const H5 = styled.h5(
   {},
-  props => [tw`text-xl md:text-2xl lg:text-3xl`, tw`leading-tight`],
+  props => [tw`text-xl md:text-2xl lg:text-3xl`, tw`leading-tight tracking-normal`],
   sharedTransforms,
 )
 
 export const H4 = styled.h4(
   {},
-  props => [tw`text-2xl md:text-3xl lg:text-4xl`, tw`leading-tight`],
+  props => [tw`text-2xl md:text-3xl lg:text-4xl`, tw`leading-tight tracking-normal`],
   sharedTransforms,
 )
 
 export const H3 = styled.h3(
   {},
-  props => [tw`text-3xl md:text-4xl lg:text-5xl`, tw`leading-none`],
+  props => [tw`text-3xl md:text-4xl lg:text-5xl`, tw`leading-none tracking-tight`],
   sharedTransforms,
 )
 
 export const H2 = styled.h2(
   {},
-  props => [tw`text-4xl md:text-5xl lg:text-6xl`, tw`leading-none`],
+  props => [tw`text-4xl md:text-5xl lg:text-6xl`, tw`leading-none tracking-tight`],
   sharedTransforms,
 )
 
 export const H1 = styled.h1(
   {},
-  props => [tw`text-5xl md:text-6xl lg:text-7xl`, tw`leading-none`],
+  props => [tw`text-5xl md:text-6xl lg:text-7xl`, tw`leading-none tracking-tight`],
   sharedTransforms,
 )
 
