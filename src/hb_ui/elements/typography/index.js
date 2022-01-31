@@ -9,7 +9,7 @@ import {
   black,
   green_primary,
   red,
-  blue_bright,
+  blue,
   orange,
 } from '../../constants/colors'
 
@@ -40,7 +40,7 @@ const sharedTransforms = props => [
     `,
   props.isBlue &&
     css`
-      color: ${blue_bright} !important;
+      color: ${blue} !important;
     `,
   props.isOrange &&
     css`
@@ -124,7 +124,7 @@ export const Red = styled.span({
 })
 
 export const Blue = styled.span({
-  color: blue_bright,
+  color: blue,
 })
 
 export const Green = styled.span({

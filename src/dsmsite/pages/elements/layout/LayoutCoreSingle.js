@@ -12,8 +12,9 @@ import {
 import {
   red,
   green_primary,
-  blue_bright
+  blue
 } from '../../../../hb_ui/constants/colors'
+import colors from '../../../../hb_ui/constants/colors'
 import {
   PageRoot,
   Section,
@@ -22,6 +23,7 @@ import {
 } from '../../../../hb_ui/elements/layout'
 import { hero, navigation } from './shared'
 
+console.dir(colors)
 function LayoutCoreSingle() {
   return (
     <PageRoot>
@@ -80,7 +82,7 @@ function LayoutCoreSingle() {
         <br />
         <PageRoot style={{ border: `2px solid ${green_primary}` }}>
           <Section style={{ border: `2px solid ${red}` }}>
-            <Container style={{ border: `2px solid ${blue_bright}` }}>
+            <Container style={{ border: `2px solid ${blue}` }}>
               <P>
                 Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur
                 blandit tempus porttitor. Morbi leo risus, porta ac consectetur
