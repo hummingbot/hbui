@@ -1,41 +1,41 @@
 import React from 'react'
 import { Global, css } from '@emotion/react'
 import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
-import colors from '../hb_ui/constants/colors'
+import colorTokens from '../../tokens/tokens.json'
 
 const customStyles = css`
   .light {
-    --bg-primary: #ffffff;
-    --bg-secondary: ${colors.greyscale_light_100};
-    --bg-tertiary: ${colors.greyscale_light_200};
-    --bg-quaternary: ${colors.greyscale_light_400};
+    --bg-primary: ${colorTokens.light.bg_primary.value};
+    --bg-secondary: ${colorTokens.light.bg_secondary.value};
+    --bg-tertiary: ${colorTokens.light.bg_tertiary.value};
+    --bg-quaternary: ${colorTokens.light.bg_quaternary.value};
 
-    --border-primary: ${colors.greyscale_light_200};
-    --border-secondary: ${colors.greyscale_light_300};
-    --border-tertiary: ${colors.greyscale_light_400};
+    --border-primary: ${colorTokens.light.border_primary.value};
+    --border-secondary: ${colorTokens.light.border_secondary.value};
+    --border-tertiary: ${colorTokens.light.border_tertiary.value};
 
-    --text-primary: ${colors.greyscale_dark_700};
-    --text-secondary: ${colors.greyscale_dark_600};
-    --text-tertiary: ${colors.greyscale_dark_400};
-    --text-quaternary: ${colors.greyscale_light_600};
+    --text-primary: ${colorTokens.light.text_primary.value};
+    --text-secondary: ${colorTokens.light.text_secondary.value};
+    --text-tertiary: ${colorTokens.light.text_tertiary.value};
+    --text-quaternary: ${colorTokens.light.text_quaternary.value};
   }
   .dark {
-    --bg-primary: ${colors.greyscale_dark_700};
-    --bg-secondary: ${colors.greyscale_dark_600};
-    --bg-tertiary: ${colors.greyscale_dark_500};
-    --bg-quaternary: ${colors.greyscale_dark_300};
+    --bg-primary: ${colorTokens.dark.bg_primary.value};
+    --bg-secondary: ${colorTokens.dark.bg_secondary.value};
+    --bg-tertiary: ${colorTokens.dark.bg_tertiary.value};
+    --bg-quaternary: ${colorTokens.dark.bg_quaternary.value};
 
-    --border-primary: ${colors.greyscale_dark_400};
-    --border-secondary: ${colors.greyscale_dark_200};
-    --border-tertiary: ${colors.greyscale_dark_100};
+    --border-primary: ${colorTokens.dark.border_primary.value};
+    --border-secondary: ${colorTokens.dark.border_secondary.value};
+    --border-tertiary: ${colorTokens.dark.border_tertiary.value};
 
-    --text-primary: #ffffff;
-    --text-secondary: ${colors.greyscale_light_200};
-    --text-tertiary: ${colors.greyscale_light_400};
-    --text-quaternary: ${colors.greyscale_light_600};
+    --text-primary: ${colorTokens.dark.text_primary.value};
+    --text-secondary: ${colorTokens.dark.text_secondary.value};
+    --text-tertiary: ${colorTokens.dark.text_tertiary.value};
+    --text-quaternary: ${colorTokens.dark.text_quaternary.value};
   }
   body {
-    -webkit-tap-highlight-color: ${colors.yellow};
+    -webkit-tap-highlight-color: ${colorTokens.global.yellow.value};
     ${tw`antialiased`}
   }
 `
