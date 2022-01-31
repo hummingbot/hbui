@@ -36,7 +36,7 @@ module.exports = {
       'red-active': colors.red_active,
       'red-light': colors.red_light,
       'red-superlight': colors.red_superlight,
-      'blue': colors.blue_bright,
+      'blue': colors.blue,
       'blue-hovered': colors.blue_hovered,
       'blue-active': colors.blue_active,
       'blue-light': colors.blue_light,
