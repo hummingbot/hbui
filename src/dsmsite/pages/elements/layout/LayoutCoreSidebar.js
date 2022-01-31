@@ -12,7 +12,7 @@ import {
 import {
   red,
   green_primary,
-  blue_bright,
+  blue,
   purple,
   orange,
 } from '../../../../hb_ui/constants/colors'
@@ -78,9 +78,9 @@ function LayoutCoreSidebar() {
           <SBLRootSidebar style={{ border: `2px solid ${purple}` }}>
             <P>Sidebar</P>
           </SBLRootSidebar>
-          <SBLRootContent style={{ border: `2px solid ${blue_bright}` }}>
+          <SBLRootContent style={{ border: `2px solid ${blue}` }}>
             <Section style={{ border: `2px solid ${red}` }}>
-              <Container style={{ border: `2px solid ${blue_bright}` }}>
+              <Container style={{ border: `2px solid ${blue}` }}>
                 <P>
                   Nullam id dolor id nibh ultricies vehicula ut id elit.
                   Curabitur blandit tempus porttitor. Morbi leo risus, porta ac
