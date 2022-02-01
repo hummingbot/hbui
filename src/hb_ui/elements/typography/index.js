@@ -59,13 +59,13 @@ const sharedTransforms = props => [
 
 export const PSmall = styled.p(
   {},
-  props => [tw`text-sm`, tw`leading-tight tracking-normal`],
+  props => [tw`text-sm`, tw`leading-tight`],
   sharedTransforms,
 )
 
 export const P = styled.p(
   {},
-  props => [tw`text-base md:text-base md:leading-normal`, tw`leading-normal`],
+  props => [tw`text-base md:text-lg md:leading-tight`, tw`leading-normal`],
   sharedTransforms,
 )
 
