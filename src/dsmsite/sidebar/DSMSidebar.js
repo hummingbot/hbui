@@ -3,7 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../hb_ui/elements/typography'
 import colors from '../../hb_ui/constants/colors'
-import HummingbotLogo from '../../hb_ui/svgs/HummingbotLogo'
+import GlobalSwitcherIcon from '../../hb_ui/svgs/GlobalSwitcherIcon'
 import TriangleRight from '../../hb_ui/svgs/TriangleRight'
 import { P } from '../../hb_ui/elements/typography'
 import { desktop_max } from '../../hb_ui/constants/media-queries'
@@ -20,7 +20,7 @@ function DSMSidebar() {
     <Sidebar>
       <PaddingBox>
         <SidebarBrand>
-          <HummingbotLogo />
+          {/*<GlobalSwitcherIcon />*/}
           <P isMedium>CoinAlpha DSM</P>
         </SidebarBrand>
       </PaddingBox>
@@ -32,6 +32,7 @@ function DSMSidebar() {
             <SidebarNavItem
               onClick={() => setCurrentSection(navItem.link)}
               to={navItem.link}
+              className={getActiveClass(navItem.link, currentSection)}
             >
               <P>{navItem.title}</P>
               {navItem.subItems && <TriangleRight />}
@@ -42,6 +43,7 @@ function DSMSidebar() {
                 <SubSidebarNavItem
                   key={subItem.link}
                   onClick={() => setCurrentSection(subItem.link)}
+                  className={getActiveClass(subItem.link, currentSection)}
                   to={subItem.link}
                 >
                   <P>{subItem.title}</P>
@@ -60,6 +62,11 @@ function DSMSidebar() {
 }
 
 export default DSMSidebar
+
+const getActiveClass = (link, currentSection) => {
+  if (currentSection === link) return 'is-active'
+  return ''
+}
 
 const Sidebar = styled.div(() => [
   tw`bg-primary z-10 transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
@@ -96,26 +103,43 @@ const SidebarNavItem = styled(NavLink)(
     width: '100%',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '4px',
-    paddingLeft: '20px',
-    paddingRight: '20px',
-    borderLeft: '4px solid transparent',
-    '&.active': {
-      borderLeft: `4px solid ${green_primary}`,
-      '& p': {
-        color: green_primary,
-      },
-    },
     ':hover': {
       '& p': {
         color: green_primary,
       },
     },
   },
-  [tw`text-black dark:(text-white)`],
+  [tw`py-1.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`],
+  css`
+    svg {
+      ${tw`transition-transform`};
+    }
+    &.active {
+      ${tw`bg-tertiary border-l-4 border-quaternary`};
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    &.is-active {
+      p {
+        ${tw`font-bold`};
+      }
+    }
+  `,
 )
 
 const SubSidebarNavItem = styled(SidebarNavItem)({
   borderLeft: 'none !important',
-  paddingLeft: '40px',
-})
+},
+  [tw`pl-11 bg-secondary`],
+  css`
+    &.active {
+      ${tw`bg-secondary`};
+    }
+    &.is-active {
+      p {
+        ${tw`font-bold`};
+      }
+    }
+  `,
+)
