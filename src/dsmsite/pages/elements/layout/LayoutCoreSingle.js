@@ -23,7 +23,6 @@ import {
 } from '../../../../hb_ui/elements/layout'
 import { hero, navigation } from './shared'
 
-console.dir(colors)
 function LayoutCoreSingle() {
   return (
     <PageRoot>
