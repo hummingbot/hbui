@@ -170,6 +170,7 @@ module.exports = {
         primary: "var(--border-primary)",
         secondary: "var(--border-secondary)",
         tertiary: "var(--border-tertiary)",
+        quaternary: "var(--border-quaternary)",
       },
       fillColor: {
         brand: "var(--fill-brand)",
