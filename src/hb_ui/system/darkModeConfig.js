@@ -12,6 +12,7 @@ const darkModeConfig = css`
     --border-primary: ${colorTokens.light.border_primary.value};
     --border-secondary: ${colorTokens.light.border_secondary.value};
     --border-tertiary: ${colorTokens.light.border_tertiary.value};
+    --border-quaternary: ${colorTokens.light.border_quaternary.value};
 
     --text-primary: ${colorTokens.light.text_primary.value};
     --text-secondary: ${colorTokens.light.text_secondary.value};
@@ -27,6 +28,7 @@ const darkModeConfig = css`
     --border-primary: ${colorTokens.dark.border_primary.value};
     --border-secondary: ${colorTokens.dark.border_secondary.value};
     --border-tertiary: ${colorTokens.dark.border_tertiary.value};
+    --border-quaternary: ${colorTokens.dark.border_quaternary.value};
 
     --text-primary: ${colorTokens.dark.text_primary.value};
     --text-secondary: ${colorTokens.dark.text_secondary.value};
