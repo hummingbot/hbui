@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HummingbotLogo() {
+function GlobalSwitcherIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,4 +22,4 @@ function HummingbotLogo() {
   )
 }
 
-export default HummingbotLogo
+export default GlobalSwitcherIcon
