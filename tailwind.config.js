@@ -156,6 +156,7 @@ module.exports = {
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],
       serif: ['Courier New', 'serif'],
+      mono: ['SF Mono', 'mono']
     },
     extend: {
       backgroundColor: {

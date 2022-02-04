@@ -191,7 +191,7 @@ function DesignOverview() {
         <br />
         <br />
         <br />
-        <PSmall>Type weight</PSmall>
+        <PSmall>Type weights</PSmall>
         <br />
         <div tw="grid grid-cols-12 gap-4">
           <div tw="grid col-span-12 md:col-span-6">

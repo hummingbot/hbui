@@ -21,8 +21,10 @@ const sharedTransforms = props => [
   props.isUppercase && tw`uppercase`,
   props.isItalic && tw`italic`,
   props.isLight && tw`font-light`,
-  props.isBold && tw`font-bold`,
   props.isMedium && tw`font-medium`,
+  props.isBold && tw`font-bold`,
+  props.isExtraBold && tw`font-extrabold`,
+  props.isHeavy && tw`font-black`,
   props.isPulsing && tw`animate-pulse`,
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
@@ -56,6 +58,12 @@ const sharedTransforms = props => [
     }
   `,
 ]
+
+export const PTiny = styled.p(
+  {},
+  props => [tw`text-xs`, tw`leading-tight`],
+  sharedTransforms,
+)
 
 export const PSmall = styled.p(
   {},
