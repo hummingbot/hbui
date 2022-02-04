@@ -23,7 +23,7 @@ import FAQ from './dsmsite/pages/faq/FAQ'
 import LayoutCoreSingle from './dsmsite/pages/elements/layout/LayoutCoreSingle'
 import LayoutCoreSidebar from './dsmsite/pages/elements/layout/LayoutCoreSidebar'
 import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
-import Typography from './dsmsite/pages/elements/typography/Typography'
+import TypographyElements from './dsmsite/pages/elements/typography/Typography'
 import TypographyTests from './dsmsite/pages/elements/typography/Tests'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
 import ButtonElementGhost from './dsmsite/pages/elements/button/GhostButton'
@@ -46,6 +46,7 @@ import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
 import DesignOverview from './dsmsite/pages/guidelines/overview/Overview'
+import TypographyGuidelines from './dsmsite/pages/guidelines/typography/Typography'
 
 function App() {
   return (
@@ -75,7 +76,7 @@ function App() {
               element={<LayoutCoreSidebar />}
             />
             <Route path="/elements/layout-extra" element={<LayoutExtra />} />
-            <Route path="/elements/typography" element={<Typography />} />
+            <Route path="/elements/typography" element={<TypographyElements />} />
             <Route path="/elements/typography/tests" element={<TypographyTests />} />
             <Route
               path="/elements/button"
@@ -120,6 +121,7 @@ function App() {
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/overview" element={<DesignOverview />} />
+            <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
           </Routes>
         </Main>
       </BrowserRouter>
