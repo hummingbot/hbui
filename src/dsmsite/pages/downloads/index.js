@@ -32,13 +32,13 @@ function Downloads() {
           <DownloadCard
             title='CoinAlpha Logotype'
             updatedAt='15.1.2022'
-            downloadLink='/downloads/typography/satoshi.zip'
+            downloadLink='/downloads/coinalpha/coinalpha_logotype.zip'
             image={coinalphaLogotype}
           />
           <DownloadCard
             title='Hummingbot Logotype'
             updatedAt='15.1.2022'
-            downloadLink='/downloads/typography/satoshi.zip'
+            downloadLink='/downloads/hummingbot/hummingbot_logotype.zip'
             image={hummingbotLogotype}
           />
         </div>
