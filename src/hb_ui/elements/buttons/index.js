@@ -47,7 +47,7 @@ export const Button = styled.button(
     isExtraLarge && [tw`px-14 py-4 text-xl lg:text-2xl lg:px-16 lg:py-5`],
     isPrimary &&
       !isGhost && [
-        tw`text-white bg-brand hover:bg-green-hovered active:bg-green-active`,
+        tw`text-white bg-green hover:bg-green-hovered active:bg-green-active`,
       ],
 
     isInfo &&
@@ -76,7 +76,7 @@ export const Button = styled.button(
 
     isPrimary &&
       isGhost && [
-        tw`text-brand bg-transparent border border-2 border-green hover:bg-green/10 active:bg-green/20`,
+        tw`text-green bg-transparent border border-2 border-green hover:bg-green/10 active:bg-green/20`,
       ],
 
     isInfo &&
