@@ -12,7 +12,6 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
-    "parcel-plugin-static-files-copy": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -26,6 +25,15 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "babel-plugin-twin": "^1.0.2",
     "parcel-bundler": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel-transformer-google-fonts": "^0.1.4",
     "tailwindcss": "^3.0.13"
+  },
+  "parcel": {
+    "transforms": {
+      "*.html": [
+        "parcel-transformer-google-fonts"
+      ]
+    }
   }
 }
