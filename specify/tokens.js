@@ -27,6 +27,7 @@ const extend = {
     "dark-bg-tertiary": "#282c2f",
     "dark-border-primary": "#323639",
     "dark-border-quaternary": "#ededed",
+    "dark-border-secondary": "#484d51",
     "dark-border-tertiary": "#788187",
     "dark-text-primary": "#ffffff",
     "dark-text-quaternary": "#aeb4b7",
