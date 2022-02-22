@@ -63,14 +63,6 @@ module.exports = {
       'none': 'box-shadow: 0 0 #0000',
     },
     colors: {
-      // 'blue_light': colors.blue_light,
-      // 'blue_pale': colors.blue_pale,
-      // 'blue_grey': colors.blue_grey,
-      // 'green_classic': colors.green_classic,
-      // 'green_light': colors.green_light,
-      // 'green_dark_1': colors.green_dark_1,
-      // 'green_dark_2': colors.green_dark_2,
-
       transparent: 'transparent',
       current: 'currentColor',
       
@@ -107,17 +99,11 @@ module.exports = {
       'orange-active': colors.orange_active,
       'orange-light': colors.orange_light,
       'orange-superlight': colors.orange_superlight,
-      // extended colors
       'grey-light': colors.grey_light,
       'grey-dark': colors.grey_dark,
-      // 'green-ui': colors.green,
-      // 'blue-ui': color.blue,
-      // 'red-ui': colors.red,
-      // 'orange-ui': colors.orange,
-      // 'yellow-ui': colors.yellow,
-      // 'purple-ui': colors.purple,
     },
     extend: {
+      // extended colors
       colors: {
         'brand-ui': colors.brand_scale,
         'green-ui': colors.green_scale,
