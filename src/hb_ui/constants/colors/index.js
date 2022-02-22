@@ -1,4 +1,3 @@
-// const colorTokens = require('../../../../tokens/tokens.json')
 const colorTokens = require('../../../../specify/tokens')
 
 module.exports = {
