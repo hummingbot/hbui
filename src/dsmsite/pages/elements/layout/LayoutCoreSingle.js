@@ -11,7 +11,7 @@ import {
 } from '../../../../hb_ui/elements/typography'
 import {
   red,
-  green_primary,
+  green,
   blue
 } from '../../../../hb_ui/constants/colors'
 import colors from '../../../../hb_ui/constants/colors'
@@ -79,7 +79,7 @@ function LayoutCoreSingle() {
           a constrained central position.)
         </P>
         <br />
-        <PageRoot style={{ border: `2px solid ${green_primary}` }}>
+        <PageRoot style={{ border: `2px solid ${green}` }}>
           <Section style={{ border: `2px solid ${red}` }}>
             <Container style={{ border: `2px solid ${blue}` }}>
               <P>

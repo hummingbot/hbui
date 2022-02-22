@@ -11,7 +11,7 @@ import navigation from './navigation'
 
 import { ThemeToggle } from '../../styles'
 
-const { green_primary } = colors
+const { green } = colors
 
 function DSMSidebar() {
   let location = useLocation()
@@ -105,7 +105,7 @@ const SidebarNavItem = styled(NavLink)(
     alignItems: 'center',
     ':hover': {
       '& p': {
-        color: green_primary,
+        color: green,
       },
     },
   },

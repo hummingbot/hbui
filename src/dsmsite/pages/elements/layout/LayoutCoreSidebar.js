@@ -11,7 +11,7 @@ import {
 } from '../../../../hb_ui/elements/typography'
 import {
   red,
-  green_primary,
+  green,
   blue,
   purple,
   orange,
@@ -74,7 +74,7 @@ function LayoutCoreSidebar() {
           the content area is scroolable.
         </P>
         <br />
-        <SBLRoot style={{ border: `2px solid ${green_primary}` }}>
+        <SBLRoot style={{ border: `2px solid ${green}` }}>
           <SBLRootSidebar style={{ border: `2px solid ${purple}` }}>
             <P>Sidebar</P>
           </SBLRootSidebar>
