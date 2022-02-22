@@ -1,8 +1,3 @@
-const overview = {
-  link: '/guidelines/overview',
-  title: 'Overview',
-}
-
 const typography = {
   link: '/guidelines/typography',
   title: 'Typography',
@@ -14,7 +9,6 @@ const colors = {
 }
 
 module.exports = [
-  overview,
   typography,
   colors
 ]

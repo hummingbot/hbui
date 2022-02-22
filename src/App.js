@@ -45,7 +45,6 @@ import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
-import DesignOverview from './dsmsite/pages/guidelines/overview/Overview'
 import TypographyGuidelines from './dsmsite/pages/guidelines/typography/Typography'
 
 function App() {
@@ -120,7 +119,6 @@ function App() {
             <Route path="/components/snackbar" element={<Snackbar />} />
 
             <Route path="/guidelines/colors" element={<Colors />} />
-            <Route path="/guidelines/overview" element={<DesignOverview />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
           </Routes>
         </Main>
