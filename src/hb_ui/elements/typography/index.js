@@ -7,7 +7,7 @@ import {
 } from '../../constants/media-queries'
 import {
   black,
-  green_primary,
+  green,
   red,
   blue,
   orange,
@@ -34,7 +34,7 @@ const sharedTransforms = props => [
     `,
   props.isBrandColor &&
     css`
-      color: ${green_primary} !important;
+      color: ${green} !important;
     `,
   props.isRed &&
     css`
@@ -61,66 +61,66 @@ const sharedTransforms = props => [
 
 export const PTiny = styled.p(
   {},
-  props => [tw`text-xs`, tw`leading-tight`],
+  props => [tw`text-xs`],
   sharedTransforms,
 )
 
 export const PSmall = styled.p(
   {},
-  props => [tw`text-sm`, tw`leading-tight`],
+  props => [tw`text-sm`],
   sharedTransforms,
 )
 
 export const P = styled.p(
   {},
-  props => [tw`text-base md:text-lg md:leading-tight`, tw`leading-normal`],
+  props => [tw`text-base md:text-lg`],
   sharedTransforms,
 )
 
 export const Body = styled.p(
   {},
-  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`, tw`leading-normal`],
+  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`],
   sharedTransforms,
 )
 
 export const H6 = styled.h6(
   {},
-  props => [tw`text-lg md:text-xl lg:text-2xl`, tw`leading-tight`],
+  props => [tw`text-lg md:text-xl lg:text-2xl`],
   sharedTransforms,
 )
 
 export const H5 = styled.h5(
   {},
-  props => [tw`text-xl md:text-2xl lg:text-3xl`, tw`leading-tight tracking-normal`],
+  props => [tw`text-xl md:text-2xl lg:text-3xl`, tw`tracking-normal`],
   sharedTransforms,
 )
 
 export const H4 = styled.h4(
   {},
-  props => [tw`text-2xl md:text-3xl lg:text-4xl`, tw`leading-tight tracking-normal`],
+  props => [tw`text-2xl md:text-3xl lg:text-4xl`, tw`tracking-normal`],
   sharedTransforms,
 )
 
 export const H3 = styled.h3(
   {},
-  props => [tw`text-3xl md:text-4xl lg:text-5xl`, tw`leading-none tracking-tight`],
+  props => [tw`text-3xl md:text-4xl lg:text-5xl`, tw`tracking-tight`],
   sharedTransforms,
 )
 
 export const H2 = styled.h2(
   {},
-  props => [tw`text-4xl md:text-5xl lg:text-6xl`, tw`leading-none tracking-tight`],
+  props => [tw`text-4xl md:text-5xl lg:text-6xl`, tw`tracking-tight`],
   sharedTransforms,
 )
 
 export const H1 = styled.h1(
   {},
-  props => [tw`text-5xl md:text-6xl lg:text-7xl`, tw`leading-none tracking-tight`],
+  props => [tw`text-5xl md:text-6xl lg:text-7xl`, tw`tracking-tight`],
   sharedTransforms,
 )
 
 export const PrimaryColor = styled.span({
-  color: green_primary,
+  color: green,
 })
 
 export const Bold = styled.span({
@@ -136,7 +136,7 @@ export const Blue = styled.span({
 })
 
 export const Green = styled.span({
-  color: green_primary,
+  color: green,
 })
 
 export const Orange = styled.span({

@@ -1,0 +1,30 @@
+{
+  "repository": "@hummingbot/ds",
+  "personalAccessToken": "1bbe25253f057237ad306d9f764193778818214ceacb8f4881b149e0705e90d0",
+  "rules": [
+    {
+      "name": "Design Tokens",
+      "path": "specify/tokens.js",
+      "parsers": [
+        {
+				  "name": "to-tailwind",
+				  "options": {
+				  	"formatName": "kebabCase",
+				    "formatTokens": {
+				      "colorFormat": {
+				        "format": "hex"
+				      },
+				      "fontSizeFormat": {
+				        "unit": "rem"
+				      }
+				    },
+				    "formatConfig": {
+				      "objectName": "extend",
+				      "module": "commonjs"
+				    }
+				  }
+				}
+      ]
+    }
+  ]
+}
