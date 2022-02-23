@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import tw from 'twin.macro'
-import tokens from '../../../specify/tokens'
+import tokens from '../../../tokens/tokens'
 
 const darkModeConfig = css`
   .light {

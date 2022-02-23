@@ -4,7 +4,7 @@
   "rules": [
     {
       "name": "Design Tokens",
-      "path": "specify/tokens.js",
+      "path": "tokens/tokens.js",
       "parsers": [
         {
 				  "name": "to-tailwind",

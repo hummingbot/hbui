@@ -1,4 +1,4 @@
-const colorTokens = require('../../../../specify/tokens')
+const colorTokens = require('../../../../tokens/tokens')
 
 module.exports = {
   white: colorTokens.colors.white,

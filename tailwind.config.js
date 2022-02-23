@@ -1,5 +1,5 @@
 const colors = require('./src/hb_ui/constants/colors')
-const tokens = require('./specify/tokens')
+const tokens = require('./tokens/tokens')
 const breakpoints = require('./src/hb_ui/constants/media-queries/breakpoints')
 
 module.exports = {
