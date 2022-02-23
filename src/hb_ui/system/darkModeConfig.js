@@ -4,6 +4,7 @@ import tokens from '../../../tokens/tokens'
 
 const darkModeConfig = css`
   .light {
+    color-scheme: light;
     --bg-primary: ${tokens.colors['light-bg-primary']};
     --bg-secondary: ${tokens.colors['light-bg-secondary']};
     --bg-tertiary: ${tokens.colors['light-bg-tertiary']};
@@ -20,6 +21,7 @@ const darkModeConfig = css`
     --text-quaternary: ${tokens.colors['light-text-quaternary']};
   }
   .dark {
+    color-scheme: dark;
     --bg-primary: ${tokens.colors['dark-bg-primary']};
     --bg-secondary: ${tokens.colors['dark-bg-secondary']};
     --bg-tertiary: ${tokens.colors['dark-bg-tertiary']};

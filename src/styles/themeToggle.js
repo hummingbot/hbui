@@ -12,7 +12,7 @@ const ThemeToggle = () => {
 
   return (
     <button
-      tw="w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary"
+      tw="ml-[25px] w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary"
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}
     >
       {isDark() ? <Moon /> : <Sun />}

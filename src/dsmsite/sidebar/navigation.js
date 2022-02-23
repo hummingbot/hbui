@@ -45,11 +45,11 @@ const faq = {
 module.exports = [
   home,
   gettingStarted,
-  guidelines,
+  faq,
+  downloads,
   designTokens,
   code,
+  guidelines,
   elements,
   components,
-  downloads,
-  faq,
 ]

@@ -24,21 +24,23 @@ function DSMSidebar() {
           <P isMedium>CoinAlpha DSM</P>
         </SidebarBrand>
       </PaddingBox>
+      <ThemeToggle />
+      <br />
       <br />
       <br />
       <SidebarNav>
         {navigation.map(navItem => (
-          <div key={navItem.title}>
+          <NavItemRoot key={navItem.title} hasSubItems={navItem.subItems}>
             <SidebarNavItem
               onClick={() => setCurrentSection(navItem.link)}
               to={navItem.link}
+              hasSubItems={navItem.subItems}
               className={getActiveClass(navItem.link, currentSection)}
             >
               <P>{navItem.title}</P>
               {navItem.subItems && <TriangleRight />}
             </SidebarNavItem>
-            {currentSection.indexOf(navItem.link) > -1 &&
-              navItem.subItems &&
+            { navItem.subItems &&
               navItem.subItems.map(subItem => (
                 <SubSidebarNavItem
                   key={subItem.link}
@@ -49,13 +51,10 @@ function DSMSidebar() {
                   <P>{subItem.title}</P>
                 </SubSidebarNavItem>
               ))}
-          </div>
+          </NavItemRoot>
         ))}
         <br />
         <br />
-        <div tw="h-full flex justify-center items-center">
-          <ThemeToggle />
-        </div>
       </SidebarNav>
     </Sidebar>
   )
@@ -69,7 +68,7 @@ const getActiveClass = (link, currentSection) => {
 }
 
 const Sidebar = styled.div(() => [
-  tw`bg-primary z-10 transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
+  tw`bg-primary z-10 overflow-y-scroll transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
   css`
     height: 100vh;
   `,
@@ -86,7 +85,7 @@ const SidebarBrand = styled.div({
   width: '100%',
   marginBottom: '30px',
   '& p': {
-    marginLeft: '10px',
+    marginLeft: '5px',
     padding: '0',
   },
 })
@@ -97,20 +96,21 @@ const SidebarNav = styled.nav({
   width: '100%',
 })
 
-const SidebarNavItem = styled(NavLink)(
-  {
-    display: 'flex',
-    width: '100%',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    ':hover': {
-      '& p': {
-        color: green,
-      },
-    },
-  },
-  [tw`py-1.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`],
+const NavItemRoot = styled.div(({ hasSubItems }) => [
+  hasSubItems && tw`my-3`,
+])
+
+const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
+  tw`py-0.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`,
   css`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: ${hasSubItems ? '600' : '400'};
+    align-items: center;
+    &:hover p {
+      color: ${green};
+    }
     svg {
       ${tw`transition-transform`};
     }
@@ -126,12 +126,44 @@ const SidebarNavItem = styled(NavLink)(
       }
     }
   `,
-)
+])
+
+// const SidebarNavItem = styled(NavLink)(
+//   {
+//     display: 'flex',
+//     width: '100%',
+//     justifyContent: 'space-between',
+//     fontWeight: props.hasSubItems ? '600' : '400',
+//     alignItems: 'center',
+//     ':hover': {
+//       '& p': {
+//         color: green,
+//       },
+//     },
+//   },
+//   [tw`py-0.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`],
+//   css`
+//     svg {
+//       ${tw`transition-transform`};
+//     }
+//     &.active {
+//       ${tw`bg-tertiary border-l-4 border-quaternary`};
+//       svg {
+//         transform: rotate(90deg);
+//       }
+//     }
+//     &.is-active {
+//       p {
+//         ${tw`font-bold`};
+//       }
+//     }
+//   `,
+// )
 
 const SubSidebarNavItem = styled(SidebarNavItem)({
   borderLeft: 'none !important',
 },
-  [tw`pl-11 bg-secondary`],
+  [tw`pl-11`],
   css`
     &.active {
       ${tw`bg-secondary`};
