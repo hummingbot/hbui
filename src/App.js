@@ -46,6 +46,7 @@ import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
 import TypographyGuidelines from './dsmsite/pages/guidelines/typography/Typography'
+import CoinAlphaBrand from './dsmsite/pages/guidelines/coinalpha_brand/CoinAlphaBrand'
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
+            <Route path="/guidelines/coinalpha-brand" element={<CoinAlphaBrand />} />
           </Routes>
         </Main>
       </BrowserRouter>
