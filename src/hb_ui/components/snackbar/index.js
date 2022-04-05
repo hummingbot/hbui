@@ -39,16 +39,16 @@ const IconBox = styled.div(({
 }) => [
   tw`flex bg-grey-dark-200 items-center px-3 py-3`,
   type === 'success' && [
-    tw`bg-green-ui-500`
+    tw`bg-green-500`
   ],
   type === 'info' && [
-    tw`bg-blue-ui-500`
+    tw`bg-blue-500`
   ],
   type === 'danger' && [
-    tw`bg-red-ui-500`
+    tw`bg-red-500`
   ],
   type === 'warning' && [
-    tw`bg-orange-ui-500`
+    tw`bg-orange-500`
   ],
 ])
 

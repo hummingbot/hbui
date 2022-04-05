@@ -34,7 +34,6 @@ function DSMSidebar() {
             <SidebarNavItem
               onClick={() => setCurrentSection(navItem.link)}
               to={navItem.link}
-              hasSubItems={navItem.subItems}
               className={getActiveClass(navItem.link, currentSection)}
             >
               <P>{navItem.title}</P>
@@ -127,38 +126,6 @@ const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
     }
   `,
 ])
-
-// const SidebarNavItem = styled(NavLink)(
-//   {
-//     display: 'flex',
-//     width: '100%',
-//     justifyContent: 'space-between',
-//     fontWeight: props.hasSubItems ? '600' : '400',
-//     alignItems: 'center',
-//     ':hover': {
-//       '& p': {
-//         color: green,
-//       },
-//     },
-//   },
-//   [tw`py-0.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`],
-//   css`
-//     svg {
-//       ${tw`transition-transform`};
-//     }
-//     &.active {
-//       ${tw`bg-tertiary border-l-4 border-quaternary`};
-//       svg {
-//         transform: rotate(90deg);
-//       }
-//     }
-//     &.is-active {
-//       p {
-//         ${tw`font-bold`};
-//       }
-//     }
-//   `,
-// )
 
 const SubSidebarNavItem = styled(SidebarNavItem)({
   borderLeft: 'none !important',

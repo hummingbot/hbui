@@ -43,22 +43,22 @@ const Root = styled.div(({ type }) => [
     }
   `,
   type === 'success' && [
-    tw`border-green-ui-100 bg-green-ui-100/20 dark:border-green-ui-300 dark:bg-green-ui-300/10`,
+    tw`border-green-100 bg-green-100/20 dark:border-green-300 dark:bg-green-300/10`,
   ],
   type === 'info' && [
-    tw`border-blue-ui-100 bg-blue-ui-100/20 dark:border-blue-ui-300 dark:bg-blue-ui-300/10`,
+    tw`border-blue-100 bg-blue-100/20 dark:border-blue-300 dark:bg-blue-300/10`,
   ],
   type === 'danger' && [
-    tw`border-red-ui-100 bg-red-ui-100/20 dark:border-red-ui-300 dark:bg-red-ui-300/10`,
+    tw`border-red-100 bg-red-100/20 dark:border-red-300 dark:bg-red-300/10`,
   ],
   type === 'warning' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/10`,
+    tw`border-orange-100 bg-orange-100/20 dark:border-orange-300 dark:bg-orange-300/10`,
   ],
   type === 'tip' && [
-    tw`border-purple-ui-100 bg-purple-ui-100/20 dark:border-purple-ui-300 dark:bg-purple-ui-300/10`,
+    tw`border-purple-100 bg-purple-100/20 dark:border-purple-300 dark:bg-purple-300/10`,
   ],
   type === 'bug' && [
-    tw`border-orange-ui-100 bg-orange-ui-100/20 dark:border-orange-ui-300 dark:bg-orange-ui-300/10`,
+    tw`border-orange-100 bg-orange-100/20 dark:border-orange-300 dark:bg-orange-300/10`,
   ],
   type === 'note' && [
     tw`border-grey-light-400 bg-grey-light-400/20 dark:bg-grey-light-100/5`,
@@ -68,22 +68,22 @@ const Root = styled.div(({ type }) => [
 const Header = styled.div(({ type }) => [
   tw`flex items-center font-medium text-lg text-grey-dark-700 dark:text-grey-light-500 pt-4 px-4 `,
   type === 'success' && [
-    tw`text-green-ui-500 dark:text-green-ui-400 focus:text-green-ui-400`,
+    tw`text-green-500 dark:text-green-400 focus:text-green-400`,
   ],
   type === 'info' && [
-    tw`text-blue-ui-500 dark:text-blue-ui-300 focus:text-blue-ui-400`,
+    tw`text-blue-500 dark:text-blue-300 focus:text-blue-400`,
   ],
   type === 'danger' && [
-    tw`text-red-ui-500 dark:text-red-ui-400 focus:text-red-ui-400`,
+    tw`text-red-500 dark:text-red-400 focus:text-red-400`,
   ],
   type === 'warning' && [
-    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`,
+    tw`text-orange-500 dark:text-orange-400 focus:text-orange-400`,
   ],
   type === 'tip' && [
-    tw`text-purple-ui-500 dark:text-purple-ui-100 focus:text-purple-ui-100`,
+    tw`text-purple-500 dark:text-purple-100 focus:text-purple-100`,
   ],
   type === 'bug' && [
-    tw`text-orange-ui-500 dark:text-orange-ui-400 focus:text-orange-ui-400`,
+    tw`text-orange-500 dark:text-orange-400 focus:text-orange-400`,
   ],
   type === 'note' && [tw`text-grey-dark-700 dark:text-white focus:text-white`],
 ])

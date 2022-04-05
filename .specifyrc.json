@@ -18,6 +18,7 @@
 				        "unit": "rem"
 				      }
 				    },
+            "splitBy": "/",
 				    "formatConfig": {
 				      "objectName": "extend",
 				      "module": "commonjs"

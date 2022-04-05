@@ -43,6 +43,8 @@ import Spinner from './dsmsite/pages/components/spinner/Spinner'
 import Callout from './dsmsite/pages/components/callout/Callout'
 import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 
+import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
+
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
 import TypographyGuidelines from './dsmsite/pages/guidelines/typography/Typography'
@@ -67,6 +69,8 @@ function App() {
             <Route path="/elements" element={<Elements />} />
             <Route path="/components" element={<Components />} />
 
+            <Route path="/design-tokens/spacings" element={<Spacings />} />
+            
             <Route
               path="/elements/layout-core"
               element={<LayoutCoreSingle />}
