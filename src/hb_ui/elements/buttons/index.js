@@ -55,25 +55,25 @@ export const Button = styled.button(
     isSuccess && [
       tw`text-white`,
       tw`border-green hover:border-green active:border-green`,
-      tw`bg-green hover:bg-green-hovered active:bg-green-active`,
+      tw`bg-green hover:bg-success-hovered active:bg-success-active`,
     ],
 
     isInfo && [
       tw`text-white`,
       tw`border-blue hover:border-blue active:border-blue`,
-      tw`bg-blue hover:bg-blue-hovered active:bg-blue-active`,
+      tw`bg-blue hover:bg-info-hovered active:bg-info-active`,
     ],
 
     isWarning && [
       tw`text-white`,
       tw`border-orange hover:border-orange active:border-orange`,
-      tw`bg-orange hover:bg-orange-hovered active:bg-orange-active`,
+      tw`bg-orange hover:bg-warning-hovered active:bg-warning-active`,
     ],
 
     isDanger && [
       tw`text-white`,
       tw`border-red hover:border-red active:border-red`,
-      tw`bg-red hover:bg-red-hovered active:bg-red-active`,
+      tw`bg-red hover:bg-danger-hovered active:bg-danger-active`,
     ],
 
     isDisabled && [tw`pointer-events-none opacity-30`],

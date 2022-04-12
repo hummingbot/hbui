@@ -6,25 +6,17 @@ module.exports = {
   green_terminal: colorTokens.terminal,
   brand: colorTokens.brand['500'],
 
-  green_light: colorTokens.green['100'],
-  green_superlight: colorTokens.green['50'],
-  green_hovered: colorTokens.green['600'],
-  green_active: colorTokens.green['700'],
+  success_hovered: colorTokens['button-state-colors']['success-hovered'],
+  success_active: colorTokens['button-state-colors']['success-active'],
 
-  red_light: colorTokens.red['100'],
-  red_superlight: colorTokens.red['50'],
-  red_hovered: colorTokens.red['600'],
-  red_active: colorTokens.red['700'],
+  danger_hovered: colorTokens['button-state-colors']['danger-hovered'],
+  danger_active: colorTokens['button-state-colors']['danger-active'],
   
-  orange_light: colorTokens.orange['100'],
-  orange_superlight: colorTokens.orange['50'],
-  orange_hovered: colorTokens.orange['600'],
-  orange_active: colorTokens.orange['700'],
+  warning_hovered: colorTokens['button-state-colors']['warning-hovered'],
+  warning_active: colorTokens['button-state-colors']['warning-active'],
   
-  blue_light: colorTokens.blue['100'],
-  blue_superlight: colorTokens.blue['50'],
-  blue_hovered: colorTokens.blue['600'],
-  blue_active: colorTokens.blue['700'],
+  info_hovered: colorTokens['button-state-colors']['info-hovered'],
+  info_active: colorTokens['button-state-colors']['info-active'],
   
   green: colorTokens.green['500'],
   blue: colorTokens.blue['500'],

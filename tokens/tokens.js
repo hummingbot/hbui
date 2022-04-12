@@ -25,6 +25,16 @@ const extend = {
       800: "#006b71",
       900: "#005157",
     },
+    "button-state-colors": {
+      "danger-active": "#a73e3e",
+      "danger-hovered": "#d64f4f",
+      "info-active": "#2364b5",
+      "info-hovered": "#2d80e8",
+      "success-active": "#008a92",
+      "success-hovered": "#00b1bb",
+      "warning-active": "#aa601c",
+      "warning-hovered": "#da7b23",
+    },
     dark: {
       "bg-primary": "#151819",
       "bg-quaternary": "#3e4347",
