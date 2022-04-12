@@ -21,7 +21,7 @@ export const Button = styled.button(
     // tw`focus:border-blue`,
     tw`border-2 border-primary hover:border-tertiary active:border-quaternary`,
     tw`bg-tertiary hover:bg-quaternary active:bg-quintenary`,
-    tw`px-3 pt-[5px] pb-[6px] rounded focus:outline-none`,
+    tw`px-3 pt-[5px] pb-[5px] rounded focus:outline-none`,
     css`
       font-family: 'Inter';
       align-items: center;
