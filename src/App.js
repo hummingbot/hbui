@@ -26,8 +26,7 @@ import LayoutExtra from './dsmsite/pages/elements/layout/LayoutExtra'
 import TypographyElements from './dsmsite/pages/elements/typography/Typography'
 import TypographyTests from './dsmsite/pages/elements/typography/Tests'
 import ButtonElementRegular from './dsmsite/pages/elements/button/Button'
-import ButtonElementGhost from './dsmsite/pages/elements/button/GhostButton'
-import ButtonElementLarge from './dsmsite/pages/elements/button/ButtonLarge'
+import ButtonElementSizes from './dsmsite/pages/elements/button/ButtonSizes'
 import ButtonElementDisabled from './dsmsite/pages/elements/button/ButtonDisabled'
 import InputElement from './dsmsite/pages/elements/input/Input'
 
@@ -87,12 +86,8 @@ function App() {
               element={<ButtonElementRegular />}
             />
             <Route
-              path="/elements/button/ghost"
-              element={<ButtonElementGhost />}
-            />
-            <Route
               path="/elements/button/large"
-              element={<ButtonElementLarge />}
+              element={<ButtonElementSizes />}
             />
             <Route
               path="/elements/button/disabled"

@@ -2,29 +2,28 @@ import tw, { css, styled } from 'twin.macro'
 
 export const Button = styled.button(
   ({
-    isPrimary,
+    isSecondary,
     isInfo,
-    isSmall,
-    isLarge,
-    isExtraLarge,
     isSuccess,
     isWarning,
     isDanger,
+    isSmall,
+    isLarge,
+    isExtraLarge,
     isDisabled,
     isUppercase,
     isGhost,
     iconColor,
   }) => [
     tw`flex`,
+    tw`text-tertiary text-[14px] font-medium`,
     tw`transition duration-100`,
-    tw`px-4 py-1 lg:px-8 lg:py-1.5 rounded-sm focus:outline-none`,
-    tw`hover:bg-quaternary active:bg-grey-dark-100`,
-    tw`font-medium`,
-    tw`text-tertiary bg-tertiary`,
-    tw`text-base`,
+    // tw`focus:border-blue`,
+    tw`border-2 border-primary hover:border-tertiary active:border-quaternary`,
+    tw`bg-tertiary hover:bg-quaternary active:bg-quintenary`,
+    tw`px-3 pt-[5px] pb-[6px] rounded focus:outline-none`,
     css`
-      min-width: 100px;
-      text-align: center;
+      font-family: 'Inter';
       align-items: center;
       justify-content: center;
       user-select: none;
@@ -43,56 +42,39 @@ export const Button = styled.button(
         text-transform: uppercase;
       `,
     ],
-    isLarge && [tw`px-10 py-2.5 text-lg lg:text-xl lg:px-14 lg:py-3`],
-    isExtraLarge && [tw`px-14 py-4 text-xl lg:text-2xl lg:px-16 lg:py-5`],
-    isPrimary &&
-      !isGhost && [
-        tw`text-white bg-green hover:bg-green-hovered active:bg-green-active`,
-      ],
+    isSmall && [tw`px-2 pt-[2px] pb-[1.5px] text-[13px]`],
+    isLarge && [tw`px-4 py-1.5 text-[16px]`],
+    // isLarge && [tw`px-4 py-1.5 text-lg lg:text-xl lg:px-14 lg:py-3`],
+    // isExtraLarge && [tw`px-14 py-4 text-xl lg:text-2xl lg:px-16 lg:py-5`],
+    // hover:bg-quaternary active:bg-grey-dark-100
+    isSecondary && [
+      tw`bg-transparent hover:bg-transparent active:bg-tertiary`,
+      tw`border-secondary hover:border-quaternary`,
+    ],
 
-    isInfo &&
-      !isGhost && [
-        tw`text-white bg-blue hover:bg-blue-hovered active:bg-blue-active`,
-      ],
+    isSuccess && [
+      tw`text-white`,
+      tw`border-green hover:border-green active:border-green`,
+      tw`bg-green hover:bg-green-hovered active:bg-green-active`,
+    ],
 
-    isWarning &&
-      !isGhost && [
-        tw`text-white bg-orange hover:bg-orange-hovered active:bg-orange-active`,
-      ],
+    isInfo && [
+      tw`text-white`,
+      tw`border-blue hover:border-blue active:border-blue`,
+      tw`bg-blue hover:bg-blue-hovered active:bg-blue-active`,
+    ],
 
-    isDanger &&
-      !isGhost && [
-        tw`text-white bg-red hover:bg-red-hovered active:bg-red-active`,
-      ],
+    isWarning && [
+      tw`text-white`,
+      tw`border-orange hover:border-orange active:border-orange`,
+      tw`bg-orange hover:bg-orange-hovered active:bg-orange-active`,
+    ],
 
-    isGhost && [tw`py-0.5`],
-    isGhost &&
-      !isPrimary &&
-      !isInfo &&
-      !isWarning &&
-      !isDanger && [
-        tw`text-black dark:text-white bg-transparent border border-2 border-grey-dark-300 dark:border-grey-light-500 hover:bg-tertiary active:bg-quaternary`,
-      ],
-
-    isPrimary &&
-      isGhost && [
-        tw`text-green bg-transparent border border-2 border-green hover:bg-green/10 active:bg-green/20`,
-      ],
-
-    isInfo &&
-      isGhost && [
-        tw`text-blue bg-transparent border border-2 border-blue hover:bg-blue/10 active:bg-blue/20`,
-      ],
-
-    isWarning &&
-      isGhost && [
-        tw`text-orange bg-transparent border border-2 border-orange hover:bg-orange/10 active:bg-orange/20`,
-      ],
-
-    isDanger &&
-      isGhost && [
-        tw`text-red bg-transparent border border-2 border-red hover:bg-red/10 active:bg-red/20`,
-      ],
+    isDanger && [
+      tw`text-white`,
+      tw`border-red hover:border-red active:border-red`,
+      tw`bg-red hover:bg-red-hovered active:bg-red-active`,
+    ],
 
     isDisabled && [tw`pointer-events-none opacity-30`],
   ],

@@ -12,9 +12,8 @@ export const hero = (
 
 export const navigation = (
   <ItemsRow style={{ display: 'flex' }}>
-    <Chip end label="Regular" to="/elements/button" />
-    <Chip end label="Ghost" to="/elements/button/ghost" />
-    <Chip end label="Large" to="/elements/button/large" />
+    <Chip end label="Variants" to="/elements/button" />
+    <Chip end label="Sizes" to="/elements/button/large" />
     <Chip end label="Disabled" to="/elements/button/disabled" />
   </ItemsRow>
 )

@@ -19,9 +19,10 @@ function ButtonElement() {
         <br />
         <br />
         <P>
-          The <Bold>disabled</Bold> button variant is an <Bold>option</Bold>{' '}
+          The <Bold>disabled</Bold> button variant is an option{' '}
           available in all variants, to be used when, for example, a user needs
-          to fill out a form before submitting.
+          to fill out a form before submitting. The button becomes transparent
+          and pointer-events are disabled.
         </P>
         <br />
         <Separator />
@@ -34,7 +35,7 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeDefaultDisabled}
           element={
-            <Button isPrimary isDisabled>
+            <Button isDisabled>
               Regular (disabled)
             </Button>
           }
@@ -42,10 +43,20 @@ function ButtonElement() {
         <br />
         <br />
         <CodeGridComponent
-          code={codePrimaryDisabled}
+          code={codeSecondaryDisabled}
           element={
-            <Button isInfo isGhost isDisabled>
-              Ghost (disabled)
+            <Button isSecondary isDisabled>
+              Secondary (disabled)
+            </Button>
+          }
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeSuccessDisabled}
+          element={
+            <Button isSuccess isDisabled>
+              Success (disabled)
             </Button>
           }
         />
@@ -54,8 +65,28 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeInfoDisabled}
           element={
-            <Button isWarning isLarge isDisabled>
-              Large (disabled)
+            <Button isInfo isDisabled>
+              Info (disabled)
+            </Button>
+          }
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeWarningDisabled}
+          element={
+            <Button isWarning isDisabled>
+              Warning (disabled)
+            </Button>
+          }
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeDangerDisabled}
+          element={
+            <Button isDanger isDisabled>
+              Danger (disabled)
             </Button>
           }
         />
@@ -71,17 +102,32 @@ export default ButtonElement
 const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
 `
 
-const codeDefaultDisabled = String.raw`<Button isPrimary isDisabled>
+const codeDefaultDisabled = String.raw`<Button isDisabled>
   Regular (disabled)
 </Button>
 `
 
-const codePrimaryDisabled = String.raw`<Button isInfo isGhost isDisabled>
-  Ghost (disabled)
+const codeSecondaryDisabled = String.raw`<Button isSecondary isDisabled>
+  Secondary (disabled)
 </Button>
 `
 
-const codeInfoDisabled = String.raw`<Button isWarning isLarge isDisabled>
-  Large (disabled)
+const codeSuccessDisabled = String.raw`<Button isSuccess isDisabled>
+  Success (disabled)
+</Button>
+`
+
+const codeInfoDisabled = String.raw`<Button isInfo isDisabled>
+  Info (disabled)
+</Button>
+`
+
+const codeWarningDisabled = String.raw`<Button isWarning isDisabled>
+  Warning (disabled)
+</Button>
+`
+
+const codeDangerDisabled = String.raw`<Button isDanger isDisabled>
+  Danger (disabled)
 </Button>
 `

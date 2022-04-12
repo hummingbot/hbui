@@ -7,7 +7,7 @@ import { Separator } from '../../../../hb_ui/elements/layout'
 import { Button } from '../../../../hb_ui/elements/buttons'
 import { hero, navigation } from './shared'
 
-function ButtonElement() {
+function ButtonSizes() {
   return (
     <div>
       {hero}
@@ -19,14 +19,8 @@ function ButtonElement() {
         <br />
         <br />
         <P>
-          The <Bold>large</Bold> and <Bold>extra large</Bold> are{' '}
-          <Bold>options</Bold> available in all variants to be used should be
-          used in special scenarios, where larger buttons are ideal.
-        </P>
-        <br />
-        <P>
-          They use the same button element therefore they are also{' '}
-          <Bold>responsive</Bold>.
+          The <Bold>small</Bold> and <Bold>large</Bold> are{' '}
+          options available in all variants.
         </P>
         <br />
         <Separator />
@@ -37,14 +31,20 @@ function ButtonElement() {
         <br />
         <br />
         <CodeGridComponent
-          code={codeLarge}
-          element={<Button isLarge>Large</Button>}
+          code={codeSmall}
+          element={<Button isSmall>Text label</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
-          code={codeExtraLarge}
-          element={<Button isExtraLarge>Extra large</Button>}
+          code={codeDefault}
+          element={<Button>Text label</Button>}
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeLarge}
+          element={<Button isLarge>Text label</Button>}
         />
         <br />
         <br />
@@ -53,17 +53,22 @@ function ButtonElement() {
   )
 }
 
-export default ButtonElement
+export default ButtonSizes
 
 const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
 `
 
-const codeLarge = String.raw`<Button isLarge>
-  Large
+const codeDefault = String.raw`<Button>
+  Text label
 </Button>
 `
 
-const codeExtraLarge = String.raw`<Button isExtraLarge>
-  Extra large
+const codeLarge = String.raw`<Button isLarge>
+  Text label
+</Button>
+`
+
+const codeSmall = String.raw`<Button isSmall>
+  Text label
 </Button>
 `
