@@ -19,8 +19,9 @@ function ButtonElement() {
         <br />
         <br />
         <P>
-          The button element is <Bold>responsive</Bold> and will automatically
-          adopt a smaller or larger size depending on the viewport width.
+          The button element has <Bold>6 variants</Bold>. Use the modifiers{' '}
+          <Bold>isSecondary</Bold>, <Bold>isSuccess</Bold>, <Bold>isInfo</Bold>,{' '}
+          <Bold>isWarning</Bold> and <Bold>isDanger</Bold> to activate them.
         </P>
         <br />
         <Separator />
