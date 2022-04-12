@@ -50,18 +50,21 @@ module.exports = {
       secondary: colorTokens.colors.dark['text-secondary'],
       tertiary: colorTokens.colors.dark['text-tertiary'],
       quaternary: colorTokens.colors.dark['text-quaternary'],
+      quintenary: colorTokens.colors.dark['text-quintenary'],
     },
     bg: {
       primary: colorTokens.colors.dark['bg-primary'],
       secondary: colorTokens.colors.dark['bg-secondary'],
       tertiary: colorTokens.colors.dark['bg-tertiary'],
       quaternary: colorTokens.colors.dark['bg-quaternary'],
+      quintenary: colorTokens.colors.dark['bg-quintenary'],
     },
     border: {
       primary: colorTokens.colors.dark['border-primary'],
       secondary: colorTokens.colors.dark['border-secondary'],
       tertiary: colorTokens.colors.dark['border-tertiary'],
       quaternary: colorTokens.colors.dark['border-quaternary'],
+      quintenary: colorTokens.colors.dark['border-quintenary'],
     },
   },
   light: {
@@ -70,18 +73,21 @@ module.exports = {
       secondary: colorTokens.colors.dark['text-secondary'],
       tertiary: colorTokens.colors.dark['text-tertiary'],
       quaternary: colorTokens.colors.dark['text-quaternary'],
+      quintenary: colorTokens.colors.dark['text-quintenary'],
     },
     bg: {
       primary: colorTokens.colors.light['bg-primary'],
       secondary: colorTokens.colors.light['bg-secondary'],
       tertiary: colorTokens.colors.light['bg-tertiary'],
       quaternary: colorTokens.colors.light['bg-quaternary'],
+      quintenary: colorTokens.colors.light['bg-quintenary'],
     },
     border: {
       primary: colorTokens.colors.light['border-primary'],
       secondary: colorTokens.colors.light['border-secondary'],
       tertiary: colorTokens.colors.light['border-tertiary'],
       quaternary: colorTokens.colors.light['border-quaternary'],
+      quintenary: colorTokens.colors.light['border-quintenary'],
     },
   },
 }

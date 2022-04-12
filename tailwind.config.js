@@ -62,6 +62,16 @@ module.exports = {
       'inner': tokens.boxShadow['shadow-inner'],
       'none': 'box-shadow: 0 0 #0000',
     },
+    borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      DEFAULT: '4px',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '12px',
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -120,7 +130,8 @@ module.exports = {
         primary: "var(--bg-primary)",
         secondary: "var(--bg-secondary)",
         tertiary: "var(--bg-tertiary)",
-        quaternary: "var(--bg-quaternary)"
+        quaternary: "var(--bg-quaternary)",
+        quintenary: "var(--bg-quintenary)"
       },
       borderColor: {
         brand: "var(--border-brand)",
@@ -128,19 +139,22 @@ module.exports = {
         secondary: "var(--border-secondary)",
         tertiary: "var(--border-tertiary)",
         quaternary: "var(--border-quaternary)",
-      },
-      fillColor: {
-        brand: "var(--fill-brand)",
-        primary: "var(--fill-primary)",
-        secondary: "var(--fill-secondary)",
-        tertiary: "var(--fill-tertiary)"
+        quintenary: "var(--border-quintenary)"
       },
       textColor: {
         brand: "var(--text-brand)",
         primary: "var(--text-primary)",
         secondary: "var(--text-secondary)",
         tertiary: "var(--text-tertiary)",
+        quaternary: "var(--text-quaternary)",
+        quintenary: "var(--text-quintenary)",
         dim: "var(--text-dim)"
+      },
+      fillColor: {
+        brand: "var(--fill-brand)",
+        primary: "var(--fill-primary)",
+        secondary: "var(--fill-secondary)",
+        tertiary: "var(--fill-tertiary)"
       }
     }
   },
