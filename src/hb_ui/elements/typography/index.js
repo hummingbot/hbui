@@ -127,6 +127,10 @@ export const Bold = styled.span({
   fontWeight: 'bold',
 })
 
+export const Underline = styled.span({
+  textDecoration: 'underline',
+})
+
 export const Red = styled.span({
   color: red,
 })
