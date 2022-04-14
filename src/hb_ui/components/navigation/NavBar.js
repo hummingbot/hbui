@@ -41,7 +41,7 @@ const NavBarRoot = styled.div(({ isUppercase, isDisabled }) => [
   tw`flex w-full bg-primary`,
   tw`justify-between items-center`,
   tw`relative py-2 pl-12 pr-4`,
-  tw`border-b-2 border-secondary`,
+  tw`border-b border-secondary`,
   css`
     .chip {
       ${tw`mr-1`};
