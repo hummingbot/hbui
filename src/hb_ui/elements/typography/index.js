@@ -73,7 +73,7 @@ export const PSmall = styled.p(
 
 export const P = styled.p(
   {},
-  props => [tw`text-base md:text-lg`],
+  props => [tw`text-base lg:text-lg`],
   sharedTransforms,
 )
 

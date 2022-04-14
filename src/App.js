@@ -41,6 +41,9 @@ import ChipComponent from './dsmsite/pages/components/chip/Chip'
 import Spinner from './dsmsite/pages/components/spinner/Spinner'
 import Callout from './dsmsite/pages/components/callout/Callout'
 import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
+import NavBarPage from './dsmsite/pages/components/navigation/navbar/NavBar'
+import BreadcrumbsBarPage from './dsmsite/pages/components/navigation/breadcrumbs/BreadcrumbsBar'
+import ComboBoxPage from './dsmsite/pages/components/combobox/ComboBox'
 
 import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
 
@@ -117,6 +120,9 @@ function App() {
             <Route path="/components/spinner" element={<Spinner />} />
             <Route path="/components/callout" element={<Callout />} />
             <Route path="/components/snackbar" element={<Snackbar />} />
+            <Route path="/components/navigation/navbar" element={<NavBarPage />} />
+            <Route path="/components/navigation/breadcrumbs" element={<BreadcrumbsBarPage />} />
+            <Route path="/components/combobox" element={<ComboBoxPage />} />
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
