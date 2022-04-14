@@ -15,7 +15,7 @@ const userData = {
 }
 const linksLeft = [
   { url: "/launchpad", label: "Launchpad" },
-  { url: "/fleet", label: "Fleet" },
+  { url: "/components/navigation/navbar", label: "Fleet" },
   { url: "/strategies", label: "Strategies" },
   { url: "/backtests", label: "Backtests" },
 ]

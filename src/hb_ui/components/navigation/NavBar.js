@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { P, Body, H6, Bold } from '../../elements/typography'
+import { P, Body, Bold } from '../../elements/typography'
 import HummingbotLogo from '../../svgs/logos/HummingbotLogo'
 import TriangleDown from '../../svgs/arrows/TriangleDown'
 import Chip from '../chip'
@@ -15,19 +15,21 @@ const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, ...prop
         </LogoContainer>
         <LinksRow>
           {linksLeft.map(link =>
-            <Chip key={link.url} to={link.url} label={link.label} />,
+            <Chip key={link.url} to={link.url} label={link.label} />
           )}
         </LinksRow>
       </LeftSide>
       <RightSide>
         <LinksRow>
           {linksRight.map(link =>
-            <Chip key={link.url} to={link.url} label={link.label} />,
+            <Chip key={link.url} to={link.url} label={link.label} />
           )}
         </LinksRow>
         <img src={userData.profileImage} alt={userData.name} />
-        <P>{userData.name}</P>
-        <TriangleDown />
+        <Menu>
+          <P>{userData.name}</P>
+          <TriangleDown />
+        </Menu>
       </RightSide>
     </NavBarRoot>
   )
@@ -59,7 +61,7 @@ const LeftSide = styled.div(({}) => [
 ])
 
 const LinksRow = styled.div(({}) => [
-  tw`flex items-center`,
+  tw`hidden lg:flex items-center`,
 ])
 
 const RightSide = styled.div(({}) => [
@@ -87,4 +89,8 @@ const LogoContainer = styled.div(({}) => [
       ${tw`ml-2 p-0 select-none`};
     }
   `,
+])
+
+const Menu = styled.div(({}) => [
+  tw`flex cursor-pointer h-[32px] flex items-center`,
 ])

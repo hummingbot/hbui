@@ -1,10 +1,16 @@
 import React from 'react'
-import { theme } from 'twin.macro'
 import { ShortHero, MainContent, PageRoot } from '../../../../ui/elements/layout'
 import CodeBlock from '../../../../ui/components/CodeBlock'
-import { Body } from '../../../../../hb_ui/elements/typography'
+import { Body, Bold } from '../../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../../hb_ui/elements/layout'
-import Spinner from '../../../../../hb_ui/components/spinner'
+import BreadcrumbsBar from '../../../../../hb_ui/components/navigation/BreadcrumbsBar'
+
+const breadcrumbLinks = [
+  { url: "/launchpad", label: "Launchpad" },
+  { url: "/fleet", label: "Fleet" },
+  { url: "/strategies", label: "Strategies" },
+  { url: "/components/navigation/breadcrumbs", label: "Backtests" },
+]
 
 function BreadcrumbsBarPage() {
   return (
@@ -15,20 +21,21 @@ function BreadcrumbsBarPage() {
       />
       <MainContent>
         <Body>
-          Default color: black & white. Custom colors: green, red, orange, blue.{' '}
+          The breadcrumbs bar takes 1 mandatory
+          argument: <Bold>links</Bold> - an array of url / label pairs.
+          <br />
+          <br />
+          It uses the React <Bold>NavLink</Bold> internally - a link will be highlighted when a route matches the URL.
         </Body>
         <Separator />
         <br />
         <br />
-        <Body>Default (grey, 40px radius)</Body>
-        <Spinner />
+        <BreadcrumbsBar
+          links={breadcrumbLinks}
+        />
         <br />
         <br />
         <CodeBlock code={codeSpinnerDefault} />
-        <br />
-        <br />
-        <Body>Custom: red, 50px radius</Body>
-        <Spinner color="red" radius={50} />
         <br />
         <br />
       </MainContent>
@@ -38,9 +45,19 @@ function BreadcrumbsBarPage() {
 
 export default BreadcrumbsBarPage
 
-const codeSpinnerDefault = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerDefault = String.raw`import BreadcrumbsBar from '(...)/../hb_ui/components/navigation/BreadcrumbsBar'
 
-<Spinner
-  radius={50}
-/>
+const breadcrumbLinks = [
+  { url: "/launchpad", label: "Launchpad" },
+  { url: "/fleet", label: "Fleet" },
+  { url: "/strategies", label: "Strategies" },
+  { url: "/components/navigation/breadcrumbs", label: "Backtests" },
+]
+
+return (
+  <BreadcrumbsBar
+    links={breadcrumbLinks}
+  />
+)
+
 `
