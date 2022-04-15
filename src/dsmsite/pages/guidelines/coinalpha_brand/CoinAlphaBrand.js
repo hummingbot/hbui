@@ -19,7 +19,7 @@ import logoSizes from './assets/sizes.png'
 import logoDonts1 from './assets/logo_donts_1.png'
 import logoDonts2 from './assets/logo_donts_2.png'
 import Callout from '../../../../hb_ui/components/callout'
-import ErrorIcon from '../../../../hb_ui/svgs/notifications/ErrorIcon'
+import ErrorIcon from '../../../../hb_ui/assets/svgs/notifications/ErrorIcon'
 
 function CoinAlphaBrand() {
   return (

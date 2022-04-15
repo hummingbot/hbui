@@ -2,7 +2,7 @@ import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import GlobalStyles from './styles/GlobalStyles'
+import GlobalStyles from './hb_ui/system/GlobalStyles'
 import ScrollToTop from './dsmsite/system/ScrollToTop'
 
 // sidebar

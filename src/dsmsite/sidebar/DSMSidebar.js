@@ -3,13 +3,13 @@ import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../hb_ui/elements/typography'
 import colors from '../../hb_ui/constants/colors'
-import GlobalSwitcherIcon from '../../hb_ui/svgs/GlobalSwitcherIcon'
-import TriangleRight from '../../hb_ui/svgs/TriangleRight'
+import GlobalSwitcherIcon from '../../hb_ui/assets/svgs/GlobalSwitcherIcon'
+import TriangleRight from '../../hb_ui/assets/svgs/TriangleRight'
 import { P } from '../../hb_ui/elements/typography'
 import { desktop_max } from '../../hb_ui/constants/media-queries'
 import navigation from './navigation'
 
-import { ThemeToggle } from '../../styles'
+import { ThemeToggle } from '../../hb_ui/system'
 
 const { green } = colors
 

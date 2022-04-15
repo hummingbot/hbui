@@ -1,7 +1,7 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { P, Body, H6, Bold } from '../../elements/typography'
-import HomeIcon from '../../svgs/icons/Home'
+import HomeIcon from '../../assets/svgs/icons/Home'
 import TextLink from '../textlink'
 
 const BreadcrumbsBar = ({ links, userData, ...props }) => {

@@ -1,10 +1,10 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { P, Body, Bold } from '../../elements/typography'
-import HummingbotLogo from '../../svgs/logos/HummingbotLogo'
-import TriangleDown from '../../svgs/arrows/TriangleDown'
+import HummingbotLogo from '../../assets/svgs/logos/HummingbotLogo'
+import TriangleDown from '../../assets/svgs/arrows/TriangleDown'
 import Chip from '../chip'
-import { ThemeToggle } from '../../../styles'
+import { ThemeToggle } from '../../system'
 
 const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThemeToggle, ...props }) => {
   return (

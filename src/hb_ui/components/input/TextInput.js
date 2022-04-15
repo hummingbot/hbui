@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import tw, { css, styled, theme } from 'twin.macro'
 import { TextInput as TextInputElement } from '../../elements/input'
-import CheckIcon from '../../svgs/notifications/CheckIcon'
-import WarningIcon from '../../svgs/notifications/WarningIcon'
-import ErrorIcon from '../../svgs/notifications/ErrorIcon'
+import CheckIcon from '../../assets/svgs/notifications/CheckIcon'
+import WarningIcon from '../../assets/svgs/notifications/WarningIcon'
+import ErrorIcon from '../../assets/svgs/notifications/ErrorIcon'
 
 const TextInput = ({
   value,
