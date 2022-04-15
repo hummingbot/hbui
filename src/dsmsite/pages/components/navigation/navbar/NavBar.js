@@ -6,6 +6,7 @@ import { Body } from '../../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../../hb_ui/elements/layout'
 import NavBar from '../../../../../hb_ui/components/navigation/NavBar'
 import Chip from '../../../../../hb_ui/components/chip'
+import { ThemeToggle } from '../../../../../styles'
 
 const siteNameA = 'Hummingbot'
 const siteNameB = 'Prime'

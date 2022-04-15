@@ -4,8 +4,9 @@ import { P, Body, Bold } from '../../elements/typography'
 import HummingbotLogo from '../../svgs/logos/HummingbotLogo'
 import TriangleDown from '../../svgs/arrows/TriangleDown'
 import Chip from '../chip'
+import { ThemeToggle } from '../../../styles'
 
-const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, ...props }) => {
+const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThemeToggle, ...props }) => {
   return (
     <NavBarRoot>
       <LeftSide>
@@ -20,6 +21,7 @@ const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, ...prop
         </LinksRow>
       </LeftSide>
       <RightSide>
+        {showThemeToggle && <ThemeToggle />}
         <LinksRow>
           {linksRight.map(link =>
             <Chip key={link.url} to={link.url} label={link.label} />
@@ -45,6 +47,9 @@ const NavBarRoot = styled.div(({ isUppercase, isDisabled }) => [
   css`
     .chip {
       ${tw`mr-1`};
+    }
+    .theme-toggle {
+      ${tw`mr-4`};
     }
   `,
 ])
