@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import { ThemeProvider } from './styles'
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container);
+root.render(
   <ThemeProvider>
     <App />
-  </ThemeProvider>,
-  document.getElementById('root'),
+  </ThemeProvider>
 )
