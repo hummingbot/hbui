@@ -48,9 +48,14 @@ const sharedTransforms = props => [
     css`
       color: ${orange} !important;
     `,
-  props.tightLineSpacing &&
+  props.leadingNone &&
     css`
-      line-height: 120% !important;
+      line-height: 100% !important;
+    `,
+  props.isLabel &&
+    css`
+      font-family: Inter !important;
+      line-height: 100% !important;
     `,
   css`
     a {
@@ -59,6 +64,11 @@ const sharedTransforms = props => [
   `,
 ]
 
+export const PNano = styled.p(
+  {},
+  props => [tw`text-[11px]`],
+  sharedTransforms,
+)
 export const PTiny = styled.p(
   {},
   props => [tw`text-xs`],
@@ -119,6 +129,8 @@ export const H1 = styled.h1(
   sharedTransforms,
 )
 
+// helpers
+
 export const PrimaryColor = styled.span({
   color: green,
 })
@@ -147,15 +159,36 @@ export const Orange = styled.span({
   color: orange,
 })
 
-export const LabelMicro = styled.p(
-  {},
-  props => [
-    tw`text-xs`,
-    tw`leading-none`,
-    tw`text-dim dark:(text-dim)`,
-    css`
-      text-transform: uppercase;
-    `,
-  ],
-  sharedTransforms,
-)
+// forms / dashboards
+
+export const FieldLabelNano = styled(PNano)({
+  fontFamily: 'Inter',
+  lineHeight: '1 !important'
+})
+
+export const FieldLabelTiny = styled(PTiny)({
+  fontFamily: 'Inter',
+  lineHeight: '1 !important'
+})
+
+export const FieldLabelSmall = styled(PSmall)({
+  fontFamily: 'Inter',
+  lineHeight: '1 !important'
+})
+
+export const FieldLabel = styled(P)({
+  fontFamily: 'Inter',
+  lineHeight: '1 !important'
+})
+
+const labelStyles = [
+  tw`text-quintenary dark:text-quintenary`,
+  tw`font-medium`,
+  tw`uppercase`,
+  tw`leading-none`,
+]
+
+export const LabelNano = styled(FieldLabelNano)({}, props => labelStyles)
+export const LabelTiny = styled(FieldLabelTiny)({}, props => labelStyles)
+export const LabelSmall = styled(FieldLabelSmall)({}, props => labelStyles)
+export const Label = styled(FieldLabel)({}, props => labelStyles)
