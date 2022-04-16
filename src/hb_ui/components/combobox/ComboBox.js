@@ -20,9 +20,9 @@ export default function ComboBox({items, selected, setSelected}) {
   return (
     <Combobox value={selected} onChange={setSelected}>
       <div tw="relative mt-1">
-        <div tw="relative w-full text-left rounded-lg shadow-md cursor-default focus:outline-none sm:text-sm overflow-hidden">
+        <div tw="relative w-full text-left rounded-lg cursor-default focus:outline-none sm:text-sm overflow-hidden">
           <Combobox.Input
-            tw="w-full bg-primary dark:bg-tertiary border-none outline-none py-2 pl-3 pr-10 text-sm leading-5 text-secondary"
+            tw="w-full bg-secondary font-medium dark:bg-tertiary border-none outline-none py-2 pl-3 pr-10 text-sm leading-5 text-secondary"
             displayValue={(item) => item.label}
             onChange={(event) => setQuery(event.target.value)}
           />
@@ -33,7 +33,7 @@ export default function ComboBox({items, selected, setSelected}) {
             />
           </Combobox.Button>
         </div>
-        <Combobox.Options tw="absolute w-full py-1 mt-1 overflow-auto text-base bg-primary dark:bg-tertiary rounded-md shadow-lg max-h-60 focus:outline-none sm:text-sm">
+        <Combobox.Options tw="absolute w-full py-1 mt-1 overflow-auto text-base bg-primary dark:bg-tertiary rounded-md shadow-lg max-h-60 focus:outline-none sm:text-sm z-50">
           {filteredItems.length === 0 && query !== '' ? (
             <div tw="cursor-default select-none relative py-2 px-4 text-primary">
               Nothing found.
