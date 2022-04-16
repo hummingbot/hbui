@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { css, styled, theme } from 'twin.macro'
-import { P, PSmall, LabelMicro } from '../../../../hb_ui/elements/typography'
+import { P, PSmall, LabelTiny } from '../../../../hb_ui/elements/typography'
 import {
   ShortHero,
   MainContentRow,

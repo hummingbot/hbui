@@ -11,7 +11,7 @@ import {
   H3,
   H2,
   H1,
-  LabelMicro,
+  LabelTiny,
 } from '../../../../hb_ui/elements/typography'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
@@ -25,9 +25,9 @@ function Typography() {
       <MainContent>
         <P isBrandColor>Label Micro</P>
         <br />
-        <LabelMicro>The quick brown fox jumps over the lazy dog</LabelMicro>
+        <LabelTiny>The quick brown fox jumps over the lazy dog</LabelTiny>
         <br />
-        <CodeBlock code={codeLabelMicro} />
+        <CodeBlock code={codeLabelTiny} />
         <br />
         <br />
         <P isBrandColor>Paragraph</P>
@@ -100,9 +100,9 @@ function Typography() {
 
 export default Typography
 
-const codeLabelMicro = String.raw`import { LabelMicro } from '../hb_ui/elements/typography'
+const codeLabelTiny = String.raw`import { LabelTiny } from '../hb_ui/elements/typography'
 
-<LabelMicro>sdfsfsd</LabelMicro>
+<LabelTiny>sdfsfsd</LabelTiny>
 `
 const codeParagraph = String.raw`import { P } from '../hb_ui/elements/typography'
 

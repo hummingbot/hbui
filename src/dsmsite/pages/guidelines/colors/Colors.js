@@ -1,6 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { P, H6, LabelMicro } from '../../../../hb_ui/elements/typography'
+import { P, H6, LabelTiny } from '../../../../hb_ui/elements/typography'
 import { Separator } from '../../../../hb_ui/elements/layout'
 import ColorCard from './ColorCard'
 import {
@@ -16,13 +16,13 @@ import index from './index'
 const labelsHeader = (
   <div tw="grid grid-cols-10 gap-8">
     <div tw="col-span-2">
-      <LabelMicro>Color</LabelMicro>
+      <LabelTiny>Color</LabelTiny>
     </div>
     <div tw="col-span-5">
-      <LabelMicro>Description</LabelMicro>
+      <LabelTiny>Description</LabelTiny>
     </div>
     <div tw="invisible md:visible md:col-span-3">
-      <LabelMicro>Token</LabelMicro>
+      <LabelTiny>Token</LabelTiny>
     </div>
   </div>
 )

@@ -10,7 +10,7 @@ import {
   H3,
   H2,
   H1,
-  LabelMicro
+  LabelTiny
 } from '../../../../hb_ui/elements/typography'
 
 function Typography() {
@@ -20,7 +20,7 @@ function Typography() {
         title='Typography'
       />
       <MainContent>
-        <LabelMicro><PrimaryColor>Label Micro</PrimaryColor> The quick brown fox jumps over the lazy dog</LabelMicro>
+        <LabelTiny><PrimaryColor>Label Micro</PrimaryColor> The quick brown fox jumps over the lazy dog</LabelTiny>
         <br />
         <br />
         <P><PrimaryColor>Paragraph</PrimaryColor> The quick brown fox jumps over the lazy dog</P>

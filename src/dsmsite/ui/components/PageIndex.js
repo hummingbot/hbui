@@ -1,11 +1,11 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import { PSmall, LabelMicro } from '../../../hb_ui/elements/typography'
+import { PSmall, LabelTiny } from '../../../hb_ui/elements/typography'
 
 const PageIndex = ({ title, items }) => {
   return (
     <Root>
-      <LabelMicro>{title}</LabelMicro>
+      <LabelTiny>{title}</LabelTiny>
       <br />
       {items.map(item => (
         <a href={`#${item.id}`} key={item.id}>

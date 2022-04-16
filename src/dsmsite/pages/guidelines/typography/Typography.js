@@ -10,7 +10,7 @@ import {
   H4,
   H6,
   H5,
-  LabelMicro
+  LabelTiny
 } from '../../../../hb_ui/elements/typography'
 import { PageRoot, Separator } from '../../../../hb_ui/elements/layout'
 import bgImage from './assets/bg.png'
