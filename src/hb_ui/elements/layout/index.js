@@ -79,7 +79,6 @@ export const ItemsRow = styled.div({
   flexWrap: 'wrap',
   '& > *': {
     marginRight: '10px',
-    marginBottom: '10px',
   },
   '& > *:last-child': {
     marginRight: '0',
