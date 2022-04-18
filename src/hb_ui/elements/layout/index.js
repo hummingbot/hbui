@@ -74,16 +74,17 @@ export const SBLRootSidebar = styled.div(() => [
   `,
 ])
 
-export const ItemsRow = styled.div({
-  display: 'flex',
-  flexWrap: 'wrap',
-  '& > *': {
-    marginRight: '10px',
-  },
-  '& > *:last-child': {
-    marginRight: '0',
-  },
-})
+export const ItemsRow = styled.div(() => [
+  tw`flex flex-wrap`,
+  css`
+    > * {
+      ${tw`mr-2`}
+    }
+    > *:last-child {
+      ${tw`mr-0`}
+    }
+  `,
+])
 
 export const Separator = styled.div(props => [
   css`
@@ -169,3 +170,11 @@ export const MobileSpaceMaker = styled.div({
     height: '80px',
   },
 })
+
+export const Window = styled.div(({}) => [
+  tw`bg-primary py-sm px-md shadow rounded`,
+  css`
+    margin: 0 auto;
+    max-width: 696px;
+  `,
+])
