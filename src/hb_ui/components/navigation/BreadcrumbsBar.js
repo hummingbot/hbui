@@ -1,25 +1,46 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import tw, { css, styled } from 'twin.macro'
+import { Link, NavLink, useLocation, useHistory } from 'react-router-dom'
 import { P, Body, H6, Bold } from '../../elements/typography'
+import { ItemsRow } from '../../elements/layout'
+import { Button } from '../../elements/buttons'
 import HomeIcon from '../../assets/svgs/icons/Home'
 import TextLink from '../textlink'
 
-const BreadcrumbsBar = ({ links, userData, ...props }) => {
+function BreadcrumbsBar({links, buttons, history}) {
   return (
     <BreadcrumbsBarRoot>
-      <HomeIcon />
-      <ChevronRight />
-      <LinksRow>
-        {links.map((link, index) => {
-          return(
-            <span key={link.url} tw='flex items-center'>
-              { index !== 0 && <P className='divider'>/</P> }
-              <TextLink to={link.url} label={link.label} />
-            </span>
-          )
-        }
-        )}
-      </LinksRow>
+      { links && <HomeIcon />}
+      { links && <ChevronRight />}
+      { links &&
+        <LinksRow>
+         {
+          links.map((link, index) => {
+            return(
+              <span key={link.url} tw='flex items-center'>
+                { index !== 0 && <P className='divider'>/</P> }
+                <TextLink to={link.url} label={link.label} />
+              </span>
+            )
+          })
+         }
+        </LinksRow>
+      }
+      { buttons &&
+        <ItemsRow>
+          {
+            buttons.map(button => {
+            return(
+              <Link key={button.url} to={button.url}>
+                <Button isSmall isSuccess={button.url === history.pathname}>
+                  {button.label}
+                </Button>
+              </Link>
+            )
+          })
+          }
+        </ItemsRow>
+      }
     </BreadcrumbsBarRoot>
   )
 }
@@ -47,10 +68,6 @@ const BreadcrumbsBarRoot = styled.div(({ isUppercase, isDisabled }) => [
       ${tw`mx-[10px]`}
     }
   `,
-])
-
-const LeftSide = styled.div(({}) => [
-  tw`flex relative`,
 ])
 
 const LinksRow = styled.div(({}) => [

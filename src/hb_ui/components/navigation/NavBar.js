@@ -27,8 +27,12 @@ const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThe
             <Chip key={link.url} to={link.url} label={link.label} />
           )}
         </LinksRow>
-        <img src={userData.profileImage} alt={userData.name} />
         <Menu>
+          { userData.profileImage ?
+            <img src={userData.profileImage} alt={userData.name} />
+            :
+            <ProfileIcon />
+          }
           <P>{userData.name}</P>
           <TriangleDown />
         </Menu>
@@ -73,7 +77,7 @@ const RightSide = styled.div(({}) => [
   tw`flex items-center`,
   css`
     img {
-      ${tw`rounded ml-4`};
+      ${tw`ml-2 rounded ml-4`};
     }
     svg {
       ${tw`ml-2`};
@@ -99,3 +103,19 @@ const LogoContainer = styled.div(({}) => [
 const Menu = styled.div(({}) => [
   tw`flex cursor-pointer h-[32px] flex items-center`,
 ])
+
+function ProfileIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="21"
+      tw="fill-current text-secondary"
+      viewBox="0 0 22 21"
+    >
+      <path
+        d="M18.188.313H3.813A2.866 2.866 0 00.937 3.187v14.376a2.838 2.838 0 002.875 2.875h14.376a2.866 2.866 0 002.875-2.875V3.188A2.895 2.895 0 0018.188.312zM11 4.625c1.752 0 3.234 1.482 3.234 3.234 0 1.797-1.482 3.235-3.234 3.235a3.221 3.221 0 01-3.234-3.235c0-1.752 1.437-3.234 3.234-3.234zM4.576 17.563c.36-2.426 2.426-4.313 4.987-4.313h2.874c2.516 0 4.583 1.887 4.942 4.313H4.576z"
+      ></path>
+    </svg>
+  );
+}
