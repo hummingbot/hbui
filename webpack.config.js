@@ -41,14 +41,7 @@ module.exports = function webpackConfig(env, args) {
     devServer: {
       hot: true,
       open: true,
-      historyApiFallback: {
-        rewrites: [
-          { from:' /./', to: '/index.html' }
-        ],
-      },
-      static: {
-        directory: path.join(__dirname, 'dist')
-      },
+      historyApiFallback: true,
     },
     plugins: [
       new CopyWebpackPlugin({
