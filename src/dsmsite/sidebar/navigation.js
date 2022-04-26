@@ -44,7 +44,7 @@ const faq = {
   title: 'FAQ',
 }
 
-module.exports = [
+const links =  [
   home,
   gettingStarted,
   faq,
@@ -55,3 +55,5 @@ module.exports = [
   elements,
   components,
 ]
+
+export default links

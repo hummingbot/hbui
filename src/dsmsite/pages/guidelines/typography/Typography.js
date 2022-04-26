@@ -11,10 +11,10 @@ import {
   H6,
   H5,
   LabelTiny
-} from '../../../../hb_ui/elements/typography'
-import { PageRoot, Separator } from '../../../../hb_ui/elements/layout'
+} from 'ab-tests/elements/typography'
+import { PageRoot, Separator } from 'ab-tests/elements/layout'
 import bgImage from './assets/bg.png'
-import Callout from '../../../../hb_ui/components/callout'
+import Callout from 'ab-tests/components/callout'
 
 function Typography() {
   return (

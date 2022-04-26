@@ -1,14 +1,14 @@
 import React from 'react'
 import tw, { css, styled, theme } from 'twin.macro'
-import { P, PSmall, LabelTiny } from '../../../../hb_ui/elements/typography'
+import { P, PSmall, LabelTiny } from 'ab-tests/elements/typography'
 import {
   ShortHero,
   MainContentRow,
   MainContentBody,
   MainContentSidebar,
 } from '../../../ui/elements/layout'
-import { Button } from '../../../../hb_ui/components/button'
-import Copy from '../../../../hb_ui/assets/svgs/16x16/Copy'
+import { Button } from 'ab-tests/components/button'
+import Copy from 'ab-tests/assets/svgs/16x16/Copy'
 
 function ColorCard({ title, description, hex, rgb }) {
   return (

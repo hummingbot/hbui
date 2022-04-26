@@ -2,9 +2,9 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
-import { Body, P, H5, Bold } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
-import { Button } from '../../../../hb_ui/elements/buttons'
+import { Body, P, H5, Bold } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
+import { Button } from 'ab-tests/elements/buttons'
 import { hero, navigation } from './shared'
 
 function ButtonSizes() {

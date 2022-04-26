@@ -8,19 +8,19 @@ import {
   Red,
   Blue,
   Green,
-} from '../../../../hb_ui/elements/typography'
+} from 'ab-tests/elements/typography'
 import {
   red,
   green,
   blue
-} from '../../../../hb_ui/constants/colors'
-import colors from '../../../../hb_ui/constants/colors'
+} from 'ab-tests/constants/colors'
+import colors from 'ab-tests/constants/colors'
 import {
   PageRoot,
   Section,
   Container,
   Separator,
-} from '../../../../hb_ui/elements/layout'
+} from 'ab-tests/elements/layout'
 import { hero, navigation } from './shared'
 
 function LayoutCoreSingle() {

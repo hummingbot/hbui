@@ -13,8 +13,10 @@ const colors = {
   title: 'Colors',
 }
 
-module.exports = [
+const links =  [
   coinalphaBrand,
   typography,
   colors
 ]
+
+export default links

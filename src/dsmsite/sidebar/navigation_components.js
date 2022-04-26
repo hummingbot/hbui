@@ -35,7 +35,7 @@ const combobox = {
   title: 'ComboBox',
 }
 
-module.exports = [
+const links =  [
   button,
   chip,
   input,
@@ -46,3 +46,5 @@ module.exports = [
   breadcrumbs,
   combobox
 ]
+
+export default links

@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
-import { P } from '../../../../hb_ui/elements/typography'
-import ComboBox from '../../../../hb_ui/components/combobox/ComboBox'
+import { Body } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
+import { P } from 'ab-tests/elements/typography'
+import {ComboBox} from 'ab-tests/components/combobox'
 
 const items = [
   { id: 1, label: 'Wade Cooper' },

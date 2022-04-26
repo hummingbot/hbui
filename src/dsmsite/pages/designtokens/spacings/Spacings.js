@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
-import { P } from '../../../../hb_ui/elements/typography'
+import { P } from 'ab-tests/elements/typography'
 import tw, { css, styled } from 'twin.macro'
 
 function Spacings() {

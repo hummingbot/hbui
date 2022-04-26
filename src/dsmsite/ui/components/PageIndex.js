@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import { PSmall, LabelTiny } from '../../../hb_ui/elements/typography'
+import { PSmall, LabelTiny } from 'ab-tests/elements/typography'
 
 const PageIndex = ({ title, items }) => {
   return (

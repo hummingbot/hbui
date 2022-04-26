@@ -1,9 +1,9 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from '../../../../hb_ui/elements/typography'
-import { Button as ButtonComponent } from '../../../../hb_ui/components/button'
-import DummyIcon from '../../../../hb_ui/assets/svgs/16x16/DummyIcon'
+import { Body } from 'ab-tests/elements/typography'
+import { Button as ButtonComponent } from 'ab-tests/components/button'
+import DummyIcon from 'ab-tests/assets/svgs/16x16/DummyIcon'
 
 function Button() {
   return (

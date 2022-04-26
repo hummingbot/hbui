@@ -4,8 +4,8 @@ import {
   Section,
   Container,
   PaddingBox,
-} from '../../../../hb_ui/elements/layout'
-import { H1, P } from '../../../../hb_ui/elements/typography'
+} from 'ab-tests/elements/layout'
+import { H1, P } from 'ab-tests/elements/typography'
 
 export const ContentBlock = styled(Section)(({ backgroundColor }) => [
   css`

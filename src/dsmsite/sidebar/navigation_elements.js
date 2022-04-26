@@ -23,10 +23,12 @@ const input = {
   title: 'TextInput',
 }
 
-module.exports = [
+const links =  [
   layoutCore,
   layoutExtra,
   typography,
   button,
   input,
 ]
+
+export default links

@@ -1,8 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from '../../../../hb_ui/elements/typography'
-import Chip from '../../../../hb_ui/components/chip'
+import { Body } from 'ab-tests/elements/typography'
+import Chip from 'ab-tests/components/chip'
 
 function ChipPage() {
   return (

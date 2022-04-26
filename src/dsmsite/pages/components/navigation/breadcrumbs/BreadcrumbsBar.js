@@ -1,9 +1,9 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../../ui/elements/layout'
 import CodeBlock from '../../../../ui/components/CodeBlock'
-import { Body, Bold } from '../../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../../hb_ui/elements/layout'
-import BreadcrumbsBar from '../../../../../hb_ui/components/navigation/BreadcrumbsBar'
+import { Body, Bold } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
+import {BreadcrumbsBar} from 'ab-tests/components/navigation'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },

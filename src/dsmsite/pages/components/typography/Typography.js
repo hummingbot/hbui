@@ -11,7 +11,7 @@ import {
   H2,
   H1,
   LabelTiny
-} from '../../../../hb_ui/elements/typography'
+} from 'ab-tests/elements/typography'
 
 function Typography() {
   return (

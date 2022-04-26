@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Body } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
+import { Body } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import Callout from '../../../../hb_ui/components/callout'
+import Callout from 'ab-tests/components/callout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function TextInputPage() {

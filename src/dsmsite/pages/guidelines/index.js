@@ -10,8 +10,8 @@ import {
   H6,
   H5,
   LabelTiny
-} from '../../../hb_ui/elements/typography'
-import { Separator } from '../../../hb_ui/elements/layout'
+} from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
 import bgImage from './assets/bg.png'
 
 function Guidelines() {

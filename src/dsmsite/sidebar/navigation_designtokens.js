@@ -13,8 +13,11 @@ const opacity = {
   title: 'Opacity',
 }
 
-module.exports = [
+const links =  [
   spacings,
   shadows,
   opacity
 ]
+
+export default links
+

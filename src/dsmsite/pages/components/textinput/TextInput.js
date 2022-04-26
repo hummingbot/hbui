@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { P, Bold } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
+import { P, Bold } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import TextInput from '../../../../hb_ui/components/input/TextInput'
+import TextInput from 'ab-tests/components/input/TextInput'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 

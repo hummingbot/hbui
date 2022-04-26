@@ -10,16 +10,16 @@ import {
   H6,
   H5,
   LabelTiny
-} from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
+} from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
 import bgImage from './assets/bg.png'
 import logoBw from './assets/logo_bw.png'
 import logoProportions from './assets/logo_proportions.png'
 import logoSizes from './assets/sizes.png'
 import logoDonts1 from './assets/logo_donts_1.png'
 import logoDonts2 from './assets/logo_donts_2.png'
-import Callout from '../../../../hb_ui/components/callout'
-import ErrorIcon from '../../../../hb_ui/assets/svgs/notifications/ErrorIcon'
+import Callout from 'ab-tests/components/callout'
+import ErrorIcon from 'ab-tests/assets/svgs/notifications/ErrorIcon'
 
 function CoinAlphaBrand() {
   return (
@@ -75,15 +75,15 @@ function CoinAlphaBrand() {
         <br />
         <div tw="grid grid-cols-12 gap-0">
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Change logo anatomy</PSmall>
           </div>
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Use the logo on top of complex backgrounds</PSmall>
           </div>
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Use a drop shadow</PSmall>
           </div>
         </div>
@@ -92,15 +92,15 @@ function CoinAlphaBrand() {
         <br />
         <div tw="grid grid-cols-12 gap-0">
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Apply rotation</PSmall>
           </div>
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Apply rotation</PSmall>
           </div>
           <div tw="col-span-4">
-            {dont}
+            <Dont />
             <PSmall>Use outline style</PSmall>
           </div>
         </div>
@@ -148,11 +148,13 @@ function CoinAlphaBrand() {
   )
 }
 
-const dont = (
-  <div tw='flex items-center mb-2'>
-    <ErrorIcon />
-    <P isRed tw='font-medium ml-1.5'>DON'T</P>
-  </div>
-)
+function Dont() {
+  return(
+    <div tw='flex items-center mb-2'>
+      <ErrorIcon />
+      <P isRed tw='font-medium ml-1.5'>DON'T</P>
+    </div>
+  )
+}
 
 export default CoinAlphaBrand

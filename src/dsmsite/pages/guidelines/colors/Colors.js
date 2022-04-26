@@ -1,7 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { P, H6, LabelTiny } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
+import { P, H6, LabelTiny } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
 import ColorCard from './ColorCard'
 import {
   ShortHero,
@@ -13,19 +13,21 @@ import {
 import PageIndex from '../../../ui/components/PageIndex'
 import index from './index'
 
-const labelsHeader = (
-  <div tw="grid grid-cols-10 gap-8">
-    <div tw="col-span-2">
-      <LabelTiny>Color</LabelTiny>
+function LabelsHeader() {
+  return (
+    <div tw="grid grid-cols-10 gap-8">
+      <div tw="col-span-2">
+        <LabelTiny>Color</LabelTiny>
+      </div>
+      <div tw="col-span-5">
+        <LabelTiny>Description</LabelTiny>
+      </div>
+      <div tw="invisible md:visible md:col-span-3">
+        <LabelTiny>Token</LabelTiny>
+      </div>
     </div>
-    <div tw="col-span-5">
-      <LabelTiny>Description</LabelTiny>
-    </div>
-    <div tw="invisible md:visible md:col-span-3">
-      <LabelTiny>Token</LabelTiny>
-    </div>
-  </div>
-)
+  )
+}
 
 function Colors() {
   return (
@@ -40,7 +42,7 @@ function Colors() {
         <br />
         <div style={{ display: 'flex' }}>
           <MainContentBody>
-            {labelsHeader}
+            {<LabelsHeader />}
             <Separator />
             <ColorCard
               title="green-hummingbot"
@@ -91,7 +93,7 @@ function Colors() {
             </P>
             <br />
             <br />
-            {labelsHeader}
+            {<LabelsHeader />}
             <Separator />
             <ColorCard
               title="red"

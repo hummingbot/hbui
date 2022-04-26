@@ -2,9 +2,9 @@ import React from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from '../../../../hb_ui/elements/typography'
-import { Separator } from '../../../../hb_ui/elements/layout'
-import Spinner from '../../../../hb_ui/components/spinner'
+import { Body } from 'ab-tests/elements/typography'
+import { Separator } from 'ab-tests/elements/layout'
+import Spinner from 'ab-tests/components/spinner'
 
 function SpinnerPage() {
   return (

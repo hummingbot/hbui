@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import { PSmall } from '../../../hb_ui/elements/typography'
+import { PSmall } from 'ab-tests/elements/typography'
 
 const CodeBlock = ({ code }) => {
   return (

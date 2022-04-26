@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
-import { H1, H3 } from '../../hb_ui/elements/typography'
-import colors from '../../hb_ui/constants/colors'
-import GlobalSwitcherIcon from '../../hb_ui/assets/svgs/GlobalSwitcherIcon'
-import TriangleRight from '../../hb_ui/assets/svgs/TriangleRight'
-import { P } from '../../hb_ui/elements/typography'
-import { desktop_max } from '../../hb_ui/constants/media-queries'
+import { H1, H3 } from 'ab-tests/elements/typography'
+import colors from 'ab-tests/constants/colors'
+import GlobalSwitcherIcon from './GlobalSwitcherIcon'
+import TriangleRight from './TriangleRight'
+import { P } from 'ab-tests/elements/typography'
 import navigation from './navigation'
 
-import { ThemeToggle } from '../../hb_ui/system'
+import ThemeToggle from 'ab-tests/system/ThemeToggle'
 
 const { green } = colors
 

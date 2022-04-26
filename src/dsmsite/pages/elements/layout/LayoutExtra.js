@@ -1,8 +1,8 @@
 import React from 'react'
 import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
-import { P, H5 } from '../../../../hb_ui/elements/typography'
-import { ItemsRow, Separator } from '../../../../hb_ui/elements/layout'
-import { Button } from '../../../../hb_ui/elements/buttons'
+import { P, H5 } from 'ab-tests/elements/typography'
+import { ItemsRow, Separator } from 'ab-tests/elements/layout'
+import { Button } from 'ab-tests/elements/buttons'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function LayoutExtra() {

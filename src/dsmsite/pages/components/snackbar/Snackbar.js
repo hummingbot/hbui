@@ -1,8 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from '../../../../hb_ui/elements/typography'
-import Snackbar from '../../../../hb_ui/components/snackbar'
+import { Body } from 'ab-tests/elements/typography'
+import Snackbar from 'ab-tests/components/snackbar'
 
 function SnackbarPage() {
   return (

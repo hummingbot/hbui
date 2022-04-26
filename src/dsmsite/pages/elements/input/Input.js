@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import { H6, P } from '../../../../hb_ui/elements/typography'
-import { TextInput } from '../../../../hb_ui/elements/input'
-import { Separator } from '../../../../hb_ui/elements/layout'
+import { H6, P } from 'ab-tests/elements/typography'
+import { TextInput } from 'ab-tests/elements/input'
+import { Separator } from 'ab-tests/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 
