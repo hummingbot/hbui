@@ -20,16 +20,16 @@ const CheckboxRoot = styled.div(({ active }) => [
   ],
 ])
 
-function CheckIcon({}) {
+function CheckIcon({active}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="10"
       height="9"
-      fill="none"
+      fill='transparent'
       viewBox="0 0 10 9"
     >
-      <path stroke="#151819" d="M1 4.5L4.2 8 9 1"></path>
+      <path tw='stroke-current text-white dark:text-black' d="M1 4.5L4.2 8 9 1"></path>
     </svg>
   );
 }

@@ -34,6 +34,14 @@ const combobox = {
   link: '/components/combobox',
   title: 'ComboBox',
 }
+const checkbox = {
+  link: '/components/checkbox',
+  title: 'Checkbox',
+}
+const switchPage = {
+  link: '/components/switch',
+  title: 'Switch',
+}
 
 const links =  [
   button,
@@ -44,7 +52,9 @@ const links =  [
   snackbar,
   navbar,
   breadcrumbs,
-  combobox
+  combobox,
+  checkbox,
+  switchPage,
 ]
 
 export default links

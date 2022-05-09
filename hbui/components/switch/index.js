@@ -3,8 +3,8 @@ import { Switch } from '@headlessui/react'
 import tw, { css } from 'twin.macro'
 
 const stylesA = {}
-stylesA[true] = tw`bg-green relative inline-flex h-6 w-11 items-center rounded-full`
-stylesA[false] = tw`bg-quaternary relative inline-flex h-6 w-11 items-center rounded-full`
+stylesA[true] = tw`bg-success! relative inline-flex h-6 w-11 items-center rounded-full`
+stylesA[false] = tw`bg-grey-light-scale-500 dark:bg-grey-dark-scale-300 relative inline-flex h-6 w-11 items-center rounded-full`
 
 const stylesB = {}
 stylesB[true] = tw`translate-x-6 inline-block h-4 w-4 transform rounded-full bg-body`

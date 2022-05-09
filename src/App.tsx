@@ -45,6 +45,8 @@ import Snackbar from './dsmsite/pages/components/snackbar/Snackbar'
 import NavBarPage from './dsmsite/pages/components/navigation/navbar/NavBar'
 import BreadcrumbsBarPage from './dsmsite/pages/components/navigation/breadcrumbs/BreadcrumbsBar'
 import ComboBoxPage from './dsmsite/pages/components/combobox/ComboBox'
+import SwitchPage from './dsmsite/pages/components/switch/Switch'
+import CheckboxPage from './dsmsite/pages/components/checkbox/Checkbox'
 
 import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
 
@@ -124,6 +126,8 @@ function App() {
             <Route path="/components/navigation/navbar" element={<NavBarPage />} />
             <Route path="/components/navigation/breadcrumbs" element={<BreadcrumbsBarPage />} />
             <Route path="/components/combobox" element={<ComboBoxPage />} />
+            <Route path="/components/switch" element={<SwitchPage />} />
+            <Route path="/components/checkbox" element={<CheckboxPage />} />
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
