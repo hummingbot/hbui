@@ -1,22 +1,16 @@
 {
-  "plugins": [
-    "babel-plugin-transform-inline-environment-variables",
-    "babel-plugin-twin",
-    "babel-plugin-macros",
+  "presets": [
     [
-      "@emotion/babel-plugin-jsx-pragmatic",
+      "@babel/preset-react",
       {
-        "export": "jsx",
-        "import": "__cssprop",
-        "module": "@emotion/react"
+        "runtime": "automatic"
       }
     ],
-    [
-      "@babel/plugin-transform-react-jsx",
-      {
-        "pragma": "__cssprop",
-        "pragmaFrag": "React.Fragment"
-      }
-    ]
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    "babel-plugin-styled-components"
   ]
 }

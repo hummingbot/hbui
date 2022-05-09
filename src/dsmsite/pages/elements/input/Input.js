@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import { H6, P } from 'ab-tests/elements/typography'
-import { TextInput } from 'ab-tests/elements/input'
-import { Separator } from 'ab-tests/elements/layout'
+import { H6, P } from '../../../../../hbui/elements/typography'
+import { TextInput } from '../../../../../hbui/elements/input'
+import { Separator } from '../../../../../hbui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 
@@ -90,7 +90,7 @@ function InputElementPage() {
 
 export default InputElementPage
 
-const codeImport = String.raw`import { Input } from '../hb_ui/elements/input'
+const codeImport = String.raw`import { Input } from '@hummingbot/hbui/elements/input'
 `
 
 const codeDefault = String.raw`<TextInput

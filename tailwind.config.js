@@ -1,1 +1,1 @@
-module.exports = require('ab-tests/tailwind.config.js')
+module.exports = require('./hbui/system/tailwind.config.js')

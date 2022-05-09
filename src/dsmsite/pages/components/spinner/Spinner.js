@@ -2,9 +2,9 @@ import React from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import Spinner from 'ab-tests/components/spinner'
+import { Body } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
+import Spinner from '../../../../../hbui/components/spinner'
 
 function SpinnerPage() {
   return (
@@ -53,14 +53,14 @@ function SpinnerPage() {
 
 export default SpinnerPage
 
-const codeSpinnerDefault = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerDefault = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
 
 <Spinner
   radius={50}
 />
 `
 
-const codeSpinnerRed = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerRed = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
 
 <Spinner
   color='red'
@@ -68,7 +68,7 @@ const codeSpinnerRed = String.raw`import Spinner from '../hb_ui/components/spinn
 />
 `
 
-const codeSpinnerGreen = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerGreen = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
 
 <Spinner
   color='green'
@@ -76,7 +76,7 @@ const codeSpinnerGreen = String.raw`import Spinner from '../hb_ui/components/spi
 />
 `
 
-const codeSpinnerBlue = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerBlue = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
 
 <Spinner
   center

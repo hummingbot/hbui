@@ -1,5 +1,5 @@
 import React from 'react'
-import { Body } from 'ab-tests/elements/typography'
+import { Body } from '../../../../hbui/elements/typography'
 import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 
 function Home() {

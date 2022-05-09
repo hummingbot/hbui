@@ -12,10 +12,12 @@
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
-    "ab-tests": "^1.1.2",
+    "@emotion/react": "^11.9.0",
+    "@hummingbot/hbui": "^1.0.17",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
+    "prop-types": "^15.8.1",
     "react": "^16 || ^17 || ^18",
     "react-dom": "^16 || ^17 || ^18",
     "react-router-dom": "^6.0.2",

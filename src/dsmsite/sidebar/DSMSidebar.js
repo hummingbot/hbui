@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
-import { H1, H3 } from 'ab-tests/elements/typography'
-import colors from 'ab-tests/constants/colors'
+import { H1, H3 } from '../../../hbui/elements/typography'
+import colors from '../../../hbui/constants/colors'
 import GlobalSwitcherIcon from './GlobalSwitcherIcon'
 import TriangleRight from './TriangleRight'
-import { P } from 'ab-tests/elements/typography'
+import { P } from '../../../hbui/elements/typography'
 import navigation from './navigation'
 
-import ThemeToggle from 'ab-tests/system/ThemeToggle'
+import ThemeToggle from '../../../hbui/system/ThemeToggle'
 
 const { green } = colors
 
@@ -66,7 +66,7 @@ const getActiveClass = (link, currentSection) => {
 }
 
 const Sidebar = styled.div(() => [
-  tw`bg-primary z-10 overflow-y-scroll transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
+  tw`bg-body z-10 overflow-y-scroll transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,
   css`
     height: 100vh;
   `,
@@ -99,7 +99,7 @@ const NavItemRoot = styled.div(({ hasSubItems }) => [
 ])
 
 const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
-  tw`py-0.5 px-5 text-black dark:(text-white) border-l-4 border-transparent`,
+  tw`py-0.5 px-5 text-primary border-l-4 border-transparent`,
   css`
     display: flex;
     width: 100%;
@@ -113,7 +113,7 @@ const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
       ${tw`transition-transform`};
     }
     &.active {
-      ${tw`bg-tertiary border-l-4 border-quaternary`};
+      ${tw`border-l-4 border-window`};
       svg {
         transform: rotate(90deg);
       }
@@ -132,7 +132,7 @@ const SubSidebarNavItem = styled(SidebarNavItem)({
   [tw`pl-11`],
   css`
     &.active {
-      ${tw`bg-secondary`};
+      ${tw`bg-window`};
     }
     &.is-active {
       p {

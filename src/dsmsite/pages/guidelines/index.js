@@ -10,8 +10,8 @@ import {
   H6,
   H5,
   LabelTiny
-} from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+} from '../../../../hbui/elements/typography'
+import { Separator } from '../../../../hbui/elements/layout'
 import bgImage from './assets/bg.png'
 
 function Guidelines() {
@@ -28,7 +28,7 @@ function Guidelines() {
         <Body>The CoinAlpha Design System reflects the patterns and components that underpin the CoinAlpha products. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the CoinAlpha ecosystem.</Body>
         <br />
         <br />
-        <H5 isBold>Principles <span tw='text-dim'>#</span></H5>
+        <H5 isBold>Principles <span tw='text-tertiary'>#</span></H5>
         <Separator />
         <br />
         <Body>These principles form the foundation of our design system. They guide our team when working on different parts of the system and help us do better and more informed decisions.</Body>

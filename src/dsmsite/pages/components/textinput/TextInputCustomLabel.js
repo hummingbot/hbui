@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { P, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+import { P, Bold } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import TextInput from 'ab-tests/components/input/TextInput'
+import TextInput from '../../../../../hbui/components/input/TextInput'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
@@ -45,7 +45,7 @@ function TextInputCustomLabel() {
 
 export default TextInputCustomLabel
 
-const codeCustomTopLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeCustomTopLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   customTopLabel='Custom Top Label'

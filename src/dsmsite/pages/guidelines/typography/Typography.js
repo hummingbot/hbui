@@ -11,10 +11,10 @@ import {
   H6,
   H5,
   LabelTiny
-} from 'ab-tests/elements/typography'
-import { PageRoot, Separator } from 'ab-tests/elements/layout'
+} from '../../../../../hbui/elements/typography'
+import { PageRoot, Separator } from '../../../../../hbui/elements/layout'
 import bgImage from './assets/bg.png'
-import Callout from 'ab-tests/components/callout'
+import { CalloutInfo } from '../../../../../hbui/components/callout'
 
 function Typography() {
   return (
@@ -45,18 +45,18 @@ function Typography() {
         <br />
         <div tw="grid grid-cols-12 gap-4">
           <div tw="grid col-span-12 md:col-span-6">
-            <H4 tw='py-4 font-light border-solid border-b-2 border-primary'>Satoshi Light</H4>
-            <H4 tw='py-4 font-normal border-solid border-b-2 border-primary'>Satoshi Regular</H4>
-            <H4 tw='py-4 font-medium border-solid border-b-2 border-primary'>Satoshi Medium</H4>
-            <H4 tw='py-4 font-bold border-solid border-b-2 border-primary'>Satoshi Bold</H4>
-            <H4 tw='py-4 font-black border-solid border-b-2 border-primary'>Satoshi Black</H4>
+            <H4 tw='py-4 font-light border-solid border-b-2 border-body'>Satoshi Light</H4>
+            <H4 tw='py-4 font-normal border-solid border-b-2 border-body'>Satoshi Regular</H4>
+            <H4 tw='py-4 font-medium border-solid border-b-2 border-body'>Satoshi Medium</H4>
+            <H4 tw='py-4 font-bold border-solid border-b-2 border-body'>Satoshi Bold</H4>
+            <H4 tw='py-4 font-black border-solid border-b-2 border-body'>Satoshi Black</H4>
           </div>
           <div tw="grid col-span-12 md:col-span-6">
-            <H4 tw='py-4 font-light border-solid border-b-2 border-primary italic'>Satoshi Light Italic</H4>
-            <H4 tw='py-4 font-normal border-solid border-b-2 border-primary italic'>Satoshi Regular Italic</H4>
-            <H4 tw='py-4 font-medium border-solid border-b-2 border-primary italic'>Satoshi Medium Italic</H4>
-            <H4 tw='py-4 font-bold border-solid border-b-2 border-primary italic'>Satoshi Bold Italic</H4>
-            <H4 tw='py-4 font-black border-solid border-b-2 border-primary italic'>Satoshi Black Italic</H4>
+            <H4 tw='py-4 font-light border-solid border-b-2 border-body italic'>Satoshi Light Italic</H4>
+            <H4 tw='py-4 font-normal border-solid border-b-2 border-body italic'>Satoshi Regular Italic</H4>
+            <H4 tw='py-4 font-medium border-solid border-b-2 border-body italic'>Satoshi Medium Italic</H4>
+            <H4 tw='py-4 font-bold border-solid border-b-2 border-body italic'>Satoshi Bold Italic</H4>
+            <H4 tw='py-4 font-black border-solid border-b-2 border-body italic'>Satoshi Black Italic</H4>
           </div>
         </div>
         <br />
@@ -71,18 +71,17 @@ function Typography() {
         <br />
         <div tw="grid grid-cols-12 gap-4">
           <div tw="grid col-span-12 md:col-span-6">
-            <H4 tw='py-4 font-mono font-normal border-solid border-b-2 border-primary'>SF Mono Regular</H4>
-            <H4 tw='py-4 font-mono font-bold border-solid border-b-2 border-primary'>SF Mono Bold</H4>
+            <H4 tw='py-4 font-mono font-normal border-solid border-b-2 border-body'>SF Mono Regular</H4>
+            <H4 tw='py-4 font-mono font-bold border-solid border-b-2 border-body'>SF Mono Bold</H4>
           </div>
           <div tw="grid col-span-12 md:col-span-6">
-            <H4 tw='py-4 font-mono font-normal border-solid border-b-2 border-primary italic'>SF Mono Reg. Italic</H4>
-            <H4 tw='py-4 font-mono font-bold border-solid border-b-2 border-primary italic'>SF Mono Bold Italic</H4>
+            <H4 tw='py-4 font-mono font-normal border-solid border-b-2 border-body italic'>SF Mono Reg. Italic</H4>
+            <H4 tw='py-4 font-mono font-bold border-solid border-b-2 border-body italic'>SF Mono Bold Italic</H4>
           </div>
         </div>
         <br />
         <br />
-        <Callout
-          type='info'
+        <CalloutInfo
           title='Download'
           text={<span>Get access to our font pack in the <Link to='/downloads#typography'>downloads</Link> section.</span>}
         />
@@ -98,7 +97,7 @@ function Typography() {
         <br />
         <br />
         <br />
-        <div tw="grid grid-cols-12 gap-4 bg-tertiary">
+        <div tw="grid grid-cols-12 gap-4 bg-window">
           <div tw="grid col-span-12 md:col-span-4">
             <PSmall tw='py-2 pl-3 font-medium'>Example</PSmall>
           </div>

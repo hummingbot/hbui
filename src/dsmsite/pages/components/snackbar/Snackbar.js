@@ -1,8 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from 'ab-tests/elements/typography'
-import Snackbar from 'ab-tests/components/snackbar'
+import { Body } from '../../../../../hbui/elements/typography'
+import Snackbar from '../../../../../hbui/components/snackbar'
 
 function SnackbarPage() {
   return (
@@ -50,7 +50,7 @@ function SnackbarPage() {
 export default SnackbarPage
 
 const codeImport = String.raw
-`import Snackbar from '../hb_ui/components/snackbar'
+`import Snackbar from '@hummingbot/hbui/components/snackbar'
 `
 
 const codeDefault = String.raw

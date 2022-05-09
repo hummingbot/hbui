@@ -2,8 +2,7 @@ import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-// import GlobalStyles from './hb_ui/system/GlobalStyles'
-import GlobalStyles from 'ab-tests/system/GlobalStyles'
+import GlobalStyles from '../hbui/system/GlobalStyles'
 
 import ScrollToTop from './dsmsite/system/ScrollToTop'
 
@@ -139,5 +138,5 @@ function App() {
 export default App
 
 const Main = styled.div(() => [
-  tw`bg-secondary transition-all w-full ml-0 md:w-[calc(100% - 270px)] md:ml-[270px]`,
+  tw`bg-body transition-all w-full ml-0 md:w-[calc(100% - 270px)] md:ml-[270px]`,
 ])

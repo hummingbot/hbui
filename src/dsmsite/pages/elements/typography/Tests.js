@@ -12,7 +12,7 @@ import {
   H2,
   H1,
   LabelTiny,
-} from 'ab-tests/elements/typography'
+} from '../../../../../hbui/elements/typography'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function Tests() {

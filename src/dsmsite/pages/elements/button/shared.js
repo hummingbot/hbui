@@ -1,7 +1,7 @@
 import React from 'react'
 import { ShortHero } from '../../../ui/elements/layout'
-import { ItemsRow } from 'ab-tests/elements/layout'
-import Chip from 'ab-tests/components/chip'
+import { ItemsRow } from '../../../../../hbui/elements/layout'
+import Chip from '../../../../../hbui/components/chip'
 
 export const hero = (
   <ShortHero

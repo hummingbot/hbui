@@ -4,8 +4,8 @@ import {
   Section,
   Container,
   PaddingBox,
-} from 'ab-tests/elements/layout'
-import { H1, P } from 'ab-tests/elements/typography'
+} from '../../../../../hbui/elements/layout'
+import { H1, P } from '../../../../../hbui/elements/typography'
 
 export const ContentBlock = styled(Section)(({ backgroundColor }) => [
   css`
@@ -40,7 +40,7 @@ export const ShortHeroPaddingBox = styled(PaddingBox)(() => [
 
 export function MainContent({ children }) {
   return (
-    <MainContentElement tw="bg-secondary">
+    <MainContentElement tw="bg-body">
       <Container>
         <PaddingBox>{children}</PaddingBox>
       </Container>
@@ -50,7 +50,7 @@ export function MainContent({ children }) {
 
 export function MainContentRow({ children }) {
   return (
-    <MainContentElement tw="bg-secondary">
+    <MainContentElement tw="bg-body">
       <Container>
         <PaddingBox tw="flex">{children}</PaddingBox>
       </Container>
@@ -60,7 +60,7 @@ export function MainContentRow({ children }) {
 
 export function ShortHero({ title, subTitle, bgImage, boldTitle }) {
   return (
-    <ContentBlock tw="bg-tertiary" style={bgImage ? {background: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'} : null}>
+    <ContentBlock tw="bg-window" style={bgImage ? {backgroundImage: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'} : null}>
       <Container>
         <ShortHeroPaddingBox>
           <H1 isBold={boldTitle}>{title}</H1>

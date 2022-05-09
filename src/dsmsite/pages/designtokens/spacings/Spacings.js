@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
-import { P } from 'ab-tests/elements/typography'
+import { P } from '../../../../../hbui/elements/typography'
 import tw, { css, styled } from 'twin.macro'
 
 function Spacings() {
@@ -32,7 +32,7 @@ const SpacingLabel = styled.div({
 })
 
 const SpacingRectangle = styled.div(({width}) => [
-  tw`bg-quaternary rounded`,
+  tw`bg-grey-light-scale-500 dark:bg-grey-dark-scale-200 rounded`,
   css`
     height: 20px;
     width: ${width + 'px'};

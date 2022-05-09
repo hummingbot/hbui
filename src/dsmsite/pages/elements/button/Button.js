@@ -2,10 +2,17 @@ import React from 'react'
 import { MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
-import { Body, P, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import { Button } from 'ab-tests/elements/buttons'
+import { Body, P, Bold } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
+import {
+  Button,
+  ButtonSecondary,
+  ButtonSuccess,
+  ButtonInfo,
+  ButtonWarning,
+  ButtonDanger
+} from '../../../../../hbui/elements/buttons'
 
 function ButtonElement() {
   return (
@@ -19,16 +26,10 @@ function ButtonElement() {
         <br />
         <br />
         <P>
-          The button element has <Bold>6 variants</Bold>. Use the modifiers{' '}
-          <Bold>isSecondary</Bold>, <Bold>isSuccess</Bold>, <Bold>isInfo</Bold>,{' '}
-          <Bold>isWarning</Bold> and <Bold>isDanger</Bold> to activate them.
+          The button element has <Bold>6 variants</Bold>.
         </P>
         <br />
         <Separator />
-        <br />
-        <br />
-        <Body>Import Button element (adjust path)</Body>
-        <CodeBlock code={codeImport} />
         <br />
         <br />
         <CodeGridComponent
@@ -39,31 +40,31 @@ function ButtonElement() {
         <br />
         <CodeGridComponent
           code={codeSecondary}
-          element={<Button isSecondary>Secondary</Button>}
+          element={<ButtonSecondary>Secondary</ButtonSecondary>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeSuccess}
-          element={<Button isSuccess>Success</Button>}
+          element={<ButtonSuccess>Success</ButtonSuccess>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeInfo}
-          element={<Button isInfo>Info</Button>}
+          element={<ButtonInfo>Info</ButtonInfo>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeWarning}
-          element={<Button isWarning>Warning</Button>}
+          element={<ButtonWarning>Warning</ButtonWarning>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeDanger}
-          element={<Button isDanger>Danger</Button>}
+          element={<ButtonDanger>Danger</ButtonDanger>}
         />
         <br />
         <br />
@@ -74,35 +75,44 @@ function ButtonElement() {
 
 export default ButtonElement
 
-const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
-`
+const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-const codeSecondary = String.raw`<Button isSecondary>
-  Secondary
-</Button>
-`
-
-const codeDefault = String.raw`<Button>
+<Button>
   Default
 </Button>
 `
 
-const codeSuccess = String.raw`<Button isSuccess>
+const codeSecondary = String.raw`import { ButtonSecondary } from '@hummingbot/hbui/elements/button'
+
+<ButtonSecondary>
+  Secondary
+</ButtonSecondary>
+`
+
+const codeSuccess = String.raw`import { ButtonSuccess } from '@hummingbot/hbui/elements/button'
+
+<ButtonSuccess>
   Success
-</Button>
+</ButtonSuccess>
 `
 
-const codeInfo = String.raw`<Button isInfo>
+const codeInfo = String.raw`import { ButtonInfo } from '@hummingbot/hbui/elements/button'
+
+<ButtonInfo>
   Info
-</Button>
+</ButtonInfo>
 `
 
-const codeWarning = String.raw`<Button isWarning>
+const codeWarning = String.raw`import { ButtonWarning } from '@hummingbot/hbui/elements/button'
+
+<ButtonWarning>
   Warning
-</Button>
+</ButtonWarning>
 `
 
-const codeDanger = String.raw`<Button isDanger>
+const codeDanger = String.raw`import { ButtonDanger } from '@hummingbot/hbui/elements/button'
+
+<ButtonDanger>
   Danger
-</Button>
+</ButtonDanger>
 `

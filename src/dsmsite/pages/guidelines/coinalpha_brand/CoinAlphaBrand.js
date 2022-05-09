@@ -10,16 +10,16 @@ import {
   H6,
   H5,
   LabelTiny
-} from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+} from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import bgImage from './assets/bg.png'
 import logoBw from './assets/logo_bw.png'
 import logoProportions from './assets/logo_proportions.png'
 import logoSizes from './assets/sizes.png'
 import logoDonts1 from './assets/logo_donts_1.png'
 import logoDonts2 from './assets/logo_donts_2.png'
-import Callout from 'ab-tests/components/callout'
-import ErrorIcon from 'ab-tests/assets/svgs/notifications/ErrorIcon'
+import { CalloutInfo } from '../../../../../hbui/components/callout'
+import ErrorIcon from '../../../../../hbui/assets/svgs/notifications/ErrorIcon'
 
 function CoinAlphaBrand() {
   return (
@@ -38,8 +38,7 @@ function CoinAlphaBrand() {
         <br />
         <img src={logoBw} alt='CoinAlpha' style={{width: '100%'}} />
         <br />
-        <Callout
-          type='info'
+        <CalloutInfo
           title='Download Brand Assets'
           text={<span>Get access to all the necessary formats so you can work with the correct brand requirements. <Link to='/downloads'>Download</Link>.</span>}
         />
@@ -133,8 +132,7 @@ function CoinAlphaBrand() {
           </div>
         </div>
         <br />
-        <Callout
-          type='info'
+        <CalloutInfo
           title='Color Library'
           text={<span>These are the colors represented for the AlphaCoin brand. To learn more about the design system color library, see the full <Link to='/guidelines/colors'>color section</Link>.</span>}
         />

@@ -8,14 +8,14 @@ import {
   Red,
   Blue,
   Green,
-} from 'ab-tests/elements/typography'
+} from '../../../../../hbui/elements/typography'
 import {
   red,
   green,
   blue,
   purple,
   orange,
-} from 'ab-tests/constants/colors'
+} from '../../../../../hbui/constants/colors'
 import {
   PageRoot,
   Section,
@@ -24,7 +24,7 @@ import {
   SBLRootContent,
   SBLRootSidebar,
   Separator
-} from 'ab-tests/elements/layout'
+} from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
 
 function LayoutCoreSidebar() {
@@ -205,8 +205,8 @@ function LayoutCoreSidebar() {
 
 export default LayoutCoreSidebar
 
-const codeSideBarLayout = String.raw`import { SBLRoot, SBLRootSidebar, SBLRootContent, Section, Container } from '../hb_ui/elements/layout'
-import { P } from '../hb_ui/elements/typography'
+const codeSideBarLayout = String.raw`import { SBLRoot, SBLRootSidebar, SBLRootContent, Section, Container } from '@hummingbot/hbui/elements/layout'
+import { P } from '@hummingbot/hbui/elements/typography'
 
 <SBLRoot>
   <SBLRootSidebar>

@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import { P } from 'ab-tests/elements/typography'
-import {ComboBox} from 'ab-tests/components/combobox'
+import { Body } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
+import { P } from '../../../../../hbui/elements/typography'
+import ComboBox from '../../../../../hbui/components/combobox'
 
 const items = [
   { id: 1, label: 'Wade Cooper' },
@@ -44,7 +44,7 @@ function ComboBoxPage() {
 
 export default ComboBoxPage
 
-const codeSpinnerDefault = String.raw`import Spinner from '../hb_ui/components/spinner'
+const codeSpinnerDefault = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
 
 <Spinner
   radius={50}

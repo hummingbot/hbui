@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
-import { Body } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+import { Body } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import Callout from 'ab-tests/components/callout'
 import CodeBlock from '../../../ui/components/CodeBlock'
+import {
+  Callout,
+  CalloutSuccess,
+  CalloutInfo,
+  CalloutDanger,
+  CalloutWarning,
+  CalloutTip,
+  CalloutBug,
+  CalloutNote,
+} from '../../../../../hbui/components/callout'
 
 function TextInputPage() {
   const [inputValue, setInputValue] = useState('')
@@ -14,10 +23,6 @@ function TextInputPage() {
         subTitle="The Callout component serves to convey highlighted information content of different types."
       />
       <MainContent>
-        <Body>Import Callout component (adjust path):</Body>
-        <CodeBlock code={codeImport} />
-        <br />
-        <Separator />
         <br />
         <br />
         <Callout
@@ -30,8 +35,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="success"
+        <CalloutSuccess
           title="Success callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -41,8 +45,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="info"
+        <CalloutInfo
           title="Info callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -52,8 +55,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="warning"
+        <CalloutWarning
           title="Warning callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -63,8 +65,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="danger"
+        <CalloutDanger
           title="Danger callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -74,8 +75,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="tip"
+        <CalloutTip
           title="Tip callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -85,8 +85,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="bug"
+        <CalloutBug
           title="Bug callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -96,8 +95,7 @@ function TextInputPage() {
         <br />
         <br />
         <br />
-        <Callout
-          type="note"
+        <CalloutNote
           title="Note callout"
           text="Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences.."
         />
@@ -112,59 +110,65 @@ function TextInputPage() {
 
 export default TextInputPage
 
-const codeImport = String.raw`import Callout from '../hb_ui/components/callout'
-`
+const codeDefault = String.raw`import { Callout } from '@hummingbot/hbui/components/callout'
 
-const codeDefault = String.raw`<Callout
+<Callout
   title='Default callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeSuccess = String.raw`<Callout
-  type='success'
+const codeSuccess = String.raw`import { CalloutSuccess } from '@hummingbot/hbui/components/callout'
+
+<CalloutSuccess
   title='Success callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeInfo = String.raw`<Callout
-  type='info'
+const codeInfo = String.raw`import { CalloutInfo } from '@hummingbot/hbui/components/callout'
+
+<CalloutInfo
   title='Info callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeWarning = String.raw`<Callout
-  type='warning'
+const codeWarning = String.raw`import { CalloutWarning } from '@hummingbot/hbui/components/callout'
+
+<CalloutWarning
   title='Warning callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeDanger = String.raw`<Callout
-  type='danger'
+const codeDanger = String.raw`import { CalloutDanger } from '@hummingbot/hbui/components/callout'
+
+<CalloutDanger
   title='Danger callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeTip = String.raw`<Callout
-  type='tip'
+const codeTip = String.raw`import { CalloutTip } from '@hummingbot/hbui/components/callout'
+
+<CalloutTip
   title='Tip callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeBug = String.raw`<Callout
-  type='bug'
+const codeBug = String.raw`import { CalloutBug } from '@hummingbot/hbui/components/callout'
+
+<CalloutBug
   title='Bug callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />
 `
 
-const codeNote = String.raw`<Callout
-  type='note'
+const codeNote = String.raw`import { CalloutNote } from '@hummingbot/hbui/components/callout'
+
+<CalloutNote
   title='Note callout'
   text='Binance Perpetual connector is released as beta version(0.33), trade it with your own risk. Binance Perpetual is different from futures contract, please see differences..'
 />

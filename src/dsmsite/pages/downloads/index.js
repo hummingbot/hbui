@@ -1,9 +1,9 @@
 import React from 'react'
 import { styled } from 'twin.macro'
-import { H6, H5, P, Body, PTiny } from 'ab-tests/elements/typography'
-import { PageRoot, Separator } from 'ab-tests/elements/layout'
+import { H6, H5, P, Body, PTiny } from '../../../../hbui/elements/typography'
+import { PageRoot, Separator } from '../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../ui/elements/layout'
-import { Button } from 'ab-tests/elements/buttons'
+import { Button } from '../../../../hbui/elements/buttons'
 import brandTypeface from './assets/brand_typeface.png'
 import coinalphaLogotype from './assets/coinalpha_logotype.png'
 import hummingbotLogotype from './assets/hummingbot_logotype.png'
@@ -55,8 +55,8 @@ export default Downloads
 
 const DownloadCard = ({title, updatedAt, downloadLink, image}) => {
   return (
-    <DownloadCardElement tw='flex border-2 border-secondary rounded'>
-      <img src={image} alt={title} tw='max-h-40 lg:max-h-60 border-r border-secondary' />
+    <DownloadCardElement tw='flex border-2 border-window rounded'>
+      <img src={image} alt={title} tw='max-h-40 lg:max-h-60 border-r border-window' />
       <div tw='p-4 lg:p-8 grid justify-between content-between '>
         <div>
           <H6 isMedium tw='mb-2'>{title}</H6>

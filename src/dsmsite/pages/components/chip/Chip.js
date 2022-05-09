@@ -1,8 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
-import { Body } from 'ab-tests/elements/typography'
-import Chip from 'ab-tests/components/chip'
+import { Body } from '../../../../../hbui/elements/typography'
+import Chip from '../../../../../hbui/components/chip'
 
 function ChipPage() {
   return (
@@ -39,7 +39,7 @@ function ChipPage() {
 
 export default ChipPage
 
-const codeImport = String.raw`import Chip from '../hb_ui/components/chip'
+const codeImport = String.raw`import Chip from '@hummingbot/hbui/components/chip'
 `
 
 const codeDefault = String.raw`<Chip

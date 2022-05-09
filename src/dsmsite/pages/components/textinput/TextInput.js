@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { P, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+import { P, Bold } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import TextInput from 'ab-tests/components/input/TextInput'
+import TextInput from '../../../../../hbui/components/input/TextInput'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { hero, navigation } from './shared'
 
@@ -80,7 +80,7 @@ function TextInputPage() {
 
 export default TextInputPage
 
-const codeDefault = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeDefault = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   placeholder='Placeholder Text'
@@ -89,7 +89,7 @@ const codeDefault = String.raw`import TextInput from '../hb_ui/components/input/
 />
 `
 
-const codeCustomTopLabel = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeCustomTopLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   customTopLabel='Custom Top Label'
@@ -99,7 +99,7 @@ const codeCustomTopLabel = String.raw`import TextInput from '../hb_ui/components
 />
 `
 
-const codeValid = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeValid = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   isValid
@@ -109,7 +109,7 @@ const codeValid = String.raw`import TextInput from '../hb_ui/components/input/Te
 />
 `
 
-const codeWarning = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeWarning = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   isWarning
@@ -119,7 +119,7 @@ const codeWarning = String.raw`import TextInput from '../hb_ui/components/input/
 />
 `
 
-const codeInvalid = String.raw`import TextInput from '../hb_ui/components/input/TextInput'
+const codeInvalid = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
 <TextInput
   isInvalid

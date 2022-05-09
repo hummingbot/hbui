@@ -1,9 +1,9 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../../ui/elements/layout'
 import CodeBlock from '../../../../ui/components/CodeBlock'
-import { Body, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import {BreadcrumbsBar} from 'ab-tests/components/navigation'
+import { Body, Bold } from '../../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../../hbui/elements/layout'
+import {BreadcrumbsBar} from '../../../../../../hbui/components/navigation'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },
@@ -35,7 +35,7 @@ function BreadcrumbsBarPage() {
         />
         <br />
         <br />
-        <CodeBlock code={codeSpinnerDefault} />
+        <CodeBlock code={code} />
         <br />
         <br />
       </MainContent>
@@ -45,7 +45,7 @@ function BreadcrumbsBarPage() {
 
 export default BreadcrumbsBarPage
 
-const codeSpinnerDefault = String.raw`import BreadcrumbsBar from '(...)/../hb_ui/components/navigation/BreadcrumbsBar'
+const code = String.raw`import BreadcrumbsBar from '@hummingbot/hbui/components/navigation/BreadcrumbsBar'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },

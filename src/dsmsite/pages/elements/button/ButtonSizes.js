@@ -2,9 +2,9 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
-import { Body, P, H5, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import { Button } from 'ab-tests/elements/buttons'
+import { Body, P, H5, Bold } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
+import { Button } from '../../../../../hbui/elements/buttons'
 import { hero, navigation } from './shared'
 
 function ButtonSizes() {
@@ -24,10 +24,6 @@ function ButtonSizes() {
         </P>
         <br />
         <Separator />
-        <br />
-        <br />
-        <Body>Import Button element (adjust path)</Body>
-        <CodeBlock code={codeImport} />
         <br />
         <br />
         <CodeGridComponent
@@ -55,20 +51,23 @@ function ButtonSizes() {
 
 export default ButtonSizes
 
-const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
-`
+const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-const codeDefault = String.raw`<Button>
+<Button>
   Text label
 </Button>
 `
 
-const codeLarge = String.raw`<Button isLarge>
+const codeLarge = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+
+<Button isLarge>
   Text label
 </Button>
 `
 
-const codeSmall = String.raw`<Button isSmall>
+const codeSmall = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+
+<Button isSmall>
   Text label
 </Button>
 `

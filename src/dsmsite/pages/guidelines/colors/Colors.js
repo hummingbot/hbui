@@ -1,7 +1,7 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { P, H6, LabelTiny } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
+import { P, H6, LabelTiny } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import ColorCard from './ColorCard'
 import {
   ShortHero,

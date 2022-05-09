@@ -8,19 +8,19 @@ import {
   Red,
   Blue,
   Green,
-} from 'ab-tests/elements/typography'
+} from '../../../../../hbui/elements/typography'
 import {
   red,
   green,
   blue
-} from 'ab-tests/constants/colors'
-import colors from 'ab-tests/constants/colors'
+} from '../../../../../hbui/constants/colors'
+import colors from '../../../../../hbui/constants/colors'
 import {
   PageRoot,
   Section,
   Container,
   Separator,
-} from 'ab-tests/elements/layout'
+} from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
 
 function LayoutCoreSingle() {
@@ -103,8 +103,8 @@ function LayoutCoreSingle() {
 
 export default LayoutCoreSingle
 
-const codeSingleColumnLayout = String.raw`import { PageRoot, Section, Container } from '../hb_ui/elements/layout'
-import { P } from '../hb_ui/elements/typography'
+const codeSingleColumnLayout = String.raw`import { PageRoot, Section, Container } from '@hummingbot/hbui/elements/layout'
+import { P } from '@hummingbot/hbui/elements/typography'
 
 <PageRoot>
   <Section>

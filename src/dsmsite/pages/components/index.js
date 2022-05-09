@@ -1,5 +1,5 @@
 import React from 'react'
-import { P, Bold } from 'ab-tests/elements/typography'
+import { P, Bold } from '../../../../hbui/elements/typography'
 import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
 
 function Components() {

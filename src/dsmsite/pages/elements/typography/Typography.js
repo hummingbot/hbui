@@ -12,7 +12,7 @@ import {
   H2,
   H1,
   LabelTiny,
-} from 'ab-tests/elements/typography'
+} from '../../../../../hbui/elements/typography'
 import CodeBlock from '../../../ui/components/CodeBlock'
 
 function Typography() {
@@ -100,43 +100,43 @@ function Typography() {
 
 export default Typography
 
-const codeLabelTiny = String.raw`import { LabelTiny } from '../hb_ui/elements/typography'
+const codeLabelTiny = String.raw`import { LabelTiny } from '@hummingbot/hbui/elements/typography'
 
 <LabelTiny>sdfsfsd</LabelTiny>
 `
-const codeParagraph = String.raw`import { P } from '../hb_ui/elements/typography'
+const codeParagraph = String.raw`import { P } from '@hummingbot/hbui/elements/typography'
 
 <P>The quick brown fox jumps over the lazy dog</P>
 `
-const codeParagraphSmall = String.raw`import { PSmall } from '../hb_ui/elements/typography'
+const codeParagraphSmall = String.raw`import { PSmall } from '@hummingbot/hbui/elements/typography'
 
 <PSmall>The quick brown fox jumps over the lazy dog</PSmall>
 `
-const codeBody = String.raw`import { Body } from '../hb_ui/elements/typography'
+const codeBody = String.raw`import { Body } from '@hummingbot/hbui/elements/typography'
 
 <Body>The quick brown fox jumps over the lazy dog</Body>
 `
-const codeH6 = String.raw`import { H5 } from '../hb_ui/elements/typography'
+const codeH6 = String.raw`import { H5 } from '@hummingbot/hbui/elements/typography'
 
 <H5>The quick brown fox jumps over the lazy dog</H5>
 `
-const codeH5 = String.raw`import { H4 } from '../hb_ui/elements/typography'
+const codeH5 = String.raw`import { H4 } from '@hummingbot/hbui/elements/typography'
 
 <H4>The quick brown fox jumps over the lazy dog</H4>
 `
-const codeH4 = String.raw`import { H4 } from '../hb_ui/elements/typography'
+const codeH4 = String.raw`import { H4 } from '@hummingbot/hbui/elements/typography'
 
 <H4>The quick brown fox jumps over the lazy dog</H4>
 `
-const codeH3 = String.raw`import { H3 } from '../hb_ui/elements/typography'
+const codeH3 = String.raw`import { H3 } from '@hummingbot/hbui/elements/typography'
 
 <H3>The quick brown fox jumps over the lazy dog</H3>
 `
-const codeH2 = String.raw`import { H2 } from '../hb_ui/elements/typography'
+const codeH2 = String.raw`import { H2 } from '@hummingbot/hbui/elements/typography'
 
 <H2>The quick brown fox jumps over the lazy dog</H2>
 `
-const codeH1 = String.raw`import { H1 } from '../hb_ui/elements/typography'
+const codeH1 = String.raw`import { H1 } from '@hummingbot/hbui/elements/typography'
 
 <H1>The quick brown fox jumps over the lazy dog</H1>
 `

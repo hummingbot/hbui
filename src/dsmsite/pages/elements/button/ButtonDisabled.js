@@ -2,10 +2,17 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
-import { Body, P, H5, Bold } from 'ab-tests/elements/typography'
-import { Separator } from 'ab-tests/elements/layout'
-import { Button } from 'ab-tests/elements/buttons'
+import { Body, P, H5, Bold } from '../../../../../hbui/elements/typography'
+import { Separator } from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
+import {
+  Button,
+  ButtonSecondary,
+  ButtonSuccess,
+  ButtonInfo,
+  ButtonWarning,
+  ButtonDanger
+} from '../../../../../hbui/elements/buttons'
 
 function ButtonElement() {
   return (
@@ -28,10 +35,6 @@ function ButtonElement() {
         <Separator />
         <br />
         <br />
-        <Body>Import Button element (adjust path)</Body>
-        <CodeBlock code={codeImport} />
-        <br />
-        <br />
         <CodeGridComponent
           code={codeDefaultDisabled}
           element={
@@ -45,9 +48,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeSecondaryDisabled}
           element={
-            <Button isSecondary isDisabled>
+            <ButtonSecondary isDisabled>
               Secondary (disabled)
-            </Button>
+            </ButtonSecondary>
           }
         />
         <br />
@@ -55,9 +58,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeSuccessDisabled}
           element={
-            <Button isSuccess isDisabled>
+            <ButtonSuccess isDisabled>
               Success (disabled)
-            </Button>
+            </ButtonSuccess>
           }
         />
         <br />
@@ -65,9 +68,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeInfoDisabled}
           element={
-            <Button isInfo isDisabled>
+            <ButtonInfo isDisabled>
               Info (disabled)
-            </Button>
+            </ButtonInfo>
           }
         />
         <br />
@@ -75,9 +78,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeWarningDisabled}
           element={
-            <Button isWarning isDisabled>
+            <ButtonWarning isDisabled>
               Warning (disabled)
-            </Button>
+            </ButtonWarning>
           }
         />
         <br />
@@ -85,9 +88,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeDangerDisabled}
           element={
-            <Button isDanger isDisabled>
+            <ButtonDanger isDisabled>
               Danger (disabled)
-            </Button>
+            </ButtonDanger>
           }
         />
         <br />
@@ -99,35 +102,44 @@ function ButtonElement() {
 
 export default ButtonElement
 
-const codeImport = String.raw`import { Button } from '../hb_ui/elements/button'
-`
+const codeDefaultDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-const codeDefaultDisabled = String.raw`<Button isDisabled>
+<Button isDisabled>
   Regular (disabled)
 </Button>
 `
 
-const codeSecondaryDisabled = String.raw`<Button isSecondary isDisabled>
+const codeSecondaryDisabled = String.raw`import { ButtonSecondary } from '@hummingbot/hbui/elements/button'
+
+<ButtonSecondary isDisabled>
   Secondary (disabled)
-</Button>
+</ButtonSecondary>
 `
 
-const codeSuccessDisabled = String.raw`<Button isSuccess isDisabled>
+const codeSuccessDisabled = String.raw`import { ButtonSuccess } from '@hummingbot/hbui/elements/button'
+
+<ButtonSuccess isDisabled>
   Success (disabled)
-</Button>
+</ButtonSuccess>
 `
 
-const codeInfoDisabled = String.raw`<Button isInfo isDisabled>
+const codeInfoDisabled = String.raw`import { ButtonInfo } from '@hummingbot/hbui/elements/button'
+
+<ButtonInfo isDisabled>
   Info (disabled)
-</Button>
+</ButtonInfo>
 `
 
-const codeWarningDisabled = String.raw`<Button isWarning isDisabled>
+const codeWarningDisabled = String.raw`import { ButtonWarning } from '@hummingbot/hbui/elements/button'
+
+<ButtonWarning isDisabled>
   Warning (disabled)
-</Button>
+</ButtonWarning>
 `
 
-const codeDangerDisabled = String.raw`<Button isDanger isDisabled>
+const codeDangerDisabled = String.raw`import { ButtonDanger } from '@hummingbot/hbui/elements/button'
+
+<ButtonDanger isDisabled>
   Danger (disabled)
-</Button>
+</ButtonDanger>
 `
