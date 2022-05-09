@@ -32,7 +32,9 @@ export default CheckboxPage
 
 const code = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
 
+const [state, setState] = useState(true)
+
 <Checkbox
-  active={true}
+  <Checkbox active={state} onClick={() => setState(!state)}/>
 />
 `
