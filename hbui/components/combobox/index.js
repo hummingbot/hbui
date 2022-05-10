@@ -18,7 +18,7 @@ export default function ComboBox({items, selected, setSelected, ...props}) {
 
   return (
     <Combobox value={selected} onChange={setSelected} {...props}>
-      <div tw="relative mt-1">
+      <div tw="relative">
         <div tw="relative w-full text-left rounded-lg cursor-default focus:outline-none sm:text-sm overflow-hidden">
           <Combobox.Input
             tw="w-full bg-input font-medium border-none outline-none py-2 pl-3 pr-10 text-sm leading-5 text-secondary"
