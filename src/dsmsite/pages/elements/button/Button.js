@@ -7,11 +7,6 @@ import { Separator } from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
 import {
   Button,
-  ButtonSecondary,
-  ButtonSuccess,
-  ButtonInfo,
-  ButtonWarning,
-  ButtonDanger
 } from '../../../../../hbui/elements/buttons'
 
 function ButtonElement() {
@@ -40,31 +35,31 @@ function ButtonElement() {
         <br />
         <CodeGridComponent
           code={codeSecondary}
-          element={<ButtonSecondary>Secondary</ButtonSecondary>}
+          element={<Button isSecondary>Secondary</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeSuccess}
-          element={<ButtonSuccess>Success</ButtonSuccess>}
+          element={<Button isSuccess>Success</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeInfo}
-          element={<ButtonInfo>Info</ButtonInfo>}
+          element={<Button isInfo>Info</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeWarning}
-          element={<ButtonWarning>Warning</ButtonWarning>}
+          element={<Button isWarning>Warning</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeDanger}
-          element={<ButtonDanger>Danger</ButtonDanger>}
+          element={<Button isDanger>Danger</Button>}
         />
         <br />
         <br />
@@ -82,37 +77,37 @@ const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements
 </Button>
 `
 
-const codeSecondary = String.raw`import { ButtonSecondary } from '@hummingbot/hbui/elements/button'
+const codeSecondary = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonSecondary>
+<Button isSecondary>
   Secondary
-</ButtonSecondary>
+</Button>
 `
 
-const codeSuccess = String.raw`import { ButtonSuccess } from '@hummingbot/hbui/elements/button'
+const codeSuccess = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonSuccess>
+<Button isSuccess>
   Success
-</ButtonSuccess>
+</Button>
 `
 
-const codeInfo = String.raw`import { ButtonInfo } from '@hummingbot/hbui/elements/button'
+const codeInfo = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonInfo>
+<Button isInfo>
   Info
-</ButtonInfo>
+</Button>
 `
 
-const codeWarning = String.raw`import { ButtonWarning } from '@hummingbot/hbui/elements/button'
+const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonWarning>
+<Button isWarning>
   Warning
-</ButtonWarning>
+</Button>
 `
 
-const codeDanger = String.raw`import { ButtonDanger } from '@hummingbot/hbui/elements/button'
+const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonDanger>
+<Button isDanger>
   Danger
-</ButtonDanger>
+</Button>
 `

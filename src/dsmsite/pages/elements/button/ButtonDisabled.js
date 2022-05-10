@@ -7,11 +7,6 @@ import { Separator } from '../../../../../hbui/elements/layout'
 import { hero, navigation } from './shared'
 import {
   Button,
-  ButtonSecondary,
-  ButtonSuccess,
-  ButtonInfo,
-  ButtonWarning,
-  ButtonDanger
 } from '../../../../../hbui/elements/buttons'
 
 function ButtonElement() {
@@ -48,9 +43,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeSecondaryDisabled}
           element={
-            <ButtonSecondary isDisabled>
+            <Button isSecondary isDisabled>
               Secondary (disabled)
-            </ButtonSecondary>
+            </Button>
           }
         />
         <br />
@@ -58,9 +53,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeSuccessDisabled}
           element={
-            <ButtonSuccess isDisabled>
+            <Button isSuccess isDisabled>
               Success (disabled)
-            </ButtonSuccess>
+            </Button>
           }
         />
         <br />
@@ -68,9 +63,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeInfoDisabled}
           element={
-            <ButtonInfo isDisabled>
+            <Button isInfo isDisabled>
               Info (disabled)
-            </ButtonInfo>
+            </Button>
           }
         />
         <br />
@@ -78,9 +73,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeWarningDisabled}
           element={
-            <ButtonWarning isDisabled>
+            <Button isWarning isDisabled>
               Warning (disabled)
-            </ButtonWarning>
+            </Button>
           }
         />
         <br />
@@ -88,9 +83,9 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeDangerDisabled}
           element={
-            <ButtonDanger isDisabled>
+            <Button isDanger isDisabled>
               Danger (disabled)
-            </ButtonDanger>
+            </Button>
           }
         />
         <br />
@@ -109,37 +104,37 @@ const codeDefaultDisabled = String.raw`import { Button } from '@hummingbot/hbui/
 </Button>
 `
 
-const codeSecondaryDisabled = String.raw`import { ButtonSecondary } from '@hummingbot/hbui/elements/button'
+const codeSecondaryDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonSecondary isDisabled>
+<Button isSecondary isDisabled>
   Secondary (disabled)
 </ButtonSecondary>
 `
 
-const codeSuccessDisabled = String.raw`import { ButtonSuccess } from '@hummingbot/hbui/elements/button'
+const codeSuccessDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonSuccess isDisabled>
+<Button isSuccess isDisabled>
   Success (disabled)
 </ButtonSuccess>
 `
 
-const codeInfoDisabled = String.raw`import { ButtonInfo } from '@hummingbot/hbui/elements/button'
+const codeInfoDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonInfo isDisabled>
+<Button isInfo isDisabled>
   Info (disabled)
 </ButtonInfo>
 `
 
-const codeWarningDisabled = String.raw`import { ButtonWarning } from '@hummingbot/hbui/elements/button'
+const codeWarningDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonWarning isDisabled>
+<Button isWarning isDisabled>
   Warning (disabled)
 </ButtonWarning>
 `
 
-const codeDangerDisabled = String.raw`import { ButtonDanger } from '@hummingbot/hbui/elements/button'
+const codeDangerDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
 
-<ButtonDanger isDisabled>
+<Button isDanger isDisabled>
   Danger (disabled)
 </ButtonDanger>
 `

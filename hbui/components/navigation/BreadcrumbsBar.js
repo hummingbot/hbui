@@ -3,7 +3,7 @@ import tw, { css, styled } from 'twin.macro'
 import { Link, NavLink, useLocation, useHistory } from 'react-router-dom'
 import { P, Body, H6, Bold } from '../../elements/typography'
 import { ItemsRow } from '../../elements/layout'
-import { Button, ButtonSuccess } from '../../elements/buttons'
+import { Button } from '../../elements/buttons'
 import HomeIcon from '../../assets/svgs/icons/Home'
 import TextLink from '../textlink'
 
@@ -34,9 +34,9 @@ function BreadcrumbsBar({links, buttons, history}) {
               return(
                 <Link key={button.url} to={button.url}>
                   {button.url === history.pathname ?
-                    <ButtonSuccess isSmall>
+                    <Button isSuccess isSmall>
                       {button.label}
-                    </ButtonSuccess>
+                    </Button>
                     :
                     <Button isSmall>
                       {button.label}
