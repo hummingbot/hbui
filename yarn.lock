@@ -1202,10 +1202,10 @@
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
   integrity sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==
 
-"@hummingbot/hbui@^1.0.17":
-  version "1.0.17"
-  resolved "https://registry.yarnpkg.com/@hummingbot/hbui/-/hbui-1.0.17.tgz#9074ca1e35a3365cb1996588c96c197ccadf4bf9"
-  integrity sha512-YXx5Y+235HYXWNWm+mhmZ5y4DnAY2ff2dP6jV2k9ZBzm6uzj6OrgMbaJXxTErYIUcZNEcXJqEwlEICkpUzhXBw==
+"@hummingbot/hbui@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@hummingbot/hbui/-/hbui-1.1.3.tgz#cba7d469963799e40383c6b6590de4c9f7943073"
+  integrity sha512-nbFrcHi/fONOH/OUFQngF0QHprDklvNTgRi+DweI1YPNIqyKqXnUl9igZizV2GViamPfuQphbw6e68HG8y5Jkw==
   dependencies:
     "@babel/cli" "^7.17.6"
     "@babel/core" "^7.13.8"
@@ -1222,6 +1222,7 @@
     babel-plugin-transform-inline-environment-variables "^0.4.3"
     babel-plugin-twin "^1.0.2"
     copyfiles "^2.4.1"
+    github-files-fetcher "^1.6.0"
     prop-types "^15.7.2"
     react "^16 || ^17 || ^18"
     react-dom "^16 || ^17 || ^18"
@@ -2748,6 +2749,11 @@ get-stream@^6.0.0:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-6.0.1.tgz#a262d8eef67aced57c2852ad6167526a43cbf7b7"
   integrity sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==
+
+github-files-fetcher@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/github-files-fetcher/-/github-files-fetcher-1.6.0.tgz#0586071e90d7e6993c9cd2e378795d9d2b3722cf"
+  integrity sha512-BQDrSX58RI7p6btj1JuCji1Mhtr9M9NpvBpR2DTXQfJN0M1m7jzahYI0udC8eylF0iCLANYMr+EeLWZnXRHQLQ==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
