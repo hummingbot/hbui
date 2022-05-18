@@ -5,7 +5,8 @@ import { Body } from '../../../../../hbui/elements/typography'
 import { Button as ButtonComponent } from '../../../../../hbui/components/button'
 import DummyIcon from '../../../../../hbui/assets/svgs/16x16/DummyIcon'
 import PlayButton from '../../../../../hbui/assets/svgs/16x16/PlayButton'
-import KebabControl from '../../../../../hbui/assets/svgs/16x16/KebabControl'
+// import KebabControl from '../../../../../hbui/assets/svgs/16x16/KebabControl'
+import MenuDropdown from '../../../../../hbui/components/menudropdown'
 
 function Button() {
   return (
@@ -40,7 +41,7 @@ function Button() {
           isSecondary
           label="Button"
           iconBefore={<PlayButton />}
-          iconAfter={<KebabControl />}
+          iconAfter={<MenuDropdown links={[]} />}
         />
         <br />
         <CodeBlock code={codeWithIconBeforeAndAfter} />
