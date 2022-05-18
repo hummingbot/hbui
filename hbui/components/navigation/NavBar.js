@@ -22,20 +22,25 @@ const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThe
       </LeftSide>
       <RightSide>
         {showThemeToggle && <ThemeToggle />}
-        <LinksRow>
-          {linksRight.map(link =>
-            <Chip key={link.url} to={link.url} label={link.label} />
-          )}
-        </LinksRow>
-        <Menu>
-          { userData.profileImage ?
-            <img src={userData.profileImage} alt={userData.name} />
-            :
-            <ProfileIcon />
-          }
-          <P>{userData.name}</P>
-          <TriangleDown />
-        </Menu>
+        {
+          linksRight &&
+          <LinksRow>
+            {linksRight.map(link =>
+              <Chip key={link.url} to={link.url} label={link.label} />
+            )}
+          </LinksRow>
+        }
+        { userData &&
+          <Menu>
+            { userData.profileImage ?
+              <img src={userData.profileImage} alt={userData.name} />
+              :
+              <ProfileIcon />
+            }
+            <P>{userData.name}</P>
+            <TriangleDown />
+          </Menu>
+        }
       </RightSide>
     </NavBarRoot>
   )
