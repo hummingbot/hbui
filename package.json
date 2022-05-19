@@ -1,4 +1,6 @@
 {
+  "name": "HBUI_DS",
+  "version": "1.2.0",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"
@@ -35,8 +37,8 @@
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-styled-components": "^2.0.2",
     "babel-plugin-twin": "^1.0.2",
-    "tailwindcss": "^2.2.19",
-    "twin.macro": "^2.8.2",
+    "tailwindcss": "^3.0.24",
+    "twin.macro": "^3.0.0-rc.1",
     "typescript": "^4.5.2",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
