@@ -1,6 +1,8 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
-import { P } from '../../../../../hbui/elements/typography'
+import { P, Bold } from '../../../../../hbui/elements/typography'
+import tokens from '../../../../../hbui/tokens'
+import { Separator } from '../../../../../hbui/elements/layout'
 import tw, { css, styled } from 'twin.macro'
 
 function Spacings() {
@@ -11,14 +13,17 @@ function Spacings() {
         subTitle="The most commonly used spacings"
       />
       <MainContent>
-        <SpacingRow label='xxs' width={8} />
-        <SpacingRow label='xs' width={16} />
-        <SpacingRow label='sm' width={24} />
-        <SpacingRow label='md' width={32} />
-        <SpacingRow label='lg' width={48} />
-        <SpacingRow label='xl' width={64} />
-        <SpacingRow label='xxl' width={80} />
-        <SpacingRow label='xxxl' width={120} />
+        <P>These spaces are available in all spacing classes, such as margins, paddings, left, right, top, bottom. Examples: <Bold>m-xs</Bold> (margin xs), <Bold>mb-xs</Bold> (margin-bottom xs), <Bold>pt-xs</Bold> (padding-top xs), <Bold>left-xs</Bold> (position left xs), <Bold>top-xs</Bold> (position top xs).</P>
+        <Separator />
+        <br />
+        <SpacingRow label='xxs' width={tokens.spacing.xxs} />
+        <SpacingRow label='xs' width={tokens.spacing.xs} />
+        <SpacingRow label='sm' width={tokens.spacing.sm} />
+        <SpacingRow label='md' width={tokens.spacing.md} />
+        <SpacingRow label='lg' width={tokens.spacing.lg} />
+        <SpacingRow label='xl' width={tokens.spacing.xl} />
+        <SpacingRow label='xxl' width={tokens.spacing.xxl} />
+        <SpacingRow label='xxxl' width={tokens.spacing.xxxl} />
       </MainContent>
     </PageRoot>
   )
@@ -43,7 +48,7 @@ const SpacingRow = ({ label, width }) => {
   return (
     <div tw="flex mb-2">
       <SpacingLabel>{label}</SpacingLabel>
-      <SpacingRectangle width={width} />
+      <SpacingRectangle style={{width: width}} />
     </div>
   )
 }

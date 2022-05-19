@@ -15,7 +15,7 @@ function InputElementPage() {
         subTitle="The TextInput element is used by the TextInput component. Use the TextInput element directly for custom scenarios."
       />
       <MainContent>
-        <P>Import input element (verify path)</P>
+        <P>Import input element</P>
         <br />
         <CodeBlock code={codeImport} />
         <br />
