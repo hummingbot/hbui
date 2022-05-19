@@ -20,7 +20,7 @@ function DSMSidebar() {
       <PaddingBox>
         <SidebarBrand>
           {/*<GlobalSwitcherIcon />*/}
-          <P isMedium>CoinAlpha DSM</P>
+          <P isMedium>HBUI DS 1.2</P>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />
