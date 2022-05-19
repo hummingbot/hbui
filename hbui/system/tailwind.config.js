@@ -33,9 +33,9 @@ module.exports = {
       serif: ['Courier New', 'serif'],
       mono: ['SF Mono', 'mono']
     },
-    dropShadow: {
+    boxShadow: {
       'sm': tokens.boxShadow['shadow-sm'],
-      'base': tokens.boxShadow.shadow,
+      'DEFAULT': tokens.boxShadow.shadow,
       'md': tokens.boxShadow['shadow-sm'],
       'lg': tokens.boxShadow['shadow-lg'],
       'xl': tokens.boxShadow['shadow-xl'],
