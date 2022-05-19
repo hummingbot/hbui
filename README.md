@@ -1,4 +1,4 @@
-## CoinAlpha Design System Manager
+## HBUI Design System
 
 WIP! Contributions are welcome.
 
@@ -7,6 +7,10 @@ Project based on:
 - Styled-components
 - Typescript
 - Webpack
+
+### Getting started:
+
+Clone the project, then:
 
 #### Install dependencies:
 
