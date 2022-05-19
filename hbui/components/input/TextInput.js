@@ -100,7 +100,7 @@ const Root = styled.div(
         left: 8px;
       }
       .prefix-label {
-        top: 12px;
+        top: 8px;
       }
     `,
     prefix &&
@@ -119,7 +119,7 @@ const Root = styled.div(
       css`
         .top-label {
           opacity: 1;
-          top: -10px;
+          top: -14px;
         }
       `,
     hasValue &&
@@ -151,18 +151,18 @@ const Root = styled.div(
 )
 
 const PrefixLabel = styled.span(({}) => [
-  tw`absolute left-4 font-medium text-tertiary text-base pointer-events-none`,
+  tw`absolute left-3 font-medium text-tertiary text-base pointer-events-none`,
 ])
 
 const PlaceholderLabel = styled.span(({ isValid, isInvalid, isWarning }) => [
-  tw`transition-all absolute duration-200 opacity-0 bg-window font-medium text-primary text-xs px-2 py-0.5 pointer-events-none focus:outline-none focus:text-blue`,
+  tw`transition-all absolute duration-200 opacity-0 bg-body font-medium text-primary text-xs px-2 py-0.5 pointer-events-none focus:outline-none focus:text-blue`,
   isValid && [tw`text-green focus:text-green`],
   isInvalid && [tw`text-red focus:text-red`],
   isWarning && [tw`text-orange focus:text-orange`],
 ])
 
 const BottomLabel = styled.div(({ isValid, isInvalid, isWarning }) => [
-  tw`flex items-center w-full bg-input font-medium text-tertiary text-sm px-4 py-2 pointer-events-none focus:outline-none focus:text-blue`,
+  tw`flex items-center w-full bg-window font-medium text-tertiary text-sm px-4 py-2 pointer-events-none focus:outline-none focus:text-blue`,
   isValid && [tw`bg-green/10 rounded text-green focus:text-green`],
   isInvalid && [tw`bg-red/10 rounded text-red focus:text-red`],
   isWarning && [tw`bg-orange/10 rounded text-orange focus:text-orange`],
