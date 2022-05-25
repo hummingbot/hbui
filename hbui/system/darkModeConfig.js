@@ -94,6 +94,27 @@ const darkModeConfig = css`
     --border-input: ${colorsLightTheme.buttons.default.border.enabled};
     --border-input-focus: ${colorsLightTheme.buttons.default.border.enabled};
     --border-input-hover: ${colorsLightTheme.buttons.default.border.hover};
+
+    --bg-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.bg.enabled};
+    --bg-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.bg.hover};
+    --bg-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.bg.active};
+    --bg-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.bg.enabled};
+    --bg-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.bg.hover};
+    --bg-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.bg.active};
+
+    --text-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.text.enabled};
+    --text-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.text.hover};
+    --text-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.text.active};
+    --text-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.text.enabled};
+    --text-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.text.hover};
+    --text-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.text.active};
+
+    --border-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.border.enabled};
+    --border-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.border.hover};
+    --border-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.border.active};
+    --border-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.border.enabled};
+    --border-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.border.hover};
+    --border-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.border.active};
   }
   .dark {
     color-scheme: dark;
@@ -182,6 +203,27 @@ const darkModeConfig = css`
     --border-input: ${colorsDarkTheme.buttons.default.border.enabled};
     --border-input-focus: ${colorsDarkTheme.buttons.default.border.enabled};
     --border-input-hover: ${colorsDarkTheme.buttons.default.border.hover};
+
+    --bg-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.bg.enabled};
+    --bg-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.bg.hover};
+    --bg-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.bg.active};
+    --bg-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.bg.enabled};
+    --bg-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.bg.hover};
+    --bg-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.bg.active};
+
+    --text-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.text.enabled};
+    --text-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.text.hover};
+    --text-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.text.active};
+    --text-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.text.enabled};
+    --text-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.text.hover};
+    --text-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.text.active};
+
+    --border-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.border.enabled};
+    --border-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.border.hover};
+    --border-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.border.active};
+    --border-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.border.enabled};
+    --border-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.border.hover};
+    --border-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.border.active};
   }
   body {
     -webkit-tap-highlight-color: ${colorPalettes.yellow['500']};

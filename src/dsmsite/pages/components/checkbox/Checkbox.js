@@ -6,21 +6,31 @@ import { Separator } from '../../../../../hbui/elements/layout'
 import Checkbox from '../../../../../hbui/components/checkbox'
 
 function CheckboxPage() {
-  const [state, setState] = useState(true)
+  const [stateChecked, setCheckedState] = useState(true)
+  const [statePartial, setPartialState] = useState(true)
   return (
     <PageRoot>
       <ShortHero
-        title="Switch"
-        subTitle="Simple binary switch control"
+        title="Checkbox"
+        subTitle="Standard checkbox"
       />
       <MainContent>
         <br />
         <br />
         <Body>Default</Body>
-        <Checkbox active={state} onClick={() => setState(!state)}/>
+        <Checkbox active={stateChecked} onClick={() => setCheckedState(!stateChecked)}/>
         <br />
+        <CodeBlock code={codeChecked} />
         <br />
-        <CodeBlock code={code} />
+        <Body>Partial selected - use prop "partial"</Body>
+        <Checkbox active={statePartial} partial={true} onClick={() => setPartialState(!statePartial)}/>
+        <br />
+        <CodeBlock code={codePartial} />
+        <br />
+        <Body>Disabled - use prop "disabled"</Body>
+        <Checkbox active={true} disabled={true}/>
+        <br />
+        <CodeBlock code={codeDisabled} />
         <br />
         <br />
       </MainContent>
@@ -30,11 +40,27 @@ function CheckboxPage() {
 
 export default CheckboxPage
 
-const code = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
+const codeChecked = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
 
 const [state, setState] = useState(true)
 
 <Checkbox
   <Checkbox active={state} onClick={() => setState(!state)}/>
+/>
+`
+
+const codePartial = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
+
+const [state, setState] = useState(true)
+
+<Checkbox
+  <Checkbox active={state} partial={true} onClick={() => setState(!state)}/>
+/>
+`
+
+const codeDisabled = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
+
+<Checkbox
+  <Checkbox active={true} disabled={true} />
 />
 `

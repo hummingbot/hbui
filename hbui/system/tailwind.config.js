@@ -111,6 +111,12 @@ module.exports = {
         input: "var(--bg-input)",
         "input-focus": "var(--bg-input-focus)",
         "input-hover": "var(--bg-input-hover)",
+        "checkbox-selected-enabled": "var(--bg-checkbox-selected-enabled)",
+        "checkbox-selected-hover": "var(--bg-checkbox-selected-hover)",
+        "checkbox-selected-active": "var(--bg-checkbox-selected-active)",
+        "checkbox-unselected-enabled": "var(--bg-checkbox-unselected-enabled)",
+        "checkbox-unselected-hover": "var(--bg-checkbox-unselected-hover)",
+        "checkbox-unselected-active": "var(--bg-checkbox-unselected-active)",
       },
       textColor: {
         primary: "var(--text-primary)",
@@ -141,6 +147,12 @@ module.exports = {
         input: "var(--text-input)",
         "input-focus": "var(--text-input-focus)",
         "input-hover": "var(--text-input-hover)",
+        "checkbox-selected-enabled": "var(--text-checkbox-selected-enabled)",
+        "checkbox-selected-hover": "var(--text-checkbox-selected-hover)",
+        "checkbox-selected-active": "var(--text-checkbox-selected-active)",
+        "checkbox-unselected-enabled": "var(--text-checkbox-unselected-enabled)",
+        "checkbox-unselected-hover": "var(--text-checkbox-unselected-hover)",
+        "checkbox-unselected-active": "var(--text-checkbox-unselected-active)",
       },
       borderColor: {
         body: "var(--border-body)",
@@ -166,6 +178,12 @@ module.exports = {
         input: "var(--border-input)",
         "input-focus": "var(--border-input-focus)",
         "input-hover": "var(--border-input-hover)",
+        "checkbox-selected-enabled": "var(--border-checkbox-selected-enabled)",
+        "checkbox-selected-hover": "var(--border-checkbox-selected-hover)",
+        "checkbox-selected-active": "var(--border-checkbox-selected-active)",
+        "checkbox-unselected-enabled": "var(--border-checkbox-unselected-enabled)",
+        "checkbox-unselected-hover": "var(--border-checkbox-unselected-hover)",
+        "checkbox-unselected-active": "var(--border-checkbox-unselected-active)",
       }
     }
   },
