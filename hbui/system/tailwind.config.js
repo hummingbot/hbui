@@ -33,16 +33,6 @@ module.exports = {
       serif: ['Courier New', 'serif'],
       mono: ['SF Mono', 'mono']
     },
-    boxShadow: {
-      'sm': tokens.boxShadow['shadow-sm'],
-      'DEFAULT': tokens.boxShadow.shadow,
-      'md': tokens.boxShadow['shadow-sm'],
-      'lg': tokens.boxShadow['shadow-lg'],
-      'xl': tokens.boxShadow['shadow-xl'],
-      '2xl': tokens.boxShadow['shadow-2-xl'],
-      'inner': tokens.boxShadow['shadow-inner'],
-      'none': 'box-shadow: 0 0 #0000',
-    },
     borderRadius: {
       'none': '0',
       'sm': '0.125rem',

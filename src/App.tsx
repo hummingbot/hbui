@@ -49,7 +49,6 @@ import SwitchPage from './dsmsite/pages/components/switch/Switch'
 import CheckboxPage from './dsmsite/pages/components/checkbox/Checkbox'
 
 import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
-import Shadows from './dsmsite/pages/designtokens/shadows/Shadows'
 
 // guidelines
 import Colors from './dsmsite/pages/guidelines/colors/Colors'
@@ -76,7 +75,6 @@ function App() {
             <Route path="/components" element={<Components />} />
 
             <Route path="/design-tokens/spacings" element={<Spacings />} />
-            <Route path="/design-tokens/shadows" element={<Shadows />} />
             
             <Route
               path="/elements/layout-core"
