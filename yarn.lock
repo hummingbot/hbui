@@ -1202,10 +1202,10 @@
   resolved "https://registry.yarnpkg.com/@heroicons/react/-/react-1.0.6.tgz#35dd26987228b39ef2316db3b1245c42eb19e324"
   integrity sha512-JJCXydOFWMDpCP4q13iEplA503MQO3xLoZiKum+955ZCtHINWnx26CUxVxxFQu/uLb4LW3ge15ZpzIkXKkJ8oQ==
 
-"@hummingbot/hbui@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@hummingbot/hbui/-/hbui-1.1.4.tgz#acc3a50a65d3e49b95e7d0b75abc3d2c00b83826"
-  integrity sha512-cshU9/rbL3BEZ9oN5xGTJrhZrh5rOcREQtUyVUcfYZmx3NvhLLstghclD8/uou94vJEh3j5eYQ+TB5Gf5FnWzw==
+"@hummingbot/hbui@^1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@hummingbot/hbui/-/hbui-1.1.9.tgz#e4903ab69ba46cf8cccf2c62dcc67cd12d16d2d7"
+  integrity sha512-1I8QLtJIWwnmFE7T+PWrgucShqO3u3osvqBvRDCtHFULlviKKv6VKrFW7c4gwn2aTHHo1mnsk49tMLJV09tCIw==
   dependencies:
     "@babel/cli" "^7.17.6"
     "@babel/core" "^7.13.8"
