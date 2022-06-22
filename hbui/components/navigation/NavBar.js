@@ -2,20 +2,22 @@ import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { P, Body, Bold } from '../../elements/typography'
 import HummingbotLogo from '../../assets/svgs/logos/HummingbotLogo'
+import CoinAlphaLogo from '../../assets/svgs/logos/CoinAlphaLogo'
 import TriangleDown from '../../assets/svgs/arrows/TriangleDown'
 import Chip from '../chip'
 import ThemeToggle from '../../system/ThemeToggle'
 
-const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThemeToggle, ...props }) => {
+const NavBar = ({ siteNameA, siteNameB, linksLeft, linksRight, userData, showThemeToggle, logo='hummingbot', ...props }) => {
   return (
     <NavBarRoot>
       <LeftSide>
-        <LogoContainer>
-          <HummingbotLogo />
+        <LogoContainer to='/'>
+          { logo === 'hummingbot' && <HummingbotLogo /> }
+          { logo === 'coinalpha' && <CoinAlphaLogo /> }
           <Body><Bold>{siteNameA}</Bold> {siteNameB}</Body>
         </LogoContainer>
         <LinksRow>
-          {linksLeft.map(link =>
+          {linksLeft && linksLeft.map(link =>
             <Chip key={link.url} to={link.url} label={link.label} />
           )}
         </LinksRow>
