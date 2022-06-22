@@ -4,7 +4,6 @@ import { greyscale_light_300 } from '../../constants/colors'
 
 export const Section = styled.div(() => [
   css`
-    // outline: 1px solid red;
     display: flex;
     flex-direction: column;
   `,
@@ -13,10 +12,9 @@ export const Section = styled.div(() => [
 
 export const Container = styled.div(() => [
   css`
-    // outline: 1px solid blue;
     align-self: center;
   `,
-  tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-9/12`,
+  tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-[1440px]`,
 ])
 
 export const ContainerRow = styled(Container)`
