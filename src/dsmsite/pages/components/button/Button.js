@@ -2,6 +2,7 @@ import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../ui/components/CodeBlock'
 import { Body } from '../../../../../hbui/elements/typography'
+import { Window } from '../../../../../hbui/elements/layout'
 import { Button as ButtonComponent } from '../../../../../hbui/components/button'
 import DummyIcon from '../../../../../hbui/assets/svgs/16x16/DummyIcon'
 import PlayButton from '../../../../../hbui/assets/svgs/16x16/PlayButton'
@@ -15,6 +16,9 @@ function Button() {
         subTitle="Component - To be used together with icons"
       />
       <MainContent>
+        <Window>
+          Button with dark-mode
+        </Window>
         <Body>Button with dark-mode ready icon (before)</Body>
         <ButtonComponent
           isSecondary
