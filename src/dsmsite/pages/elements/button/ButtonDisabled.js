@@ -97,42 +97,42 @@ function ButtonElement() {
 
 export default ButtonElement
 
-const codeDefaultDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeDefaultDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isDisabled>
   Regular (disabled)
 </Button>
 `
 
-const codeSecondaryDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeSecondaryDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSecondary isDisabled>
   Secondary (disabled)
 </ButtonSecondary>
 `
 
-const codeSuccessDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeSuccessDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSuccess isDisabled>
   Success (disabled)
 </ButtonSuccess>
 `
 
-const codeInfoDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeInfoDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isInfo isDisabled>
   Info (disabled)
 </ButtonInfo>
 `
 
-const codeWarningDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeWarningDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isWarning isDisabled>
   Warning (disabled)
 </ButtonWarning>
 `
 
-const codeDangerDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeDangerDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isDanger isDisabled>
   Danger (disabled)

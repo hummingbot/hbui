@@ -70,42 +70,42 @@ function ButtonElement() {
 
 export default ButtonElement
 
-const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button>
   Default
 </Button>
 `
 
-const codeSecondary = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeSecondary = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSecondary>
   Secondary
 </Button>
 `
 
-const codeSuccess = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeSuccess = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSuccess>
   Success
 </Button>
 `
 
-const codeInfo = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeInfo = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isInfo>
   Info
 </Button>
 `
 
-const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isWarning>
   Warning
 </Button>
 `
 
-const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isDanger>
   Danger

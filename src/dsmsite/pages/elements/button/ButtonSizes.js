@@ -51,21 +51,21 @@ function ButtonSizes() {
 
 export default ButtonSizes
 
-const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button>
   Text label
 </Button>
 `
 
-const codeLarge = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeLarge = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isLarge>
   Text label
 </Button>
 `
 
-const codeSmall = String.raw`import { Button } from '@hummingbot/hbui/elements/button'
+const codeSmall = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSmall>
   Text label
