@@ -38,7 +38,7 @@ function Code() {
         <TailwindCssLogo />
         <br />
         <P>
-          <Bold>Tailwind CSS</Bold> is a utility-first framework which generates
+          <a href='https://tailwindcss.com/' target='_blank' rel="noreferrer"><Bold>Tailwind CSS</Bold></a> is a utility-first framework which generates
           a set of utility classes based on design tokens from our Design System created in Figma.
           This provides a reliable set of standards to ensure consistency across all Hummingbot
           projects with the added benefit of a large active community as well
@@ -49,14 +49,14 @@ function Code() {
         <TwinMacroLogo />
         <br />
         <P>
-          <Bold>Twin.macro</Bold> allows us to use the generated utility classes inside
+          <a href='https://github.com/ben-rogerson/twin.macro' target='_blank' rel="noreferrer"><Bold>Twin.macro</Bold></a> allows us to use the generated utility classes inside
           JavaScript and ensures only the used classes are bundled with the final code.
         </P>
         <br />
         <br />
         <div style={{fontSize: '50px'}}>💅</div>
         <P>
-          <Bold>styled-components</Bold> is the most popular css-in-js library
+          <a href='https://styled-components.com/' target='_blank' rel="noreferrer"><Bold>styled-components</Bold></a> is the most popular css-in-js library
           available, with a large community and 100% complete feature set.
         </P>
         <br />
