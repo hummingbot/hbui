@@ -63,6 +63,12 @@ function GettingStarted() {
         <br />
         <CodeBlock code={codeThemeProvider} />
         <br />
+        <P>
+          Finally, depending on the structure of your project you may need some babel setup, as in this example:
+        </P>
+        <br />
+        <CodeBlock code={codeBabel} />
+        <br />
       </MainContent>
     </PageRoot>
   )
@@ -84,3 +90,19 @@ root.render(
     <App />
   </ThemeProvider>
 )`
+const codeBabel = String.raw`{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    "babel-plugin-styled-components"
+  ]
+}`
