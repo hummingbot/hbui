@@ -15,6 +15,7 @@ export const Button = styled.button(
     isUppercase,
     isGhost,
     iconColor,
+    isTerminal,
   }) => [
     tw`flex transition duration-100`,
     tw`font-medium! text-[14px]`,
@@ -52,6 +53,7 @@ export const Button = styled.button(
     isInfo && infoStyle,
     isWarning && warningStyle,
     isDanger && dangerStyle,
+    isTerminal && terminalStyle,
     isSmall && [tw`px-2 pt-[2px] pb-[1.5px] text-[13px]`],
     isTiny && [tw`px-1 pt-0 pb-0 text-[11px]`],
     isLarge && [tw`px-4 py-1.5 text-[16px]`],
@@ -94,4 +96,10 @@ const dangerStyle = [
   tw`text-button-danger hover:text-button-danger-hover`,
   tw`bg-danger hover:bg-danger-hover active:bg-danger-active`,
   tw`border-button-danger hover:border-button-danger-hover active:border-button-danger-active`,
+]
+
+const terminalStyle = [
+  tw`text-black hover:text-terminal active:text-terminal`,
+  tw`bg-terminal hover:bg-transparent active:bg-transparent`,
+  tw`border-terminal hover:border-terminal active:border-terminal`,
 ]

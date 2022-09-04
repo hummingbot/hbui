@@ -21,7 +21,7 @@ function ButtonElement() {
         <br />
         <br />
         <P>
-          The button element has <Bold>6 variants</Bold>.
+          The button element has <Bold>7 variants</Bold>.
         </P>
         <br />
         <Separator />
@@ -60,6 +60,12 @@ function ButtonElement() {
         <CodeGridComponent
           code={codeDanger}
           element={<Button isDanger>Danger</Button>}
+        />
+        <br />
+        <br />
+        <CodeGridComponent
+          code={codeTerminal}
+          element={<Button isTerminal>Terminal</Button>}
         />
         <br />
         <br />
@@ -108,6 +114,15 @@ const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements
 const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isDanger>
+  Danger
+</Button>
+`
+
+const codeTerminal = String.raw`// USE ONLY ON DARK MODE
+
+import { Button } from '@hummingbot/hbui/elements/buttons'
+
+<Button isTerminal>
   Danger
 </Button>
 `
