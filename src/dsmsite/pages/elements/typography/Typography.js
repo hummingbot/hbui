@@ -35,28 +35,28 @@ function Typography() {
         <P>Most standard typography unit, available in default, small, tiny and nano sizes. Uses the brand's main typeface: Satoshi.</P>
         <Separator />
         <br />
-        <P isBrandColor>Paragraph (nano)</P>
+        <P tw='text-green dark:text-terminal'>Paragraph (nano)</P>
         <br />
         <PNano>The quick brown fox jumps over the lazy dog</PNano>
         <br />
         <CodeBlock code={codeParagraphNano} />
         <br />
         <br />
-        <P isBrandColor>Paragraph (tiny)</P>
+        <P tw='text-green dark:text-terminal'>Paragraph (tiny)</P>
         <br />
         <PTiny>The quick brown fox jumps over the lazy dog</PTiny>
         <br />
         <CodeBlock code={codeParagraphTiny} />
         <br />
         <br />
-        <P isBrandColor>Paragraph (small)</P>
+        <P tw='text-green dark:text-terminal'>Paragraph (small)</P>
         <br />
         <PSmall>The quick brown fox jumps over the lazy dog</PSmall>
         <br />
         <CodeBlock code={codeParagraphSmall} />
         <br />
         <br />
-        <P isBrandColor>Paragraph (default)</P>
+        <P tw='text-green dark:text-terminal'>Paragraph (default)</P>
         <br />
         <P>The quick brown fox jumps over the lazy dog</P>
         <br />
@@ -67,28 +67,28 @@ function Typography() {
         <P>Typography elements for forms. Based on the same sizes as the Paragraph variants, these use the font "Inter" for better readability in small sizes. Available in default, small, tiny and nano sizes.</P>
         <Separator />
         <br />
-        <P isBrandColor>Label (nano)</P>
+        <P tw='text-green dark:text-terminal'>Label (nano)</P>
         <br />
         <LabelNano>The quick brown fox jumps over the lazy dog</LabelNano>
         <br />
         <CodeBlock code={codeLabelNano} />
         <br />
         <br />
-        <P isBrandColor>Label (tiny)</P>
+        <P tw='text-green dark:text-terminal'>Label (tiny)</P>
         <br />
         <LabelTiny>The quick brown fox jumps over the lazy dog</LabelTiny>
         <br />
         <CodeBlock code={codeLabelTiny} />
         <br />
         <br />
-        <P isBrandColor>Label (small)</P>
+        <P tw='text-green dark:text-terminal'>Label (small)</P>
         <br />
         <LabelSmall>The quick brown fox jumps over the lazy dog</LabelSmall>
         <br />
         <CodeBlock code={codeLabelSmall} />
         <br />
         <br />
-        <P isBrandColor>Label (default)</P>
+        <P tw='text-green dark:text-terminal'>Label (default)</P>
         <br />
         <Label>The quick brown fox jumps over the lazy dog</Label>
         <br />
@@ -99,7 +99,7 @@ function Typography() {
         <P>Slightly larger typography unit, to be used in bodies of text for enhanced readability. Font: Satoshi.</P>
         <Separator />
         <br />
-        <P isBrandColor>Body</P>
+        <P tw='text-green dark:text-terminal'>Body</P>
         <br />
         <Body>The quick brown fox jumps over the lazy dog</Body>
         <br />
@@ -110,42 +110,42 @@ function Typography() {
         <P>Standard headline elements. Font: Satoshi.</P>
         <Separator />
         <br />
-        <P isBrandColor>H6</P>
+        <P tw='text-green dark:text-terminal'>H6</P>
         <br />
         <H6>The quick brown fox jumps over the lazy dog</H6>
         <br />
         <CodeBlock code={codeH6} />
         <br />
         <br />
-        <P isBrandColor>H5</P>
+        <P tw='text-green dark:text-terminal'>H5</P>
         <br />
         <H5>The quick brown fox jumps over the lazy dog</H5>
         <br />
         <CodeBlock code={codeH5} />
         <br />
         <br />
-        <P isBrandColor>H4</P>
+        <P tw='text-green dark:text-terminal'>H4</P>
         <br />
         <H4>The quick brown fox jumps over the lazy dog</H4>
         <br />
         <CodeBlock code={codeH4} />
         <br />
         <br />
-        <P isBrandColor>H3</P>
+        <P tw='text-green dark:text-terminal'>H3</P>
         <br />
         <H3>The quick brown fox jumps over the lazy dog</H3>
         <br />
         <CodeBlock code={codeH3} />
         <br />
         <br />
-        <P isBrandColor>H2</P>
+        <P tw='text-green dark:text-terminal'>H2</P>
         <br />
         <H2>The quick brown fox jumps over the lazy dog</H2>
         <br />
         <CodeBlock code={codeH2} />
         <br />
         <br />
-        <P isBrandColor>H1</P>
+        <P tw='text-green dark:text-terminal'>H1</P>
         <br />
         <H1>The quick brown fox jumps over the lazy dog</H1>
         <br />

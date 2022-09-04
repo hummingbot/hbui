@@ -60,7 +60,7 @@ export function MainContentRow({ children }) {
 
 export function ShortHero({ title, subTitle, bgImage, boldTitle }) {
   return (
-    <ContentBlock tw="bg-window" style={bgImage ? {backgroundImage: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'} : null}>
+    <ContentBlock tw="bg-window border-b-2 border-green dark:border-terminal" style={bgImage ? {backgroundImage: `url(${bgImage}) no-repeat`, backgroundSize: 'cover'} : null}>
       <Container>
         <ShortHeroPaddingBox>
           <H1 isBold={boldTitle}>{title}</H1>

@@ -2,15 +2,12 @@ import React, { useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../../hbui/elements/typography'
-import colors from '../../../hbui/constants/colors'
 import GlobalSwitcherIcon from './GlobalSwitcherIcon'
 import TriangleRight from './TriangleRight'
 import { P } from '../../../hbui/elements/typography'
 import navigation from './navigation'
 
 import ThemeToggle from '../../../hbui/system/ThemeToggle'
-
-const { green } = colors
 
 function DSMSidebar() {
   let location = useLocation()
@@ -20,7 +17,7 @@ function DSMSidebar() {
       <PaddingBox>
         <SidebarBrand>
           {/*<GlobalSwitcherIcon />*/}
-          <P isMedium>HBUI DS 1.2</P>
+          <P isMedium tw='text-green dark:text-terminal'>HBUI DS 1.2</P>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />
@@ -99,7 +96,7 @@ const NavItemRoot = styled.div(({ hasSubItems }) => [
 ])
 
 const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
-  tw`py-0.5 px-5 text-primary border-l-4 border-transparent`,
+  tw`py-0.5 px-5 text-green dark:text-terminal border-l-4 border-transparent`,
   css`
     display: flex;
     width: 100%;
@@ -107,7 +104,7 @@ const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
     font-weight: ${hasSubItems ? '600' : '400'};
     align-items: center;
     &:hover p {
-      color: ${green};
+      ${tw`text-green dark:text-terminal`};
     }
     svg {
       ${tw`transition-transform`};
@@ -120,7 +117,7 @@ const SidebarNavItem = styled(NavLink)(({ hasSubItems }) => [
     }
     &.is-active {
       p {
-        ${tw`font-bold`};
+        ${tw`font-bold text-green dark:text-terminal`};
       }
     }
   `,

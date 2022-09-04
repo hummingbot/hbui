@@ -62,7 +62,7 @@ const BreadcrumbsBarRoot = styled.div(({ isUppercase, isDisabled }) => [
   tw`border-b border-body`,
   css`
     a.active {
-      ${tw`text-brand-scale-500`}
+      ${tw`text-green dark:text-terminal`}
     }
     .home-icon {
       ${tw`relative top-[-1px]`}
