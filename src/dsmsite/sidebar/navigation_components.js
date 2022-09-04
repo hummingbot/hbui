@@ -2,6 +2,10 @@ const button = {
   link: '/components/button',
   title: 'Button',
 }
+const externallinkbutton = {
+  link: '/components/externallinkbutton',
+  title: 'ExternalLinkButton',
+}
 const chip = {
   link: '/components/chip',
   title: 'Chip',
@@ -45,6 +49,7 @@ const switchPage = {
 
 const links =  [
   button,
+  externallinkbutton,
   chip,
   input,
   spinner,

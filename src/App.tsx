@@ -33,6 +33,7 @@ import InputElement from './dsmsite/pages/elements/input/Input'
 
 // components
 import ButtonComponent from './dsmsite/pages/components/button/Button'
+import ExternalLinkButton from './dsmsite/pages/components/button/ExternalLinkButton'
 import TextInput from './dsmsite/pages/components/textinput/TextInput'
 import TextInputCustomLabel from './dsmsite/pages/components/textinput/TextInputCustomLabel'
 import TextInputExtendedLabel from './dsmsite/pages/components/textinput/TextInputExtendedLabel'
@@ -102,6 +103,7 @@ function App() {
             <Route path="/elements/text-input" element={<InputElement />} />
 
             <Route path="/components/button" element={<ButtonComponent />} />
+            <Route path="/components/externallinkbutton" element={<ExternalLinkButton />} />
             <Route path="/components/chip" element={<ChipComponent />} />
             <Route path="/components/text-input" element={<TextInput />} />
             <Route
