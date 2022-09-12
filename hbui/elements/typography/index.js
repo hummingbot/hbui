@@ -121,6 +121,10 @@ export const Bold = styled.span({
   fontWeight: 'bold',
 })
 
+export const Medium = styled.span({
+  fontWeight: '500',
+})
+
 export const Underline = styled.span({
   textDecoration: 'underline',
 })
