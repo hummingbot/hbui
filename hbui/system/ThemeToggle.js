@@ -2,7 +2,7 @@ import React from 'react'
 import 'twin.macro'
 import { ThemeContext } from './ThemeContext'
 
-const ThemeToggle = () => {
+const ThemeToggle = ({...props}) => {
   const { theme, setTheme } = React.useContext(ThemeContext)
 
   function isDark() {
@@ -11,6 +11,7 @@ const ThemeToggle = () => {
 
   return (
     <button
+      {...props}
       className='theme-toggle'
       tw="ml-[25px] w-6 h-6 focus:outline-none fill-current text-primary hover:text-secondary"
       onClick={() => setTheme(isDark() ? 'light' : 'dark')}
