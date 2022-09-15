@@ -24,10 +24,10 @@ function NavBar({
   
   const [mobileOpen, setMobileOpen] = useState(false);
   const LinkClass = linkClass
-  const processLink = (link) => {
+  const processLink = (link, index) => {
     if (!link.subLinks) {
       return (
-        <FirstLevelItem key={link.url}>
+        <FirstLevelItem key={'firstlevel-link-' + index}>
           <NavItem>
             <LinkClass to={link.url}>
               <NavP>{link.label}</NavP>
@@ -38,15 +38,15 @@ function NavBar({
     }
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={link.url}>
+      <FirstLevelItem key={'firstlevel-link-' + index}>
         <LinkGroup>
           <NavP tw='relative top-[-1px]'>{link.label}</NavP>
           <Links className='links'>
             {
-              link.subLinks.map(subLink => {
+              link.subLinks.map((subLink, indexB) => {
                 let ItemClass = subLink.external ? NavA : LinkClass
                 return (
-                  <NavItem key={subLink.label}>
+                  <NavItem key={'secondlevel-link-' + String(index) + String(indexB)}>
                     <ItemClass to={subLink.url} href={subLink.url} target='_blank' rel="noreferrer">
                       <NavP>{subLink.label}</NavP>
                       {subLink.external && <ExternalLinkIcon />}
@@ -61,10 +61,10 @@ function NavBar({
     )
   }
 
-  const processMobileLink = (link) => {
+  const processMobileLink = (link, index) => {
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={link.url}>
+      <FirstLevelItem key={'mobile-firstlevel-link-' + index}>
         {!link.subLinks ?
           <LinkClass to={link.url}>
             <NavMobileH4 onClick={() => setMobileOpen(false)}>{link.label}</NavMobileH4>
@@ -74,11 +74,11 @@ function NavBar({
             <NavMobileH4 tw='opacity-50'>{link.label}</NavMobileH4>
             <div tw='pl-xs'>
               {
-                link.subLinks.map(subLink => {
+                link.subLinks.map((subLink, indexB) => {
                   let ItemClass = subLink.external ? NavA : LinkClass
                   return (
                     <ItemClass
-                      key={subLink.label}
+                      key={'mobile-secondlevel-link' + String(index) + String(indexB)}
                       style={{display: 'flex', alignItems: 'center'}}
                       to={subLink.url}
                       href={subLink.url}
@@ -131,8 +131,8 @@ function NavBar({
         </div>
         <br />
         <br />
-        {linksRight && linksRight.map(link =>
-          {return processMobileLink(link)}
+        {linksRight && linksRight.map((link, indexC) =>
+          {return processMobileLink(link, indexC)}
         )}
         <br />
         <br />
@@ -155,16 +155,16 @@ function NavBar({
           </LogoContainer>
         </LinkClass>
         <LinksLeft>
-          {linksLeft && linksLeft.map(link =>
-            {return processLink(link)}
+          {linksLeft && linksLeft.map((link, index) =>
+            {return processLink(link, index)}
           )}
         </LinksLeft>
       </LeftSide>
       <RightSide>
         {showThemeToggle && <ThemeToggle style={{position: 'relative', top:'-2px'}} />}
         {
-          linksRight && linksRight.map(link =>
-            {return processLink(link)}
+          linksRight && linksRight.map((link, indexB) =>
+            {return processLink(link, indexB)}
           )
         }
         { userData &&
