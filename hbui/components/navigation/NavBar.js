@@ -119,7 +119,7 @@ function NavBar({
 
   const showMobileNav = () => {
     return (
-      <MobileNavRoot style={{zIndex: '99999'}}>
+      <MobileNavRoot style={{zIndex: '99999', height: '100vh', overflowY: 'scroll'}}>
         <CloseIcon
           tw='absolute cursor-pointer top-[10px] right-[8px]'
           onClick={() => setMobileOpen(false)}
