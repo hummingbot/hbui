@@ -134,6 +134,12 @@ function NavBar({
         {linksRight && linksRight.map(link =>
           {return processMobileLink(link)}
         )}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </MobileNavRoot>
     )
   }
