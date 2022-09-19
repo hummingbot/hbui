@@ -10,6 +10,10 @@ const chip = {
   link: '/components/chip',
   title: 'Chip',
 }
+const cards = {
+  link: '/components/cards',
+  title: 'Cards',
+}
 const input = {
   link: '/components/text-input',
   title: 'TextInput',
@@ -51,6 +55,7 @@ const links =  [
   button,
   externallinkbutton,
   chip,
+  cards,
   input,
   spinner,
   callout,

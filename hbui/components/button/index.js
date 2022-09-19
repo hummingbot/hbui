@@ -41,14 +41,14 @@ Button.defaultProps = {
 }
 
 
-function ExternalLinkIcon() {
+export function ExternalLinkIcon({...props}) {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="13"
       height="14"
       viewBox="0 0 13 14"
-      tw='ml-xs'
     >
       <path
         tw="fill-current"
@@ -69,7 +69,7 @@ export function ExternalLinkButton({label, ...props}) {
   return (
     <CustomExternalLinkButton {...props}>
       {label}
-      <ExternalLinkIcon />
+      <ExternalLinkIcon tw='ml-xs' />
     </CustomExternalLinkButton>
   );
 }

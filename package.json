@@ -1,6 +1,6 @@
 {
   "name": "HBUI_DS",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"

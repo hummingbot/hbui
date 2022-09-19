@@ -17,7 +17,7 @@ function DSMSidebar() {
       <PaddingBox>
         <SidebarBrand>
           {/*<GlobalSwitcherIcon />*/}
-          <P isMedium tw='text-primary dark:text-terminal'>HBUI DS 1.3.3</P>
+          <P isMedium tw='text-primary dark:text-terminal'>HBUI DS 1.4.0</P>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />

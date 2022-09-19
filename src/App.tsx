@@ -48,6 +48,7 @@ import BreadcrumbsBarPage from './dsmsite/pages/components/navigation/breadcrumb
 import ComboBoxPage from './dsmsite/pages/components/combobox/ComboBox'
 import SwitchPage from './dsmsite/pages/components/switch/Switch'
 import CheckboxPage from './dsmsite/pages/components/checkbox/Checkbox'
+import CardsPage from './dsmsite/pages/components/cards/Cards'
 
 import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
 
@@ -130,6 +131,7 @@ function App() {
             <Route path="/components/combobox" element={<ComboBoxPage />} />
             <Route path="/components/switch" element={<SwitchPage />} />
             <Route path="/components/checkbox" element={<CheckboxPage />} />
+            <Route path="/components/cards" element={<CardsPage />} />
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />
