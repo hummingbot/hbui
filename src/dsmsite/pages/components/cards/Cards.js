@@ -6,6 +6,8 @@ import { CardA } from '../../../../../hbui/components/cards/CardA'
 import { CardB } from '../../../../../hbui/components/cards/CardB'
 import { CardC } from '../../../../../hbui/components/cards/CardC'
 import { Link } from 'react-router-dom'
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 function CardsPage() {
   return (
@@ -129,7 +131,7 @@ function CardsPage() {
 export default CardsPage
 
 const codeCardA = String.raw`import { CardA } from '@hummingbot/hbui/components/cards/CardA'
-import { Link } from 'react-router-dom' // import from gatsby package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
 
 <div tw='w-full flex content-between'>
   <CardA
@@ -162,7 +164,7 @@ import { Link } from 'react-router-dom' // import from gatsby package in Gatsby 
 `
 
 const codeCardB = String.raw`import { CardB } from '@hummingbot/hbui/components/cards/CardB'
-import { Link } from 'react-router-dom' // import from gatsby package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
 
 <div tw='w-full flex content-between'>
   <CardB
@@ -231,7 +233,7 @@ function IconB() {
 }`
 
 const codeCardC = String.raw`import { CardC } from '@hummingbot/hbui/components/cards/CardC'
-import { Link } from 'react-router-dom' // import from gatsby package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
 
 <div tw='grid grid-cols-1 gap-xs lg:grid-cols-2 w-full content-between'>
   <CardC
