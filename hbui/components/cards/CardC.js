@@ -16,7 +16,6 @@ export function CardC({
   let LinkClass
   let LinkElement = ExternalA
   if (!external) {
-    console.log('if (!external) {')
     LinkElement = linkClass
   }
   return (
