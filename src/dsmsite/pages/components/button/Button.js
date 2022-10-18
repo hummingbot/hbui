@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { Body } from '../../../../../hbui/elements/typography'
 import { Button as ButtonComponent } from '../../../../../hbui/components/button'
 import DummyIcon from '../../../../../hbui/assets/svgs/16x16/DummyIcon'

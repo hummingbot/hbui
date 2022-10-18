@@ -3,7 +3,7 @@ import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
 import { P, H5 } from '../../../../../hbui/elements/typography'
 import { ItemsRow, Separator } from '../../../../../hbui/elements/layout'
 import { Button } from '../../../../../hbui/elements/buttons'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 
 function LayoutExtra() {
   return (

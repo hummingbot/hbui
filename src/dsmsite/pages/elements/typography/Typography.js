@@ -21,7 +21,7 @@ import {
 import {
   Separator
 } from '../../../../../hbui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 
 function Typography() {
   return (

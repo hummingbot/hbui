@@ -3,7 +3,7 @@ import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import { H6, P } from '../../../../../hbui/elements/typography'
 import { TextInput } from '../../../../../hbui/elements/input'
 import { Separator } from '../../../../../hbui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 
 function InputElementPage() {

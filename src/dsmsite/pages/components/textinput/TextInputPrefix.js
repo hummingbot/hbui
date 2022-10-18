@@ -3,7 +3,7 @@ import { P, Bold } from '../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
 import TextInput from '../../../../../hbui/components/input/TextInput'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { hero, navigation } from './shared'
 
 function TextInputPrefix() {

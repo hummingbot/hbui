@@ -13,7 +13,7 @@ import {
   H1,
   LabelTiny,
 } from '../../../../../hbui/elements/typography'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 
 function Tests() {
   return (

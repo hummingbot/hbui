@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent, PageRoot } from '../../../../ui/elements/layout'
-import CodeBlock from '../../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../../hbui/components/code/CodeBlock'
 import { Body, Bold } from '../../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../../hbui/elements/layout'
 import {BreadcrumbsBar} from '../../../../../../hbui/components/navigation'

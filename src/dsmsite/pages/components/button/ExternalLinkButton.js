@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { Body, P } from '../../../../../hbui/elements/typography'
 import { ExternalLinkButton as ExternalLinkButtonComponent } from '../../../../../hbui/components/button'
 

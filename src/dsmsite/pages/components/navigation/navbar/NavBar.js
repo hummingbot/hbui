@@ -1,7 +1,7 @@
 import React from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent, PageRoot } from '../../../../ui/elements/layout'
-import CodeBlock from '../../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../../hbui/components/code/CodeBlock'
 import { P, Body, Bold, Medium } from '../../../../../../hbui/elements/typography'
 import { Separator, Container } from '../../../../../../hbui/elements/layout'
 import { NavBar } from '../../../../../../hbui/components/navigation'

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Body } from '../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../hbui/elements/layout'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import {
   Callout,
   CalloutSuccess,

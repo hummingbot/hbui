@@ -1,6 +1,5 @@
 import React from 'react'
 import { ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, P, H5, Bold } from '../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../hbui/elements/layout'

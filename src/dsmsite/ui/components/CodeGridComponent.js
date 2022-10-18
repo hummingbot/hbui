@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
-import CodeBlock from './CodeBlock'
+import CodeBlock from '../../../../hbui/components/code/CodeBlock'
 
 const CodeGridComponent = ({ element, code }) => {
   return (

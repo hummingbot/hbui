@@ -1,6 +1,6 @@
 import React from 'react'
 import { MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import CodeGridComponent from '../../../ui/components/CodeGridComponent'
 import { Body, P, Bold } from '../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../hbui/elements/layout'

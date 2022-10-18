@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { theme } from 'twin.macro'
 import { ShortHero, MainContent, PageRoot } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { Body } from '../../../../../hbui/elements/typography'
 import { Separator } from '../../../../../hbui/elements/layout'
 import { P } from '../../../../../hbui/elements/typography'

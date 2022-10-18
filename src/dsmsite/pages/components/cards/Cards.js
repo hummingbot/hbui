@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { H4, P } from '../../../../../hbui/elements/typography'
 import { CardA } from '../../../../../hbui/components/cards/CardA'
 import { CardB } from '../../../../../hbui/components/cards/CardB'
