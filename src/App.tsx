@@ -50,6 +50,7 @@ import SwitchPage from './dsmsite/pages/components/switch/Switch'
 import CheckboxPage from './dsmsite/pages/components/checkbox/Checkbox'
 import CardsPage from './dsmsite/pages/components/cards/Cards'
 import VideoComponentsPage from './dsmsite/pages/components/video/Video'
+import CodeBlockPage from './dsmsite/pages/components/code/CodeBlock'
 
 import Spacings from './dsmsite/pages/designtokens/spacings/Spacings'
 
@@ -134,6 +135,7 @@ function App() {
             <Route path="/components/checkbox" element={<CheckboxPage />} />
             <Route path="/components/cards" element={<CardsPage />} />
             <Route path="/components/video" element={<VideoComponentsPage />} />
+            <Route path="/components/code" element={<CodeBlockPage />} />
 
             <Route path="/guidelines/colors" element={<Colors />} />
             <Route path="/guidelines/typography" element={<TypographyGuidelines />} />

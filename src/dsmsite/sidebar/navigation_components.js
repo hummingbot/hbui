@@ -54,6 +54,10 @@ const video = {
   link: '/components/video',
   title: 'Video',
 }
+const code = {
+  link: '/components/code',
+  title: 'Code',
+}
 
 const links =  [
   breadcrumbs,
@@ -62,6 +66,7 @@ const links =  [
   cards,
   checkbox,
   chip,
+  code,
   combobox,
   externallinkbutton,
   input,
