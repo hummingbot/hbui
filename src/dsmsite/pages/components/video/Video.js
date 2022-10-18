@@ -2,8 +2,8 @@ import React from 'react'
 import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
 import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
 import { H4, P, Bold } from '../../../../../hbui/elements/typography'
-import { Video } from '../../../../../hbui/components/video/Video'
-import { VideoCard } from '../../../../../hbui/components/video/VideoCard'
+import Video from '../../../../../hbui/components/video/Video'
+import VideoCard from '../../../../../hbui/components/video/VideoCard'
 
 function VideoPage() {
   return (
@@ -42,7 +42,7 @@ function VideoPage() {
 
 export default VideoPage
 
-const videoCardCode = String.raw`import { VideoCard } from '@hummingbot/hbui/components/video/VideoCard'
+const videoCardCode = String.raw`import VideoCard from '@hummingbot/hbui/components/video/VideoCard'
 
 <VideoCard
   videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo' // must be EMBED url
@@ -51,7 +51,7 @@ const videoCardCode = String.raw`import { VideoCard } from '@hummingbot/hbui/com
 />
 `
 
-const videoStandaloneCode = String.raw`import { Video } from '@hummingbot/hbui/components/video/Video'
+const videoStandaloneCode = String.raw`import Video from '@hummingbot/hbui/components/video/Video'
 
 <Video
   videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo' // must be EMBED url

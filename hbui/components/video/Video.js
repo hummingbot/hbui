@@ -2,7 +2,7 @@ import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { H6, P } from '@hummingbot/hbui/elements/typography'
 
-export function Video({
+function Video({
   videoEmbedSrc,
   ...props
   }) {
@@ -19,6 +19,8 @@ export function Video({
     />
   )
 }
+
+export default Video
 
 const VideoRoot = styled.div(() => [
   tw`bg-window border border-window hover:(border-green text-green) dark:(hover:(border-terminal text-terminal))`,

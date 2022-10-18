@@ -2,7 +2,7 @@ import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { H6, P } from '@hummingbot/hbui/elements/typography'
 
-export function VideoCard({
+function VideoCard({
   videoEmbedSrc,
   title,
   description,
@@ -33,6 +33,8 @@ export function VideoCard({
     </VideoRoot>
   )
 }
+
+export default VideoCard
 
 const VideoRoot = styled.div(() => [
   tw`bg-window border border-window hover:(border-green text-green) dark:(hover:(border-terminal text-terminal))`,
