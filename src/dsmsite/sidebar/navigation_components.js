@@ -50,21 +50,26 @@ const switchPage = {
   link: '/components/switch',
   title: 'Switch',
 }
+const video = {
+  link: '/components/video',
+  title: 'Video',
+}
 
 const links =  [
-  button,
-  externallinkbutton,
-  chip,
-  cards,
-  input,
-  spinner,
-  callout,
-  snackbar,
-  navbar,
   breadcrumbs,
-  combobox,
+  button,
+  callout,
+  cards,
   checkbox,
+  chip,
+  combobox,
+  externallinkbutton,
+  input,
+  navbar,
+  snackbar,
+  spinner,
   switchPage,
+  video,
 ]
 
 export default links
