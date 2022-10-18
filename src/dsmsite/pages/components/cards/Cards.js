@@ -6,8 +6,6 @@ import { CardA } from '../../../../../hbui/components/cards/CardA'
 import { CardB } from '../../../../../hbui/components/cards/CardB'
 import { CardC } from '../../../../../hbui/components/cards/CardC'
 import { Link } from 'react-router-dom'
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 function CardsPage() {
   return (
