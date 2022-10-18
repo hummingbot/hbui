@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageRoot, ShortHero, MainContent } from '../../../ui/elements/layout'
-import CodeBlock from '../../../ui/components/CodeBlock'
-import { H4, P } from '../../../../../hbui/elements/typography'
+import CodeBlock from '../../../../../hbui/components/code/CodeBlock'
+import { H4, P, Bold } from '../../../../../hbui/elements/typography'
 import { Video } from '../../../../../hbui/components/video/Video'
 import { VideoCard } from '../../../../../hbui/components/video/VideoCard'
 
@@ -14,7 +14,7 @@ function VideoPage() {
       />
       <MainContent>
         <H4>Video Card</H4>
-        <P>Video component in Card style</P>
+        <P>Video component in Card style. Both <Bold>title</Bold> and <Bold>description</Bold> props are optional. If you only pass the videoEmbedSrc prop, the video will still keep a smooth card style.</P>
         <br />
         <VideoCard
           videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo'
@@ -45,7 +45,7 @@ export default VideoPage
 const videoCardCode = String.raw`import { VideoCard } from '@hummingbot/hbui/components/video/VideoCard'
 
 <VideoCard
-  videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo'
+  videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo' // must be EMBED url
   title="Test"
   descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
 />
@@ -54,6 +54,6 @@ const videoCardCode = String.raw`import { VideoCard } from '@hummingbot/hbui/com
 const videoStandaloneCode = String.raw`import { Video } from '@hummingbot/hbui/components/video/Video'
 
 <Video
-  videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo'
+  videoEmbedSrc='https://www.youtube.com/embed/T3AuplcGNyo' // must be EMBED url
 />
 `
