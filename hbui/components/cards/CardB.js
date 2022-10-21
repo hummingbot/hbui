@@ -13,6 +13,19 @@ export function CardB({
   linkClass,
   ...props
   }) {
+  if(!linkURL) {
+    return (
+      <HoverlessRoot {...props}>
+        { iconElement && <div tw='mb-xs'>{iconElement}</div> }
+        {headerText &&
+          <HeaderSection>
+            <Header isBold>{headerText}</Header>
+          </HeaderSection>
+        }
+        {descriptionText && <Description>{descriptionText}</Description>}
+      </HoverlessRoot>
+    )
+  }
   let LinkClass
   let LinkElement = ExternalA
   if (!external) {
@@ -36,6 +49,11 @@ const ExternalA = styled.a(() => [])
 
 const Root = styled.div(() => [
   tw`bg-window border border-window hover:(border-green text-green) dark:(hover:(border-terminal text-terminal)) p-xxs lg:p-xs xl:p-sm rounded-[8px]`,
+])
+
+
+const HoverlessRoot = styled.div(() => [
+  tw`bg-window border border-window p-xxs lg:p-xs xl:p-sm rounded-[8px]`,
 ])
 
 const HeaderSection = styled.div(() => [
