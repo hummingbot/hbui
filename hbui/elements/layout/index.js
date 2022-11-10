@@ -91,9 +91,5 @@ export const SeparatorWindow = styled(SeparatorBase)(props => [
 ])
 
 export const Window = styled.div(({}) => [
-  tw`bg-window py-sm px-md shadow rounded`,
-  css`
-    margin: 0 auto;
-    max-width: 696px;
-  `,
+  tw`bg-window py-sm px-md rounded border border-window`,
 ])
