@@ -17,17 +17,19 @@ function NavBar({
   linkCTA,
   bgColor,
   linkClass,
-  logo='hummingbot',
+  customLogoSVG,
+  logo,
   position='fixed',
+  containerVariant='regular',
   ...props
   }) {
   
   const [mobileOpen, setMobileOpen] = useState(false);
   const LinkClass = linkClass
-  const processLink = (link, index) => {
+  const processLink = (link) => {
     if (!link.subLinks) {
       return (
-        <FirstLevelItem key={'firstlevel-link-' + index}>
+        <FirstLevelItem key={link.url}>
           <NavItem>
             <LinkClass to={link.url}>
               <NavP>{link.label}</NavP>
@@ -38,15 +40,15 @@ function NavBar({
     }
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={'firstlevel-link-' + index}>
+      <FirstLevelItem key={link.url}>
         <LinkGroup>
           <NavP tw='relative top-[-1px]'>{link.label}</NavP>
           <Links className='links'>
             {
-              link.subLinks.map((subLink, indexB) => {
+              link.subLinks.map(subLink => {
                 let ItemClass = subLink.external ? NavA : LinkClass
                 return (
-                  <NavItem key={'secondlevel-link-' + String(index) + String(indexB)}>
+                  <NavItem key={subLink.label}>
                     <ItemClass to={subLink.url} href={subLink.url} target='_blank' rel="noreferrer">
                       <NavP>{subLink.label}</NavP>
                       {subLink.external && <ExternalLinkIcon />}
@@ -61,10 +63,10 @@ function NavBar({
     )
   }
 
-  const processMobileLink = (link, index) => {
+  const processMobileLink = (link) => {
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={'mobile-firstlevel-link-' + index}>
+      <FirstLevelItem key={link.url}>
         {!link.subLinks ?
           <LinkClass to={link.url}>
             <NavMobileH4 onClick={() => setMobileOpen(false)}>{link.label}</NavMobileH4>
@@ -74,11 +76,11 @@ function NavBar({
             <NavMobileH4 tw='opacity-50'>{link.label}</NavMobileH4>
             <div tw='pl-xs'>
               {
-                link.subLinks.map((subLink, indexB) => {
+                link.subLinks.map(subLink => {
                   let ItemClass = subLink.external ? NavA : LinkClass
                   return (
                     <ItemClass
-                      key={'mobile-secondlevel-link' + String(index) + String(indexB)}
+                      key={subLink.label}
                       style={{display: 'flex', alignItems: 'center'}}
                       to={subLink.url}
                       href={subLink.url}
@@ -117,71 +119,71 @@ function NavBar({
     )
   }
 
+  const processLogo = () => {
+    if (customLogoSVG) {
+      return customLogoSVG
+    }
+    if (logo && logo === 'hummingbot') { return <HummingbotLogo />}
+    if (logo && logo === 'coinalpha') { return <CoinAlphaLogo />}
+    // fallback to Hummingbot logo
+    return <HummingbotLogo />
+  }
+
   const showMobileNav = () => {
     return (
-      <MobileNavRoot style={{zIndex: '99999', height: '100vh', overflowY: 'scroll'}}>
+      <MobileNavRoot style={{zIndex: '99999'}}>
         <CloseIcon
-          tw='absolute cursor-pointer top-[10px] right-[8px]'
+          tw='absolute cursor-pointer top-[10px] right-[12px]'
           onClick={() => setMobileOpen(false)}
         />
         <div tw='flex items-center'>
-          { logo === 'hummingbot' && <HummingbotLogo /> }
-          { logo === 'coinalpha' && <CoinAlphaLogo /> }
+          { processLogo() }
           <NavMobileH4 tw='pl-xxs font-medium leading-none'>{siteNameA} <span tw='ml-[4px] font-thin'>{siteNameB}</span></NavMobileH4>
         </div>
         <br />
         <br />
-        {linksRight && linksRight.map((link, indexC) =>
-          {return processMobileLink(link, indexC)}
+        {linksRight && linksRight.map(link =>
+          {return processMobileLink(link)}
         )}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </MobileNavRoot>
     )
   }
 
   return (
     <NavBarRoot style={{backgroundColor: bgColor || 'transparent', position: position}}>
-      <LeftSide>
-        <LinkClass to='/'>
-          <LogoContainer>
-            { logo === 'hummingbot' && <HummingbotLogo /> }
-            { logo === 'coinalpha' && <CoinAlphaLogo /> }
-            <Body><Bold>{siteNameA}</Bold> {siteNameB}</Body>
-          </LogoContainer>
-        </LinkClass>
-        <LinksLeft>
-          {linksLeft && linksLeft.map((link, index) =>
-            {return processLink(link, index)}
-          )}
-        </LinksLeft>
-      </LeftSide>
-      <RightSide>
-        {showThemeToggle && <ThemeToggle style={{position: 'relative', top:'-2px'}} />}
-        {
-          linksRight && linksRight.map((link, indexB) =>
-            {return processLink(link, indexB)}
-          )
-        }
-        { userData &&
-          <Menu>
-            { userData.profileImage ?
-              <img src={userData.profileImage} alt={userData.name} />
-              :
-              <ProfileIcon />
-            }
-            <P>{userData.name}</P>
-            <TriangleDown />
-          </Menu>
-        }
-        { processCTA(linkCTA) }
-      </RightSide>
-      <HamburgerIcon onClick={() => setMobileOpen(!mobileOpen)} />
-      { mobileOpen && showMobileNav()}
+      <Container variant={containerVariant} tw='flex flex-row justify-between items-center'>
+        <LeftSide>
+          <LinkClass to='/'>
+            <LogoContainer>
+              { processLogo() }
+              <Body><Bold>{siteNameA}</Bold> {siteNameB}</Body>
+            </LogoContainer>
+          </LinkClass>
+          <LinksLeft>
+            {linksLeft && linksLeft.map(link =>
+              {return processLink(link)}
+            )}
+          </LinksLeft>
+        </LeftSide>
+        <RightSide>
+          {showThemeToggle && <ThemeToggle style={{position: 'relative', top:'-2px'}} />}
+          { linksRight && linksRight.map(link => {return processLink(link)}) }
+          { userData &&
+            <Menu>
+              { userData.profileImage ?
+                <img src={userData.profileImage} alt={userData.name} />
+                :
+                <ProfileIcon />
+              }
+              <P>{userData.name}</P>
+              <TriangleDown />
+            </Menu>
+          }
+          { processCTA(linkCTA) }
+        </RightSide>
+        <HamburgerIcon onClick={() => setMobileOpen(!mobileOpen)} />
+        { mobileOpen && showMobileNav()}
+      </Container>
     </NavBarRoot>
   )
 }
@@ -276,10 +278,10 @@ const FirstLevelItem = styled.div(() => [
   tw`mx-1.5`,
 ])
 
-const NavBarRoot = styled.div(({ isUppercase, isDisabled }) => [
-  tw`z-50 fixed top-0 left-0 flex w-full`,
-  tw`justify-between items-center`,
-  tw`py-2 px-2 md:px-4`,
+const NavBarRoot = styled(Section)(({ isUppercase, isDisabled }) => [
+  tw`z-50 fixed top-0 left-0`,
+  // tw`z-50 fixed top-0 left-0 flex w-full`,
+  // tw`py-2 px-2 md:px-4`,
   tw`border-b border-body`,
   css`
     height: 50px;
