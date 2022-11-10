@@ -33,7 +33,7 @@ const linkCTA = {
   label: 'CTA',
   url: 'https://www.google.com',
   external: true,
-  buttonStyle: 'success',
+  buttonVariant: 'success',
 }
 
 function NavBarPage() {

@@ -109,10 +109,7 @@ function NavBar({
       <CTALinkClass to={linkCTA.url} href={linkCTA.url} target='_blank' rel="noreferrer">
         <Button
           tw='ml-sm'
-          isSecondary={linkCTA.buttonStyle === 'secondary'}
-          isSuccess={linkCTA.buttonStyle === 'success'}
-          isInfo={linkCTA.buttonStyle === 'info'}
-          isTerminal={linkCTA.buttonStyle === 'terminal'}
+          variant={linkCTA && linkCTA.buttonVariant ? linkCTA.buttonVariant : 'success'}
         >
           {linkCTA.label}
         </Button>
