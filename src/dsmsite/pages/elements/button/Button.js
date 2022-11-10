@@ -35,37 +35,37 @@ function ButtonElement() {
         <br />
         <CodeGridComponent
           code={codeSecondary}
-          element={<Button isSecondary>Secondary</Button>}
+          element={<Button variant='secondary'>Secondary</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeSuccess}
-          element={<Button isSuccess>Success</Button>}
+          element={<Button variant='success'>Success</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeInfo}
-          element={<Button isInfo>Info</Button>}
+          element={<Button variant='info'>Info</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeWarning}
-          element={<Button isWarning>Warning</Button>}
+          element={<Button variant='warning'>Warning</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeDanger}
-          element={<Button isDanger>Danger</Button>}
+          element={<Button variant='danger'>Danger</Button>}
         />
         <br />
         <br />
         <CodeGridComponent
           code={codeTerminal}
-          element={<Button isTerminal>Terminal</Button>}
+          element={<Button variant='terminal'>Terminal</Button>}
         />
         <br />
         <br />
@@ -85,44 +85,44 @@ const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements
 
 const codeSecondary = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isSecondary>
+<Button variant='secondary'>
   Secondary
 </Button>
 `
 
 const codeSuccess = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isSuccess>
+<Button variant='success'>
   Success
 </Button>
 `
 
 const codeInfo = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isInfo>
+<Button variant='info'>
   Info
 </Button>
 `
 
 const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isWarning>
+<Button variant='warning'>
   Warning
 </Button>
 `
 
 const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isDanger>
+<Button variant='danger'>
   Danger
 </Button>
 `
 
-const codeTerminal = String.raw`// USE ONLY ON DARK MODE
+const codeTerminal = String.raw`// USE THIS VARIANT ONLY ON DARK MODE
 
 import { Button } from '@hummingbot/hbui/elements/buttons'
 
-<Button isTerminal>
+<Button variant='terminal'>
   Danger
 </Button>
 `

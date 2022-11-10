@@ -46,14 +46,9 @@ export const Button = styled.button(
         text-transform: uppercase;
       `,
     ],
-    // variantStyle(variant, isInfo, isSuccess, isWarning, isDanger),
-    defaultStyle,
-    isSecondary && secondaryStyle,
-    isSuccess && successStyle,
-    isInfo && infoStyle,
-    isWarning && warningStyle,
-    isDanger && dangerStyle,
-    isTerminal && terminalStyle,
+
+    ({ variant = 'default' }) => buttonVariants[variant],
+    
     isSmall && [tw`px-2 pt-[2px] pb-[1.5px] text-[13px]`],
     isTiny && [tw`px-1 pt-0 pb-0 text-[11px]`],
     isLarge && [tw`px-4 py-1.5 text-[16px]`],
@@ -103,3 +98,14 @@ const terminalStyle = [
   tw`bg-terminal hover:bg-transparent active:bg-transparent`,
   tw`border-terminal hover:border-terminal active:border-terminal`,
 ]
+
+
+const buttonVariants = {
+  default: defaultStyle,
+  secondary: secondaryStyle,
+  success: successStyle,
+  info: infoStyle,
+  warning: warningStyle,
+  danger: dangerStyle,
+  terminal: terminalStyle,
+}

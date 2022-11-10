@@ -4,7 +4,7 @@ import tw, { css, styled, theme } from 'twin.macro'
 import { H1, H3 } from '../../../hbui/elements/typography'
 import GlobalSwitcherIcon from './GlobalSwitcherIcon'
 import TriangleRight from './TriangleRight'
-import { P } from '../../../hbui/elements/typography'
+import { P, PSmall } from '../../../hbui/elements/typography'
 import navigation from './navigation'
 
 import ThemeToggle from '../../../hbui/system/ThemeToggle'
@@ -16,8 +16,9 @@ function DSMSidebar() {
     <Sidebar>
       <PaddingBox>
         <SidebarBrand>
-          {/*<GlobalSwitcherIcon />*/}
-          <P isMedium tw='text-primary dark:text-terminal'>HBUI DS 1.4.0</P>
+          <P isMedium tw='pb-sm text-primary dark:text-terminal'>HBUI</P>
+          <PSmall tw='text-secondary'>The Hummingbot Design System</PSmall>
+          <PSmall tw='text-secondary'>v1.5.0</PSmall>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />
@@ -75,8 +76,6 @@ const PaddingBox = styled.div({
 })
 
 const SidebarBrand = styled.div({
-  display: 'flex',
-  alignItems: 'center',
   width: '100%',
   marginBottom: '30px',
   '& p': {

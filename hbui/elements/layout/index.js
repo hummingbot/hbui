@@ -10,11 +10,17 @@ export const Section = styled.div(() => [
   tw`w-full`,
 ])
 
+const containerVariants = {
+  short: tw`w-[calc(100% - 40px)] md:w-11/12 max-w-[1022px]`,
+  large: tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-[1440px]`,
+  full: tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-[calc(100% - 60px)]`,
+}
+
 export const Container = styled.div(() => [
   css`
     align-self: center;
   `,
-  tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-10/12 2xl:w-[1440px]`,
+  ({ variant = 'large' }) => containerVariants[variant]
 ])
 
 export const ContainerRow = styled(Container)`

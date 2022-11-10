@@ -1,6 +1,6 @@
 {
   "name": "HBUI_DS",
-  "version": "1.4.3",
+  "version": "1.5.0",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"
@@ -15,7 +15,8 @@
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
     "@emotion/react": "^11.9.0",
-    "@hummingbot/hbui": "^1.1.9",
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "v1",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",

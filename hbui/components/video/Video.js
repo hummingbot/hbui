@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { H6, P } from '@hummingbot/hbui/elements/typography'
+import { H6, P } from '../../elements/typography'
 
 function Video({
   videoEmbedSrc,
