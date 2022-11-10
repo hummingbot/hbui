@@ -62,6 +62,7 @@ function NavBarPage() {
           linksRight={linksRight}
           linkCTA={linkCTA}
           position='relative'
+          containerVariant='full'
         />
         <br />
         <br />
@@ -80,6 +81,10 @@ function NavBarPage() {
         <P><Bold>linkClass:</Bold> (class) The Link component of your particular project type (see "important note" below).</P>
         <br />
         <P><Bold>position:</Bold> (string) (default: "fixed") CSS position for the NavBar root. If a value other than "fixed" is needed in your case, pass "relative" or "absolute" accordingly.</P>
+        <br />
+        <P><Bold>customLogoSVG:</Bold> (SVG component) (default: "null") Provide an SVG component to display as a custom logo.</P>
+        <br />
+        <P><Bold>containerVariant:</Bold> (string) ("short", "large", "full") to set the desired max-width of the content inside the navbar.</P>
         <br />
         <P><Bold>linksRight:</Bold> (array) Set of links to show in the left side. </P>
         <P tw='pl-sm'>Array should contain a sequence of objects with the following properties:</P>
@@ -150,7 +155,9 @@ return (
     linksLeft={linksLeft}
     linksRight={linksRight}
     linkCTA={linkCTA}
+    customLogoSVG={null}
     position='relative'
+    containerVariant='full'
   />
 )
 `

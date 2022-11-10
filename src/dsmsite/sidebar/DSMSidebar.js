@@ -18,7 +18,7 @@ function DSMSidebar() {
         <SidebarBrand>
           <P isMedium tw='pb-sm text-primary dark:text-terminal'>HBUI</P>
           <PSmall tw='text-secondary'>The Hummingbot Design System</PSmall>
-          <PSmall tw='text-secondary'>v1.5.1</PSmall>
+          <PSmall tw='text-secondary'>v1.5.2</PSmall>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />
