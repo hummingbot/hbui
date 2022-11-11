@@ -54,9 +54,14 @@ function Home() {
           </a>
         </P>
         <P>
-          <a href='https://github.com/CoinAlpha/dsm_boilerplate' target='_blank' rel="noreferrer">
-          Boilerplate project
+          <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
+          CRA Boilerplate project
           </a> (Boilerplate React app - based on CreateReactApp)
+        </P>
+        <P>
+          <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
+          Gatsby Boilerplate project
+          </a> (Boilerplate Gatsby app)
         </P>
         <P>
           <a href='https://github.com/CoinAlpha/dsm' target='_blank' rel="noreferrer">
