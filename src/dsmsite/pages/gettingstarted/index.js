@@ -7,7 +7,31 @@ function GettingStarted() {
     <PageRoot>
       <ShortHero title="Getting Started" />
       <MainContent>
-        <Body>First, you should become familiar with these libraries:</Body>
+        <br />
+        <Body isBold>Start with a Boilerplate project</Body>
+        <P>
+          Choose a project type:
+        </P>
+        <br />
+        <P>
+          <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
+            Create-React-App boilerplate project
+          </a>
+        </P>
+        <br />
+        <P>
+          <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
+            Gatsby boilerplate project
+          </a>
+        </P>
+        <br />
+        <P>
+          These boilerplate projects have the HBUI Design System pre-installed and everything already set up.
+          They contain 2 example pages and demonstrate the usage of typography, buttons and navigation.
+        </P>
+        <br />
+        <br />
+        <Body>You should become familiar with these libraries:</Body>
         <a href='https://github.com/ben-rogerson/twin.macro' target='_blank' rel="noreferrer">
           <P isUnderline>twin.macro</P>
         </a>
@@ -17,26 +41,6 @@ function GettingStarted() {
         <a href='https://styled-components.com/' target='_blank' rel="noreferrer">
           <P isUnderline>styled-components</P>
         </a>
-        <br />
-        <br />
-        <br />
-        <Body isBold>Start with a Boilerplate project</Body>
-        <P>
-          This is the easiest way to get started.
-        </P>
-        <br />
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
-          <P>Create-React-App boilerplate project</P>
-        </a>
-        <br />
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
-          <P>Gatsby boilerplate project</P>
-        </a>
-        <br />
-        <P>
-          These boilerplate projects have the HBUI Design System pre-installed and everything already set up.
-          They contain 2 example pages and demonstrate the usage of typography, buttons and navigation.
-        </P>
         <br />
         <br />
       </MainContent>
