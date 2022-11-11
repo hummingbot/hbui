@@ -25,13 +25,13 @@ function GettingStarted() {
           This is the easiest way to get started.
         </P>
         <br />
-        <P>
-          Create-React-App boilerplate project: <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer"></a>
-        </P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
+          <P>Create-React-App boilerplate project</P>
+        </a>
         <br />
-        <P>
-          Gatsby boilerplate project: <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer"></a>
-        </P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
+          <P>Gatsby boilerplate project</P>
+        </a>
         <br />
         <P>
           These boilerplate projects have the HBUI Design System pre-installed and everything already set up.
