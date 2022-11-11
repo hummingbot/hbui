@@ -11,3 +11,5 @@ const HeroBlock = ({ children, containerVariant='large', ...props }) => {
     </Section>
   )
 }
+
+export default HeroBlock
