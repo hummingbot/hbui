@@ -1,7 +1,6 @@
 import React from 'react'
 import { Body, P } from '../../../../hbui/elements/typography'
 import { PageRoot, ShortHero, MainContent } from '../../ui/elements/layout'
-import CodeBlock from '../../../../hbui/components/code/CodeBlock'
 
 function GettingStarted() {
   return (
@@ -21,53 +20,24 @@ function GettingStarted() {
         <br />
         <br />
         <br />
-        <Body>Two suggestions to get started:</Body>
-        <Body isBold>Option 1: Boilerplate project</Body>
+        <Body isBold>Start with a Boilerplate project</Body>
         <P>
           This is the easiest way to get started.
         </P>
         <br />
         <P>
-          Clone the boilerplate project and start from there: <a href='https://github.com/CoinAlpha/dsm_boilerplate' target='_blank' rel="noreferrer">
-          Boilerplate project on Github
-          </a>
+          Create-React-App boilerplate project: <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer"></a>
         </P>
         <br />
         <P>
-          The boilerplate project is a React app (based on CreateReactApp) with
-          the HBUI NPM module pre-installed and everything already set up. The
-          project contains 2 example pages and demo usage of typography.
-        </P>
-        <br />
-        <br />
-        <Body isBold>Option 2: Manual install</Body>
-        <P>
-          Import the NPM module into your React project:
-        </P>
-        <br />
-        <CodeBlock code={codeImport} />
-        <br />
-        <P>
-          Create a file in the root of your project named <span tw='font-bold'>tailwind.config.js</span> with the following content:
-        </P>
-        <br />
-        <CodeBlock code={codeConfig} />
-        <br />
-        <P>
-          Wrap your <span tw='font-bold'>App</span> in the <span tw='font-bold'>ThemeProvider</span> such as in this example:
+          Gatsby boilerplate project: <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer"></a>
         </P>
         <br />
         <P>
-          (make sure the import paths match the file structure of your app)
+          These boilerplate projects have the HBUI Design System pre-installed and everything already set up.
+          They contain 2 example pages and demonstrate the usage of typography, buttons and navigation.
         </P>
         <br />
-        <CodeBlock code={codeThemeProvider} />
-        <br />
-        <P>
-          Finally, depending on the structure of your project you may need some babel setup, as in this example:
-        </P>
-        <br />
-        <CodeBlock code={codeBabel} />
         <br />
       </MainContent>
     </PageRoot>
@@ -75,34 +45,3 @@ function GettingStarted() {
 }
 
 export default GettingStarted
-
-
-const codeImport = String.raw`yarn add @hummingbot/hbui@latest`
-const codeConfig = String.raw`module.exports = require('./node_modules/@hummingbot/hbui/system/tailwind.config.js')`
-const codeThemeProvider = String.raw`import { createRoot } from 'react-dom/client'
-import App from './App'
-import { ThemeProvider } from './node_modules/@hummingbot/hbui/system/ThemeContext'
-
-const container = document.getElementById('root')
-const root = createRoot(container);
-root.render(
-  <ThemeProvider>
-    <App />
-  </ThemeProvider>
-)`
-const codeBabel = String.raw`{
-  "presets": [
-    [
-      "@babel/preset-react",
-      {
-        "runtime": "automatic"
-      }
-    ],
-    "@babel/preset-typescript"
-  ],
-  "plugins": [
-    "babel-plugin-twin",
-    "babel-plugin-macros",
-    "babel-plugin-styled-components"
-  ]
-}`
