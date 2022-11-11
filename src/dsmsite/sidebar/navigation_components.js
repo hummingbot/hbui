@@ -10,6 +10,10 @@ const chip = {
   link: '/components/chip',
   title: 'Chip',
 }
+const hero = {
+  link: '/components/hero',
+  title: 'Hero',
+}
 const cards = {
   link: '/components/cards',
   title: 'Cards',
@@ -69,6 +73,7 @@ const links =  [
   code,
   combobox,
   externallinkbutton,
+  hero,
   input,
   navbar,
   snackbar,

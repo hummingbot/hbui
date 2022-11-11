@@ -1,6 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
-import { Section, Container} from '@hummingbot/hbui/elements/layout'
+import { Section, Container} from '../../elements/layout'
 
 const HeroBlock = ({ children, containerVariant='large', ...props }) => {
   return (
