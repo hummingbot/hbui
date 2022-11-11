@@ -1,7 +1,5 @@
 ## HBUI Design System
 
-WIP! Contributions are welcome.
-
 Project based on:
 - Twin.macro
 - Styled-components
