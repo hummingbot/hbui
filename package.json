@@ -16,7 +16,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test_publish": "cd npm_module && npm publish && cd ..",
-    "build_module_and_publish": "yarn && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm publish && cd ..",
+    "build_module_and_publish": "npm version patch && yarn && specify pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version patch && npm publish && cd ..",
     "build_module_ls": "yarn && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm publish && cd ..",
     "pack_categories": "yarn packcomponents && yarn packelements && yarn packconstants && yarn packsystem && yarn packtokens && yarn packassets",
     "packindex": "babel ./hbui/index.js --out-file ./npm_module/_dist/index.js",
