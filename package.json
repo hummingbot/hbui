@@ -2,7 +2,7 @@
   "name": "HBUI_DS",
   "description": "HBUI library - The Hummingbot Design System",
   "homepage": "https://github.com/CoinAlpha/hbui",
-  "version": "1.6.13",
+  "version": "1.6.14",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"
@@ -17,7 +17,8 @@
     "clean": "gatsby clean",
     "test": "echo $npm_package_version",
     "testa": "git commit -m 'Update NPM module to '$npm_package_version",
-    "build_module_and_publish_patch": "npm version --no-git-tag-version patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-git-tag-version patch && npm publish && cd .. && git add . && git commit -m 'Update NPM module to '$npm_package_version && git push origin master",
+    "build_module_and_publish_patch": "npm version --no-git-tag-version patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-git-tag-version patch && npm publish",
+    "save": "git add . && git commit -m 'Update NPM module to '$npm_package_version && git push origin master",
     "build_module_and_publish_minor": "npm version --no-git-tag-version minor && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-git-tag-version minor && npm publish && cd .. && git add . && git commit -m 'Update NPM module to '$npm_package_version && git push origin master",
     "build_module_and_publish_major": "npm version --no-git-tag-version major && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-git-tag-version major && npm publish && cd .. && git add . && git commit -m 'Update NPM module to '$npm_package_version && git push origin master",
     "pack_categories": "yarn packcomponents && yarn packelements && yarn packconstants && yarn packsystem && yarn packtokens && yarn packassets",
