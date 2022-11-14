@@ -4,7 +4,7 @@
   "rules": [
     {
       "name": "Design Tokens",
-      "path": "hbui/tokens/index.js",
+      "path": "npm_module/tokens/index.js",
       "parsers": [
         {
 				  "name": "to-tailwind",
@@ -12,7 +12,7 @@
 				  	"formatName": "kebabCase",
 				    "formatTokens": {
 				      "colorFormat": {
-				        "format": "hex8"
+				        "format": "hex"
 				      },
 				      "fontSizeFormat": {
 				        "unit": "rem"

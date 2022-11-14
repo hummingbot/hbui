@@ -1,5 +1,6 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
+import { Link } from 'gatsby'
 import tw, { css, styled } from 'twin.macro'
 
 const Chip = ({ to, label, isUppercase, isDisabled, ...props }) => {
@@ -31,7 +32,7 @@ const ChipRoot = styled.span(({ isUppercase, isDisabled }) => [
   isDisabled && [tw`pointer-events-none opacity-30`],
 ])
 
-const ChipElement = styled(NavLink)(({}) => [
+const ChipElement = styled(Link)(({}) => [
   tw`flex`,
   tw`transition duration-100`,
   tw`px-2 rounded focus:outline-none`,

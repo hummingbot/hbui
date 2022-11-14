@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'gatsby'
 import tw, { css, styled } from 'twin.macro'
 
 const TextLink = ({ to, label, isDisabled, ...props }) => {
@@ -12,7 +12,7 @@ const TextLink = ({ to, label, isDisabled, ...props }) => {
 
 export default TextLink
 
-const TextLinkElement = styled(NavLink)(({}) => [
+const TextLinkElement = styled(Link)(({}) => [
   tw`flex`,
   tw`transition duration-100`,
   tw`focus:outline-none`,

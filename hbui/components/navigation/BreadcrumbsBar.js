@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { Link, NavLink, useLocation, useHistory } from 'react-router-dom'
+import { Link, NavLink, useLocation, useHistory } from 'gatsby'
 import { P, Body, H6, Bold } from '../../elements/typography'
 import { ItemsRow } from '../../elements/layout'
 import { Button } from '../../elements/buttons'
@@ -17,7 +17,7 @@ function BreadcrumbsBar({links, buttons, history}) {
          {
           links.map((link, index) => {
             return(
-              <span key={link.url} tw='flex items-center'>
+              <span key={link.url + index} tw='flex items-center'>
                 { index !== 0 && <P className='divider'>/</P> }
                 <TextLink to={link.url} label={link.label} />
               </span>
@@ -30,9 +30,9 @@ function BreadcrumbsBar({links, buttons, history}) {
         <div style={{margin: '0 auto', width: '696px'}}>
           <ItemsRow>
             {
-              buttons.map(button => {
+              buttons.map((button, index) => {
               return(
-                <Link key={button.url} to={button.url}>
+                <Link key={button.url + index} to={button.url}>
                   {button.url === history.pathname ?
                     <Button isSuccess isSmall>
                       {button.label}

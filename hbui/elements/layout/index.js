@@ -23,6 +23,13 @@ export const Container = styled.div(() => [
   ({ variant = 'large' }) => containerVariants[variant]
 ])
 
+export const ContainerSB = styled.div(() => [
+  css`
+    align-self: center;
+  `,
+  tw`w-[calc(100% - 40px)] md:w-11/12 xl:w-[1024px] 2xl:w-[1280px]`
+])
+
 export const ContainerRow = styled(Container)`
   display: flex;
 `

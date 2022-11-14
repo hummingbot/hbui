@@ -30,7 +30,7 @@ function NavBar({
   const processLink = (link) => {
     if (!link.subLinks) {
       return (
-        <FirstLevelItem key={link.url}>
+        <FirstLevelItem key={link.url + link.label}>
           <NavItem>
             <LinkClass to={link.url}>
               <NavP>{link.label}</NavP>
@@ -41,7 +41,7 @@ function NavBar({
     }
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={link.url}>
+      <FirstLevelItem key={link.url + link.label}>
         <LinkGroup>
           <NavP tw='relative top-[-1px]'>{link.label}</NavP>
           <Links className='links'>
@@ -67,7 +67,7 @@ function NavBar({
   const processMobileLink = (link) => {
     // following code executes if link has property "subLinks"
     return (
-      <FirstLevelItem key={link.url}>
+      <FirstLevelItem key={link.url + link.label}>
         {!link.subLinks ?
           <LinkClass to={link.url}>
             <NavMobileH4 onClick={() => setMobileOpen(false)}>{link.label}</NavMobileH4>
@@ -81,7 +81,7 @@ function NavBar({
                   let ItemClass = subLink.external ? NavA : LinkClass
                   return (
                     <ItemClass
-                      key={subLink.label}
+                      key={subLink.url + subLink.label}
                       style={{display: 'flex', alignItems: 'center'}}
                       to={subLink.url}
                       href={subLink.url}
