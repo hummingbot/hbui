@@ -1,6 +1,6 @@
 {
   "name": "@hummingbot/hbui",
-  "version": "1.6.9",
+  "version": "1.6.11",
   "author": "Hummingbot Design Team",
   "exports": {
     ".": "./_dist/index.js",
