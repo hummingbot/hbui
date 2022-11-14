@@ -2,7 +2,7 @@
   "name": "HBUI_DS",
   "description": "HBUI library - The Hummingbot Design System",
   "homepage": "https://github.com/CoinAlpha/hbui",
-  "version": "1.6.5",
+  "version": "1.6.4",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"
@@ -15,7 +15,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build_module_and_publish": "npm version patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version patch && npm publish && cd ..",
+    "build_module_and_publish": "npm version patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version patch && npm publish",
     "pack_categories": "yarn packcomponents && yarn packelements && yarn packconstants && yarn packsystem && yarn packtokens && yarn packassets",
     "packindex": "babel ./hbui/index.js --out-file ./npm_module/_dist/index.js",
     "packelements": "babel ./hbui/elements/**/**/**/** -d ./npm_module/_dist/elements && rm ./npm_module/_dist/elements/*.*",
