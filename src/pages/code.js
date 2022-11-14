@@ -57,7 +57,7 @@ const Code = () => (
       <div style={{fontSize: '50px'}}>💅</div>
       <P>
         <a href='https://styled-components.com/' target='_blank' rel="noreferrer"><Bold>styled-components</Bold></a> is the most popular css-in-js library
-        available, with a large community and 100% complete feature set.
+        available, with a large community and a complete feature set.
       </P>
       <br />
       <br />
