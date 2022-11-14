@@ -15,7 +15,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "build_module_and_publish": "npm version --no-commit-hooks patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-commit-hooks patch && npm publish",
+    "build_module_and_publish": "npm version --no-git-tag-version patch && yarn && yarn pull-tokens && rm -rf ./npm_module/_dist && yarn packindex && yarn pack_categories && cd npm_module && npm version --no-git-tag-version patch && npm publish",
     "pack_categories": "yarn packcomponents && yarn packelements && yarn packconstants && yarn packsystem && yarn packtokens && yarn packassets",
     "packindex": "babel ./hbui/index.js --out-file ./npm_module/_dist/index.js",
     "packelements": "babel ./hbui/elements/**/**/**/** -d ./npm_module/_dist/elements && rm ./npm_module/_dist/elements/*.*",
