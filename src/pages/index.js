@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../components/layout'
 import { MainContent } from '../components/elements/layout'
 import { Container } from '../../hbui/elements/layout'
-import { H1, Body, P } from '../../hbui/elements/typography'
+import { H1, Body, P, H4 } from '../../hbui/elements/typography'
 import { Button } from '../../hbui/elements/buttons'
 import Hero from '../../hbui/components/hero/Hero'
 
@@ -12,7 +12,7 @@ const IndexPage = () => (
   <Layout>
     <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
       <H1 isHeavy tw='text-green dark:text-terminal'>HBUI</H1>
-      <P>The Hummingbot Design System</P>
+      <H4>The Hummingbot Design System</H4>
     </Hero>
     <MainContent>
       <Body>Welcome to the Hummingbot Design System</Body>
@@ -41,7 +41,7 @@ const IndexPage = () => (
       <br />
       <P>
         5. By using this NPM module, we achieve the goal of standardising
-        the visual language across all Hummingbot and Hummingbot projects.
+        the visual language across all Hummingbot and CoinAlpha projects.
       </P>
       <br />
       <P>
