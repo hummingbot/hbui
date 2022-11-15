@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 import tw, { styled, css } from 'twin.macro'
 import {
   LabelSmall,
 } from '../../elements/typography'
 
-function MenuDropdown({links, side='right', type='kebab', ...props}) {
+function MenuDropdown({links, linkClass, side='right', type='kebab', ...props}) {
+  const LinkClass = linkClass
   return (
     <KebabMenuRoot {...props}>
       {type === 'kebab' && <KebabControl /> }
@@ -13,9 +13,9 @@ function MenuDropdown({links, side='right', type='kebab', ...props}) {
       <KebabMenuContent className='kebab-menu-content' side={side}>
         {links.map(link => {
           return (
-            <Link to={link.to} key={link.label}>
+            <LinkClass to={link.to} href={link.to} key={link.label}>
               <KebabMenuItem>{link.label}</KebabMenuItem>
-            </Link>
+            </LinkClass>
           )
         })}
       </KebabMenuContent>

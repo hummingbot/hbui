@@ -12,7 +12,7 @@ import {
   MainContentSidebar,
 } from '../../components/elements/layout'
 import PageIndex from '../../components/PageIndex'
-import { Button } from '../../../hbui/components/button'
+import { Button } from '../../../hbui/components/buttons'
 import Copy from '../../../hbui/assets/svgs/16x16/Copy'
 
 const Colors = () => (

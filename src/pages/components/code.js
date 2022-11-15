@@ -32,15 +32,13 @@ function CodeBlockPage() {
 
 export default CodeBlockPage
 
-const codeblockCode = "import CodeBlock from '@hummingbot/hbui/components/code/CodeBlock'" + "\n" +
+const codeblockCode = `import CodeBlock from '@hummingbot/hbui/components/code/CodeBlock'\n
+// declare the code to pass to the component using String.raw:
+const myCodeContent = String.raw\`<CodeBlock
+  code={myCodeContent}
+/>\`
 
-"" + "\n" +
-"// declare the code to pass to the component using String.raw:" + "\n" +
-"const myCodeContent = String.raw`<CodeBlock" + "\n" +
-"  code={myCodeContent}" + "\n" +
-"/>`" + "\n" +
-"" + "\n" +
-"// pass it as a prop to the component:" + "\n" +
-"<CodeBlock" + "\n" +
-"  code={myCodeContent}" + "\n" +
-"/>"
+// pass it as a prop to the component:
+<CodeBlock
+  code={myCodeContent}
+/>`

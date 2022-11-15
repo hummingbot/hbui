@@ -1,6 +1,4 @@
-import React from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { greyscale_light_300 } from '../../constants/colors'
 
 export const Section = styled.div(() => [
   css`
@@ -97,6 +95,6 @@ export const SeparatorWindow = styled(SeparatorBase)(props => [
   tw`border-window`,
 ])
 
-export const Window = styled.div(({}) => [
+export const Window = styled.div(() => [
   tw`bg-window py-sm px-md rounded border border-window`,
 ])

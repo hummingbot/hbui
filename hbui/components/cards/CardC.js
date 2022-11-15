@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import tw, { css, styled, theme } from 'twin.macro'
+import React from 'react'
+import tw, { css, styled } from 'twin.macro'
 import { H6, P } from '../../elements/typography'
-import { ExternalLinkIcon } from '../button'
+import { ExternalLinkIcon } from '../buttons'
 
 export function CardC({
   iconElement,
@@ -32,7 +31,6 @@ export function CardC({
       </HoverlessRoot>
     )
   }
-  let LinkClass
   let LinkElement = ExternalA
   if (!external) {
     LinkElement = linkClass

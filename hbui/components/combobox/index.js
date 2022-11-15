@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { Combobox, Transition } from '@headlessui/react'
+import { Combobox } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
-import tw, { css } from 'twin.macro'
+import tw from 'twin.macro'
 
 export default function ComboBox({items, selected, setSelected, ...props}) {
   const [query, setQuery] = useState('')

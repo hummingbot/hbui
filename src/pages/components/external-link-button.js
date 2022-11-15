@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import { ShortHero, MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { Body, P } from '../../../hbui/elements/typography'
-import { ExternalLinkButton as ExternalLinkButtonComponent } from '../../../hbui/components/button'
+import { ExternalLinkButton as ExternalLinkButtonComponent } from '../../../hbui/components/buttons'
 import Layout from '../../components/layout'
 
 const ExternalLinkButton = () => (
@@ -30,7 +30,7 @@ const ExternalLinkButton = () => (
 
 export default ExternalLinkButton
 
-const codeWithIconBefore = String.raw`import { ExternalLinkButton } from '@hummingbot/hbui/components/button'
+const codeWithIconBefore = String.raw`import { ExternalLinkButton } from '@hummingbot/hbui/components/buttons'
 
 <ExternalLinkButton
   label="External Link Button"

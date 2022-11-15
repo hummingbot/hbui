@@ -1,4 +1,4 @@
-import tw, { styled, css } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import React from 'react'
 
 function Checkbox({active, partial, disabled, ...props}) {

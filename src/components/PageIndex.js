@@ -1,5 +1,5 @@
 import React from 'react'
-import tw, { styled } from 'twin.macro'
+import { styled } from 'twin.macro'
 import { PSmall, LabelTiny } from '../../hbui/elements/typography'
 
 const PageIndex = ({ title, items }) => {

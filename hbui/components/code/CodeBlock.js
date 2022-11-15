@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';

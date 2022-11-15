@@ -1,11 +1,12 @@
-// /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent, PageRoot } from '../../components/elements/layout'
+import { ShortHero, MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { Body, Bold } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import {BreadcrumbsBar} from '../../../hbui/components/navigation'
+import { Link }from 'gatsby'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },
@@ -34,6 +35,7 @@ function BreadcrumbsPage() {
         <br />
         <BreadcrumbsBar
           links={breadcrumbLinks}
+          linkClass={Link}
         />
         <br />
         <br />

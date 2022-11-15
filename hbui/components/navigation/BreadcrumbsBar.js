@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { Link, NavLink, useLocation, useHistory } from 'gatsby'
-import { P, Body, H6, Bold } from '../../elements/typography'
+import { P, PSmall } from '../../elements/typography'
 import { ItemsRow } from '../../elements/layout'
 import { Button } from '../../elements/buttons'
 import HomeIcon from '../../assets/svgs/icons/Home'
-import TextLink from '../textlink'
 
-function BreadcrumbsBar({links, buttons, history}) {
+function BreadcrumbsBar({links, linkClass, buttons, history}) {
+  const LinkClass = linkClass
   return (
     <BreadcrumbsBarRoot>
       { links && <HomeIcon />}
@@ -19,7 +18,11 @@ function BreadcrumbsBar({links, buttons, history}) {
             return(
               <span key={link.url + index} tw='flex items-center'>
                 { index !== 0 && <P className='divider'>/</P> }
-                <TextLink to={link.url} label={link.label} />
+                <LinkClass to={link.url} href={link.url}>
+                  <TextLink>
+                    {link.label}
+                  </TextLink>
+                </LinkClass>
               </span>
             )
           })
@@ -32,7 +35,7 @@ function BreadcrumbsBar({links, buttons, history}) {
             {
               buttons.map((button, index) => {
               return(
-                <Link key={button.url + index} to={button.url}>
+                <LinkClass key={button.url + index} to={button.url} href={button.url}>
                   {button.url === history.pathname ?
                     <Button isSuccess isSmall>
                       {button.label}
@@ -42,7 +45,7 @@ function BreadcrumbsBar({links, buttons, history}) {
                       {button.label}
                     </Button>
                   }
-                </Link>
+                </LinkClass>
               )
             })
             }
@@ -78,10 +81,29 @@ const BreadcrumbsBarRoot = styled.div(({ isUppercase, isDisabled }) => [
   `,
 ])
 
-const LinksRow = styled.div(({}) => [
+const LinksRow = styled.div(() => [
   tw`flex items-center`,
 ])
 
+const TextLinkElement = styled(PSmall)(() => [
+  tw`flex`,
+  tw`transition duration-100`,
+  tw`focus:outline-none`,
+  tw`font-medium`,
+  tw`text-tertiary`,
+  css`
+    user-select: none;
+    cursor: pointer;
+  `,
+])
+
+const TextLink = ({ to, label, isDisabled, ...props }) => {
+  return (
+    <TextLinkElement to={to} className='text-link'>
+      {label}
+    </TextLinkElement>
+  )
+}
 
 function ChevronRight() {
   return (

@@ -61,7 +61,7 @@ const DownloadCard = ({title, updatedAt, downloadLink, image}) => {
           <H6 isMedium tw='mb-2'>{title}</H6>
           <P tw='text-tertiary'>Updated at {updatedAt}</P>
         </div>
-        <a href={downloadLink} target='_blank'><Button isPrimary>Download</Button></a>
+        <a href={downloadLink} target='_blank' rel='noreferrer'><Button isPrimary>Download</Button></a>
       </div>
     </DownloadCardElement>
   )

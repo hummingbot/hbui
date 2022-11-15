@@ -1,7 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import tw, { css, styled, theme } from 'twin.macro'
-import { Button as ButtonElement } from '../../elements/buttons'
+import tw, { css, styled } from 'twin.macro'
 import CheckIcon from '../../assets/svgs/notifications/CheckIcon'
 import WarningIcon from '../../assets/svgs/notifications/WarningIcon'
 import ErrorIcon from '../../assets/svgs/notifications/ErrorIcon'
@@ -107,36 +105,36 @@ const Root = styled.div(({ type }) => [
   `,
 ])
 
-const RootDefault = styled(Root)(({}) => [
+const RootDefault = styled(Root)(() => [
   tw`border-grey-light-scale-400 bg-grey-light-scale-200`,
   tw`dark:bg-grey-light-scale-100/5`,
 ])
 
-const RootSuccess = styled(Root)(({}) => [
+const RootSuccess = styled(Root)(() => [
   tw`border-green-scale-100 bg-green-scale-100/20`,
   tw`dark:border-green-scale-300 dark:bg-green-scale-500/10`,
 ])
-const RootInfo = styled(Root)(({}) => [
+const RootInfo = styled(Root)(() => [
   tw`border-blue-scale-100 bg-blue-scale-100/20`,
   tw`dark:border-blue-scale-300 dark:bg-blue-scale-300/10`,
 ])
-const RootDanger = styled(Root)(({}) => [
+const RootDanger = styled(Root)(() => [
   tw`border-red-scale-100 bg-red-scale-100/20`,
   tw`dark:border-red-scale-300 dark:bg-red-scale-300/10`,
 ])
-const RootWarning = styled(Root)(({}) => [
+const RootWarning = styled(Root)(() => [
   tw`border-orange-scale-100 bg-orange-scale-100/20`,
   tw`dark:border-orange-scale-300 dark:bg-orange-scale-300/10`,
 ])
-const RootTip = styled(Root)(({}) => [
+const RootTip = styled(Root)(() => [
   tw`border-purple-scale-100 bg-purple-scale-100/20`,
   tw`dark:border-purple-scale-300 dark:bg-purple-scale-300/10`,
 ])
-const RootBug = styled(Root)(({}) => [
+const RootBug = styled(Root)(() => [
   tw`border-orange-scale-100 bg-orange-scale-100/20`,
   tw`dark:border-orange-scale-300 dark:bg-orange-scale-300/10`,
 ])
-const RootNote = styled(Root)(({}) => [
+const RootNote = styled(Root)(() => [
   tw`border-grey-light-scale-400 bg-grey-light-scale-400/20`,
   tw`dark:bg-grey-light-scale-100/5`,
 ])
@@ -170,7 +168,7 @@ const HeaderNote = styled(Header)(({ type }) => [
   tw`text-grey-dark-scale-700 dark:text-white`
 ])
 
-const Text = styled.div(({}) => [
+const Text = styled.div(() => [
   tw`font-medium text-grey-dark-scale-200 dark:text-white px-4 pb-4 pt-2`,
   css`
     a {

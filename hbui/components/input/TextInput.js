@@ -150,7 +150,7 @@ const Root = styled.div(
   ],
 )
 
-const PrefixLabel = styled.span(({}) => [
+const PrefixLabel = styled.span(() => [
   tw`absolute left-3 font-medium text-tertiary text-base pointer-events-none`,
 ])
 

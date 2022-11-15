@@ -115,7 +115,7 @@ const getPathElement = color => {
       return <OrangePath />
     case 'red':
       return <RedPath />
+    default:
+      return <DefaultPath />
   }
-
-  return <DefaultPath />
 }

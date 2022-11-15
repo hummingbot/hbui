@@ -1,6 +1,5 @@
-import tw, { css, styled, theme } from 'twin.macro'
+import tw, { css, styled } from 'twin.macro'
 import {
-  black,
   green,
   red,
   blue,

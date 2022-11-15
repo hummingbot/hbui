@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React, { useState } from 'react'
 import { Switch } from '@headlessui/react'
 import tw, { css } from 'twin.macro'

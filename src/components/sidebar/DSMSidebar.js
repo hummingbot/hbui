@@ -1,25 +1,22 @@
-import React, { useState } from 'react'
-// import { NavLink, useLocation } from 'react-router-dom'
+import React from 'react'
 import { Link } from 'gatsby'
-import tw, { css, styled, theme } from 'twin.macro'
-import { H1, H3 } from '../../../hbui/elements/typography'
-import GlobalSwitcherIcon from './GlobalSwitcherIcon'
+import tw, { css, styled } from 'twin.macro'
+// import GlobalSwitcherIcon from './GlobalSwitcherIcon'
 import TriangleRight from './TriangleRight'
 import { P, PSmall } from '../../../hbui/elements/typography'
 import navigation from './navigation'
 
 import ThemeToggle from '../../../hbui/system/ThemeToggle'
+import packageJson from '../../../package.json'
 
 function DSMSidebar() {
-  // let location = useLocation()
-  // const [currentSection, setCurrentSection] = useState(location.pathname)
   return (
     <Sidebar>
       <PaddingBox>
         <SidebarBrand>
-          <P isMedium tw='pb-sm text-primary dark:text-terminal'>HBUI</P>
-          <PSmall tw='text-secondary'>The Hummingbot Design System</PSmall>
-          <PSmall tw='text-secondary'>v1.5.31</PSmall>
+          <P isBold tw='pb-sm text-primary dark:text-terminal'>HBUI</P>
+          <PSmall isMedium tw='text-secondary'>Hummingbot Design System</PSmall>
+          <PSmall isMedium tw='text-secondary'>v{packageJson.version}</PSmall>
         </SidebarBrand>
       </PaddingBox>
       <ThemeToggle />
@@ -31,9 +28,7 @@ function DSMSidebar() {
           <NavItemRoot key={navItem.title} hasSubItems={navItem.subItems}>
             <SidebarNavItem
               activeClassName='is-active'
-              // onClick={() => setCurrentSection(navItem.link)}
               to={navItem.link}
-              // className={getActiveClass(navItem.link, currentSection)}
             >
               <P>{navItem.title}</P>
               {navItem.subItems && <TriangleRight />}
@@ -43,8 +38,6 @@ function DSMSidebar() {
                 <SubSidebarNavItem
                   key={subItem.link}
                   activeClassName='is-active'
-                  // onClick={() => setCurrentSection(subItem.link)}
-                  // className={getActiveClass(subItem.link, currentSection)}
                   to={subItem.link}
                 >
                   <P>{subItem.title}</P>
@@ -60,11 +53,6 @@ function DSMSidebar() {
 }
 
 export default DSMSidebar
-
-const getActiveClass = (link, currentSection) => {
-  if (currentSection === link) return 'is-active'
-  return ''
-}
 
 const Sidebar = styled.div(() => [
   tw`bg-body z-10 overflow-y-scroll transition-all duration-100 fixed top-0 w-[270px] left-[-270px] md:left-0`,

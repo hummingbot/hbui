@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw from 'twin.macro'
 import { Section, Container } from '../../elements/layout'

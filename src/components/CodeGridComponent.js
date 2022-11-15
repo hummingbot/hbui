@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw from 'twin.macro'
 import CodeBlock from '../../hbui/components/code/CodeBlock'

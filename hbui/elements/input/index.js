@@ -1,4 +1,4 @@
-import tw, { css, styled } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 
 export const TextInput = styled.input(({ isValid, isInvalid, isWarning }) => [
   tw`flex w-full`,

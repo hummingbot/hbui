@@ -1,6 +1,6 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
-import PropTypes from 'prop-types'
-import tw, { css, styled, theme } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import SuccessIcon from '../../assets/svgs/alerts/SuccessIcon'
 import WarningIcon from '../../assets/svgs/alerts/WarningIcon'
 import DangerIcon from '../../assets/svgs/alerts/DangerIcon'
@@ -52,6 +52,6 @@ const IconBox = styled.div(({
   ],
 ])
 
-const Text = styled.div(({}) => [
+const Text = styled.div(() => [
   tw`flex font-medium text-grey-dark-scale-200 dark:text-white items-center px-4`,
 ])

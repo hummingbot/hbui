@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import { H6, P } from '../../elements/typography'

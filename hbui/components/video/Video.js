@@ -1,6 +1,6 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
-import tw, { css, styled } from 'twin.macro'
-import { H6, P } from '../../elements/typography'
+import tw, { styled } from 'twin.macro'
 
 function Video({
   videoEmbedSrc,
@@ -8,6 +8,7 @@ function Video({
   }) {
   return (
     <iframe
+      title={props.title}
       {...props}
       tw='w-full aspect-video rounded'
       src={videoEmbedSrc}
@@ -21,8 +22,3 @@ function Video({
 }
 
 export default Video
-
-const VideoRoot = styled.div(() => [
-  tw`bg-window border border-window hover:(border-green text-green) dark:(hover:(border-terminal text-terminal))`,
-  tw`p-xxs lg:p-xs xl:p-sm rounded-[8px]`,
-])

@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import tw, { styled, css } from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import { Button as ButtonElement } from '../../elements/buttons'
-import { P } from '../../elements/typography'
 
 export const Button = ({ label, iconBefore, iconAfter, ...props }) => {
   return (

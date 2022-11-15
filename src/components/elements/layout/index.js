@@ -1,5 +1,5 @@
 import React from 'react'
-import tw, { styled, theme, css } from 'twin.macro'
+import tw, { styled, css } from 'twin.macro'
 import {
   Section,
   Container,
