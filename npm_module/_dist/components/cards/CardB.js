@@ -7,10 +7,9 @@ exports.CardB = CardB;
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteralLoose"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
-var _react = _interopRequireWildcard(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _react = _interopRequireDefault(require("react"));
 var _typography = require("../../elements/typography");
-var _button = require("../button");
+var _buttons = require("../buttons");
 var _templateObject;
 var _excluded = ["iconElement", "headerText", "descriptionText", "linkURL", "external", "linkClass"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -28,7 +27,6 @@ function CardB(_ref) {
       isBold: true
     }, headerText)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText));
   }
-  var LinkClass;
   var LinkElement = ExternalA;
   if (!external) {
     LinkElement = linkClass;
@@ -136,7 +134,7 @@ var _StyledDiv2 = (0, _styledComponents["default"])("div").withConfig({
 })({
   "marginBottom": "16px"
 });
-var _StyledExternalLinkIcon = (0, _styledComponents["default"])(_button.ExternalLinkIcon).withConfig({
+var _StyledExternalLinkIcon = (0, _styledComponents["default"])(_buttons.ExternalLinkIcon).withConfig({
   displayName: "CardB___StyledExternalLinkIcon",
   componentId: "sc-12r1m1z-8"
 })({

@@ -103,8 +103,9 @@ var getPathElement = function getPathElement(color) {
       return /*#__PURE__*/_react["default"].createElement(OrangePath, null);
     case 'red':
       return /*#__PURE__*/_react["default"].createElement(RedPath, null);
+    default:
+      return /*#__PURE__*/_react["default"].createElement(DefaultPath, null);
   }
-  return /*#__PURE__*/_react["default"].createElement(DefaultPath, null);
 };
 var _StyledSvg = (0, _styledComponents["default"])("svg").withConfig({
   displayName: "spinner___StyledSvg",

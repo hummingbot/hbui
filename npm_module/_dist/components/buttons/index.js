@@ -11,7 +11,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _buttons = require("../../elements/buttons");
-var _typography = require("../../elements/typography");
 var _excluded = ["label", "iconBefore", "iconAfter"],
   _excluded2 = ["label"];
 var Button = function Button(_ref) {
@@ -64,14 +63,14 @@ function ExternalLinkIcon(_ref2) {
   }));
 }
 var _StyledExternalLinkIcon = (0, _styledComponents["default"])(ExternalLinkIcon).withConfig({
-  displayName: "button___StyledExternalLinkIcon",
-  componentId: "sc-1kafyhf-0"
+  displayName: "buttons___StyledExternalLinkIcon",
+  componentId: "sc-42vy15-0"
 })({
   "marginLeft": "16px"
 });
 var CustomExternalLinkButton = (0, _styledComponents["default"])(_buttons.Button).withConfig({
-  displayName: "button__CustomExternalLinkButton",
-  componentId: "sc-1kafyhf-1"
+  displayName: "buttons__CustomExternalLinkButton",
+  componentId: "sc-42vy15-1"
 })(function () {
   return [{
     "display": "flex",
@@ -129,8 +128,8 @@ function ExternalLinkButton(_ref3) {
   return /*#__PURE__*/_react["default"].createElement(CustomExternalLinkButton, props, label, /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null));
 }
 var _StyledPath = (0, _styledComponents["default"])("path").withConfig({
-  displayName: "button___StyledPath",
-  componentId: "sc-1kafyhf-2"
+  displayName: "buttons___StyledPath",
+  componentId: "sc-42vy15-2"
 })({
   "fill": "currentColor"
 });

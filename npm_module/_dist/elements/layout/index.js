@@ -4,11 +4,8 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 var _typeof = require("@babel/runtime/helpers/typeof");
 exports.__esModule = true;
 exports.Window = exports.SeparatorWindow = exports.SeparatorBase = exports.Separator = exports.Section = exports.SBLRootSidebar = exports.SBLRootContent = exports.SBLRoot = exports.PageRoot = exports.PaddingBox = exports.ItemsRow = exports.ContainerSB = exports.ContainerRow = exports.Container = void 0;
-var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteralLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
-var _react = _interopRequireDefault(require("react"));
-var _colors = require("../../constants/colors");
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9;
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -187,8 +184,7 @@ exports.SeparatorWindow = SeparatorWindow;
 var Window = _styledComponents["default"].div.withConfig({
   displayName: "layout__Window",
   componentId: "sc-12wnft2-13"
-})(function (_ref2) {
-  (0, _objectDestructuringEmpty2["default"])(_ref2);
+})(function () {
   return [{
     "borderRadius": "4px",
     "borderWidth": "1px",

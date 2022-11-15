@@ -8,26 +8,28 @@ var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtim
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
-var _reactRouterDom = require("react-router-dom");
 var _typography = require("../../elements/typography");
 var _templateObject, _templateObject2, _templateObject3;
-var _excluded = ["links", "side", "type"],
+var _excluded = ["links", "linkClass", "side", "type"],
   _excluded2 = ["active"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function MenuDropdown(_ref) {
   var links = _ref.links,
+    linkClass = _ref.linkClass,
     _ref$side = _ref.side,
     side = _ref$side === void 0 ? 'right' : _ref$side,
     _ref$type = _ref.type,
     type = _ref$type === void 0 ? 'kebab' : _ref$type,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
+  var LinkClass = linkClass;
   return /*#__PURE__*/_react["default"].createElement(KebabMenuRoot, props, type === 'kebab' && /*#__PURE__*/_react["default"].createElement(KebabControl, null), type === 'chevron' && /*#__PURE__*/_react["default"].createElement(TriangleDown, null), /*#__PURE__*/_react["default"].createElement(KebabMenuContent, {
     className: "kebab-menu-content",
     side: side
   }, links.map(function (link) {
-    return /*#__PURE__*/_react["default"].createElement(_reactRouterDom.Link, {
+    return /*#__PURE__*/_react["default"].createElement(LinkClass, {
       to: link.to,
+      href: link.to,
       key: link.label
     }, /*#__PURE__*/_react["default"].createElement(KebabMenuItem, null, link.label));
   })));

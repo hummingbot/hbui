@@ -4,13 +4,10 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 var _typeof = require("@babel/runtime/helpers/typeof");
 exports.__esModule = true;
 exports.CalloutWarning = exports.CalloutTip = exports.CalloutSuccess = exports.CalloutNote = exports.CalloutInfo = exports.CalloutDanger = exports.CalloutBug = exports.Callout = void 0;
-var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteralLoose"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
-var _buttons = require("../../elements/buttons");
 var _CheckIcon = _interopRequireDefault(require("../../assets/svgs/notifications/CheckIcon"));
 var _WarningIcon = _interopRequireDefault(require("../../assets/svgs/notifications/WarningIcon"));
 var _ErrorIcon = _interopRequireDefault(require("../../assets/svgs/notifications/ErrorIcon"));
@@ -118,8 +115,7 @@ var Root = _styledComponents["default"].div.withConfig({
 var RootDefault = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootDefault",
   componentId: "sc-19ipjvn-1"
-})(function (_ref10) {
-  (0, _objectDestructuringEmpty2["default"])(_ref10);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(223 225 226 / var(--tw-border-opacity))",
@@ -134,8 +130,7 @@ var RootDefault = (0, _styledComponents["default"])(Root).withConfig({
 var RootSuccess = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootSuccess",
   componentId: "sc-19ipjvn-2"
-})(function (_ref11) {
-  (0, _objectDestructuringEmpty2["default"])(_ref11);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(176 236 240 / var(--tw-border-opacity))",
@@ -151,8 +146,7 @@ var RootSuccess = (0, _styledComponents["default"])(Root).withConfig({
 var RootInfo = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootInfo",
   componentId: "sc-19ipjvn-3"
-})(function (_ref12) {
-  (0, _objectDestructuringEmpty2["default"])(_ref12);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(191 220 255 / var(--tw-border-opacity))",
@@ -168,8 +162,7 @@ var RootInfo = (0, _styledComponents["default"])(Root).withConfig({
 var RootDanger = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootDanger",
   componentId: "sc-19ipjvn-4"
-})(function (_ref13) {
-  (0, _objectDestructuringEmpty2["default"])(_ref13);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(249 203 203 / var(--tw-border-opacity))",
@@ -185,8 +178,7 @@ var RootDanger = (0, _styledComponents["default"])(Root).withConfig({
 var RootWarning = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootWarning",
   componentId: "sc-19ipjvn-5"
-})(function (_ref14) {
-  (0, _objectDestructuringEmpty2["default"])(_ref14);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(250 218 188 / var(--tw-border-opacity))",
@@ -202,8 +194,7 @@ var RootWarning = (0, _styledComponents["default"])(Root).withConfig({
 var RootTip = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootTip",
   componentId: "sc-19ipjvn-6"
-})(function (_ref15) {
-  (0, _objectDestructuringEmpty2["default"])(_ref15);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(206 176 250 / var(--tw-border-opacity))",
@@ -219,8 +210,7 @@ var RootTip = (0, _styledComponents["default"])(Root).withConfig({
 var RootBug = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootBug",
   componentId: "sc-19ipjvn-7"
-})(function (_ref16) {
-  (0, _objectDestructuringEmpty2["default"])(_ref16);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(250 218 188 / var(--tw-border-opacity))",
@@ -236,8 +226,7 @@ var RootBug = (0, _styledComponents["default"])(Root).withConfig({
 var RootNote = (0, _styledComponents["default"])(Root).withConfig({
   displayName: "callout__RootNote",
   componentId: "sc-19ipjvn-8"
-})(function (_ref17) {
-  (0, _objectDestructuringEmpty2["default"])(_ref17);
+})(function () {
   return [{
     "--tw-border-opacity": "1",
     "borderColor": "rgb(223 225 226 / var(--tw-border-opacity))",
@@ -251,8 +240,8 @@ var RootNote = (0, _styledComponents["default"])(Root).withConfig({
 var Header = _styledComponents["default"].div.withConfig({
   displayName: "callout__Header",
   componentId: "sc-19ipjvn-9"
-})(function (_ref18) {
-  var type = _ref18.type;
+})(function (_ref10) {
+  var type = _ref10.type;
   return [{
     "display": "flex",
     "alignItems": "center",
@@ -266,8 +255,8 @@ var Header = _styledComponents["default"].div.withConfig({
 var HeaderDefault = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderDefault",
   componentId: "sc-19ipjvn-10"
-})(function (_ref19) {
-  var type = _ref19.type;
+})(function (_ref11) {
+  var type = _ref11.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(21 24 25 / var(--tw-text-opacity))",
@@ -280,8 +269,8 @@ var HeaderDefault = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderSuccess = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderSuccess",
   componentId: "sc-19ipjvn-11"
-})(function (_ref20) {
-  var type = _ref20.type;
+})(function (_ref12) {
+  var type = _ref12.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(0 194 206 / var(--tw-text-opacity))",
@@ -294,8 +283,8 @@ var HeaderSuccess = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderInfo = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderInfo",
   componentId: "sc-19ipjvn-12"
-})(function (_ref21) {
-  var type = _ref21.type;
+})(function (_ref13) {
+  var type = _ref13.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(49 141 255 / var(--tw-text-opacity))",
@@ -308,8 +297,8 @@ var HeaderInfo = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderDanger = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderDanger",
   componentId: "sc-19ipjvn-13"
-})(function (_ref22) {
-  var type = _ref22.type;
+})(function (_ref14) {
+  var type = _ref14.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(235 87 87 / var(--tw-text-opacity))",
@@ -322,8 +311,8 @@ var HeaderDanger = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderWarning = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderWarning",
   componentId: "sc-19ipjvn-14"
-})(function (_ref23) {
-  var type = _ref23.type;
+})(function (_ref15) {
+  var type = _ref15.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(240 135 39 / var(--tw-text-opacity))",
@@ -336,8 +325,8 @@ var HeaderWarning = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderTip = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderTip",
   componentId: "sc-19ipjvn-15"
-})(function (_ref24) {
-  var type = _ref24.type;
+})(function (_ref16) {
+  var type = _ref16.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(98 0 238 / var(--tw-text-opacity))",
@@ -350,8 +339,8 @@ var HeaderTip = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderBug = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderBug",
   componentId: "sc-19ipjvn-16"
-})(function (_ref25) {
-  var type = _ref25.type;
+})(function (_ref17) {
+  var type = _ref17.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(240 135 39 / var(--tw-text-opacity))",
@@ -364,8 +353,8 @@ var HeaderBug = (0, _styledComponents["default"])(Header).withConfig({
 var HeaderNote = (0, _styledComponents["default"])(Header).withConfig({
   displayName: "callout__HeaderNote",
   componentId: "sc-19ipjvn-17"
-})(function (_ref26) {
-  var type = _ref26.type;
+})(function (_ref18) {
+  var type = _ref18.type;
   return [{
     "--tw-text-opacity": "1",
     "color": "rgb(21 24 25 / var(--tw-text-opacity))",
@@ -378,8 +367,7 @@ var HeaderNote = (0, _styledComponents["default"])(Header).withConfig({
 var Text = _styledComponents["default"].div.withConfig({
   displayName: "callout__Text",
   componentId: "sc-19ipjvn-18"
-})(function (_ref27) {
-  (0, _objectDestructuringEmpty2["default"])(_ref27);
+})(function () {
   return [{
     "paddingLeft": "1rem",
     "paddingRight": "1rem",

@@ -5,6 +5,8 @@ exports.__esModule = true;
 exports["default"] = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactSyntaxHighlighter = require("react-syntax-highlighter");
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
+
 var CodeBlock = function CodeBlock(_ref) {
   var code = _ref.code;
   return /*#__PURE__*/_react["default"].createElement(_reactSyntaxHighlighter.Prism, {

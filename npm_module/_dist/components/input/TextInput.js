@@ -4,7 +4,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 var _typeof = require("@babel/runtime/helpers/typeof");
 exports.__esModule = true;
 exports["default"] = void 0;
-var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteralLoose"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -103,8 +102,7 @@ var Root = _styledComponents["default"].div.withConfig({
 var PrefixLabel = _styledComponents["default"].span.withConfig({
   displayName: "TextInput__PrefixLabel",
   componentId: "sc-n3ri1-1"
-})(function (_ref3) {
-  (0, _objectDestructuringEmpty2["default"])(_ref3);
+})(function () {
   return [{
     "pointerEvents": "none",
     "position": "absolute",
@@ -117,10 +115,10 @@ var PrefixLabel = _styledComponents["default"].span.withConfig({
 var PlaceholderLabel = _styledComponents["default"].span.withConfig({
   displayName: "TextInput__PlaceholderLabel",
   componentId: "sc-n3ri1-2"
-})(function (_ref4) {
-  var isValid = _ref4.isValid,
-    isInvalid = _ref4.isInvalid,
-    isWarning = _ref4.isWarning;
+})(function (_ref3) {
+  var isValid = _ref3.isValid,
+    isInvalid = _ref3.isInvalid,
+    isWarning = _ref3.isWarning;
   return [{
     "pointerEvents": "none",
     "position": "absolute",
@@ -168,10 +166,10 @@ var PlaceholderLabel = _styledComponents["default"].span.withConfig({
 var BottomLabel = _styledComponents["default"].div.withConfig({
   displayName: "TextInput__BottomLabel",
   componentId: "sc-n3ri1-3"
-})(function (_ref5) {
-  var isValid = _ref5.isValid,
-    isInvalid = _ref5.isInvalid,
-    isWarning = _ref5.isWarning;
+})(function (_ref4) {
+  var isValid = _ref4.isValid,
+    isInvalid = _ref4.isInvalid,
+    isWarning = _ref4.isWarning;
   return [{
     "pointerEvents": "none",
     "display": "flex",

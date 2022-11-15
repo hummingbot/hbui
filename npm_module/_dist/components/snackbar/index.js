@@ -3,11 +3,9 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
 exports["default"] = void 0;
-var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
 var _SuccessIcon = _interopRequireDefault(require("../../assets/svgs/alerts/SuccessIcon"));
 var _WarningIcon = _interopRequireDefault(require("../../assets/svgs/alerts/WarningIcon"));
 var _DangerIcon = _interopRequireDefault(require("../../assets/svgs/alerts/DangerIcon"));
@@ -90,8 +88,7 @@ var IconBox = _styledComponents["default"].div.withConfig({
 var Text = _styledComponents["default"].div.withConfig({
   displayName: "snackbar__Text",
   componentId: "sc-1z0imi3-2"
-})(function (_ref4) {
-  (0, _objectDestructuringEmpty2["default"])(_ref4);
+})(function () {
   return [{
     "display": "flex",
     "alignItems": "center",
