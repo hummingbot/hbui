@@ -1,1 +1,1 @@
-module.exports = require('./system/tailwind.config.js')
+module.exports = require('./_dist/system/tailwind.config.js')
