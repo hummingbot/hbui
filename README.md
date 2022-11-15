@@ -1,3 +1,5 @@
+![HBUI](https://repository-images.githubusercontent.com/440312044/5e644c3a-c7d5-49fc-acc2-4076c6c8ba7f)
+
 ## HBUI - The Hummingbot Design System
 
 This repository holds the source code and documentation of the [HBUI Hummingbot Design System](https://hbui.netlify.app/)
