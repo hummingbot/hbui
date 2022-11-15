@@ -30,7 +30,7 @@ git clone git@github.com:CoinAlpha/hbui.git hbui
 // cd into the folder
 cd hbui
 
-Install the dependencies
+// Install the dependencies
 yarn
 
 // Start up
