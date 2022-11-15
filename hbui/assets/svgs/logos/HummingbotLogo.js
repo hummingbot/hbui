@@ -1,70 +1,147 @@
+import { styled, css } from 'twin.macro'
 import React from "react";
 
 const primaryColors = {
-  a: '#00858B',
-  b: '#007E82',
-  c: '#006E72',
-  d: '#006063',
-  e: '#00A8B3',
-  f: '#00C2CE',
+  birdBody: '#00C2CE',
+  backWing: '#00A8B3',
+  flutterWingA: '#00858B',
+  flutterWingB: '#007E82',
+  flutterWingC: '#006E72',
+  flutterWingD: '#006063',
+}
+
+const terminalColors = {
+  birdBody: '#5FFFD7',
+  backWing: '#30806B',
+  flutterWingA: '#43B397',
+  flutterWingB: '#399981',
+  flutterWingC: '#30806B',
+  flutterWingD: '#266656',
+}
+
+const wbColors = {
+  birdBody: 'white',
+  backWing: 'rgba(255,255,255, 0.2)',
+  flutterWingA: 'rgba(255,255,255, 0.35)',
+  flutterWingB: 'rgba(255,255,255, 0.3)',
+  flutterWingC: 'rgba(255,255,255, 0.25)',
+  flutterWingD: 'rgba(255,255,255, 0.1)',
 }
 
 const bwColors = {
-  a: 'rgba(0,0,0,0.35)',
-  b: 'rgba(0,0,0,0.3)',
-  c: 'rgba(0,0,0,0.25)',
-  e: 'rgba(0,0,0,0.2)',
-  d: 'rgba(0,0,0,0.1)',
-  f: 'black',
+  birdBody: 'black',
+  backWing: 'rgba(0,0,0, 0.2)',
+  flutterWingA: 'rgba(0,0,0, 0.35)',
+  flutterWingB: 'rgba(0,0,0, 0.3)',
+  flutterWingC: 'rgba(0,0,0, 0.25)',
+  flutterWingD: 'rgba(0,0,0, 0.1)',
+}
+
+const LogoSVG = styled.svg(
+  () => [
+    ({ size = 'small' }) => logoSizes[size],
+    // css`
+    //   outline: 1px solid red;
+    // `
+  ],
+)
+
+const tinySize = [
+  css`
+    width: 27px;
+    height: 23px;
+  `,
+]
+
+const smallSize = [
+  css`
+    width: 40px;
+    height: 32px;
+  `,
+]
+
+const mediumSize = [
+  css`
+    width: 55px;
+    height: 48px;
+  `,
+]
+
+const largeSize = [
+  css`
+    width: 90px;
+    height: 80px;
+  `,
+]
+
+const hugeSize = [
+  css`
+    width: 140px;
+    height: 130px;
+  `,
+]
+
+const logoSizes = {
+  tiny: tinySize,
+  small: smallSize,
+  medium: mediumSize,
+  large: largeSize,
+  huge: hugeSize,
 }
 
 function HummingbotLogo({...props}) {
+  let colors = primaryColors
+  if(props.colorStyle === 'terminal') { colors = terminalColors}
+  if(props.colorStyle === 'white-black') { colors = wbColors}
+  if(props.colorStyle === 'black-white') { colors = bwColors}
   return (
-    <svg
+    <LogoSVG
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="31"
       height="28"
       fill="none"
-      viewBox="0 0 31 28"
+      viewBox="0 0 47 38"
       className={props.className}
     >
       <path
-        fill={props.bw ? bwColors.a : primaryColors.a}
+        fill={colors.flutterWingA}
         fillRule="evenodd"
-        d="M25.306 14.932c-2.464.893-4.935.573-6.562-.645.677-2.051 2.509-3.93 4.974-4.824 2.463-.893 4.934-.572 6.561.646a6.683 6.683 0 01-.185.49c-.79 1.856-2.522 3.512-4.788 4.333z"
+        d="M38.377 20.314c-3.86 1.27-7.732.814-10.28-.92 1.06-2.918 3.93-5.592 7.79-6.862 3.861-1.27 7.732-.814 10.28.919a8.434 8.434 0 01-.29.696c-1.236 2.642-3.95 4.998-7.5 6.167z"
         clipRule="evenodd"
       ></path>
       <path
-        fill={props.bw ? bwColors.a : primaryColors.b}
+        fill={colors.flutterWingB}
         fillRule="evenodd"
-        d="M24.554 18.248c-2.619-.346-4.777-1.776-5.81-3.615 1.413-1.515 3.828-2.342 6.446-1.997 2.619.345 4.777 1.776 5.81 3.614a5.492 5.492 0 01-.242.244c-1.438 1.36-3.73 2.08-6.204 1.754z"
+        d="M37.035 24.621c-4.028-.5-7.348-2.57-8.937-5.23 2.174-2.193 5.889-3.39 9.917-2.89s7.349 2.57 8.938 5.23c-.12.12-.244.238-.372.352-2.212 1.968-5.738 3.01-9.546 2.538z"
         clipRule="evenodd"
       ></path>
       <path
-        fill={props.bw ? bwColors.a : primaryColors.c}
+        fill={colors.flutterWingC}
         fillRule="evenodd"
-        d="M22.342 20.846c-2.157-1.714-3.456-4.226-3.598-6.533 1.873-.706 4.338-.222 6.495 1.492 2.156 1.715 3.456 4.225 3.598 6.533a4.564 4.564 0 01-.358.119c-1.822.522-4.116-.004-6.137-1.611z"
+        d="M33.71 28.228c-3.361-2.305-5.389-5.68-5.61-8.783 2.921-.949 6.766-.3 10.128 2.006 3.362 2.305 5.39 5.68 5.61 8.783a8.02 8.02 0 01-.558.16c-2.841.701-6.417-.005-9.57-2.166z"
         clipRule="evenodd"
       ></path>
       <path
-        fill={props.bw ? bwColors.a : primaryColors.d}
+        fill={colors.flutterWingD}
         fillRule="evenodd"
-        d="M20.071 21.96c-1.378-2.464-1.664-5.208-.946-7.24 2.006.273 4.125 1.833 5.502 4.297 1.378 2.464 1.663 5.208.945 7.239a5.064 5.064 0 01-.498-.093c-1.851-.442-3.74-1.942-5.003-4.203z"
+        d="M29.538 29.806c-2.09-3.528-2.524-7.456-1.434-10.363 3.043.39 6.258 2.622 8.348 6.15 2.09 3.529 2.525 7.457 1.434 10.364a8.136 8.136 0 01-.754-.133c-2.81-.632-5.676-2.78-7.594-6.017z"
         clipRule="evenodd"
       ></path>
       <path
-        fill={props.bw ? bwColors.a : primaryColors.e}
+        fill={colors.backWing}
+        fillOpacity="0.84"
         fillRule="evenodd"
-        d="M20.871 5.792c-.415 5.392-4.5 9.372-9.127 8.89a7.387 7.387 0 01-1.651-.368L19.916.302a11.134 11.134 0 01.956 5.49z"
+        d="M31.525 7.544c-.655 7.41-7.108 12.878-14.414 12.215-.9-.082-1.772-.253-2.607-.505L30.015 0a13.568 13.568 0 011.51 7.544z"
         clipRule="evenodd"
       ></path>
       <path
-        fill={props.bw ? bwColors.a : primaryColors.f}
+        fill={colors.birdBody}
         fillRule="evenodd"
-        d="M14.188 11.706l-.074-.055c-1.156-.835-2.45-1.886-3.81-2.224-.898-.225-1.78-.05-2.518.56-.66.544-.821 1.35-1.35 1.989C5.952 12.56 0 15.405 0 15.405l.083.215s5.56-2.718 6.692-2.49c1.133.228 3.423.997 4.88 4.233 1.538 3.41 4.503 5.516 6.15 5.256l-1.602 5.06c8.247.438 5.316-7.21 2.774-11.032 1.132-.36 2.23-.902 3.244-1.493a9.266 9.266 0 001.737-1.329c1.167-1.121 2.127-2.546 2.832-4.02.948-1.98 1.79-4.374 2.047-6.619l-14.649 8.518v.002z"
+        d="M21.534 15.493l-.114-.077c-1.752-1.162-3.717-2.624-5.781-3.094-1.364-.311-2.702-.068-3.82.778-1.002.758-1.248 1.88-2.05 2.767C9.033 16.682 0 20.638 0 20.638l.126.3s8.438-3.78 10.157-3.464c1.719.317 5.195 1.387 7.408 5.888 2.333 4.743 6.832 7.673 9.332 7.311l-2.43 7.04c12.515.607 8.067-10.031 4.208-15.348 1.719-.5 3.386-1.253 4.925-2.076.94-.503 1.821-1.13 2.636-1.847 1.77-1.56 3.228-3.542 4.298-5.592 1.439-2.755 2.716-6.085 3.107-9.208l-22.233 11.85z"
         clipRule="evenodd"
       ></path>
-    </svg>
+    </LogoSVG>
   );
 }
 

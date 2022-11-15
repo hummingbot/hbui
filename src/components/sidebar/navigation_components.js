@@ -18,6 +18,14 @@ const input = {
   link: '/components/text-input',
   title: 'TextInput',
 }
+const logo = {
+  link: '/components/logo',
+  title: 'Logo',
+}
+const windowComponent = {
+  link: '/components/window',
+  title: 'Window',
+}
 const spinner = {
   link: '/components/spinner',
   title: 'Spinner',
@@ -70,11 +78,13 @@ const links =  [
   externallinkbutton,
   hero,
   input,
+  logo,
   navbar,
   snackbar,
   spinner,
   switchPage,
   video,
+  windowComponent,
 ]
 
 export default links
