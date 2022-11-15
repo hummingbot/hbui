@@ -157,6 +157,7 @@ yarn develop
 HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby) HBUI Boilerplate
+
 [Create-React-App](https://github.com/CoinAlpha/hbui-boilerplate-cra) HBUI Boilerplate
 
 ### Useful references
