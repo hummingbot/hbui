@@ -1,4 +1,4 @@
-## HBUI Boilerplate for Gatsby Projects
+## HBUI - The Hummingbot Design System
 
 This repository holds the source code and documentation of the [HBUI Hummingbot Design System](https://hbui.netlify.app/)
 
