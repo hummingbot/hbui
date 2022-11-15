@@ -16,6 +16,7 @@ The original design of this design system lives in a [Figma document](https://ww
 This repository is the HBUI documentation site. To use the HBUI design system, you should start from one of the boilerplate projects. They are ready-to-run apps with everything already configured for you to start your own project using HBUI. There are two types of boilerplate projects available:
 
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby)
+
 [Create-React-App](https://github.com/CoinAlpha/hbui-boilerplate-cra)
 
 ### Instructions to run this project
