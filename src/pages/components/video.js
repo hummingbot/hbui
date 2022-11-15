@@ -2,18 +2,19 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H4, P, Bold } from '../../../hbui/elements/typography'
+import { H1, H4, P, Bold } from '../../../hbui/elements/typography'
 import Video from '../../../hbui/components/video/Video'
 import VideoCard from '../../../hbui/components/video/VideoCard'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const VideoPage = () => (
   <Layout>
-    <ShortHero
-      title="Video"
-      subTitle="Collection of Video components"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Video</H1>
+      <P>Collection of Video components</P>
+    </Hero>
     <MainContent>
       <H4>Video Card</H4>
       <P>Video component in Card style. Both <Bold>title</Bold> and <Bold>description</Bold> props are optional. If you only pass the videoEmbedSrc prop, the video will still keep a smooth card style.</P>

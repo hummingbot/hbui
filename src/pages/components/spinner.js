@@ -2,18 +2,19 @@
 import React from 'react'
 import tw, { theme } from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body } from '../../../hbui/elements/typography'
+import { H1, P, Body } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Spinner from '../../../hbui/components/spinner'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const SpinnerPage = () => (
   <Layout>
-    <ShortHero
-      title="Spinner"
-      subTitle="Versatile SVG-based spinner component to use in loading scenarios"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Spinner</H1>
+      <P>Versatile SVG-based spinner component to use in loading scenarios</P>
+    </Hero>
     <MainContent>
       <Body>
         Default color: black & white. Custom colors: green, red, orange, blue.{' '}

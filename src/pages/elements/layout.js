@@ -2,12 +2,14 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
+import Hero from '../../../hbui/components/hero/Hero'
 import {
   P,
   Bold,
   H6,
+  H1,
   Red,
   Blue,
   Green,
@@ -32,7 +34,9 @@ import {
 
 const LayoutCore = () => (
   <Layout>
-    <ShortHero title="Layout" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Layout</H1>
+    </Hero>
     <MainContent>
       <P>
         The single column layout is the simplest layout and consists of a
@@ -280,8 +284,7 @@ import { P } from '@hummingbot/hbui/elements/typography'
       <P>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</P>
     </Container>
   </Section>
-</PageRoot>
-`
+</PageRoot>`
 
 const codeSideBarLayout = String.raw`import { SBLRoot, SBLRootSidebar, SBLRootContent, Section, Container } from '@hummingbot/hbui/elements/layout'
 import { P } from '@hummingbot/hbui/elements/typography'
@@ -320,5 +323,4 @@ import { P } from '@hummingbot/hbui/elements/typography'
       </Container>
     </Section>
   </SBLRootContent>
-</SBLRoot>
-`
+</SBLRoot>`

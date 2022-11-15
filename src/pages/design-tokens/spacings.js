@@ -2,18 +2,18 @@
 import React from 'react'
 import tw, { css, styled } from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import { Separator } from '../../../hbui/elements/layout'
-// import { , MainContent } from '../../components/elements/layout'
-import { P, Bold } from '../../../hbui/elements/typography'
+import Hero from '../../../hbui/components/hero/Hero'
+import { H1, P, Bold } from '../../../hbui/elements/typography'
 import tokens from '../../../hbui/tokens'
 
 const SpacingsPage = () => (
   <Layout>
-    <ShortHero
-      title="Spacings"
-      subTitle="The most commonly used spacings"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Spacings</H1>
+      <P>The most commonly used spacings</P>
+    </Hero>
     <MainContent>
       <P>These spaces are available in all spacing classes, such as margins, paddings, left, right, top, bottom. Examples: <Bold>m-xs</Bold> (margin xs), <Bold>mb-xs</Bold> (margin-bottom xs), <Bold>pt-xs</Bold> (padding-top xs), <Bold>left-xs</Bold> (position left xs), <Bold>top-xs</Bold> (position top xs).</P>
       <Separator />

@@ -2,16 +2,16 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
-import { P, Body, H6, H5 } from '../../../hbui/elements/typography'
+import { MainContent } from '../../components/elements/layout'
+import { H1, P, Body, H6, H5 } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 
-const GuilinesIndex = () => (
+const GuidelinesIndex = () => (
   <Layout>
-    <ShortHero
-      title='Design Guidelines'
-      boldTitle={true}
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Design guidelines</H1>
+    </Hero>
     <MainContent>
       <br />
       <br />
@@ -54,4 +54,4 @@ const GuilinesIndex = () => (
   </Layout>
 )
 
-export default GuilinesIndex
+export default GuidelinesIndex

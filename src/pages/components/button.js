@@ -1,22 +1,23 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw from 'twin.macro'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body } from '../../../hbui/elements/typography'
+import { H1, P, Body } from '../../../hbui/elements/typography'
 import { Button as ButtonComponent } from '../../../hbui/components/buttons'
 import DummyIcon from '../../../hbui/assets/svgs/16x16/DummyIcon'
 import PlayButton from '../../../hbui/assets/svgs/16x16/PlayButton'
 import MenuDropdown from '../../../hbui/components/menudropdown'
 import Layout from '../../components/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 import { Link } from 'gatsby'
 
 const Button = () => (
   <Layout>
-    <ShortHero
-      title="Button"
-      subTitle="Component - To be used together with icons"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Button</H1>
+      <P>Component - To be used together with icons</P>
+    </Hero>
     <MainContent>
       <Body>Button with dark-mode ready icon (before)</Body>
       <ButtonComponent
@@ -71,8 +72,7 @@ import PlayButton from '@hummingbot/hbui/svgs/16x16/PlayButton'
   variant='secondary'
   label="Button"
   iconBefore={<PlayButton tw='fill-current />}
-/>
-`
+/>`
 
 const codeWithIconAfter = String.raw`import { Button } from '@hummingbot/hbui/components/buttons'
 import PlayButton from '@hummingbot/hbui/svgs/16x16/PlayButton'
@@ -81,8 +81,7 @@ import PlayButton from '@hummingbot/hbui/svgs/16x16/PlayButton'
   variant='secondary'
   label="Button"
   iconAfter={<PlayButton tw='fill-current />}
-/>
-`
+/>`
 
 const codeWithIconBeforeAndAfter = String.raw`import { Button } from '@hummingbot/hbui/components/buttons'
 import PlayButton from '@hummingbot/hbui/svgs/16x16/PlayButton'
@@ -93,8 +92,7 @@ import MenuDropdown from '@hummingbot/hbui/components/menudropdown'
   label="Button"
   iconBefore={<PlayButton tw='fill-current />}
   iconAfter={<MenuDropdown />}
-/>
-`
+/>`
 
 const codeWithCustomIconColor = String.raw`import { Button } from '@hummingbot/hbui/components/buttons'
 import { DummyIcon } from '@hummingbot/hbui/svgs/16x16/DummyIcon'
@@ -104,5 +102,4 @@ import { DummyIcon } from '@hummingbot/hbui/svgs/16x16/DummyIcon'
   label="Button"
   iconBefore={<DummyIcon />}
   iconColor="white"
-/>
-`
+/>`

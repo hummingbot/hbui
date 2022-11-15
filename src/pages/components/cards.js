@@ -4,18 +4,19 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { PageRoot, ShortHero, MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H4, P } from '../../../hbui/elements/typography'
+import { H1, H4, P } from '../../../hbui/elements/typography'
 import { CardA } from '../../../hbui/components/cards/CardA'
 import { CardB } from '../../../hbui/components/cards/CardB'
 import { CardC } from '../../../hbui/components/cards/CardC'
 import { Link } from 'gatsby'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const CardsPage = () => (
   <Layout>
-    <ShortHero
-      title="Cards"
-      subTitle="Collection of Card components"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Cards</H1>
+      <P>Collection of Card components</P>
+    </Hero>
     <MainContent>
       <H4>CardA</H4>
       <P>Most standard Card style</P>
@@ -159,8 +160,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     linkClass={Link}
     external={true}
   />
-</div>
-`
+</div>`
 
 const codeCardB = String.raw`import { CardB } from '@hummingbot/hbui/components/cards/CardB'
 import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
@@ -284,8 +284,7 @@ function IconB() {
       <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"></path>
     </svg>
   );
-}
-`
+}`
 
 function IconA() {
   return (

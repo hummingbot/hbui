@@ -4,19 +4,20 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { PageRoot, ShortHero, MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body } from '../../../hbui/elements/typography'
+import { H1, P, Body } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Checkbox from '../../../hbui/components/checkbox'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const CheckboxPage = () => {
   const [stateChecked, setCheckedState] = useState(true)
   const [statePartial, setPartialState] = useState(true)
   return(
     <Layout>
-      <ShortHero
-        title="Checkbox"
-        subTitle="Standard checkbox"
-      />
+      <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+        <H1 isBold>Checkbox</H1>
+        <P>Standard checkbox</P>
+      </Hero>
       <MainContent>
         <br />
         <br />
@@ -49,8 +50,7 @@ const [state, setState] = useState(true)
 
 <Checkbox
   <Checkbox active={state} onClick={() => setState(!state)}/>
-/>
-`
+/>`
 
 const codePartial = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
 
@@ -58,12 +58,10 @@ const [state, setState] = useState(true)
 
 <Checkbox
   <Checkbox active={state} partial={true} onClick={() => setState(!state)}/>
-/>
-`
+/>`
 
 const codeDisabled = String.raw`import Checkbox from '@hummingbot/hbui/components/checkbox'
 
 <Checkbox
   <Checkbox active={true} disabled={true} />
-/>
-`
+/>`

@@ -2,12 +2,13 @@
 import React from 'react'
 import tw, { theme } from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { P, Body, Bold, Medium } from '../../../hbui/elements/typography'
+import { H1, P, Body, Bold, Medium } from '../../../hbui/elements/typography'
 import { Separator, Container } from '../../../hbui/elements/layout'
 import { NavBar } from '../../../hbui/components/navigation'
 import { Link } from 'gatsby'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const siteNameA = 'Hummingbot'
 const siteNameB = 'Prime'
@@ -40,10 +41,10 @@ const linkCTA = {
 
 const Navigation = () => (
   <Layout>
-    <ShortHero
-      title="NavBar"
-      subTitle="The NavBar components offers a quick and easy way to set up a working navigation"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>NavBar</H1>
+      <P>The NavBar components offers a quick and easy way to set up a working navigation</P>
+    </Hero>
     <MainContent>
       <Body>
         How to use the NavBar

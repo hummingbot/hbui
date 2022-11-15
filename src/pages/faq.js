@@ -2,12 +2,15 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../components/layout'
-import { H6, P } from '../../hbui/elements/typography'
-import { ShortHero, MainContent } from '../components/elements/layout'
+import { H1, H6, P } from '../../hbui/elements/typography'
+import { MainContent } from '../components/elements/layout'
+import Hero from '../../hbui/components/hero/Hero'
 
 const FAQ = () => (
   <Layout>
-    <ShortHero title="FAQ" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isHeavy>FAQ</H1>
+    </Hero>
     <MainContent>
       <H6>What is this?</H6>
       <P>The code and documentation for the <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=305%3A4068'>Hummingbot Design System</a></P>

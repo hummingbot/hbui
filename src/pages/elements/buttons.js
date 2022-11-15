@@ -2,15 +2,18 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
-import { P, Bold } from '../../../hbui/elements/typography'
+import { MainContent } from '../../components/elements/layout'
+import { H1, P, Bold } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import { Button } from '../../../hbui/elements/buttons'
 import CodeGridComponent from '../../components/CodeGridComponent'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const Buttons = () => (
   <Layout>
-    <ShortHero title="Buttons" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Buttons</H1>
+    </Hero>
     <MainContent>
       <P>The button element has <Bold>7 variants</Bold>.</P>
       <br />
@@ -169,43 +172,37 @@ const codeDefault = String.raw`import { Button } from '@hummingbot/hbui/elements
 
 <Button>
   Default
-</Button>
-`
+</Button>`
 
 const codeSecondary = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='secondary'>
   Secondary
-</Button>
-`
+</Button>`
 
 const codeSuccess = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='success'>
   Success
-</Button>
-`
+</Button>`
 
 const codeInfo = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='info'>
   Info
-</Button>
-`
+</Button>`
 
 const codeWarning = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='warning'>
   Warning
-</Button>
-`
+</Button>`
 
 const codeDanger = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='danger'>
   Danger
-</Button>
-`
+</Button>`
 
 const codeTerminal = String.raw`// USE THIS VARIANT ONLY ON DARK MODE
 
@@ -213,63 +210,54 @@ import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='terminal'>
   Danger
-</Button>
-`
+</Button>`
 
 const codeDefaultDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isDisabled>
   Regular (disabled)
-</Button>
-`
+</Button>`
 
 const codeSecondaryDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='secondary' isDisabled>
   Secondary (disabled)
-</ButtonSecondary>
-`
+</ButtonSecondary>`
 
 const codeSuccessDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='success' isDisabled>
   Success (disabled)
-</ButtonSuccess>
-`
+</ButtonSuccess>`
 
 const codeInfoDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='info' isDisabled>
   Info (disabled)
-</ButtonInfo>
-`
+</ButtonInfo>`
 
 const codeWarningDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='warning' isDisabled>
   Warning (disabled)
-</ButtonWarning>
-`
+</ButtonWarning>`
 
 const codeDangerDisabled = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button variant='danger' isDisabled>
   Danger (disabled)
-</ButtonDanger>
-`
+</ButtonDanger>`
 
 const codeLargeSizes = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isLarge>
   Text label
-</Button>
-`
+</Button>`
 
 const codeSmallSizes = String.raw`import { Button } from '@hummingbot/hbui/elements/buttons'
 
 <Button isSmall>
   Text label
-</Button>
-`
+</Button>`
 
 

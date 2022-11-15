@@ -2,16 +2,17 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Layout from '../components/layout'
-import { H6, H5, P, Body, PTiny } from '../../hbui/elements/typography'
+import { H1, H6, H5, P, Body, PTiny } from '../../hbui/elements/typography'
 import { PageRoot, Separator } from '../../hbui/elements/layout'
 import { Button } from '../../hbui/elements/buttons'
-import { ShortHero, MainContent } from '../components/elements/layout'
-// import Navigation from '../ui/components/Navigation'
-// import Hero from '../ui/components/home/Hero'
+import { MainContent } from '../components/elements/layout'
+import Hero from '../../hbui/components/hero/Hero'
 
 const DesignTokens = () => (
   <Layout>
-    <ShortHero title="Downloads" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Downloads</H1>
+    </Hero>
     <MainContent>
       <br />
       <br />

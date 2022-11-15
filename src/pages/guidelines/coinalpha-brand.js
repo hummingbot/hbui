@@ -4,10 +4,12 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { Link } from 'gatsby'
 import { ShortHero, MainContent } from '../../components/elements/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 import {
   P,
   PSmall,
   Body,
+  H1,
   H2,
   H4,
   H6,
@@ -20,13 +22,10 @@ import ErrorIcon from '../../../hbui/assets/svgs/notifications/ErrorIcon'
 
 const Brand = () => (
   <Layout>
-    <ShortHero
-      title='CoinAlpha Brand'
-      boldTitle={true}
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>CoinAlpha Brand</H1>
+    </Hero>
     <MainContent>
-      <br />
-      <br />
       <Body>Our brand and product logos are clear, impactful and recognizable. In everything we do, we aim to bring focus and clarity to teams without distracting, so our logos and symbols are direct, clear, and impactful. To accomplish this, we adhere to the guidelines below.</Body>
       <br />
       <P>The CoinAlpha logo is available in two color schemes: black and white. The black version works best on a white or light background. The white version should be used on dark backgrounds.</P>

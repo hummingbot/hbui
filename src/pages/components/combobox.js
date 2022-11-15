@@ -7,8 +7,9 @@ import { ShortHero, MainContent, PageRoot } from '../../components/elements/layo
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { Body } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
-import { P } from '../../../hbui/elements/typography'
+import { H1, P } from '../../../hbui/elements/typography'
 import ComboBox from '../../../hbui/components/combobox'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const items = [
   { id: 1, label: 'Wade Cooper' },
@@ -23,10 +24,10 @@ const ComboboxPage = () => {
   const [selected, setSelected] = useState(items[0])
   return(
     <Layout>
-      <ShortHero
-        title="ComboBox"
-        subTitle="Generic combobox with autocomplete"
-      />
+      <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+        <H1 isBold>ComboBox</H1>
+        <P>Generic combobox with autocomplete</P>
+      </Hero>
       <MainContent>
         <Body>
           (Not working ATM)

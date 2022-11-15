@@ -1,18 +1,19 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import tw from 'twin.macro'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body, P } from '../../../hbui/elements/typography'
+import { H1, Body, P } from '../../../hbui/elements/typography'
 import { ExternalLinkButton as ExternalLinkButtonComponent } from '../../../hbui/components/buttons'
 import Layout from '../../components/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const ExternalLinkButton = () => (
   <Layout>
-    <ShortHero
-      title="External Link Button"
-      subTitle="Button for external links"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>External Link Button</H1>
+      <P>Button for external links</P>
+    </Hero>
     <MainContent>
       <Body>External link Button with dark-mode ready icon (before)</Body>
       <P>This button includes an "external link" icon on the right side by default</P>
@@ -34,5 +35,4 @@ const codeWithIconBefore = String.raw`import { ExternalLinkButton } from '@hummi
 
 <ExternalLinkButton
   label="External Link Button"
-/>
-`
+/>`

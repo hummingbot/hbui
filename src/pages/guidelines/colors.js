@@ -4,8 +4,8 @@ import tw, { styled }  from 'twin.macro'
 import Layout from '../../components/layout'
 import { H1, P, H6, LabelTiny, PSmall } from '../../../hbui/elements/typography'
 import { Separator, Section, Container } from '../../../hbui/elements/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 import {
-  ShortHero,
   MainContent,
   MainContentRow,
   MainContentBody,
@@ -17,17 +17,17 @@ import Copy from '../../../hbui/assets/svgs/16x16/Copy'
 
 const Colors = () => (
   <Layout>
-    <ShortHero
-      title="Colors"
-      subTitle="Color distinguishes our brand and helps us create consistent experiences across products."
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Colors</H1>
+      <P>Color distinguishes our brand and helps us create consistent experiences across products.</P>
+    </Hero>
     <MainContent>
       <H6 id="primary-colors">Primary Colors</H6>
       <br />
       <br />
       <div style={{ display: 'flex' }}>
         <MainContentBody>
-          {<LabelsHeader />}
+          <LabelsHeader />
           <Separator />
           <ColorCard
             title="green-hummingbot"

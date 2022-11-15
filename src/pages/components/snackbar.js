@@ -2,17 +2,18 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body } from '../../../hbui/elements/typography'
+import { H1, P, Body } from '../../../hbui/elements/typography'
 import Snackbar from '../../../hbui/components/snackbar'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const SnackBar = () => (
   <Layout>
-    <ShortHero
-      title="Snackbar"
-      subTitle="The Snackbar component is used to display notifications in various states."
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Snackbar</H1>
+      <P>The Snackbar component is used to display notifications in various states.</P>
+    </Hero>
     <MainContent>
       <Body>Import Snackbar element (adjust path)</Body>
       <CodeBlock code={codeImport} />

@@ -6,10 +6,6 @@ const externallinkbutton = {
   link: '/components/external-link-button',
   title: 'ExternalLinkButton',
 }
-const chip = {
-  link: '/components/chip',
-  title: 'Chip',
-}
 const hero = {
   link: '/components/hero',
   title: 'Hero',
@@ -69,7 +65,6 @@ const links =  [
   callout,
   cards,
   checkbox,
-  chip,
   code,
   combobox,
   externallinkbutton,

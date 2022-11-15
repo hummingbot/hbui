@@ -2,12 +2,15 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
-import { P, Bold } from '../../../hbui/elements/typography'
+import { MainContent } from '../../components/elements/layout'
+import { H1, P, Bold } from '../../../hbui/elements/typography'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const Elements = () => (
   <Layout>
-    <ShortHero title="Elements" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Elements</H1>
+    </Hero>
     <MainContent>
       <P>
         <Bold>Elements</Bold> are basic building blocks that can either be

@@ -9,16 +9,14 @@ const Layout = ({ children, ...rest }) => (
   <div {...rest} tw='bg-body'>
     <HBUIGlobalStyles />
     <ThemeProvider>
-      <DSMSidebar />
-      <Main>
-        {children}
-      </Main>
+      <div tw='grid grid-cols-1 md:(grid-cols-10 gap-0)'>
+        <DSMSidebar tw='hidden col-span-1 md:(block col-span-2)' />
+        <div tw='block bg-body col-span-1 h-auto md:(h-screen col-span-8 overflow-y-scroll)'>
+          {children}
+        </div>
+      </div>
     </ThemeProvider>
   </div>
 )
 
 export default Layout
-
-const Main = styled.div(() => [
-  tw`bg-body transition-all w-full ml-0 md:(ml-[270px] w-[calc(100% - 270px)])`,
-])

@@ -3,18 +3,14 @@ import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { PageRoot, Section } from '../../../hbui/elements/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
-import { H3, H4, P, Bold } from '../../../hbui/elements/typography'
+import { MainContent } from '../../components/elements/layout'
+import { H1, H3, H4, P, Bold } from '../../../hbui/elements/typography'
 import Hero from '../../../hbui/components/hero/Hero'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 
 const HeroPage = () => (
   <Layout>
-    <ShortHero
-      title="Hero"
-      subTitle="A responsive Hero component that aligns content automatically"
-    />
-    <Hero containerVariant='large' tw='bg-window border border-b border-window'>
+    <Hero tw='bg-window border border-b border-window'>
       <H3>Hero</H3>
       <P>Hero component example</P>
     </Hero>

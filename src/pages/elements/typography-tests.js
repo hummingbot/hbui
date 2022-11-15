@@ -3,6 +3,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
+import Hero from '../../../hbui/components/hero/Hero'
 import {
   P,
   PNano,

@@ -2,21 +2,21 @@
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { P, Bold } from '../../../hbui/elements/typography'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { H1, P, Bold } from '../../../hbui/elements/typography'
+import { MainContent } from '../../components/elements/layout'
 import { Separator } from '../../../hbui/elements/layout'
 import TextInput from '../../../hbui/components/input/TextInput'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-// import { hero, navigation } from './shared'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const TextInputPage = () => {
   const [inputValue, setInputValue] = useState('')
   return (
     <Layout>
-      <ShortHero
-        title="TextInput"
-        subTitle="The TextInput component extends the functionality of the TextInput element with additional labels."
-      />
+      <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+        <H1 isBold>TextInput</H1>
+        <P>The TextInput component extends the functionality of the TextInput element with additional labels.</P>
+      </Hero>
       <MainContent>
         {/*{navigation}*/}
         <br />
@@ -246,8 +246,7 @@ const codeDefault = String.raw`import TextInput from '@hummingbot/hbui/component
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeCustomTopLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -256,8 +255,7 @@ const codeCustomTopLabel = String.raw`import TextInput from '@hummingbot/hbui/co
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeValid = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -266,8 +264,7 @@ const codeValid = String.raw`import TextInput from '@hummingbot/hbui/components/
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeWarning = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -276,8 +273,7 @@ const codeWarning = String.raw`import TextInput from '@hummingbot/hbui/component
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeInvalid = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -286,8 +282,7 @@ const codeInvalid = String.raw`import TextInput from '@hummingbot/hbui/component
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 // const codeCustomTopLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -306,8 +301,7 @@ const codeDefaultExtendedLabel = String.raw`import TextInput from '@hummingbot/h
   bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeValidExtendedLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -317,8 +311,7 @@ const codeValidExtendedLabel = String.raw`import TextInput from '@hummingbot/hbu
   bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeWarningExtendedLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -328,8 +321,7 @@ const codeWarningExtendedLabel = String.raw`import TextInput from '@hummingbot/h
   bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeInvalidExtendedLabel = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -339,8 +331,7 @@ const codeInvalidExtendedLabel = String.raw`import TextInput from '@hummingbot/h
   bottomLabel='Bottom Label'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 // const codeDefault = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -361,8 +352,7 @@ const codeCustomPrefixPadding = String.raw`import TextInput from '@hummingbot/hb
   placeholder="Your address"
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`
 
 const codeRequired = String.raw`import TextInput from '@hummingbot/hbui/components/input/TextInput'
 
@@ -371,5 +361,4 @@ const codeRequired = String.raw`import TextInput from '@hummingbot/hbui/componen
   placeholder='Placeholder Text'
   value={inputValue}
   onChange={yourChangeHandler}
-/>
-`
+/>`

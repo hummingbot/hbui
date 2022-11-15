@@ -2,13 +2,18 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../components/layout'
-import { ShortHero, MainContent } from '../components/elements/layout'
-import { Body, P } from '../../hbui/elements/typography'
+import { MainContent } from '../components/elements/layout'
+import { Container } from '../../hbui/elements/layout'
+import { H1, Body, P } from '../../hbui/elements/typography'
 import { Button } from '../../hbui/elements/buttons'
+import Hero from '../../hbui/components/hero/Hero'
 
 const IndexPage = () => (
   <Layout>
-    <ShortHero title="HBUI" subTitle="The Hummingbot Design System" />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isHeavy tw='text-green dark:text-terminal'>HBUI</H1>
+      <P>The Hummingbot Design System</P>
+    </Hero>
     <MainContent>
       <Body>Welcome to the Hummingbot Design System</Body>
       <br />

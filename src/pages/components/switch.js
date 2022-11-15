@@ -2,18 +2,19 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body } from '../../../hbui/elements/typography'
+import { H1, P, Body } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Switch from '../../../hbui/components/switch'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const SwitchPage = () => (
   <Layout>
-    <ShortHero
-      title="Switch"
-      subTitle="Simple binary switch control"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Switch</H1>
+      <P>Simple binary switch control</P>
+    </Hero>
     <MainContent>
       <br />
       <br />

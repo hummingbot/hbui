@@ -1,12 +1,13 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
 import Layout from '../../components/layout'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { Body, Bold } from '../../../hbui/elements/typography'
+import { H1, P, Body, Bold } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import {BreadcrumbsBar} from '../../../hbui/components/navigation'
 import { Link }from 'gatsby'
+import Hero from '../../../hbui/components/hero/Hero'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },
@@ -18,10 +19,10 @@ const breadcrumbLinks = [
 function BreadcrumbsPage() {
   return (
     <Layout>
-      <ShortHero
-        title="Breadcrumbs"
-        subTitle="Generic breadcrumbs bar"
-      />
+      <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+        <H1 isBold>Breadcrumbs</H1>
+        <P>Generic breadcrumbs bar</P>
+      </Hero>
       <MainContent>
         <Body>
           The breadcrumbs bar takes 1 mandatory

@@ -2,17 +2,18 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../components/layout'
-import { ShortHero, MainContent } from '../components/elements/layout'
-import { Body, P, H5, Bold } from '../../hbui/elements/typography'
+import { MainContent } from '../components/elements/layout'
+import Hero from '../../hbui/components/hero/Hero'
+import { H1, Body, P, H5, Bold } from '../../hbui/elements/typography'
 import { Separator } from '../../hbui/elements/layout'
 import { Section, Container } from '../../hbui/elements/layout'
 
 const Code = () => (
   <Layout>
-    <ShortHero
-      title="Code"
-      subTitle="The code foundations of the Hummingbot design system"
-    />
+    <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
+      <H1 isBold>Code</H1>
+      <P>The code foundations of the Hummingbot design system</P>
+    </Hero>
     <MainContent>
       <H5>Overview</H5>
       <br />
