@@ -55,7 +55,7 @@ stylesB[false] = {
   "borderRadius": "9999px",
   "backgroundColor": "var(--bg-body)"
 };
-function MyToggle(_ref) {
+function SwitchElement(_ref) {
   var _ref$active = _ref.active,
     active = _ref$active === void 0 ? false : _ref$active,
     _ref$disabled = _ref.disabled,
@@ -79,7 +79,7 @@ function MyToggle(_ref) {
     $_css2: stylesB[enabled]
   }));
 }
-var _default = MyToggle;
+var _default = SwitchElement;
 exports["default"] = _default;
 var _StyledSwitch = (0, _styledComponents["default"])(_react2.Switch).withConfig({
   displayName: "switch___StyledSwitch",
