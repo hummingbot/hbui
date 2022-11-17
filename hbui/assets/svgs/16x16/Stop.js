@@ -1,6 +1,6 @@
 import React from "react";
 
-function StopButton({...props}) {
+function Stop({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ function StopButton({...props}) {
   );
 }
 
-export default StopButton;
+export default Stop;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function PlayButton({...props}) {
+function Play({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,4 +17,4 @@ function PlayButton({...props}) {
   );
 }
 
-export default PlayButton;
+export default Play;
