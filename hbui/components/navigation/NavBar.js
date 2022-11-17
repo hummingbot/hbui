@@ -165,7 +165,11 @@ function NavBar({
         </LeftSide>
         <RightSide>
           {showThemeToggle && <ThemeToggle style={{position: 'relative', top:'-2px'}} />}
-          { linksRight && linksRight.map(link => {return processLink(link)}) }
+          { linksRight &&
+            <div tw='ml-xs flex items-center'>
+              { linksRight.map(link => {return processLink(link)}) }
+            </div>
+          }
           { userData &&
             <Menu>
               { userData.profileImage ?
@@ -238,7 +242,6 @@ const NavItem = styled.div(() => [
   tw`flex hover:(border-b-2 border-green)`,
   css`
     display: block;
-    margin: 0 !important;
     padding: 0 !important;
     user-select: none;
     cursor: pointer;
@@ -273,7 +276,7 @@ const NavMobileH4 = styled(H4)(() => [
 ])
 
 const FirstLevelItem = styled.div(() => [
-  tw`mx-1.5`,
+  tw`mr-5`,
 ])
 
 const NavBarRoot = styled(Section)(({ isUppercase, isDisabled }) => [
@@ -283,9 +286,6 @@ const NavBarRoot = styled(Section)(({ isUppercase, isDisabled }) => [
   tw`border-b border-body`,
   css`
     height: 50px;
-    .theme-toggle {
-      ${tw`mr-4`};
-    }
   `,
 ])
 

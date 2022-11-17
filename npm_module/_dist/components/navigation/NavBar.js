@@ -148,9 +148,9 @@ function NavBar(_ref) {
       position: 'relative',
       top: '-2px'
     }
-  }), linksRight && linksRight.map(function (link) {
+  }), linksRight && /*#__PURE__*/_react["default"].createElement(_StyledDiv3, null, linksRight.map(function (link) {
     return processLink(link);
-  }), userData && /*#__PURE__*/_react["default"].createElement(Menu, null, userData.profileImage ? /*#__PURE__*/_react["default"].createElement("img", {
+  })), userData && /*#__PURE__*/_react["default"].createElement(Menu, null, userData.profileImage ? /*#__PURE__*/_react["default"].createElement("img", {
     src: userData.profileImage,
     alt: userData.name
   }) : /*#__PURE__*/_react["default"].createElement(ProfileIcon, null), /*#__PURE__*/_react["default"].createElement(_typography.P, null, userData.name), /*#__PURE__*/_react["default"].createElement(_TriangleDown["default"], null)), processCTA(linkCTA)), /*#__PURE__*/_react["default"].createElement(HamburgerIcon, {
@@ -225,7 +225,7 @@ var NavItem = _styledComponents["default"].div.withConfig({
       "--tw-border-opacity": "1",
       "borderColor": "rgb(0 194 206 / var(--tw-border-opacity))"
     }
-  }, (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    display: block;\n    margin: 0 !important;\n    padding: 0 !important;\n    user-select: none;\n    cursor: pointer;\n    border-bottom: 2px solid transparent;\n  "])))];
+  }, (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    display: block;\n    padding: 0 !important;\n    user-select: none;\n    cursor: pointer;\n    border-bottom: 2px solid transparent;\n  "])))];
 });
 var NavP = (0, _styledComponents["default"])(_typography.PSmall).withConfig({
   displayName: "NavBar__NavP",
@@ -275,8 +275,7 @@ var FirstLevelItem = _styledComponents["default"].div.withConfig({
   componentId: "sc-1p4sd4m-10"
 })(function () {
   return [{
-    "marginLeft": "0.375rem",
-    "marginRight": "0.375rem"
+    "marginRight": "1.25rem"
   }];
 });
 var NavBarRoot = (0, _styledComponents["default"])(_layout.Section).withConfig({
@@ -296,9 +295,7 @@ var NavBarRoot = (0, _styledComponents["default"])(_layout.Section).withConfig({
   {
     "borderBottomWidth": "1px",
     "borderColor": "var(--border-body)"
-  }, (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    height: 50px;\n    .theme-toggle {\n      ", ";\n    }\n  "])), {
-    "marginRight": "1rem"
-  })];
+  }, (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    height: 50px;\n  "])))];
 });
 var Side = _styledComponents["default"].div.withConfig({
   displayName: "NavBar__Side",
@@ -401,7 +398,7 @@ function ExternalLinkIcon() {
 }
 function HamburgerIcon(_ref3) {
   var props = Object.assign({}, ((0, _objectDestructuringEmpty2["default"])(_ref3), _ref3));
-  return /*#__PURE__*/_react["default"].createElement(_StyledDiv3, props, /*#__PURE__*/_react["default"].createElement(_StyledDiv4, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv5, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv6, null));
+  return /*#__PURE__*/_react["default"].createElement(_StyledDiv4, props, /*#__PURE__*/_react["default"].createElement(_StyledDiv5, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv6, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv7, null));
 }
 function CloseIcon(_ref4) {
   var props = Object.assign({}, ((0, _objectDestructuringEmpty2["default"])(_ref4), _ref4));
@@ -466,47 +463,41 @@ var _StyledContainer = (0, _styledComponents["default"])(_layout.Container).with
   "alignItems": "center",
   "justifyContent": "space-between"
 });
+var _StyledDiv3 = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "NavBar___StyledDiv3",
+  componentId: "sc-1p4sd4m-24"
+})({
+  "marginLeft": "16px",
+  "display": "flex",
+  "alignItems": "center"
+});
 var _StyledSvg = (0, _styledComponents["default"])("svg").withConfig({
   displayName: "NavBar___StyledSvg",
-  componentId: "sc-1p4sd4m-24"
+  componentId: "sc-1p4sd4m-25"
 })({
   "fill": "currentColor",
   "color": "var(--text-secondary)"
 });
 var _StyledSvg2 = (0, _styledComponents["default"])("svg").withConfig({
   displayName: "NavBar___StyledSvg2",
-  componentId: "sc-1p4sd4m-25"
+  componentId: "sc-1p4sd4m-26"
 })({
   "marginLeft": "16px"
 });
 var _StyledPath = (0, _styledComponents["default"])("path").withConfig({
   displayName: "NavBar___StyledPath",
-  componentId: "sc-1p4sd4m-26"
-})({
-  "fill": "currentColor"
-});
-var _StyledDiv3 = (0, _styledComponents["default"])("div").withConfig({
-  displayName: "NavBar___StyledDiv3",
   componentId: "sc-1p4sd4m-27"
 })({
-  "display": "block",
-  "cursor": "pointer",
-  "@media (min-width: 976px)": {
-    "display": "none"
-  }
+  "fill": "currentColor"
 });
 var _StyledDiv4 = (0, _styledComponents["default"])("div").withConfig({
   displayName: "NavBar___StyledDiv4",
   componentId: "sc-1p4sd4m-28"
 })({
-  "marginBottom": "3px",
-  "height": "2px",
-  "width": "16px",
-  "--tw-bg-opacity": "1",
-  "backgroundColor": "rgb(0 0 0 / var(--tw-bg-opacity))",
-  ".dark &": {
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
+  "display": "block",
+  "cursor": "pointer",
+  "@media (min-width: 976px)": {
+    "display": "none"
   }
 });
 var _StyledDiv5 = (0, _styledComponents["default"])("div").withConfig({
@@ -527,6 +518,20 @@ var _StyledDiv6 = (0, _styledComponents["default"])("div").withConfig({
   displayName: "NavBar___StyledDiv6",
   componentId: "sc-1p4sd4m-30"
 })({
+  "marginBottom": "3px",
+  "height": "2px",
+  "width": "16px",
+  "--tw-bg-opacity": "1",
+  "backgroundColor": "rgb(0 0 0 / var(--tw-bg-opacity))",
+  ".dark &": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(255 255 255 / var(--tw-bg-opacity))"
+  }
+});
+var _StyledDiv7 = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "NavBar___StyledDiv7",
+  componentId: "sc-1p4sd4m-31"
+})({
   "height": "2px",
   "width": "16px",
   "--tw-bg-opacity": "1",
@@ -538,7 +543,7 @@ var _StyledDiv6 = (0, _styledComponents["default"])("div").withConfig({
 });
 var _StyledSvg3 = (0, _styledComponents["default"])("svg").withConfig({
   displayName: "NavBar___StyledSvg3",
-  componentId: "sc-1p4sd4m-31"
+  componentId: "sc-1p4sd4m-32"
 })({
   "fill": "currentColor"
 });
