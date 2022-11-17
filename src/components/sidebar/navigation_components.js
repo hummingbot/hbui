@@ -66,6 +66,10 @@ const code = {
   link: '/components/code',
   title: 'Code',
 }
+const tag = {
+  link: '/components/tag',
+  title: 'Tag',
+}
 
 const links =  [
   breadcrumbs,
@@ -85,6 +89,7 @@ const links =  [
   switchPage,
   video,
   windowComponent,
+  tag,
 ]
 
 export default links

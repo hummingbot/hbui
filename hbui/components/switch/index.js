@@ -11,7 +11,7 @@ const stylesB = {}
 stylesB[true] = tw`translate-x-6 inline-block h-4 w-4 transform rounded-full bg-body`
 stylesB[false] = tw`translate-x-1 inline-block h-4 w-4 transform rounded-full bg-body`
 
-function MyToggle({active=false, disabled=false}) {
+function SwitchElement({active=false, disabled=false}) {
   const [enabled, setEnabled] = useState(active)
   return (
     <Switch
@@ -28,4 +28,4 @@ function MyToggle({active=false, disabled=false}) {
   )
 }
 
-export default MyToggle
+export default SwitchElement
