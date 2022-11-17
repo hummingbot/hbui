@@ -94,7 +94,7 @@ const TextInputPage = () => {
 
 export default TextInputPage
 
-const codeImport = String.raw`import { Input } from '@hummingbot/hbui/elements/input'`
+const codeImport = String.raw`import { TextInput } from '@hummingbot/hbui/elements/input'`
 
 const codeDefault = String.raw`<TextInput
   defaultValue=''
