@@ -2,7 +2,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 
-const function ArrowLeftIcon({...props}) {
+export function ArrowLeftIcon({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const function ArrowLeftIcon({...props}) {
   );
 }
 
-const function ArrowRightIcon({...props}) {
+export function ArrowRightIcon({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,7 @@ const function ArrowRightIcon({...props}) {
   );
 }
 
-const function ArrowDownIcon({...props}) {
+export function ArrowDownIcon({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const function ArrowDownIcon({...props}) {
   );
 }
 
-const function ArrowUpIcon({...props}) {
+export function ArrowUpIcon({...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
