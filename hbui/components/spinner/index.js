@@ -11,6 +11,7 @@ function Spinner({ color, radius, style, duration, strokeWidth, center, ...props
   return (
     <span style={styles}>
       <svg
+        {...props}
         viewBox="0 0 42 42"
         css={css`
           @keyframes rotate {

@@ -16,9 +16,19 @@ const Button = () => (
   <Layout>
     <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
       <H1 isBold>Button</H1>
-      <P>Component - To be used together with icons</P>
+      <P>Button component - to be used together with icons</P>
     </Hero>
     <MainContent>
+      <Body>Button with loading state</Body>
+      <ButtonComponent
+        loading={true}
+        variant='secondary'
+        label="Loading..."
+      />
+      <br />
+      <CodeBlock code={codeWithLoading} />
+      <br />
+      <br />
       <Body>Button with dark-mode ready icon (before)</Body>
       <ButtonComponent
         variant='secondary'
@@ -65,11 +75,18 @@ const Button = () => (
 
 export default Button
 
+const codeWithLoading = String.raw`import { Button } from '@hummingbot/hbui/components/buttons'
+
+<Button
+  variant='secondary'
+  loading={true}
+  label="Loading..."
+/>`
+
 const codeWithIconBefore = String.raw`import { Button } from '@hummingbot/hbui/components/buttons'
 import Play from '@hummingbot/hbui/svgs/16x16/Play'
 
 <Button
-  variant='secondary'
   label="Button"
   iconBefore={<Play tw='fill-current />}
 />`

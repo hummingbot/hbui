@@ -2,13 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import tw, { styled } from 'twin.macro'
 import { Button as ButtonElement } from '../../elements/buttons'
+import Spinner from '../spinner'
 
-export const Button = ({ label, iconBefore, iconAfter, variant, ...props }) => {
+export const Button = ({ label, iconBefore, iconAfter, variant, loading, ...props }) => {
   return (
-    <ButtonElement variant={variant} type="button" {...props}>
+    <ButtonElement variant={variant} {...props}>
       {iconBefore && <span className="icon-before">{iconBefore}</span>}
       {label}
       {iconAfter && <span className="icon-after">{iconAfter}</span>}
+      {loading && <Spinner color='white' tw='block ml-xxs' radius={15} />}
     </ButtonElement>
   )
 }
