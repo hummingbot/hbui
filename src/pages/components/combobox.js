@@ -29,19 +29,16 @@ const ComboboxPage = () => {
         <P>Generic combobox with autocomplete</P>
       </Hero>
       <MainContent>
-        <Body>
-          (Not working ATM)
-        </Body>
-        <Body>
-          Default state
-        </Body>
-        <Separator />
-        <br />
-        <br />
         <P>Selected:</P>
         <P isBold>{selected.label}</P>
         <br />
-        <ComboBox items={items} selected={selected} setSelected={setSelected} />
+        <ComboBox
+          items={items}
+          selected={selected}
+          setSelected={setSelected}
+        />
+        <br />
+        <CodeBlock code={codeComboBox} />
         <br />
         <br />
       </MainContent>
@@ -51,8 +48,22 @@ const ComboboxPage = () => {
 
 export default ComboboxPage
 
-const codeSpinnerDefault = String.raw`import Spinner from '@hummingbot/hbui/components/spinner'
+const codeComboBox = String.raw`import React, { useState } from 'react'
+import ComboBox from '@hummingbot/hbui/components/combobox'
 
-<Spinner
-  radius={50}
+const items = [
+  { id: 1, label: 'Wade Cooper' },
+  { id: 2, label: 'Arlene Mccoy' },
+  { id: 3, label: 'Devon Webb' },
+  { id: 4, label: 'Tom Cook' },
+  { id: 5, label: 'Tanya Fox' },
+  { id: 6, label: 'Hellen Schmidt' },
+]
+
+const [selected, setSelected] = useState(items[0])
+
+<ComboBox
+  items={items}
+  selected={selected}
+  setSelected={setSelected}
 />`
