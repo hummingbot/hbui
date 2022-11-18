@@ -45,7 +45,7 @@ const TagElement = styled.div(
   ({
     isUppercase,
   }) => [
-  tw`inline-flex rounded p-1 flex justify-center border`,
+  tw`inline-flex rounded p-1 select-none flex justify-center border`,
   ({ variant = 'default' }) => tagVariants[variant],
   isUppercase && tw`uppercase`
 ])
