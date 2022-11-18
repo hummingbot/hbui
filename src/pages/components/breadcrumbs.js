@@ -32,9 +32,7 @@ function BreadcrumbsPage() {
           <br />
           It uses the React <Bold>NavLink</Bold> internally - a link will be highlighted when a route matches the URL.
         </Body>
-        <Separator />
-        <br />
-        <br />
+        <Separator tw='mb-[2px]' />
         <BreadcrumbsBar
           links={breadcrumbLinks}
           linkClass={Link}
