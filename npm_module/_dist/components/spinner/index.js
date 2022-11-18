@@ -28,7 +28,7 @@ function Spinner(_ref) {
   var Path = getPathElement(color);
   return /*#__PURE__*/_react["default"].createElement("span", {
     style: styles
-  }, /*#__PURE__*/_react["default"].createElement(_StyledSvg, {
+  }, /*#__PURE__*/_react["default"].createElement(_StyledSvg, Object.assign({}, props, {
     viewBox: "0 0 42 42",
     style: {
       animationDuration: (duration ? duration : 900) + "ms",
@@ -36,7 +36,7 @@ function Spinner(_ref) {
       height: (radius ? radius : 40) + "px"
     },
     $_css2: (0, _styledComponents.css)(_templateObject || (_templateObject = (0, _taggedTemplateLiteralLoose2["default"])(["\n          @keyframes rotate {\n            100% {transform: rotate(360deg);}\n          }\n          animation-name: rotate;\n          animation-timing-function: linear;\n          display: inline-block;\n          animation-iteration-count: infinite;\n        "])))
-  }, /*#__PURE__*/_react["default"].createElement("g", {
+  }), /*#__PURE__*/_react["default"].createElement("g", {
     fill: "none",
     transform: "translate(3 3)",
     strokeWidth: "3"

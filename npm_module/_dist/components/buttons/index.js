@@ -11,22 +11,26 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _buttons = require("../../elements/buttons");
-var _excluded = ["label", "iconBefore", "iconAfter", "variant"],
+var _spinner = _interopRequireDefault(require("../spinner"));
+var _excluded = ["label", "iconBefore", "iconAfter", "variant", "loading"],
   _excluded2 = ["label"];
 var Button = function Button(_ref) {
   var label = _ref.label,
     iconBefore = _ref.iconBefore,
     iconAfter = _ref.iconAfter,
     variant = _ref.variant,
+    loading = _ref.loading,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
   return /*#__PURE__*/_react["default"].createElement(_buttons.Button, Object.assign({
-    variant: variant,
-    type: "button"
+    variant: variant
   }, props), iconBefore && /*#__PURE__*/_react["default"].createElement("span", {
     className: "icon-before"
   }, iconBefore), label, iconAfter && /*#__PURE__*/_react["default"].createElement("span", {
     className: "icon-after"
-  }, iconAfter));
+  }, iconAfter), loading && /*#__PURE__*/_react["default"].createElement(_StyledSpinner, {
+    color: "white",
+    radius: 15
+  }));
 };
 exports.Button = Button;
 Button.propTypes = {
@@ -121,9 +125,16 @@ function ExternalLinkButton(_ref3) {
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref3, _excluded2);
   return /*#__PURE__*/_react["default"].createElement(CustomExternalLinkButton, props, label, /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null));
 }
+var _StyledSpinner = (0, _styledComponents["default"])(_spinner["default"]).withConfig({
+  displayName: "buttons___StyledSpinner",
+  componentId: "sc-42vy15-2"
+})({
+  "marginLeft": "8px",
+  "display": "block"
+});
 var _StyledPath = (0, _styledComponents["default"])("path").withConfig({
   displayName: "buttons___StyledPath",
-  componentId: "sc-42vy15-2"
+  componentId: "sc-42vy15-3"
 })({
   "fill": "currentColor"
 });
