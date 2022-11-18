@@ -59,6 +59,7 @@ var TagElement = _styledComponents["default"].div.withConfig({
   var isUppercase = _ref2.isUppercase;
   return [{
     "display": "inline-flex",
+    "userSelect": "none",
     "justifyContent": "center",
     "borderRadius": "4px",
     "borderWidth": "1px",
