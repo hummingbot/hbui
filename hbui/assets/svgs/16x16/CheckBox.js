@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
+import React from 'react'
 import tw, { styled, css } from 'twin.macro'
 
 function CheckBox({active, ...props}) {

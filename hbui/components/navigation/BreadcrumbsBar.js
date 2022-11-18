@@ -9,7 +9,7 @@ function BreadcrumbsBar({links, linkClass, buttons, history}) {
   const LinkClass = linkClass
   return (
     <BreadcrumbsBarRoot>
-      { links && <HomeIcon />}
+      { links && <HomeIcon tw='fill-current text-primary' />}
       { links && <ChevronRight />}
       { links &&
         <LinksRow>
@@ -19,9 +19,9 @@ function BreadcrumbsBar({links, linkClass, buttons, history}) {
               <span key={link.url + index} tw='flex items-center'>
                 { index !== 0 && <P className='divider'>/</P> }
                 <LinkClass to={link.url} href={link.url}>
-                  <TextLink>
+                  <PSmall tw='flex select-none cursor-pointer focus:outline-none font-medium text-tertiary'>
                     {link.label}
-                  </TextLink>
+                  </PSmall>
                 </LinkClass>
               </span>
             )
@@ -84,26 +84,6 @@ const BreadcrumbsBarRoot = styled.div(({ isUppercase, isDisabled }) => [
 const LinksRow = styled.div(() => [
   tw`flex items-center`,
 ])
-
-const TextLinkElement = styled(PSmall)(() => [
-  tw`flex`,
-  tw`transition duration-100`,
-  tw`focus:outline-none`,
-  tw`font-medium`,
-  tw`text-tertiary`,
-  css`
-    user-select: none;
-    cursor: pointer;
-  `,
-])
-
-const TextLink = ({ to, label, isDisabled, ...props }) => {
-  return (
-    <TextLinkElement to={to} className='text-link'>
-      {label}
-    </TextLinkElement>
-  )
-}
 
 function ChevronRight() {
   return (

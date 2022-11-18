@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
+import React from 'react'
+import tw from 'twin.macro'
 
 function PowerSwitch({active, ...props}) {
   return (
@@ -8,6 +10,7 @@ function PowerSwitch({active, ...props}) {
       height="14"
       fill="none"
       viewBox="0 0 14 14"
+      tw="fill-current text-primary"
       {...props}
     >
       <path
