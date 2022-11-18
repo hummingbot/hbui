@@ -30,7 +30,8 @@ function MenuDropdown(_ref) {
     return /*#__PURE__*/_react["default"].createElement(LinkClass, {
       to: link.to,
       href: link.to,
-      key: link.label
+      key: link.label,
+      onClick: link.onClick
     }, /*#__PURE__*/_react["default"].createElement(KebabMenuItem, null, link.label));
   })));
 }

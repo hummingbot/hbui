@@ -11,14 +11,16 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _buttons = require("../../elements/buttons");
-var _excluded = ["label", "iconBefore", "iconAfter"],
+var _excluded = ["label", "iconBefore", "iconAfter", "variant"],
   _excluded2 = ["label"];
 var Button = function Button(_ref) {
   var label = _ref.label,
     iconBefore = _ref.iconBefore,
     iconAfter = _ref.iconAfter,
+    variant = _ref.variant,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
   return /*#__PURE__*/_react["default"].createElement(_buttons.Button, Object.assign({
+    variant: variant,
     type: "button"
   }, props), iconBefore && /*#__PURE__*/_react["default"].createElement("span", {
     className: "icon-before"
@@ -29,12 +31,8 @@ var Button = function Button(_ref) {
 exports.Button = Button;
 Button.propTypes = {
   // Button types
-  isPrimary: _propTypes["default"].bool,
-  isSecondary: _propTypes["default"].bool,
-  isSmall: _propTypes["default"].bool,
-  isSuccess: _propTypes["default"].bool,
-  isDanger: _propTypes["default"].bool,
-  isWarning: _propTypes["default"].bool,
+  variant: _propTypes["default"].string,
+  // disabled state
   isDisabled: _propTypes["default"].bool,
   // Button label content
   label: _propTypes["default"].string.isRequired,
@@ -42,14 +40,10 @@ Button.propTypes = {
   onClick: _propTypes["default"].func
 };
 Button.defaultProps = {
-  isPrimary: false,
-  isSecondary: false,
-  isSmall: false,
-  isSuccess: false,
-  isDanger: false,
-  isWarning: false,
+  variant: 'default',
+  label: 'Button',
   isDisabled: false,
-  onClick: undefined
+  onClick: null
 };
 function ExternalLinkIcon(_ref2) {
   var props = Object.assign({}, ((0, _objectDestructuringEmpty2["default"])(_ref2), _ref2));
