@@ -4,12 +4,13 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports["default"] = void 0;
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
 var _excluded = ["active"];
 function PowerSwitch(_ref) {
   var active = _ref.active,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
-  return /*#__PURE__*/_react["default"].createElement("svg", Object.assign({
+  return /*#__PURE__*/_react["default"].createElement(_StyledSvg, Object.assign({
     xmlns: "http://www.w3.org/2000/svg",
     width: "14",
     height: "14",
@@ -22,3 +23,10 @@ function PowerSwitch(_ref) {
 }
 var _default = PowerSwitch;
 exports["default"] = _default;
+var _StyledSvg = (0, _styledComponents["default"])("svg").withConfig({
+  displayName: "PowerSwitch___StyledSvg",
+  componentId: "sc-1l1ny36-0"
+})({
+  "fill": "currentColor",
+  "color": "var(--text-primary)"
+});
