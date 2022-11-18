@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import tw, { styled } from 'twin.macro'
 import { Button as ButtonElement } from '../../elements/buttons'
 
-export const Button = ({ label, iconBefore, iconAfter, ...props }) => {
+export const Button = ({ label, iconBefore, iconAfter, variant, ...props }) => {
   return (
-    <ButtonElement type="button" {...props}>
+    <ButtonElement variant={variant} type="button" {...props}>
       {iconBefore && <span className="icon-before">{iconBefore}</span>}
       {label}
       {iconAfter && <span className="icon-after">{iconAfter}</span>}
@@ -15,12 +15,8 @@ export const Button = ({ label, iconBefore, iconAfter, ...props }) => {
 
 Button.propTypes = {
   // Button types
-  isPrimary: PropTypes.bool,
-  isSecondary: PropTypes.bool,
-  isSmall: PropTypes.bool,
-  isSuccess: PropTypes.bool,
-  isDanger: PropTypes.bool,
-  isWarning: PropTypes.bool,
+  variant: PropTypes.string,
+  // disabled state
   isDisabled: PropTypes.bool,
   // Button label content
   label: PropTypes.string.isRequired,
@@ -29,14 +25,10 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  isPrimary: false,
-  isSecondary: false,
-  isSmall: false,
-  isSuccess: false,
-  isDanger: false,
-  isWarning: false,
+  variant: 'default',
+  label: 'Button',
   isDisabled: false,
-  onClick: undefined,
+  onClick: null,
 }
 
 
