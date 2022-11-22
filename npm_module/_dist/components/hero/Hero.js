@@ -27,10 +27,10 @@ var _StyledSection = (0, _styledComponents["default"])(_layout.Section).withConf
   "@media (min-width: 768px)": {
     "height": "350px"
   },
-  "@media (min-width: 976px)": {
+  "@media (min-width: 1024px)": {
     "height": "400px"
   },
-  "@media (min-width: 1440px)": {
+  "@media (min-width: 1280px)": {
     "height": "450px"
   },
   "@media (min-width: 1536px)": {

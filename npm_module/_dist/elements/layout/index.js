@@ -31,7 +31,7 @@ var containerVariants = {
     "@media (min-width: 768px)": {
       "width": "80%"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "width": "70%"
     },
     "@media (min-width: 1536px)": {
@@ -44,7 +44,7 @@ var containerVariants = {
     "@media (min-width: 768px)": {
       "width": "91.666667%"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "width": "83.333333%"
     },
     "@media (min-width: 1536px)": {
@@ -79,11 +79,11 @@ var PaddingBox = _styledComponents["default"].div.withConfig({
       "paddingTop": "2rem",
       "paddingBottom": "2rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "paddingTop": "3rem",
       "paddingBottom": "3rem"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "paddingTop": "5rem",
       "paddingBottom": "5rem"
     }
@@ -187,7 +187,7 @@ var Window = _styledComponents["default"].div.withConfig({
       "paddingLeft": "24px",
       "paddingRight": "24px"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "borderRadius": "4px",
       "paddingTop": "24px",
       "paddingBottom": "24px",

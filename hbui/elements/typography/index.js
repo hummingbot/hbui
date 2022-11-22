@@ -22,7 +22,6 @@ const sharedTransforms = props => [
   props.isCentered && tw`text-center`,
   props.noSelect && tw`select-none`,
   props.isWhite && tw`!text-white`,
-  props.isBrandColor && tw`!text-green`,
   props.isGreen && tw`!text-green`,
   props.isRed && tw`!text-red`,
   props.isBlue && tw`!text-blue`,

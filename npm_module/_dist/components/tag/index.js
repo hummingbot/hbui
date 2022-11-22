@@ -27,24 +27,24 @@ var _default = Tag;
 exports["default"] = _default;
 var defaultStyle = [{
   "--tw-border-opacity": "1",
-  "borderColor": "rgb(174 180 183 / var(--tw-border-opacity))"
-}, (0, _styledComponents.css)(_templateObject || (_templateObject = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#aeb4b7")];
+  "borderColor": "rgb(174 179 182 / var(--tw-border-opacity))"
+}, (0, _styledComponents.css)(_templateObject || (_templateObject = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#AEB3B6")];
 var infoStyle = [{
   "--tw-border-opacity": "1",
   "borderColor": "rgb(49 141 255 / var(--tw-border-opacity))"
-}, (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#318dff")];
+}, (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#318DFF")];
 var successStyle = [{
   "--tw-border-opacity": "1",
   "borderColor": "rgb(0 194 206 / var(--tw-border-opacity))"
-}, (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#00c2ce")];
+}, (0, _styledComponents.css)(_templateObject3 || (_templateObject3 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#00C2CE")];
 var dangerStyle = [{
   "--tw-border-opacity": "1",
   "borderColor": "rgb(235 87 87 / var(--tw-border-opacity))"
-}, (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#eb5757")];
+}, (0, _styledComponents.css)(_templateObject4 || (_templateObject4 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#EB5757")];
 var warningStyle = [{
   "--tw-border-opacity": "1",
   "borderColor": "rgb(240 135 39 / var(--tw-border-opacity))"
-}, (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#f08727")];
+}, (0, _styledComponents.css)(_templateObject5 || (_templateObject5 = (0, _taggedTemplateLiteralLoose2["default"])(["p { color: ", ";"])), "#F08727")];
 var tagVariants = {
   "default": defaultStyle,
   info: infoStyle,

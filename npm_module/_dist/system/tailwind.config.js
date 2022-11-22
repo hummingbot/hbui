@@ -1,34 +1,39 @@
 "use strict";
 
-var _borderRadius, _textColor;
+var _borderRadius;
 var tokens = require('../tokens');
 var colors = tokens.colors;
-var colorsDark = colors.dark;
-var colorsLight = colors.light;
-var colorPalettes = colors['color-palettes'];
-var breakpoints = require('../constants/breakpoints');
+var text = tokens.text;
+var breakpoints = tokens.breakpoints;
+// const colorsDark = colors.dark
+// const colorsLight = colors.light
+var colorPalettes = colors.color_palettes;
 module.exports = {
   darkMode: 'class',
   theme: {
     fontSize: {
-      'xs': tokens.fontSize['text-xs'],
-      'sm': tokens.fontSize['text-sm'],
-      'base': tokens.fontSize['text-base'],
-      'lg': tokens.fontSize['text-lg'],
-      'xl': tokens.fontSize['text-xl'],
-      '2xl': tokens.fontSize['text-2-xl'],
-      '3xl': tokens.fontSize['text-3-xl'],
-      '4xl': tokens.fontSize['text-4-xl'],
-      '5xl': tokens.fontSize['text-5-xl'],
-      '6xl': tokens.fontSize['text-6-xl'],
-      '7xl': tokens.fontSize['text-7-xl']
+      'xxxs': text.fontSize['text-2-xxs'],
+      'xxs': text.fontSize['text-xxs'],
+      'xs': text.fontSize['text-xs'],
+      'sm': text.fontSize['text-sm'],
+      'base': text.fontSize['text-base'],
+      'lg': text.fontSize['text-lg'],
+      'xl': text.fontSize['text-xl'],
+      '2xl': text.fontSize['text-2xl'],
+      '3xl': text.fontSize['text-3xl'],
+      '4xl': text.fontSize['text-4xl'],
+      '5xl': text.fontSize['text-5xl'],
+      '6xl': text.fontSize['text-6xl'],
+      '7xl': text.fontSize['text-7xl'],
+      '8xl': text.fontSize['text-8xl'],
+      '9xl': text.fontSize['text-9xl']
     },
     screens: {
-      'sm': breakpoints['sm'] + "px",
-      'md': breakpoints['md'] + "px",
-      'lg': breakpoints['lg'] + "px",
-      'xl': breakpoints['xl'] + "px",
-      '2xl': breakpoints['xxl'] + "px"
+      'sm': breakpoints.sm,
+      'md': breakpoints.md,
+      'lg': breakpoints.lg,
+      'xl': breakpoints.xl,
+      '2xl': breakpoints['2xl']
     },
     fontFamily: {
       sans: ['Satoshi', 'sans-serif'],
@@ -46,21 +51,20 @@ module.exports = {
       'black': colors.black,
       'white': colors.white,
       'terminal': colors.terminal,
-      'green': tokens.colors['color-palettes'].green['500'],
-      'red': tokens.colors['color-palettes'].red['500'],
-      'blue': tokens.colors['color-palettes'].blue['500'],
-      'yellow': tokens.colors['color-palettes'].yellow['500'],
-      'purple': tokens.colors['color-palettes'].purple['500'],
-      'magenta': tokens.colors['color-palettes'].magenta['500'],
-      'orange': tokens.colors['color-palettes'].orange['500'],
-      'success': tokens.colors['color-palettes'].green['500'],
-      'danger': tokens.colors['color-palettes'].red['500'],
-      'info': tokens.colors['color-palettes'].blue['500'],
-      'warning': tokens.colors['color-palettes'].orange['500']
+      'green': colorPalettes.green['500'],
+      'red': colorPalettes.red['500'],
+      'blue': colorPalettes.blue['500'],
+      'yellow': colorPalettes.yellow['500'],
+      'purple': colorPalettes.purple['500'],
+      'magenta': colorPalettes.magenta['500'],
+      'orange': colorPalettes.orange['500'],
+      'success': colorPalettes.green['500'],
+      'danger': colorPalettes.red['500'],
+      'info': colorPalettes.blue['500'],
+      'warning': colorPalettes.orange['500']
     },
     extend: {
       colors: {
-        'brand-scale': colorPalettes.brand,
         'green-scale': colorPalettes.green,
         'red-scale': colorPalettes.red,
         'blue-scale': colorPalettes.blue,
@@ -68,8 +72,8 @@ module.exports = {
         'purple-scale': colorPalettes.purple,
         'magenta-scale': colorPalettes.magenta,
         'orange-scale': colorPalettes.orange,
-        'grey-light-scale': colorPalettes['grey-light'],
-        'grey-dark-scale': colorPalettes['grey-dark']
+        'grey-light-scale': colorPalettes.grey_light,
+        'grey-dark-scale': colorPalettes.grey_dark
       },
       spacing: tokens.spacing,
       backgroundColor: {
@@ -102,7 +106,7 @@ module.exports = {
         "checkbox-unselected-hover": "var(--bg-checkbox-unselected-hover)",
         "checkbox-unselected-active": "var(--bg-checkbox-unselected-active)"
       },
-      textColor: (_textColor = {
+      textColor: {
         primary: "var(--text-primary)",
         secondary: "var(--text-secondary)",
         tertiary: "var(--text-tertiary)",
@@ -124,11 +128,19 @@ module.exports = {
         "button-danger": "var(--text-button-danger)",
         "button-danger-hover": "var(--text-button-danger-hover)",
         "button-danger-active": "var(--text-button-danger-active)",
-        input: "var(--text-input)",
         navbutton: "var(--text-navbutton)",
         "navbutton-hover": "var(--text-navbutton-hover)",
-        "navbutton-active": "var(--text-navbutton-active)"
-      }, _textColor["input"] = "var(--text-input)", _textColor["input-focus"] = "var(--text-input-focus)", _textColor["input-hover"] = "var(--text-input-hover)", _textColor["checkbox-selected-enabled"] = "var(--text-checkbox-selected-enabled)", _textColor["checkbox-selected-hover"] = "var(--text-checkbox-selected-hover)", _textColor["checkbox-selected-active"] = "var(--text-checkbox-selected-active)", _textColor["checkbox-unselected-enabled"] = "var(--text-checkbox-unselected-enabled)", _textColor["checkbox-unselected-hover"] = "var(--text-checkbox-unselected-hover)", _textColor["checkbox-unselected-active"] = "var(--text-checkbox-unselected-active)", _textColor),
+        "navbutton-active": "var(--text-navbutton-active)",
+        input: "var(--text-input)",
+        "input-focus": "var(--text-input-focus)",
+        "input-hover": "var(--text-input-hover)",
+        "checkbox-selected-enabled": "var(--text-checkbox-selected-enabled)",
+        "checkbox-selected-hover": "var(--text-checkbox-selected-hover)",
+        "checkbox-selected-active": "var(--text-checkbox-selected-active)",
+        "checkbox-unselected-enabled": "var(--text-checkbox-unselected-enabled)",
+        "checkbox-unselected-hover": "var(--text-checkbox-unselected-hover)",
+        "checkbox-unselected-active": "var(--text-checkbox-unselected-active)"
+      },
       borderColor: {
         body: "var(--border-body)",
         window: "var(--border-window)",

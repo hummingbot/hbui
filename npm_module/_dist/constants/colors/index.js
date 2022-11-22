@@ -1,12 +1,11 @@
 "use strict";
 
 var colorTokens = require('../../tokens').colors;
-var colorPalettes = colorTokens['color-palettes'];
+var colorPalettes = colorTokens.color_palettes;
 module.exports = {
   white: colorTokens.white,
   black: colorTokens.black,
   terminal: colorTokens.terminal,
-  brand: colorPalettes.brand['500'],
   // success_hovered: colorTokens['button-state-colors']['success-hovered'],
   // success_active: colorTokens['button-state-colors']['success-active'],
 
@@ -28,7 +27,6 @@ module.exports = {
   magenta: colorPalettes.magenta['500'],
   grey_light: colorPalettes['grey-light'],
   grey_dark: colorPalettes['grey-dark'],
-  brand_scale: colorPalettes.brand,
   green_scale: colorPalettes.green,
   blue_scale: colorPalettes.blue,
   orange_scale: colorPalettes.orange,

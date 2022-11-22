@@ -48,9 +48,6 @@ var sharedTransforms = function sharedTransforms(props) {
   }, props.isWhite && {
     "--tw-text-opacity": "1 !important",
     "color": "rgb(255 255 255 / var(--tw-text-opacity)) !important"
-  }, props.isBrandColor && {
-    "--tw-text-opacity": "1 !important",
-    "color": "rgb(0 194 206 / var(--tw-text-opacity)) !important"
   }, props.isGreen && {
     "--tw-text-opacity": "1 !important",
     "color": "rgb(0 194 206 / var(--tw-text-opacity)) !important"
@@ -101,7 +98,7 @@ var P = _styledComponents["default"].p.withConfig({
 })({}, function (props) {
   return [{
     "fontSize": "0.9375rem",
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "1.125rem"
     }
   }];
@@ -130,7 +127,7 @@ var H6 = _styledComponents["default"].h6.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "1.25rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "1.5rem"
     }
   }];
@@ -145,7 +142,7 @@ var H5 = _styledComponents["default"].h5.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "1.5rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "1.875rem"
     }
   }, {
@@ -162,7 +159,7 @@ var H4 = _styledComponents["default"].h4.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "1.875rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "2.25rem"
     }
   }, {
@@ -179,7 +176,7 @@ var H3 = _styledComponents["default"].h3.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "2.25rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "3rem"
     }
   }, {
@@ -196,7 +193,7 @@ var H2 = _styledComponents["default"].h2.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "3rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "3.75rem"
     }
   }, {
@@ -213,7 +210,7 @@ var H1 = _styledComponents["default"].h1.withConfig({
     "@media (min-width: 768px)": {
       "fontSize": "3.75rem"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "fontSize": "4.5rem"
     }
   }, {

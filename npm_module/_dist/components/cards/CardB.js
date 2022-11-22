@@ -68,10 +68,10 @@ var Root = _styledComponents["default"].div.withConfig({
       "--tw-text-opacity": "1",
       "color": "rgb(95 255 215 / var(--tw-text-opacity))"
     },
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "padding": "16px"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "padding": "24px"
     }
   }];
@@ -86,10 +86,10 @@ var HoverlessRoot = _styledComponents["default"].div.withConfig({
     "borderColor": "var(--border-window)",
     "backgroundColor": "var(--bg-window)",
     "padding": "8px",
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "padding": "16px"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "padding": "24px"
     }
   }];

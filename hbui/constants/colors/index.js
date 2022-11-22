@@ -1,11 +1,10 @@
 const colorTokens = require('../../tokens').colors
-const colorPalettes = colorTokens['color-palettes']
+const colorPalettes = colorTokens.color_palettes
 
 module.exports = {
   white: colorTokens.white,
   black: colorTokens.black,
   terminal: colorTokens.terminal,
-  brand: colorPalettes.brand['500'],
 
   // success_hovered: colorTokens['button-state-colors']['success-hovered'],
   // success_active: colorTokens['button-state-colors']['success-active'],
@@ -30,7 +29,6 @@ module.exports = {
   grey_light: colorPalettes['grey-light'],
   grey_dark: colorPalettes['grey-dark'],
 
-  brand_scale: colorPalettes.brand,
   green_scale: colorPalettes.green,
   blue_scale: colorPalettes.blue,
   orange_scale: colorPalettes.orange,

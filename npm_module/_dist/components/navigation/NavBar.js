@@ -312,7 +312,7 @@ var LinksLeft = _styledComponents["default"].div.withConfig({
   return [{
     "display": "none",
     "alignItems": "center",
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "display": "flex"
     }
   }];
@@ -332,7 +332,7 @@ var RightSide = (0, _styledComponents["default"])(Side).withConfig({
   return [{
     "display": "none",
     "alignItems": "center",
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "display": "flex"
     }
   }, (0, _styledComponents.css)(_templateObject8 || (_templateObject8 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    img {\n      ", ";\n    }\n    svg {\n      ", ";\n    }\n  "])), {
@@ -496,7 +496,7 @@ var _StyledDiv4 = (0, _styledComponents["default"])("div").withConfig({
 })({
   "display": "block",
   "cursor": "pointer",
-  "@media (min-width: 976px)": {
+  "@media (min-width: 1024px)": {
     "display": "none"
   }
 });

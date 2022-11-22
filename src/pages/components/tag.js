@@ -25,14 +25,14 @@ const TagPage = () => (
       />
       <br />
       <br />
-      <CodeBlock code={code} />
+      <CodeBlock code={codeDefault} />
       <br />
       <br />
       <Body>Uppercase</Body>
       <Tag
-        label='Default'
-        variant='default'
         isUppercase={true}
+        label='UPPERCASE'
+        variant='default'
       />
       <br />
       <br />
@@ -86,38 +86,45 @@ const TagPage = () => (
 export default TagPage
 
 
-const code = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeDefault = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  label='Default'
+  variant='default'
 />`
 
-const codeUppercase = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeUppercase = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  isUppercase={true}
+  label='UPPERCASE'
+  variant='default'
 />`
 
-const codeInfo = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeInfo = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  label='Info'
+  variant='info'
 />`
 
-const codeSuccess = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeSuccess = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  label='Success'
+  variant='success'
 />`
 
-const codeWarning = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeWarning = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  label='Warning'
+  variant='warning'
 />`
 
-const codeDanger = String.raw`import Switch from '@hummingbot/hbui/components/switch'
+const codeDanger = String.raw`import Tag from '@hummingbot/hbui/components/tag'
 
-<Switch
-  active={true}
+<Tag
+  label='Danger'
+  variant='danger'
 />`

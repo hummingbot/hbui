@@ -2,21 +2,21 @@ import { css } from '@emotion/react'
 import tw from 'twin.macro'
 import tokens from '../tokens'
 const colors = tokens.colors
-const colorPalettes = colors['color-palettes']
+const colorPalettes = colors.color_palettes
 const colorsDarkTheme = colors.dark
 const colorsLightTheme = colors.light
 
 const darkModeConfig = css`
   .light {
     color-scheme: light;
-    --bg-body: ${colorsLightTheme['body-bg']};
-    --border-body: ${colorsLightTheme['body-border']};
-    --bg-window: ${colorsLightTheme['window-bg']};
-    --border-window: ${colorsLightTheme['window-border']};
+    --bg-body: ${colorsLightTheme.body_bg};
+    --border-body: ${colorsLightTheme.body_border};
+    --bg-window: ${colorsLightTheme.window_bg};
+    --border-window: ${colorsLightTheme.window_border};
 
-    --text-primary: ${colorsLightTheme['text-primary']};
-    --text-secondary: ${colorsLightTheme['text-secondary']};
-    --text-tertiary: ${colorsLightTheme['text-tertiary']};
+    --text-primary: ${colorsLightTheme.text_primary};
+    --text-secondary: ${colorsLightTheme.text_secondary};
+    --text-tertiary: ${colorsLightTheme.text_tertiary};
 
     --bg-button: ${colorsLightTheme.buttons.default.bg.enabled};
     --bg-button-hover: ${colorsLightTheme.buttons.default.bg.hover};
@@ -73,59 +73,50 @@ const darkModeConfig = css`
     --border-button-danger-hover: ${colorsLightTheme.buttons.danger.border.hover};
     --border-button-danger-active: ${colorsLightTheme.buttons.danger.border.active};
     
-    --bg-navbutton: ${colorsLightTheme.navbutton.bg.enabled};
-    --bg-navbutton-hover: ${colorsLightTheme.navbutton.bg.hover};
-    --bg-navbutton-active: ${colorsLightTheme.navbutton.bg.active};
-    --bg-navbutton-selected: ${colorsLightTheme.navbutton.bg.selected};
-    
-    --text-navbutton: ${colorsLightTheme.navbutton.text.enabled};
-    --text-navbutton-hover: ${colorsLightTheme.navbutton.text.hover};
-    --text-navbutton-active: ${colorsLightTheme.navbutton.text.active};
-    --text-navbutton-selected: ${colorsLightTheme.navbutton.text.selected};
-    
-    --bg-input: ${colorsLightTheme.buttons.default.bg.enabled};
-    --bg-input-focus: ${colorsLightTheme.buttons.default.bg.enabled};
-    --bg-input-hover: ${colorsLightTheme.buttons.default.bg.hover};
+    --bg-input: ${colorsLightTheme.input.bg.enabled};
+    --bg-input-focus: ${colorsLightTheme.input.bg.enabled};
+    --bg-input-hover: ${colorsLightTheme.input.bg.hover};
 
-    --text-input: ${colorsLightTheme.buttons.default.text.enabled};
-    --text-input-focus: ${colorsLightTheme.buttons.default.text.enabled};
-    --text-input-hover: ${colorsLightTheme.buttons.default.text.hover};
+    --text-input: ${colorsLightTheme.input.text.enabled};
+    --text-input-focus: ${colorsLightTheme.input.text.focus};
+    --text-input-hover: ${colorsLightTheme.input.text.hover};
+    --text-input-prefix: ${colorsLightTheme.input.text.prefix};
+    --text-input-field_label: ${colorsLightTheme.input.text.field_label};
 
-    --border-input: ${colorsLightTheme.buttons.default.border.enabled};
-    --border-input-focus: ${colorsLightTheme.buttons.default.border.enabled};
-    --border-input-hover: ${colorsLightTheme.buttons.default.border.hover};
+    --border-input: ${colorsLightTheme.input.border.default};
+    --border-input-focus: ${colorsLightTheme.input.border.focus};
 
-    --bg-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.bg.enabled};
-    --bg-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.bg.hover};
-    --bg-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.bg.active};
-    --bg-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.bg.enabled};
-    --bg-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.bg.hover};
-    --bg-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.bg.active};
+    --bg-checkbox-selected-enabled: ${colorsLightTheme.checkbox.selected.bg.enabled};
+    --bg-checkbox-selected-hover: ${colorsLightTheme.checkbox.selected.bg.hover};
+    --bg-checkbox-selected-active: ${colorsLightTheme.checkbox.selected.bg.active};
+    --bg-checkbox-unselected-enabled: ${colorsLightTheme.checkbox.unselected.bg.enabled};
+    --bg-checkbox-unselected-hover: ${colorsLightTheme.checkbox.unselected.bg.hover};
+    --bg-checkbox-unselected-active: ${colorsLightTheme.checkbox.unselected.bg.active};
 
-    --text-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.text.enabled};
-    --text-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.text.hover};
-    --text-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.text.active};
-    --text-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.text.enabled};
-    --text-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.text.hover};
-    --text-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.text.active};
+    --text-checkbox-selected-enabled: ${colorsLightTheme.checkbox.selected.text.enabled};
+    --text-checkbox-selected-hover: ${colorsLightTheme.checkbox.selected.text.hover};
+    --text-checkbox-selected-active: ${colorsLightTheme.checkbox.selected.text.active};
+    --text-checkbox-unselected-enabled: ${colorsLightTheme.checkbox.unselected.text.enabled};
+    --text-checkbox-unselected-hover: ${colorsLightTheme.checkbox.unselected.text.hover};
+    --text-checkbox-unselected-active: ${colorsLightTheme.checkbox.unselected.text.active};
 
-    --border-checkbox-selected-enabled: ${colorsLightTheme.checkboxes.selected.border.enabled};
-    --border-checkbox-selected-hover: ${colorsLightTheme.checkboxes.selected.border.hover};
-    --border-checkbox-selected-active: ${colorsLightTheme.checkboxes.selected.border.active};
-    --border-checkbox-unselected-enabled: ${colorsLightTheme.checkboxes.unselected.border.enabled};
-    --border-checkbox-unselected-hover: ${colorsLightTheme.checkboxes.unselected.border.hover};
-    --border-checkbox-unselected-active: ${colorsLightTheme.checkboxes.unselected.border.active};
+    --border-checkbox-selected-enabled: ${colorsLightTheme.checkbox.selected.border.enabled};
+    --border-checkbox-selected-hover: ${colorsLightTheme.checkbox.selected.border.hover};
+    --border-checkbox-selected-active: ${colorsLightTheme.checkbox.selected.border.active};
+    --border-checkbox-unselected-enabled: ${colorsLightTheme.checkbox.unselected.border.enabled};
+    --border-checkbox-unselected-hover: ${colorsLightTheme.checkbox.unselected.border.hover};
+    --border-checkbox-unselected-active: ${colorsLightTheme.checkbox.unselected.border.active};
   }
   .dark {
     color-scheme: dark;
-    --bg-body: ${colorsDarkTheme['body-bg']};
-    --border-body: ${colorsDarkTheme['body-border']};
-    --bg-window: ${colorsDarkTheme['window-bg']};
-    --border-window: ${colorsDarkTheme['window-border']};
+    --bg-body: ${colorsDarkTheme.body_bg};
+    --border-body: ${colorsDarkTheme.body_border};
+    --bg-window: ${colorsDarkTheme.window_bg};
+    --border-window: ${colorsDarkTheme.window_border};
 
-    --text-primary: ${colorsDarkTheme['text-primary']};
-    --text-secondary: ${colorsDarkTheme['text-secondary']};
-    --text-tertiary: ${colorsDarkTheme['text-tertiary']};
+    --text-primary: ${colorsDarkTheme.text_primary};
+    --text-secondary: ${colorsDarkTheme.text_secondary};
+    --text-tertiary: ${colorsDarkTheme.text_tertiary};
 
     --bg-button: ${colorsDarkTheme.buttons.default.bg.enabled};
     --bg-button-hover: ${colorsDarkTheme.buttons.default.bg.hover};
@@ -182,48 +173,39 @@ const darkModeConfig = css`
     --border-button-danger-hover: ${colorsDarkTheme.buttons.danger.border.hover};
     --border-button-danger-active: ${colorsDarkTheme.buttons.danger.border.active};
     
-    --bg-navbutton: ${colorsDarkTheme.navbutton.bg.enabled};
-    --bg-navbutton-hover: ${colorsDarkTheme.navbutton.bg.hover};
-    --bg-navbutton-active: ${colorsDarkTheme.navbutton.bg.active};
-    --bg-navbutton-selected: ${colorsDarkTheme.navbutton.bg.selected};
-    
-    --text-navbutton: ${colorsDarkTheme.navbutton.text.enabled};
-    --text-navbutton-hover: ${colorsDarkTheme.navbutton.text.hover};
-    --text-navbutton-active: ${colorsDarkTheme.navbutton.text.active};
-    --text-navbutton-selected: ${colorsDarkTheme.navbutton.text.selected};
-    
-    --bg-input: ${colorsDarkTheme.buttons.default.bg.enabled};
-    --bg-input-focus: ${colorsDarkTheme.buttons.default.bg.enabled};
-    --bg-input-hover: ${colorsDarkTheme.buttons.default.bg.hover};
+    --bg-input: ${colorsDarkTheme.input.bg.enabled};
+    --bg-input-focus: ${colorsDarkTheme.input.bg.enabled};
+    --bg-input-hover: ${colorsDarkTheme.input.bg.hover};
 
-    --text-input: ${colorsDarkTheme.buttons.default.text.enabled};
-    --text-input-focus: ${colorsDarkTheme.buttons.default.text.enabled};
-    --text-input-hover: ${colorsDarkTheme.buttons.default.text.hover};
+    --text-input: ${colorsDarkTheme.input.text.enabled};
+    --text-input-focus: ${colorsDarkTheme.input.text.focus};
+    --text-input-hover: ${colorsDarkTheme.input.text.hover};
+    --text-input-prefix: ${colorsDarkTheme.input.text.prefix};
+    --text-input-field_label: ${colorsDarkTheme.input.text.field_label};
 
-    --border-input: ${colorsDarkTheme.buttons.default.border.enabled};
-    --border-input-focus: ${colorsDarkTheme.buttons.default.border.enabled};
-    --border-input-hover: ${colorsDarkTheme.buttons.default.border.hover};
+    --border-input: ${colorsDarkTheme.input.border.default};
+    --border-input-focus: ${colorsDarkTheme.input.border.focus};
 
-    --bg-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.bg.enabled};
-    --bg-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.bg.hover};
-    --bg-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.bg.active};
-    --bg-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.bg.enabled};
-    --bg-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.bg.hover};
-    --bg-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.bg.active};
+    --bg-checkbox-selected-enabled: ${colorsDarkTheme.checkbox.selected.bg.enabled};
+    --bg-checkbox-selected-hover: ${colorsDarkTheme.checkbox.selected.bg.hover};
+    --bg-checkbox-selected-active: ${colorsDarkTheme.checkbox.selected.bg.active};
+    --bg-checkbox-unselected-enabled: ${colorsDarkTheme.checkbox.unselected.bg.enabled};
+    --bg-checkbox-unselected-hover: ${colorsDarkTheme.checkbox.unselected.bg.hover};
+    --bg-checkbox-unselected-active: ${colorsDarkTheme.checkbox.unselected.bg.active};
 
-    --text-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.text.enabled};
-    --text-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.text.hover};
-    --text-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.text.active};
-    --text-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.text.enabled};
-    --text-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.text.hover};
-    --text-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.text.active};
+    --text-checkbox-selected-enabled: ${colorsDarkTheme.checkbox.selected.text.enabled};
+    --text-checkbox-selected-hover: ${colorsDarkTheme.checkbox.selected.text.hover};
+    --text-checkbox-selected-active: ${colorsDarkTheme.checkbox.selected.text.active};
+    --text-checkbox-unselected-enabled: ${colorsDarkTheme.checkbox.unselected.text.enabled};
+    --text-checkbox-unselected-hover: ${colorsDarkTheme.checkbox.unselected.text.hover};
+    --text-checkbox-unselected-active: ${colorsDarkTheme.checkbox.unselected.text.active};
 
-    --border-checkbox-selected-enabled: ${colorsDarkTheme.checkboxes.selected.border.enabled};
-    --border-checkbox-selected-hover: ${colorsDarkTheme.checkboxes.selected.border.hover};
-    --border-checkbox-selected-active: ${colorsDarkTheme.checkboxes.selected.border.active};
-    --border-checkbox-unselected-enabled: ${colorsDarkTheme.checkboxes.unselected.border.enabled};
-    --border-checkbox-unselected-hover: ${colorsDarkTheme.checkboxes.unselected.border.hover};
-    --border-checkbox-unselected-active: ${colorsDarkTheme.checkboxes.unselected.border.active};
+    --border-checkbox-selected-enabled: ${colorsDarkTheme.checkbox.selected.border.enabled};
+    --border-checkbox-selected-hover: ${colorsDarkTheme.checkbox.selected.border.hover};
+    --border-checkbox-selected-active: ${colorsDarkTheme.checkbox.selected.border.active};
+    --border-checkbox-unselected-enabled: ${colorsDarkTheme.checkbox.unselected.border.enabled};
+    --border-checkbox-unselected-hover: ${colorsDarkTheme.checkbox.unselected.border.hover};
+    --border-checkbox-unselected-active: ${colorsDarkTheme.checkbox.unselected.border.active};
   }
   body {
     -webkit-tap-highlight-color: ${colorPalettes.yellow['500']};

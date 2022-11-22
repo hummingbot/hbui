@@ -148,7 +148,7 @@ var _StyledDiv2 = (0, _styledComponents["default"])("div").withConfig({
     "outline": "2px solid transparent",
     "outlineOffset": "2px"
   },
-  "@media (min-width: 480px)": {
+  "@media (min-width: 640px)": {
     "fontSize": "0.8125rem"
   }
 });
@@ -212,7 +212,7 @@ var _StyledComboboxOptions = (0, _styledComponents["default"])(_react2.Combobox.
     "outline": "2px solid transparent",
     "outlineOffset": "2px"
   },
-  "@media (min-width: 480px)": {
+  "@media (min-width: 640px)": {
     "fontSize": "0.8125rem"
   }
 });

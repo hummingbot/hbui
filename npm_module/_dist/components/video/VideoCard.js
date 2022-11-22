@@ -55,10 +55,10 @@ var VideoRoot = _styledComponents["default"].div.withConfig({
   }, {
     "borderRadius": "8px",
     "padding": "8px",
-    "@media (min-width: 976px)": {
+    "@media (min-width: 1024px)": {
       "padding": "16px"
     },
-    "@media (min-width: 1440px)": {
+    "@media (min-width: 1280px)": {
       "padding": "24px"
     }
   }];
