@@ -23,25 +23,26 @@ const IndexPage = () => (
       </P>
       <br />
       <P>
-        2. The styles are synchronised and parsed via <a href='https://specifyapp.com/' target='_blank' rel="noreferrer">Specify App</a>, which
-        generates <a href='https://css-tricks.com/what-are-design-tokens/'  target='_blank' rel="noreferrer">design tokens</a> and converts them into <a href='https://tailwindcss.com/' target='_blank' rel="noreferrer">TailwindCSS</a> format.
+        2. The styles are downloaded and parsed via a local script, which
+        the <a href='https://css-tricks.com/what-are-design-tokens/' target='_blank' rel="noreferrer">design tokens</a> in
+        a local file.
       </P>
       <br />
       <P>
         3. These design tokens are then imported by this project to create a
-        custom TailwindCSS configuration file that reflects the Hummingbot design
-        language.
+        custom <a href='https://tailwindcss.com/' target='_blank' rel="noreferrer">TailwindCSS</a> configuration 
+        file that reflects the Hummingbot design language.
       </P>
       <br />
       <P>
-        4. An <a href='https://www.npmjs.com/package/@hummingbot/hbui' target='_blank' rel="noreferrer">NPM module</a> containing a collection of React Elements and Components
-        is provided to facilitate the usage of this design system and drastically
-        accelerate development time, while maintaining consistency across all projects.
+        4. An <a href='https://www.npmjs.com/package/@hummingbot/hbui' target='_blank' rel="noreferrer">NPM module</a> containing
+        a collection of React Elements and Components is provided to facilitate the usage of this 
+        design system and drastically accelerate development time, while maintaining consistency across all projects.
       </P>
       <br />
       <P>
-        5. By using this NPM module, we achieve the goal of standardising
-        the visual language across all Hummingbot and CoinAlpha projects.
+        5. By using this NPM module, we achieve the goal of standardising the visual language across all 
+        Hummingbot and CoinAlpha projects.
       </P>
       <br />
       <P>
