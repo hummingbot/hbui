@@ -24,25 +24,24 @@ const IndexPage = () => (
       <br />
       <P>
         2. The styles are downloaded and parsed via a local script, which
-        the <a href='https://css-tricks.com/what-are-design-tokens/' target='_blank' rel="noreferrer">design tokens</a> in
+        stores the <a href='https://css-tricks.com/what-are-design-tokens/' target='_blank' rel="noreferrer">design tokens</a> in
         a local file.
       </P>
       <br />
       <P>
-        3. These design tokens are then imported by this project to create a
+        3. These design tokens are then used to create a
         custom <a href='https://tailwindcss.com/' target='_blank' rel="noreferrer">TailwindCSS</a> configuration 
         file that reflects the Hummingbot design language.
       </P>
       <br />
       <P>
         4. An <a href='https://www.npmjs.com/package/@hummingbot/hbui' target='_blank' rel="noreferrer">NPM module</a> containing
-        a collection of React Elements and Components is provided to facilitate the usage of this 
-        design system and drastically accelerate development time, while maintaining consistency across all projects.
+        a collection of react elements, components and system files is provided to allow any project to use this design system.
       </P>
       <br />
       <P>
         5. By using this NPM module, we achieve the goal of standardising the visual language across all 
-        Hummingbot and CoinAlpha projects.
+        Hummingbot and CoinAlpha projects, as well as drastically accelerating development time.
       </P>
       <br />
       <P>
