@@ -8,16 +8,17 @@ This repository holds the source code and documentation of the [HBUI Hummingbot 
 
 ### The flow
 
-The original design of this design system lives in a [Figma document](https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407). This Figma document is connected to a private [Specify](https://specifyapp.com/) account that takes care of synchronizing all the design values (design tokens) and makes it possible to export the design tokens in a [TailwindCSS](https://tailwindcss.com/)-compatible format that is turned into the custom TailwindCSS configuration of this React project, supported by [twin.macro](https://github.com/ben-rogerson/twin.macro) to make it React-friendly. Finally, this projects has the ability to export a [NPM module](https://www.npmjs.com/package/@hummingbot/hbui) that is consumed by other projects.
-
+The original design of this design system lives in a [Figma document](https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407). This package contains a custom script that extracts the design tokens from the Figma document (colors, fonts, spacings, breakpoints, shadows) and saves them in a `./hbui/tokens.js` file, which is then used to create a custom [TailwindCSS](https://tailwindcss.com/) configuration. This project also uses [twin.macro](https://github.com/ben-rogerson/twin.macro) to make use of TailwindCSS in a React-friendly manner. Finally, this project exports an [NPM module](https://www.npmjs.com/package/@hummingbot/hbui) that is in turn consumed by other projects.
 
 ### Use or try out out the HBUI Hummingbot design system
 
-This repository is the HBUI documentation site. To use the HBUI design system, you should start from one of the boilerplate projects. They are ready-to-run apps with everything already configured for you to start your own project using HBUI. There are two types of boilerplate projects available:
+To use the HBUI design system, all you need is the [HBUI NPM module](https://www.npmjs.com/package/@hummingbot/hbui). But we recommend you start from one of the HBUI boilerplate projects (below) where everything is already set up for you. We have two types of boilerplate projects available:
 
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby)
 
 [Create-React-App](https://github.com/CoinAlpha/hbui-boilerplate-cra)
+
+These are ready-to-run apps with everything already configured and ready to go.
 
 ### Instructions to run this project
 
@@ -39,7 +40,6 @@ yarn develop
 
 The project will run on http://localhost:8000/
 
-
 Alternatively, run this command to enable opening the site in the local network (eg. in your phone)
 
 ```bash
@@ -48,71 +48,32 @@ yarn develop-m
 
 ### Instructions to perform updates to the NPM module
 
-To perform updates to the NPM module, a script connects to the Specify account and downloads the updated design tokens. Since this Specify account is private, only Hummingbot team members have access. If you have access, log in to the Specify account and get a `personalAccessToken`.
+To perform updates to the NPM module, a local script connects to the Figma API (v1) and downloads the updated design tokens into the file `./hbui/tokens.js`. To set up, it is necessary to create an `.env` file with the Figma file ID and a Figma API access token.
 
 These are the steps:
 
-1/7: Perform your updates and test them locally
+1/5: First, make sure the app is running without errors.
 
-2/7: Log in to [Specify](https://specifyapp.com/) and get your `personalAccessToken`
+2/5: Get a Figma API access token
 
-3/7: Install the Specify CLI in your system
-
-```shell
-yarn global add @specifyapp/cli
-```
-
-4/7: Create a file called `.specifyrc.json` at the root of the project with the following content (replace your personal access token):
+3/5: Create a file called `.env` at the root of the project with the following content (replace Figma API access token with your own):
 
 ```shell
-{
-  "repository": "@hummingbot/ds",
-  "personalAccessToken": "your personalAccessToken here",
-  "rules": [
-    {
-      "name": "Design Tokens",
-      "path": "tokens/index.js",
-      "parsers": [
-        {
-          "name": "to-tailwind",
-          "options": {
-            "formatName": "kebabCase",
-            "formatTokens": {
-              "colorFormat": {
-                "format": "hex"
-              },
-              "fontSizeFormat": {
-                "unit": "rem"
-              }
-            },
-            "splitBy": "/",
-            "formatConfig": {
-              "objectName": "extend",
-              "module": "commonjs"
-            }
-          }
-        }
-      ]
-    }
-  ]
-}
-
+FIGMA_API_TOKEN=your-access-token
+FIGMA_FILE_ID=hf03Mn2cecwA1ioUxlHg9P
 ```
 
-5/7: Test if your Specify connection is working by pulling the design tokens
+The FIGMA_FILE_ID in the code above is our original Figma file for the HBUI design system. 
 
-```shell
-specify pull
-```
+(If you are trying this outside Hummingbot, and you want to create your own NPM module, you should make a copy of our Figma file to get started, grab the file ID from your copy and replace the FIGMA_FILE_ID in the code above. You will also have to change the module name, author etc in the file `./npm_module/package.json`.)
 
-
-6/7: You need to be logged into NPM as a user with authorisation to make updates to the @hummingbot space.
+4/5: You need to be logged into NPM as a user with authorisation to make updates to the @hummingbot space (or your own space if you're building your own NPM module).
 
 ```shell
 npm login
 ```
 
-7/7: If all the above is done, you are ready to make updates, There are three types of updates available:
+5/5: If all the above is done, you are ready to make updates. There are three types of updates available:
 
 ```shell
 // patch update (-.-.+)
@@ -125,7 +86,7 @@ npm run publish_minor
 npm run publish_major
 ```
 
-Recommended: Alternatively, use the following script variant to automatically git-commits the changes with a commit message that includes the new version number: "Update NPM module to X.X.X". Remember to push the changes to the appropriate branch / PR.
+Alternatively, use the following script variant to automatically git-commits the changes with a commit message that includes the new version number: "Update NPM module to X.X.X". Remember to push the changes to the appropriate branch / PR.
 
 ```shell
 // patch update (-.-.+)
@@ -138,13 +99,13 @@ npm run publish_minor_and_commit
 npm run publish_major_and_commit
 ```
 
-### To just update the design tokens
+### To simply update the design tokens
 
-If you just want to test the latest design tokens, do the Specify setup like explained above, pull the tokens and test the app:
+If you just want to test the latest design tokens, setup an `.env` file like explained above, pull the tokens and test the app:
 
 ```shell
 // pull the tokens
-specify pull
+yarn pull-tokens
 
 // test the app
 yarn develop
@@ -167,3 +128,7 @@ HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 [TailwindCSS Documentation](https://tailwindcss.com/docs)
 
 TailwindCSS for React: [twin.macro](https://github.com/ben-rogerson/twin.macro)
+
+### Todo
+
+- Make the build script compatible with Windows
