@@ -1,4 +1,4 @@
-const colorTokens = require('../../tokens').colors
+const colorTokens = require('../../tokens/index.json').colors
 const colorPalettes = colorTokens.color_palettes
 
 module.exports = {
