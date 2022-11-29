@@ -188,7 +188,7 @@ var Window = _styledComponents["default"].div.withConfig({
       "paddingRight": "24px"
     },
     "@media (min-width: 1024px)": {
-      "borderRadius": "4px",
+      "borderRadius": "0.25rem",
       "paddingTop": "24px",
       "paddingBottom": "24px",
       "paddingLeft": "32px",

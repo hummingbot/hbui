@@ -19,7 +19,7 @@ var TextInput = _styledComponents["default"].input.withConfig({
     "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
     "transitionDuration": "100ms"
   }, {
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "paddingLeft": "0.625rem",
     "paddingRight": "0.625rem",
     "paddingTop": "0.25rem",

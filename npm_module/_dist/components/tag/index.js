@@ -61,7 +61,7 @@ var TagElement = _styledComponents["default"].div.withConfig({
     "display": "inline-flex",
     "userSelect": "none",
     "justifyContent": "center",
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "borderWidth": "1px",
     "padding": "0.25rem"
   }, function (_ref3) {

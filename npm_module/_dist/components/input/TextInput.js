@@ -190,7 +190,7 @@ var BottomLabel = _styledComponents["default"].div.withConfig({
       "outlineOffset": "2px"
     }
   }, isValid && [{
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "backgroundColor": "rgb(0 194 206 / 0.1)",
     "--tw-text-opacity": "1",
     "color": "rgb(0 194 206 / var(--tw-text-opacity))",
@@ -199,7 +199,7 @@ var BottomLabel = _styledComponents["default"].div.withConfig({
       "color": "rgb(0 194 206 / var(--tw-text-opacity))"
     }
   }], isInvalid && [{
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "backgroundColor": "rgb(235 87 87 / 0.1)",
     "--tw-text-opacity": "1",
     "color": "rgb(235 87 87 / var(--tw-text-opacity))",
@@ -208,7 +208,7 @@ var BottomLabel = _styledComponents["default"].div.withConfig({
       "color": "rgb(235 87 87 / var(--tw-text-opacity))"
     }
   }], isWarning && [{
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "backgroundColor": "rgb(240 135 39 / 0.1)",
     "--tw-text-opacity": "1",
     "color": "rgb(240 135 39 / var(--tw-text-opacity))",

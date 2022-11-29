@@ -1,7 +1,6 @@
 "use strict";
 
-var _borderRadius;
-var tokens = require('../tokens');
+var tokens = require('../tokens/index.json');
 var colors = tokens.colors;
 var text = tokens.text;
 var breakpoints = tokens.breakpoints;
@@ -40,11 +39,15 @@ module.exports = {
       serif: ['Courier New', 'serif'],
       mono: ['SF Mono', 'mono']
     },
-    borderRadius: (_borderRadius = {
+    borderRadius: {
       'none': '0',
       'sm': '0.125rem',
-      DEFAULT: '0.25rem'
-    }, _borderRadius["DEFAULT"] = '4px', _borderRadius['md'] = '0.375rem', _borderRadius['lg'] = '0.5rem', _borderRadius['full'] = '9999px', _borderRadius['large'] = '12px', _borderRadius),
+      DEFAULT: '0.25rem',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '12px'
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

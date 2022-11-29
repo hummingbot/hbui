@@ -37,7 +37,7 @@ var CheckboxRoot = _styledComponents["default"].div.withConfig({
     "cursor": "pointer",
     "alignItems": "center !important",
     "justifyContent": "center !important",
-    "borderRadius": "4px"
+    "borderRadius": "0.25rem"
   }, {
     "position": "relative",
     "borderWidth": "1px",

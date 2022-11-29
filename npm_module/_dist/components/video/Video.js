@@ -29,5 +29,5 @@ var _StyledIframe = (0, _styledComponents["default"])("iframe").withConfig({
 })({
   "aspectRatio": "16 / 9",
   "width": "100%",
-  "borderRadius": "4px"
+  "borderRadius": "0.25rem"
 });

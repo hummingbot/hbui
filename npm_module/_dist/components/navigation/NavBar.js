@@ -337,7 +337,7 @@ var RightSide = (0, _styledComponents["default"])(Side).withConfig({
     }
   }, (0, _styledComponents.css)(_templateObject8 || (_templateObject8 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    img {\n      ", ";\n    }\n    svg {\n      ", ";\n    }\n  "])), {
     "marginLeft": "1rem",
-    "borderRadius": "4px"
+    "borderRadius": "0.25rem"
   }, {
     "marginLeft": "0.5rem"
   })];

@@ -104,7 +104,7 @@ var Root = _styledComponents["default"].div.withConfig({
 })(function (_ref9) {
   var type = _ref9.type;
   return [{
-    "borderRadius": "4px",
+    "borderRadius": "0.25rem",
     "borderLeftWidth": "8px",
     "borderRightWidth": "1px",
     "borderBottomWidth": "1px",
