@@ -62,14 +62,19 @@ const IndexPage = () => (
         </a>
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
-        CRA Boilerplate project
-        </a> (Boilerplate React app - based on CreateReactApp)
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
+        Webpack Boilerplate
+        </a> (Webpack React app)
+      </P>
+      <P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
+        Webpack Boilerpate (TS)
+        </a> (TypeScript-ready Webpack React app)
       </P>
       <P>
         <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
-        Gatsby Boilerplate project
-        </a> (Boilerplate Gatsby app)
+        Gatsby Boilerplate
+        </a> (Gatsby app)
       </P>
       <P>
         <a href='https://github.com/CoinAlpha/hbui' target='_blank' rel="noreferrer">

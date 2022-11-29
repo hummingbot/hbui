@@ -19,14 +19,20 @@ const GettingStarted = () => (
       </P>
       <br />
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-cra' target='_blank' rel="noreferrer">
-          Create-React-App boilerplate project
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
+          Webpack
+        </a>
+      </P>
+      <br />
+      <P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
+          Webpack (TypeScript)
         </a>
       </P>
       <br />
       <P>
         <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
-          Gatsby boilerplate project
+          Gatsby
         </a>
       </P>
       <br />
@@ -36,7 +42,7 @@ const GettingStarted = () => (
       </P>
       <br />
       <br />
-      <Body>You should become familiar with these libraries:</Body>
+      <Body>You should be familiar with the following libraries:</Body>
       <a href='https://github.com/ben-rogerson/twin.macro' target='_blank' rel="noreferrer">
         <P isUnderline>twin.macro</P>
       </a>

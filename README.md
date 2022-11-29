@@ -16,7 +16,9 @@ To use the HBUI design system, all you need is the [HBUI NPM module](https://www
 
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby)
 
-[Create-React-App](https://github.com/CoinAlpha/hbui-boilerplate-cra)
+[Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack)
+
+[Webpack (TypeScript)](https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts)
 
 These are ready-to-run apps with everything already configured and ready to go.
 
@@ -119,7 +121,9 @@ HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby) HBUI Boilerplate
 
-[Create-React-App](https://github.com/CoinAlpha/hbui-boilerplate-cra) HBUI Boilerplate
+[Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack) HBUI Boilerplate
+
+[Webpack (TypeScript)](https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts) HBUI Boilerplate
 
 ### Useful references
 
