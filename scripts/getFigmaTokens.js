@@ -123,7 +123,6 @@ async function getDesignTokens(url = '', data = {}) {
   for (var sss = 0; sss < cleanEffectObjects.length; sss++) {
     const obj = cleanEffectObjects[sss]
     let newShadowObject = getFormattedObjectValue(obj, 'shadow')
-    // let newShadowObject = _.set({}, obj.name.split('/'), obj.shadow)
     shadowsData = _.merge(shadowsData, newShadowObject)
   }
 
@@ -132,7 +131,6 @@ async function getDesignTokens(url = '', data = {}) {
   for (var i = 0; i < cleanColorObjects.length; i++) {
     const obj = cleanColorObjects[i]
     let newColorObject = getFormattedObjectValue(obj, 'color')
-    // let newColorObject = _.set({}, obj.name.split('/'), obj.color)
     colorData = _.merge(colorData, newColorObject)
   }
 
