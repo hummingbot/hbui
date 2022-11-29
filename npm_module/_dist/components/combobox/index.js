@@ -87,7 +87,16 @@ spanStyles[true] = {
   "fontWeight": "500",
   ":hover": {
     "cursor": "pointer",
-    "backgroundColor": "var(--bg-input)"
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))"
+  },
+  ":hover:focus": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(235 87 87 / var(--tw-bg-opacity))"
+  },
+  ".dark &:hover": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(62 67 71 / var(--tw-bg-opacity))"
   }
 };
 spanStyles[false] = {
@@ -102,7 +111,16 @@ spanStyles[false] = {
   "fontWeight": "400",
   ":hover": {
     "cursor": "pointer",
-    "backgroundColor": "var(--bg-input)"
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))"
+  },
+  ":hover:focus": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(235 87 87 / var(--tw-bg-opacity))"
+  },
+  ".dark &:hover": {
+    "--tw-bg-opacity": "1",
+    "backgroundColor": "rgb(62 67 71 / var(--tw-bg-opacity))"
   }
 };
 var spanBStyles = {};
@@ -158,7 +176,8 @@ var _StyledComboboxInput = (0, _styledComponents["default"])(_react2.Combobox.In
 })({
   "width": "100%",
   "borderStyle": "none",
-  "backgroundColor": "var(--bg-input)",
+  "--tw-bg-opacity": "1",
+  "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))",
   "paddingTop": "0.5rem",
   "paddingBottom": "0.5rem",
   "paddingLeft": "0.75rem",
@@ -168,7 +187,10 @@ var _StyledComboboxInput = (0, _styledComponents["default"])(_react2.Combobox.In
   "lineHeight": "1.25rem",
   "color": "var(--text-secondary)",
   "outline": "2px solid transparent",
-  "outlineOffset": "2px"
+  "outlineOffset": "2px",
+  ".dark &": {
+    "backgroundColor": "var(--bg-input)"
+  }
 });
 var _StyledComboboxButton = (0, _styledComponents["default"])(_react2.Combobox.Button).withConfig({
   displayName: "combobox___StyledComboboxButton",
@@ -201,7 +223,9 @@ var _StyledComboboxOptions = (0, _styledComponents["default"])(_react2.Combobox.
   "width": "100%",
   "overflow": "auto",
   "borderRadius": "0.375rem",
-  "backgroundColor": "var(--bg-body)",
+  "borderWidth": "1px",
+  "borderColor": "var(--border-window)",
+  "backgroundColor": "var(--bg-window)",
   "paddingTop": "0.25rem",
   "paddingBottom": "0.25rem",
   "fontSize": "0.9375rem",

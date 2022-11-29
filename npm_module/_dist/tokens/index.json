@@ -422,7 +422,7 @@
       "body_border": "#3E4347",
       "window_bg": "#1E2224",
       "text_secondary": "#AEB3B6",
-      "text_primary": "#FFFFFF",
+      "text_primary": "#F7F7F7",
       "radio_group": {
         "bg": {
           "enabled": "#282C2F",
