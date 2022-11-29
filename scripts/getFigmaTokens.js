@@ -10,25 +10,17 @@ const FIGMA_API_TOKEN = process.env.FIGMA_API_TOKEN
 const fileId = process.env.FIGMA_FILE_ID
 
 const getFormattedObjectValue = function(obj, valueProperty) {
-  const objNameArray = obj.name.split('/')
-  let result = {}
-  const createdObjects = []
-  for (var i = objNameArray.length - 1; i >= 0; i--) {
-    const newObject = {}
-    if (i === objNameArray.length - 1) {
-      newObject[objNameArray[i]] = obj[valueProperty]
-    } else {
-      newObject[objNameArray[i]] = createdObjects.pop()
-    }
-    createdObjects.push(newObject)
-    result = {
-      ...result,
-      ...newObject
-    }
-  }
-  const output = {}
-  output[objNameArray[0]] = result[objNameArray[0]]
-  return output
+  let resultObject = {}
+  const parts = obj.name.split('/')
+  parts.reduce((prev, curr, i) => (
+    Object.assign(
+      prev, 
+      {[curr]: i === parts.length - 1 ? obj[valueProperty] : Object(prev[curr])}
+    ), 
+    prev[curr]
+  ), resultObject)
+
+  return resultObject
 }
 
 async function getDesignTokens(url = '', data = {}) {
@@ -131,6 +123,7 @@ async function getDesignTokens(url = '', data = {}) {
   for (var sss = 0; sss < cleanEffectObjects.length; sss++) {
     const obj = cleanEffectObjects[sss]
     let newShadowObject = getFormattedObjectValue(obj, 'shadow')
+    // let newShadowObject = _.set({}, obj.name.split('/'), obj.shadow)
     shadowsData = _.merge(shadowsData, newShadowObject)
   }
 
@@ -139,6 +132,7 @@ async function getDesignTokens(url = '', data = {}) {
   for (var i = 0; i < cleanColorObjects.length; i++) {
     const obj = cleanColorObjects[i]
     let newColorObject = getFormattedObjectValue(obj, 'color')
+    // let newColorObject = _.set({}, obj.name.split('/'), obj.color)
     colorData = _.merge(colorData, newColorObject)
   }
 
