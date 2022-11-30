@@ -3,7 +3,6 @@ import React from 'react'
 import tw, { styled } from 'twin.macro'
 import NavBar from '../../../hbui/components/navigation/NavBar'
 import { Link } from 'gatsby'
-import CustomLogo from './CustomLogo'
 
 const userData = null
 const siteNameA = 'HBUI'

@@ -3,20 +3,15 @@ import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { Link } from 'gatsby'
-import { ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import Hero from '../../../hbui/components/hero/Hero'
 import {
   P,
   PSmall,
   Body,
   H1,
-  H2,
-  H4,
   H6,
-  H5,
-  LabelTiny
 } from '../../../hbui/elements/typography'
-import { Separator } from '../../../hbui/elements/layout'
 import { CalloutInfo } from '../../../hbui/components/callout'
 import ErrorIcon from '../../../hbui/assets/svgs/notifications/ErrorIcon'
 

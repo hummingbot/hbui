@@ -2,10 +2,9 @@
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { PageRoot, ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { H1, P, Body } from '../../../hbui/elements/typography'
-import { Separator } from '../../../hbui/elements/layout'
 import Checkbox from '../../../hbui/components/checkbox'
 import Hero from '../../../hbui/components/hero/Hero'
 

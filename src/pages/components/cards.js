@@ -2,7 +2,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
-import { PageRoot, ShortHero, MainContent } from '../../components/elements/layout'
+import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { H1, H4, P } from '../../../hbui/elements/typography'
 import { CardA } from '../../../hbui/components/cards/CardA'
