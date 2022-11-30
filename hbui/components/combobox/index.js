@@ -1,11 +1,11 @@
+/* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
+import tw from 'twin.macro'
 import React, { useState } from 'react'
 import { Combobox } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
-import tw from 'twin.macro'
 
 export default function ComboBox({items, selected, setSelected, ...props}) {
   const [query, setQuery] = useState('')
-
   const filteredItems =
     query === ''
       ? items
@@ -21,7 +21,7 @@ export default function ComboBox({items, selected, setSelected, ...props}) {
       <div tw="relative">
         <div tw="relative w-full text-left rounded-lg cursor-default focus:outline-none sm:text-sm overflow-hidden">
           <Combobox.Input
-            tw="w-full bg-grey-light-scale-300 dark:bg-input font-medium border-none outline-none py-2 pl-3 pr-10 text-sm leading-5 text-secondary"
+            tw="w-full bg-window font-medium border border-window outline-none py-2 pl-3 pr-10 text-sm leading-5 text-secondary"
             displayValue={(item) => item.label}
             onChange={(event) => setQuery(event.target.value)}
           />
@@ -47,7 +47,6 @@ export default function ComboBox({items, selected, setSelected, ...props}) {
                 {({ selected, active }) => (
                   <span tw='block relative'>
                     <span
-                      className='aqui'
                       css={spanStyles[selected]}
                     >
                       {item.label}
