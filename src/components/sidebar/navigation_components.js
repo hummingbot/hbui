@@ -70,6 +70,18 @@ const tag = {
   link: '/components/tag',
   title: 'Tag',
 }
+const select = {
+  link: '/components/select',
+  title: 'Select',
+}
+const radiogroup = {
+  link: '/components/radiogroup',
+  title: 'RadioGroup',
+}
+const tabs = {
+  link: '/components/tabs',
+  title: 'Tabs',
+}
 
 const links =  [
   breadcrumbs,
@@ -78,17 +90,20 @@ const links =  [
   cards,
   checkbox,
   code,
+  select,
   combobox,
   externallinkbutton,
   hero,
   input,
   logo,
   navbar,
+  radiogroup,
   snackbar,
   spinner,
   switchPage,
   video,
   windowComponent,
+  tabs,
   tag,
 ]
 
