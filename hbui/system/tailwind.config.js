@@ -69,6 +69,7 @@ module.exports = {
       'warning': colorPalettes.orange['500'],
     },
     extend: {
+      opacity: { 5: "0.05", 10: "0.1", 20: "0.2", 50: "0.5" },
       colors: {
         'green-scale': colorPalettes.green,
         'red-scale': colorPalettes.red,
