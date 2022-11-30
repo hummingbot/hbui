@@ -43,7 +43,6 @@ function ComboBox(_ref) {
       var selected = _ref2.selected,
         active = _ref2.active;
       return /*#__PURE__*/_react["default"].createElement(_StyledSpan, null, /*#__PURE__*/_react["default"].createElement(_StyledSpan2, {
-        className: "aqui",
         $_css: spanStyles[selected]
       }, item.label), selected ? /*#__PURE__*/_react["default"].createElement(_StyledSpan3, {
         $_css2: spanBStyles[selected]
@@ -175,9 +174,9 @@ var _StyledComboboxInput = (0, _styledComponents["default"])(_react2.Combobox.In
   componentId: "sc-1c06qzc-2"
 })({
   "width": "100%",
-  "borderStyle": "none",
-  "--tw-bg-opacity": "1",
-  "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))",
+  "borderWidth": "1px",
+  "borderColor": "var(--border-window)",
+  "backgroundColor": "var(--bg-window)",
   "paddingTop": "0.5rem",
   "paddingBottom": "0.5rem",
   "paddingLeft": "0.75rem",
@@ -187,10 +186,7 @@ var _StyledComboboxInput = (0, _styledComponents["default"])(_react2.Combobox.In
   "lineHeight": "1.25rem",
   "color": "var(--text-secondary)",
   "outline": "2px solid transparent",
-  "outlineOffset": "2px",
-  ".dark &": {
-    "backgroundColor": "var(--bg-input)"
-  }
+  "outlineOffset": "2px"
 });
 var _StyledComboboxButton = (0, _styledComponents["default"])(_react2.Combobox.Button).withConfig({
   displayName: "combobox___StyledComboboxButton",
