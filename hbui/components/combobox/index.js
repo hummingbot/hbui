@@ -16,6 +16,10 @@ export default function ComboBox({items, selected, setSelected, placeholderName,
             .includes(query.toLowerCase().replace(/\s+/g, ''))
         )
 
+  if (!placeholderName) {
+    placeholderName = props.multiple ? 'Select multiple' : 'Select one'
+  }
+
   const getPlaceholder = () => {
     if (!selected) {
       return placeholderName

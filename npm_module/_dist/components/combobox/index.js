@@ -9,13 +9,14 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireWildcard(require("react"));
 var _react2 = require("@headlessui/react");
 var _solid = require("@heroicons/react/solid");
-var _excluded = ["items", "selected", "setSelected"];
+var _excluded = ["items", "selected", "setSelected", "placeholderName"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function ComboBox(_ref) {
   var items = _ref.items,
     selected = _ref.selected,
     setSelected = _ref.setSelected,
+    placeholderName = _ref.placeholderName,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
   var _useState = (0, _react.useState)(''),
     query = _useState[0],
@@ -23,13 +24,16 @@ function ComboBox(_ref) {
   var filteredItems = query === '' ? items : items.filter(function (item) {
     return item.label.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''));
   });
+  if (!placeholderName) {
+    placeholderName = props.multiple ? 'Select multiple' : 'Select one';
+  }
   var getPlaceholder = function getPlaceholder() {
     if (!selected) {
-      return props.multiple ? 'Select multiple' : 'Select';
+      return placeholderName;
     }
     if (props.multiple) {
       if (selected.length === 0) {
-        return 'Select multiple';
+        return placeholderName;
       }
       if (selected.length === 1) {
         return selected[0].label;
@@ -40,7 +44,6 @@ function ComboBox(_ref) {
         });
       }
     } else {
-      console.log('selected', selected);
       return selected.label;
     }
   };
