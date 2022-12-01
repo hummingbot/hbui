@@ -20,7 +20,7 @@ const items = [
 
 const ComboboxPage = () => {
   const [selected, setSelected] = useState(null)
-  const [selectedMultiple, setSelectedMultiple] = useState([items[0]])
+  const [selectedMultiple, setSelectedMultiple] = useState([])
   return(
     <Layout>
       <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
@@ -36,6 +36,7 @@ const ComboboxPage = () => {
         <P isBold>{selected ? selected.label : 'none'}</P>
         <br />
         <ComboBox
+          placeholderName='Name'
           items={items}
           selected={selected}
           setSelected={setSelected}
@@ -56,10 +57,11 @@ const ComboboxPage = () => {
         ))}
         <br />
         <ComboBox
+          multiple={true}
+          placeholderName='People'
           items={items}
           selected={selectedMultiple}
           setSelected={setSelectedMultiple}
-          multiple={true}
         />
         <br />
         <CodeBlock code={codeComboBoxMultiple} />
@@ -87,6 +89,7 @@ const items = [
 const [selected, setSelected] = useState(items[0])
 
 <ComboBox
+  placeholderName='Name' // shown in empty state
   items={items}
   selected={selected}
   setSelected={setSelected}
@@ -110,6 +113,7 @@ const [selectedMultiple, setSelectedMultiple] = useState([items[0]])
 
 <ComboBox
   multiple={true} // enable multiple mode
+  placeholderName='People' // shown in empty state
   items={items}
   selected={selectedMultiple}
   setSelected={setSelectedMultiple}

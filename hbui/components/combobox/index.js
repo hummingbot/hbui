@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Combobox } from '@headlessui/react'
 import { CheckIcon, XIcon, SelectorIcon } from '@heroicons/react/solid'
 
-export default function ComboBox({items, selected, setSelected, ...props}) {
+export default function ComboBox({items, selected, setSelected, placeholderName, ...props}) {
   const [query, setQuery] = useState('')
   const filteredItems =
     query === ''
@@ -18,12 +18,12 @@ export default function ComboBox({items, selected, setSelected, ...props}) {
 
   const getPlaceholder = () => {
     if (!selected) {
-      return props.multiple ? 'Select multiple' : 'Select'
+      return placeholderName
     }
 
     if (props.multiple) {
       if (selected.length === 0) {
-        return 'Select multiple'
+        return placeholderName
       }
       if (selected.length === 1) {
         return selected[0].label
@@ -32,7 +32,6 @@ export default function ComboBox({items, selected, setSelected, ...props}) {
         return selected.map(item => item.label)
       }
     } else {
-      console.log('selected', selected)
       return selected.label
     }
   }
