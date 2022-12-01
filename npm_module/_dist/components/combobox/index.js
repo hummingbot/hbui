@@ -23,17 +23,50 @@ function ComboBox(_ref) {
   var filteredItems = query === '' ? items : items.filter(function (item) {
     return item.label.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''));
   });
+  var getPlaceholder = function getPlaceholder() {
+    if (!selected) {
+      return props.multiple ? 'Select multiple' : 'Select';
+    }
+    if (props.multiple) {
+      if (selected.length === 0) {
+        return 'Select multiple';
+      }
+      if (selected.length === 1) {
+        return selected[0].label;
+      }
+      if (selected.length > 1) {
+        return selected.map(function (item) {
+          return item.label;
+        });
+      }
+    } else {
+      console.log('selected', selected);
+      return selected.label;
+    }
+  };
+  var hasSelection = function hasSelection() {
+    if (props.multiple && selected && selected.length > 0) return true;
+    if (!props.multiple && selected) return true;
+    return false;
+  };
   return /*#__PURE__*/_react["default"].createElement(_react2.Combobox, Object.assign({
     value: selected,
     onChange: setSelected
   }, props), /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, /*#__PURE__*/_react["default"].createElement(_StyledComboboxInput, {
+    placeholder: getPlaceholder(),
     displayValue: function displayValue(item) {
-      return item.label;
+      return !selected ? '' : props.multiple ? '' : selected.label;
     },
     onChange: function onChange(event) {
       return setQuery(event.target.value);
+    },
+    autocomplete: "off"
+  }), /*#__PURE__*/_react["default"].createElement(_StyledComboboxButton, null, hasSelection() && /*#__PURE__*/_react["default"].createElement(_StyledXIcon, {
+    "aria-hidden": "true",
+    onClick: function onClick() {
+      return setSelected(props.multiple ? [] : null);
     }
-  }), /*#__PURE__*/_react["default"].createElement(_StyledComboboxButton, null, /*#__PURE__*/_react["default"].createElement(_StyledSelectorIcon, {
+  }), /*#__PURE__*/_react["default"].createElement(_StyledSelectorIcon, {
     "aria-hidden": "true"
   }))), /*#__PURE__*/_react["default"].createElement(_StyledComboboxOptions, null, filteredItems.length === 0 && query !== '' ? /*#__PURE__*/_react["default"].createElement(_StyledDiv3, null, "Nothing found.") : filteredItems.map(function (item) {
     return /*#__PURE__*/_react["default"].createElement(_StyledComboboxOption, {
@@ -43,9 +76,9 @@ function ComboBox(_ref) {
       var selected = _ref2.selected,
         active = _ref2.active;
       return /*#__PURE__*/_react["default"].createElement(_StyledSpan, null, /*#__PURE__*/_react["default"].createElement(_StyledSpan2, {
-        $_css: spanStyles[selected]
+        $_css: spanStyles[active]
       }, item.label), selected ? /*#__PURE__*/_react["default"].createElement(_StyledSpan3, {
-        $_css2: spanBStyles[selected]
+        $_css2: spanBStyles[active]
       }, /*#__PURE__*/_react["default"].createElement(_StyledCheckIcon, {
         "aria-hidden": "true"
       })) : null);
@@ -79,21 +112,17 @@ spanStyles[true] = {
   "overflow": "hidden",
   "textOverflow": "ellipsis",
   "whiteSpace": "nowrap",
+  "--tw-bg-opacity": "1",
+  "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))",
   "paddingLeft": "2.5rem",
   "paddingRight": "1rem",
   "paddingTop": "0.5rem",
   "paddingBottom": "0.5rem",
   "fontWeight": "500",
   ":hover": {
-    "cursor": "pointer",
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))"
+    "cursor": "pointer"
   },
-  ":hover:focus": {
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(235 87 87 / var(--tw-bg-opacity))"
-  },
-  ".dark &:hover": {
+  ".dark &": {
     "--tw-bg-opacity": "1",
     "backgroundColor": "rgb(62 67 71 / var(--tw-bg-opacity))"
   }
@@ -109,17 +138,7 @@ spanStyles[false] = {
   "paddingBottom": "0.5rem",
   "fontWeight": "400",
   ":hover": {
-    "cursor": "pointer",
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))"
-  },
-  ":hover:focus": {
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(235 87 87 / var(--tw-bg-opacity))"
-  },
-  ".dark &:hover": {
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(62 67 71 / var(--tw-bg-opacity))"
+    "cursor": "pointer"
   }
 };
 var spanBStyles = {};
@@ -200,9 +219,17 @@ var _StyledComboboxButton = (0, _styledComponents["default"])(_react2.Combobox.B
   "alignItems": "center",
   "paddingRight": "0.5rem"
 });
+var _StyledXIcon = (0, _styledComponents["default"])(_solid.XIcon).withConfig({
+  displayName: "combobox___StyledXIcon",
+  componentId: "sc-1c06qzc-4"
+})({
+  "height": "1.25rem",
+  "width": "1.25rem",
+  "color": "var(--text-tertiary)"
+});
 var _StyledSelectorIcon = (0, _styledComponents["default"])(_solid.SelectorIcon).withConfig({
   displayName: "combobox___StyledSelectorIcon",
-  componentId: "sc-1c06qzc-4"
+  componentId: "sc-1c06qzc-5"
 })({
   "height": "1.25rem",
   "width": "1.25rem",
@@ -210,7 +237,7 @@ var _StyledSelectorIcon = (0, _styledComponents["default"])(_solid.SelectorIcon)
 });
 var _StyledComboboxOptions = (0, _styledComponents["default"])(_react2.Combobox.Options).withConfig({
   displayName: "combobox___StyledComboboxOptions",
-  componentId: "sc-1c06qzc-5"
+  componentId: "sc-1c06qzc-6"
 })({
   "position": "absolute",
   "zIndex": "50",
@@ -238,7 +265,7 @@ var _StyledComboboxOptions = (0, _styledComponents["default"])(_react2.Combobox.
 });
 var _StyledDiv3 = (0, _styledComponents["default"])("div").withConfig({
   displayName: "combobox___StyledDiv3",
-  componentId: "sc-1c06qzc-6"
+  componentId: "sc-1c06qzc-7"
 })({
   "position": "relative",
   "cursor": "default",
@@ -251,33 +278,33 @@ var _StyledDiv3 = (0, _styledComponents["default"])("div").withConfig({
 });
 var _StyledComboboxOption = (0, _styledComponents["default"])(_react2.Combobox.Option).withConfig({
   displayName: "combobox___StyledComboboxOption",
-  componentId: "sc-1c06qzc-7"
+  componentId: "sc-1c06qzc-8"
 })(["", ""], function (_ref3) {
   var active = _ref3.active;
   return comboBoxStyles[active];
 });
 var _StyledSpan = (0, _styledComponents["default"])("span").withConfig({
   displayName: "combobox___StyledSpan",
-  componentId: "sc-1c06qzc-8"
+  componentId: "sc-1c06qzc-9"
 })({
   "position": "relative",
   "display": "block"
 });
 var _StyledSpan2 = (0, _styledComponents["default"])("span").withConfig({
   displayName: "combobox___StyledSpan2",
-  componentId: "sc-1c06qzc-9"
+  componentId: "sc-1c06qzc-10"
 })(["", ""], function (p) {
   return p.$_css;
 });
 var _StyledSpan3 = (0, _styledComponents["default"])("span").withConfig({
   displayName: "combobox___StyledSpan3",
-  componentId: "sc-1c06qzc-10"
+  componentId: "sc-1c06qzc-11"
 })(["", ""], function (p) {
   return p.$_css2;
 });
 var _StyledCheckIcon = (0, _styledComponents["default"])(_solid.CheckIcon).withConfig({
   displayName: "combobox___StyledCheckIcon",
-  componentId: "sc-1c06qzc-11"
+  componentId: "sc-1c06qzc-12"
 })({
   "height": "1.25rem",
   "width": "1.25rem"
