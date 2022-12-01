@@ -115,8 +115,7 @@ spanStyles[true] = {
   "overflow": "hidden",
   "textOverflow": "ellipsis",
   "whiteSpace": "nowrap",
-  "--tw-bg-opacity": "1",
-  "backgroundColor": "rgb(233 235 236 / var(--tw-bg-opacity))",
+  "backgroundColor": "rgb(201 205 207 / 0.1)",
   "paddingLeft": "2.5rem",
   "paddingRight": "1rem",
   "paddingTop": "0.5rem",
@@ -124,10 +123,6 @@ spanStyles[true] = {
   "fontWeight": "500",
   ":hover": {
     "cursor": "pointer"
-  },
-  ".dark &": {
-    "--tw-bg-opacity": "1",
-    "backgroundColor": "rgb(62 67 71 / var(--tw-bg-opacity))"
   }
 };
 spanStyles[false] = {
@@ -181,7 +176,7 @@ var _StyledDiv2 = (0, _styledComponents["default"])("div").withConfig({
   "width": "100%",
   "cursor": "default",
   "overflow": "hidden",
-  "borderRadius": "0.5rem",
+  "borderRadius": "0.25rem",
   "textAlign": "left",
   ":focus": {
     "outline": "2px solid transparent",
