@@ -38,6 +38,10 @@ const snackbar = {
   link: '/components/snackbar',
   title: 'Snackbar',
 }
+const modal = {
+  link: '/components/modal',
+  title: 'Modal',
+}
 const navbar = {
   link: '/components/navbar',
   title: 'NavBar',
@@ -96,6 +100,7 @@ const links =  [
   hero,
   input,
   logo,
+  modal,
   navbar,
   radiogroup,
   snackbar,
