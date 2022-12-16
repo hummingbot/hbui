@@ -28,7 +28,7 @@ export default Layout
 
 function HamburgerIcon({...props}) {
   return (
-    <div tw='block lg:hidden cursor-pointer absolute top-4 right-[19px] z-50' {...props}>
+    <div tw='block md:hidden cursor-pointer absolute top-4 right-[19px] z-50' {...props}>
       <div tw='w-[16px] h-[2px] mb-[3px] bg-black dark:bg-white'/>
       <div tw='w-[16px] h-[2px] mb-[3px] bg-black dark:bg-white'/>
       <div tw='w-[16px] h-[2px] bg-black dark:bg-white'/>
