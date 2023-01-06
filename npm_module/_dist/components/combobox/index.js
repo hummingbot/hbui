@@ -63,7 +63,7 @@ function ComboBox(_ref) {
     onChange: function onChange(event) {
       return setQuery(event.target.value);
     },
-    autocomplete: "off"
+    autoComplete: "off"
   }), /*#__PURE__*/_react["default"].createElement(_StyledComboboxButton, null, hasSelection() && /*#__PURE__*/_react["default"].createElement(_StyledXIcon, {
     "aria-hidden": "true",
     onClick: function onClick() {
