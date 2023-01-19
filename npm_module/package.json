@@ -1,6 +1,6 @@
 {
   "name": "@hummingbot/hbui",
-  "version": "1.8.11",
+  "version": "1.8.12",
   "author": "Hummingbot Design Team",
   "exports": {
     ".": "./_dist/index.js",
@@ -39,6 +39,7 @@
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.1.5",
     "@emotion/react": "^11.10.5",
+    "babel-plugin-twin": "^1.0.2",
     "react-syntax-highlighter": "^15.5.0",
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
