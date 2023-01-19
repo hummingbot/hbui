@@ -2,18 +2,13 @@
 import React from 'react'
 import tw, { styled }  from 'twin.macro'
 import Layout from '../../components/layout'
-import { H1, P, H6, LabelTiny, PSmall } from '../../../hbui/elements/typography'
-import { Separator, Section, Container } from '../../../hbui/elements/layout'
+import { H1, P, H6, PSmall } from '../../../hbui/elements/typography'
 import Hero from '../../../hbui/components/hero/Hero'
 import {
   MainContent,
-  MainContentRow,
-  MainContentBody,
-  MainContentSidebar,
 } from '../../components/elements/layout'
-import PageIndex from '../../components/PageIndex'
-import { Button } from '../../../hbui/components/buttons'
-import Copy from '../../../hbui/assets/svgs/16x16/Copy'
+import tokens from '../../../hbui/tokens/index.json'
+const colorTokens = tokens.colors
 
 const Colors = () => (
   <Layout>
@@ -22,175 +17,118 @@ const Colors = () => (
       <P>Color distinguishes our brand and helps us create consistent experiences across products.</P>
     </Hero>
     <MainContent>
-      <H6 id="primary-colors">Primary Colors</H6>
+      <H6 isBold id="primary-colors">Main Colors</H6>
+      <br />
+      <P>Each "main color" corresponds to the level "500" of the respective color palette.</P>
+      <br />
+      <MainColorsRow>
+        <ColorLabel>Green</ColorLabel>
+        <ColorLabel>Terminal</ColorLabel>
+        <ColorLabel>Blue</ColorLabel>
+        <ColorLabel>Purple</ColorLabel>
+        <ColorLabel>Magenta</ColorLabel>
+        <ColorLabel>Red</ColorLabel>
+        <ColorLabel>Orange</ColorLabel>
+        <ColorLabel>Yellow</ColorLabel>
+      </MainColorsRow>
+      <MainColorsRow>
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.green['500'] }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.terminal }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.blue['500']  }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.purple['500'] }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.magenta['500'] }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.red['500'] }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.orange['500'] }} />
+        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.yellow['500'] }} />
+      </MainColorsRow>
+      <MainColorsRow>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.green['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.blue['500'] }</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.purple['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.magenta['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.red['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.orange['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.yellow['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.terminal}</ColorHexLabel>
+      </MainColorsRow>
       <br />
       <br />
-      <div style={{ display: 'flex' }}>
-        <MainContentBody>
-          <LabelsHeader />
-          <Separator />
-          <ColorCard
-            title="green-hummingbot"
-            description="Primary color for Hummingbot. Used as primary button background, hero area background, and as a link color. This color provides accessible contrast when used for text on light background."
-            hex="#00C2CE"
-            rgb="0, 206, 194"
-          />
-          <Separator />
-          <ColorCard
-            title="green-humminbot-dark-1"
-            description="Strong primary color for Humminbot. Used in primary color gradients, and as a primary button hover color."
-            hex="#0D999E"
-            rgb="13, 153, 158"
-          />
-          <Separator />
-          <ColorCard
-            title="green-humminbot-dark-2"
-            description="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Quam diu etiam furor iste tuus nos eludet."
-            hex="#355C6A"
-            rgb="53, 92, 106"
-          />
-          <Separator />
-          <ColorCard
-            title="green-humminbot-dark-3"
-            description="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Quam diu etiam furor iste tuus nos eludet."
-            hex="#404C5C"
-            rgb="64, 76, 92"
-          />
-          <Separator />
-          <ColorCard
-            title="green-terminal"
-            description="Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Quam diu etiam furor iste tuus nos eludet."
-            hex="#5FFFD7"
-            rgb="95, 255, 215"
-          />
-          <Separator />
-          <br />
-          <br />
-          <br />
-          <br />
-          <H6 id="secondary-colors">Secondary Colors</H6>
-          <br />
-          <P>
-            Our secondary palette contains a variety of colors to keep things
-            fresh and interesting. When used in conjunction with our primary
-            palette, these colors make every moment feel on-brand and every
-            interaction informative.
-          </P>
-          <br />
-          <br />
-          {<LabelsHeader />}
-          <Separator />
-          <ColorCard
-            title="red"
-            description="Primary color for Hummingbot. Used as primary button background, hero area background, and as a link color. This color provides accessible contrast when used for text on light background."
-            hex="#EB5757"
-            rgb="235, 87, 87"
-          />
-          <Separator />
-          <ColorCard
-            title="orange"
-            description="Primary color for Hummingbot. Used as primary button background, hero area background, and as a link color. This color provides accessible contrast when used for text on light background."
-            hex="#F08727"
-            rgb="240, 135, 39"
-          />
-          <Separator />
-          <ColorCard
-            title="yellow"
-            description="Primary color for Hummingbot. Used as primary button background, hero area background, and as a link color. This color provides accessible contrast when used for text on light background."
-            hex="#FCDB17"
-            rgb="252, 219, 23"
-          />
-          <Separator />
-          <ColorCard
-            title="blue"
-            description="Primary color for Hummingbot. Used as primary button background, hero area background, and as a link color. This color provides accessible contrast when used for text on light background."
-            hex="#318DFF"
-            rgb="113, 83, 198"
-          />
-          <Separator />
-          <br />
-          <br />
-        </MainContentBody>
-        <MainContentSidebar>
-          <PageIndex title="On this page" items={index} />
-        </MainContentSidebar>
-      </div>
+      <br />
+      <H6 isBold id="primary-colors">Color Palettes</H6>
+      <br />
+      <Palette colorName='Green' colors={colorTokens.color_palettes.green} />
+      <Palette colorName='Blue' colors={colorTokens.color_palettes.blue} />
+      <Palette colorName='Purple' colors={colorTokens.color_palettes.purple} />
+      <Palette colorName='Magenta' colors={colorTokens.color_palettes.magenta} />
+      <Palette colorName='Red' colors={colorTokens.color_palettes.red} />
+      <Palette colorName='Orange' colors={colorTokens.color_palettes.orange} />
+      <Palette colorName='Yellow' colors={colorTokens.color_palettes.yellow} />
+      <Palette colorName='Grey Light' colors={colorTokens.color_palettes.grey_light} />
+      <Palette colorName='Grey Dark' colors={colorTokens.color_palettes.grey_dark} />
     </MainContent>
   </Layout>
 )
 
 export default Colors
 
-const primaryColors = {
-  label: 'Primary colors',
-  id: 'primary-colors',
-}
+const MainColorsRow = styled.div(() => [
+  tw`grid grid-cols-8 gap-2`,
+])
+const ColorsRow = styled.div(() => [
+  tw`grid grid-cols-10 gap-2`,
+])
+const ColorSwatch = styled.div(() => [
+  tw`aspect-video rounded`,
+])
+const ColorLabel = styled(PSmall)(() => [
+  tw`mb-2`,
+])
+const ColorHexLabel = styled(ColorLabel)(() => [
+  tw`font-mono`,
+])
 
-const secondaryColors = {
-  label: 'Secondary colors',
-  id: 'secondary-colors',
-}
-
-const extendedPalette = {
-  label: 'Extended palette',
-  id: 'extended-palette',
-}
-
-const index = [primaryColors, secondaryColors, extendedPalette]
-
-
-
-function ColorCard({ title, description, hex, rgb }) {
+function Palette({colorName, colors}) {
   return (
-    <ColorCardRoot tw="grid grid-cols-10 gap-8">
-      <div tw="col-span-4 md:col-span-2">
-        <ColorSwatch hex={hex} />
-      </div>
-      <div tw="col-span-6 md:col-span-5">
-        <PSmall isBold className="title">
-          {title}
-        </PSmall>
-        <PSmall>{description}</PSmall>
-      </div>
-      <div tw="col-span-12 lg:col-span-3">
-        <Button label={`HEX (${hex})`} iconAfter={<Copy />} />
-        <Button label={`RGB (${rgb})`} iconAfter={<Copy />} />
-      </div>
-    </ColorCardRoot>
-  )
-}
-
-const ColorCardRoot = styled.div({
-  paddingTop: '30px',
-  paddingBottom: '30px',
-  '& .title': {
-    marginBottom: '10px',
-  },
-  '& button': {
-    marginBottom: '10px',
-  },
-})
-
-const ColorSwatch = styled.div(props => ({
-  height: '118px',
-  width: '100%',
-  borderRadius: '10px',
-  background: props.hex,
-}))
-
-function LabelsHeader() {
-  return (
-    <div tw="grid grid-cols-10 gap-8">
-      <div tw="col-span-2">
-        <LabelTiny>Color</LabelTiny>
-      </div>
-      <div tw="col-span-5">
-        <LabelTiny>Description</LabelTiny>
-      </div>
-      <div tw="invisible md:visible md:col-span-3">
-        <LabelTiny>Token</LabelTiny>
-      </div>
+    <div>
+      <P tw='mb-4'>{colorName}</P>
+      <ColorsRow>
+        <ColorLabel>50</ColorLabel>
+        <ColorLabel>100</ColorLabel>
+        <ColorLabel>200</ColorLabel>
+        <ColorLabel>300</ColorLabel>
+        <ColorLabel>400</ColorLabel>
+        <ColorLabel tw='font-black'>500</ColorLabel>
+        <ColorLabel>600</ColorLabel>
+        <ColorLabel>700</ColorLabel>
+        <ColorLabel>800</ColorLabel>
+        <ColorLabel>900</ColorLabel>
+      </ColorsRow>
+      <ColorsRow>
+        <ColorSwatch style={{backgroundColor: colors['50']  }} />
+        <ColorSwatch style={{backgroundColor: colors['100'] }} />
+        <ColorSwatch style={{backgroundColor: colors['200'] }} />
+        <ColorSwatch style={{backgroundColor: colors['300'] }} />
+        <ColorSwatch style={{backgroundColor: colors['400'] }} />
+        <ColorSwatch style={{backgroundColor: colors['500'] }} />
+        <ColorSwatch style={{backgroundColor: colors['600'] }} />
+        <ColorSwatch style={{backgroundColor: colors['700'] }} />
+        <ColorSwatch style={{backgroundColor: colors['800'] }} />
+        <ColorSwatch style={{backgroundColor: colors['900'] }} />
+      </ColorsRow>
+      <ColorsRow>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['50']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['100'] }</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['200']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['300']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['400']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['500']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['600']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['700']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['800']}</ColorHexLabel>
+        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['900']}</ColorHexLabel>
+      </ColorsRow>
+      <br />
+      <br />
     </div>
   )
 }
-

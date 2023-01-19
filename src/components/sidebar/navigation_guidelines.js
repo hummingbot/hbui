@@ -13,10 +13,16 @@ const colors = {
   title: 'Colors',
 }
 
+const darkmode = {
+  link: '/guidelines/dark-mode',
+  title: 'Dark/Light Mode',
+}
+
 const links =  [
   coinalphaBrand,
   typography,
-  colors
+  colors,
+  darkmode
 ]
 
 export default links
