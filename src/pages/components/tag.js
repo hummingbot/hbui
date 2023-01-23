@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Tag from '../../../hbui/components/tag'
 import Hero from '../../../hbui/components/hero/Hero'
@@ -18,7 +18,7 @@ const TagPage = () => (
     <MainContent>
       <br />
       <br />
-      <Body>Default</Body>
+      <PLarge>Default</PLarge>
       <Tag
         label='Default'
         variant='default'
@@ -28,7 +28,7 @@ const TagPage = () => (
       <CodeBlock code={codeDefault} />
       <br />
       <br />
-      <Body>Uppercase</Body>
+      <PLarge>Uppercase</PLarge>
       <Tag
         isUppercase={true}
         label='UPPERCASE'
@@ -39,7 +39,7 @@ const TagPage = () => (
       <CodeBlock code={codeUppercase} />
       <br />
       <br />
-      <Body>Success</Body>
+      <PLarge>Success</PLarge>
       <Tag
         label='Success'
         variant='success'
@@ -49,7 +49,7 @@ const TagPage = () => (
       <CodeBlock code={codeSuccess} />
       <br />
       <br />
-      <Body>Info</Body>
+      <PLarge>Info</PLarge>
       <Tag
         label='Info'
         variant='info'
@@ -59,7 +59,7 @@ const TagPage = () => (
       <CodeBlock code={codeInfo} />
       <br />
       <br />
-      <Body>Warning</Body>
+      <PLarge>Warning</PLarge>
       <Tag
         label='Warning'
         variant='warning'
@@ -69,7 +69,7 @@ const TagPage = () => (
       <CodeBlock code={codeWarning} />
       <br />
       <br />
-      <Body>Danger</Body>
+      <PLarge>Danger</PLarge>
       <Tag
         label='Danger'
         variant='danger'

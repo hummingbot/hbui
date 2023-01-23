@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import tw, { css, styled } from 'twin.macro'
-import { H4, P, PSmall, Body, Bold } from '../../elements/typography'
+import { H4, P, PSmall, PLarge, Bold } from '../../elements/typography'
 import { Button } from '../../elements/buttons'
 import { Section, Container } from '../../elements/layout'
 import HummingbotLogo from '../../assets/svgs/logos/HummingbotLogo'
@@ -154,7 +154,7 @@ function NavBar({
           <LinkClass to='/'>
             <LogoContainer>
               { processLogo() }
-              <Body><Bold>{siteNameA}</Bold> {siteNameB}</Body>
+              <PLarge><Bold>{siteNameA}</Bold> {siteNameB}</PLarge>
             </LogoContainer>
           </LinkClass>
           <LinksLeft>

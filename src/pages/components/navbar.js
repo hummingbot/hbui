@@ -4,7 +4,7 @@ import tw, { theme } from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body, Bold, Medium } from '../../../hbui/elements/typography'
+import { H1, P, PLarge, Bold, Medium } from '../../../hbui/elements/typography'
 import { Separator, Container } from '../../../hbui/elements/layout'
 import { NavBar } from '../../../hbui/components/navigation'
 import { Link } from 'gatsby'
@@ -46,9 +46,9 @@ const Navigation = () => (
       <P>The NavBar components offers a quick and easy way to set up a working navigation</P>
     </Hero>
     <MainContent>
-      <Body>
+      <PLarge>
         How to use the NavBar
-      </Body>
+      </PLarge>
       <P>Create a component called <Bold>Navigation.js</Bold> and place it in your app where your navigation should be shown.</P>
       <br />
       <P>Inside that <Bold>Navigation.js</Bold> component, create an instance of <Bold>NavBar</Bold> and pass in the necessary props as explained and exemplified below.</P>

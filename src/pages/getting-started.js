@@ -2,7 +2,7 @@
 import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../components/layout'
-import { H1, P, Body } from '../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../hbui/elements/typography'
 import { MainContent } from '../components/elements/layout'
 import Hero from '../../hbui/components/hero/Hero'
 
@@ -13,7 +13,7 @@ const GettingStarted = () => (
     </Hero>
     <MainContent>
       <br />
-      <Body isBold>Start with a Boilerplate project</Body>
+      <PLarge isBold>Start with a Boilerplate project</PLarge>
       <P>
         Choose a project type:
       </P>
@@ -42,7 +42,7 @@ const GettingStarted = () => (
       </P>
       <br />
       <br />
-      <Body>You should be familiar with the following libraries:</Body>
+      <PLarge>You should be familiar with the following libraries:</PLarge>
       <a href='https://github.com/ben-rogerson/twin.macro' target='_blank' rel="noreferrer">
         <P isUnderline>twin.macro</P>
       </a>

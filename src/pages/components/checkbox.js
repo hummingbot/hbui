@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import Checkbox from '../../../hbui/components/checkbox'
 import Hero from '../../../hbui/components/hero/Hero'
 
@@ -20,17 +20,17 @@ const CheckboxPage = () => {
       <MainContent>
         <br />
         <br />
-        <Body>Default</Body>
+        <PLarge>Default</PLarge>
         <Checkbox active={stateChecked} onClick={() => setCheckedState(!stateChecked)}/>
         <br />
         <CodeBlock code={codeChecked} />
         <br />
-        <Body>Partial selected - use prop "partial"</Body>
+        <PLarge>Partial selected - use prop "partial"</PLarge>
         <Checkbox active={statePartial} partial={true} onClick={() => setPartialState(!statePartial)}/>
         <br />
         <CodeBlock code={codePartial} />
         <br />
-        <Body>Disabled - use prop "disabled"</Body>
+        <PLarge>Disabled - use prop "disabled"</PLarge>
         <Checkbox active={true} disabled={true}/>
         <br />
         <CodeBlock code={codeDisabled} />

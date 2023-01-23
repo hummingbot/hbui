@@ -3,7 +3,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
-import { H1, P, Body, H6, H5 } from '../../../hbui/elements/typography'
+import { H1, P, PLarge, H6, H5 } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Hero from '../../../hbui/components/hero/Hero'
 
@@ -15,13 +15,13 @@ const GuidelinesIndex = () => (
     <MainContent>
       <br />
       <br />
-      <Body>The Hummingbot Design System reflects the patterns and components that underpin the CoinAlpha and Hummingbot products. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the CoinAlpha / Hummingbot ecosystem.</Body>
+      <PLarge>The Hummingbot Design System reflects the patterns and components that underpin the CoinAlpha and Hummingbot products. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the CoinAlpha / Hummingbot ecosystem.</PLarge>
       <br />
       <br />
       <H5 isBold>Principles <span tw='text-tertiary'>#</span></H5>
       <Separator />
       <br />
-      <Body>These principles form the foundation of our design system. They guide our team when working on different parts of the system and help us do better and more informed decisions.</Body>
+      <PLarge>These principles form the foundation of our design system. They guide our team when working on different parts of the system and help us do better and more informed decisions.</PLarge>
       <br />
       <H6 isBold>Put user needs first</H6>
       <P>We care for the people who use our products. We’re here to make their day-to-day and long-term work better and more pleasant through great user experience.</P>

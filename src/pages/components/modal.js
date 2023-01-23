@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body, PSmall } from '../../../hbui/elements/typography'
+import { H1, P, PLarge, PSmall } from '../../../hbui/elements/typography'
 import Modal from '../../../hbui/components/modal'
 import {Button} from '../../../hbui/elements/buttons'
 import {Separator} from '../../../hbui/elements/layout'
@@ -26,7 +26,7 @@ const ModalPage = () => (
       <P>The modal also locks the scroll of background content.</P>
       <Separator />
       <br />
-      <Body>Click to open modal</Body>
+      <PLarge>Click to open modal</PLarge>
       <Modal
         contentProps={{
           title: 'Modal title',

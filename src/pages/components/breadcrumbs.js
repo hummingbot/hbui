@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body, Bold } from '../../../hbui/elements/typography'
+import { H1, P, PLarge, Bold } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import {BreadcrumbsBar} from '../../../hbui/components/navigation'
 import { Link }from 'gatsby'
@@ -25,13 +25,13 @@ function BreadcrumbsPage() {
         <P>Generic breadcrumbs bar</P>
       </Hero>
       <MainContent>
-        <Body>
+        <PLarge>
           The breadcrumbs bar takes 1 mandatory
           argument: <Bold>links</Bold> - an array of url / label pairs.
           <br />
           <br />
           It uses the React <Bold>NavLink</Bold> internally - a link will be highlighted when a route matches the URL.
-        </Body>
+        </PLarge>
         <Separator tw='mb-[2px]' />
         <BreadcrumbsBar
           links={breadcrumbLinks}

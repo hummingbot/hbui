@@ -3,7 +3,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import { Button as ButtonComponent } from '../../../hbui/components/buttons'
 import DummyIcon from '../../../hbui/assets/svgs/16x16/DummyIcon'
 import Play from '../../../hbui/assets/svgs/16x16/Play'
@@ -19,7 +19,7 @@ const Button = () => (
       <P>Button component - to be used together with icons</P>
     </Hero>
     <MainContent>
-      <Body>Button with loading state</Body>
+      <PLarge>Button with loading state</PLarge>
       <ButtonComponent
         loading={true}
         variant='secondary'
@@ -29,7 +29,7 @@ const Button = () => (
       <CodeBlock code={codeWithLoading} />
       <br />
       <br />
-      <Body>Button with dark-mode ready icon (before)</Body>
+      <PLarge>Button with dark-mode ready icon (before)</PLarge>
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -39,7 +39,7 @@ const Button = () => (
       <CodeBlock code={codeWithIconBefore} />
       <br />
       <br />
-      <Body>Button with dark-mode ready icon (after)</Body>
+      <PLarge>Button with dark-mode ready icon (after)</PLarge>
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -49,7 +49,7 @@ const Button = () => (
       <CodeBlock code={codeWithIconAfter} />
       <br />
       <br />
-      <Body>Button with dark-mode ready icon (before and after)</Body>
+      <PLarge>Button with dark-mode ready icon (before and after)</PLarge>
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -60,7 +60,7 @@ const Button = () => (
       <CodeBlock code={codeWithIconBeforeAndAfter} />
       <br />
       <br />
-      <Body>Button with "success" state and custom icon color</Body>
+      <PLarge>Button with "success" state and custom icon color</PLarge>
       <ButtonComponent
         variant='success'
         label="Button"

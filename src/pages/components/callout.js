@@ -1,7 +1,7 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import tw from 'twin.macro'
 import React, { useState } from 'react'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'

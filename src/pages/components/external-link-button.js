@@ -3,7 +3,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, Body, P } from '../../../hbui/elements/typography'
+import { H1, PLarge, P } from '../../../hbui/elements/typography'
 import { ExternalLinkButton as ExternalLinkButtonComponent } from '../../../hbui/components/buttons'
 import Layout from '../../components/layout'
 import Hero from '../../../hbui/components/hero/Hero'
@@ -15,7 +15,7 @@ const ExternalLinkButton = () => (
       <P>Button for external links</P>
     </Hero>
     <MainContent>
-      <Body>External link Button with dark-mode ready icon (before)</Body>
+      <PLarge>External link Button with dark-mode ready icon (before)</PLarge>
       <P>This button includes an "external link" icon on the right side by default</P>
       <br />
       <ExternalLinkButtonComponent

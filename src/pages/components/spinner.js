@@ -4,7 +4,7 @@ import tw, { theme } from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Spinner from '../../../hbui/components/spinner'
 import Hero from '../../../hbui/components/hero/Hero'
@@ -16,34 +16,34 @@ const SpinnerPage = () => (
       <P>Versatile SVG-based spinner component to use in loading scenarios</P>
     </Hero>
     <MainContent>
-      <Body>
+      <PLarge>
         Default color: black & white. Custom colors: green, red, orange, blue.{' '}
-      </Body>
+      </PLarge>
       <Separator />
       <br />
       <br />
-      <Body>Default (grey, 40px radius)</Body>
+      <PLarge>Default (grey, 40px radius)</PLarge>
       <Spinner />
       <br />
       <br />
       <CodeBlock code={codeSpinnerDefault} />
       <br />
       <br />
-      <Body>Custom: red, 50px radius</Body>
+      <PLarge>Custom: red, 50px radius</PLarge>
       <Spinner color="red" radius={50} />
       <br />
       <br />
       <CodeBlock code={codeSpinnerRed} />
       <br />
       <br />
-      <Body>Custom: green, 40px radius</Body>
+      <PLarge>Custom: green, 40px radius</PLarge>
       <Spinner color="green" radius={40} />
       <br />
       <br />
       <CodeBlock code={codeSpinnerGreen} />
       <br />
       <br />
-      <Body>Custom: blue, centered, 30px radius</Body>
+      <PLarge>Custom: blue, centered, 30px radius</PLarge>
       <Spinner center color="blue" radius={30} />
       <br />
       <br />

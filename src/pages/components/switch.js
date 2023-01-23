@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import { Separator } from '../../../hbui/elements/layout'
 import Switch from '../../../hbui/components/switch'
 import Hero from '../../../hbui/components/hero/Hero'
@@ -18,7 +18,7 @@ const SwitchPage = () => (
     <MainContent>
       <br />
       <br />
-      <Body>Default</Body>
+      <PLarge>Default</PLarge>
       <Switch />
       <br />
       <br />

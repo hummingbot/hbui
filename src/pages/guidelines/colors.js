@@ -21,35 +21,40 @@ const Colors = () => (
       <br />
       <P>Each "main color" corresponds to the level "500" of the respective color palette.</P>
       <br />
+      <br />
       <MainColorsRow>
-        <ColorLabel>Green</ColorLabel>
-        <ColorLabel>Terminal</ColorLabel>
-        <ColorLabel>Blue</ColorLabel>
-        <ColorLabel>Purple</ColorLabel>
-        <ColorLabel>Magenta</ColorLabel>
-        <ColorLabel>Red</ColorLabel>
-        <ColorLabel>Orange</ColorLabel>
-        <ColorLabel>Yellow</ColorLabel>
-      </MainColorsRow>
-      <MainColorsRow>
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.green['500'] }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.terminal }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.blue['500']  }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.purple['500'] }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.magenta['500'] }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.red['500'] }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.orange['500'] }} />
-        <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.yellow['500'] }} />
-      </MainColorsRow>
-      <MainColorsRow>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.green['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.blue['500'] }</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.purple['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.magenta['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.red['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.orange['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.color_palettes.yellow['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colorTokens.terminal}</ColorHexLabel>
+        <SwatchItem>
+          <SwatchInfo label='Green' hex={colorTokens.color_palettes.green['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.green['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Terminal' hex={colorTokens.color_palettes.blue['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.terminal }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Blue' hex={colorTokens.color_palettes.purple['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.blue['500']  }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Purple' hex={colorTokens.color_palettes.magenta['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.purple['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Magenta' hex={colorTokens.color_palettes.red['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.magenta['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Red' hex={colorTokens.color_palettes.orange['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.red['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Orange' hex={colorTokens.color_palettes.yellow['500']} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.orange['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='Yellow' hex={colorTokens.terminal} />
+          <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.yellow['500'] }} />
+        </SwatchItem>
       </MainColorsRow>
       <br />
       <br />
@@ -72,19 +77,22 @@ const Colors = () => (
 export default Colors
 
 const MainColorsRow = styled.div(() => [
-  tw`grid grid-cols-8 gap-2`,
+  tw`block sm:(grid grid-cols-8 gap-2)`,
 ])
 const ColorsRow = styled.div(() => [
-  tw`grid grid-cols-10 gap-2`,
-])
-const ColorSwatch = styled.div(() => [
-  tw`aspect-video rounded`,
+  tw`block sm:(grid grid-cols-10 gap-2)`,
 ])
 const ColorLabel = styled(PSmall)(() => [
-  tw`mb-2`,
+  tw`mb-[2px]`,
 ])
 const ColorHexLabel = styled(ColorLabel)(() => [
-  tw`font-mono`,
+  tw`font-mono text-tertiary mb-2`,
+])
+const SwatchItem = styled.div(() => [
+  tw`mb-2 grid grid-cols-2 gap-4 sm:(block mb-0)`,
+])
+const ColorSwatch = styled.div(() => [
+  tw`aspect-auto rounded sm:aspect-video`,
 ])
 
 function Palette({colorName, colors}) {
@@ -92,43 +100,58 @@ function Palette({colorName, colors}) {
     <div>
       <P tw='mb-4'>{colorName}</P>
       <ColorsRow>
-        <ColorLabel>50</ColorLabel>
-        <ColorLabel>100</ColorLabel>
-        <ColorLabel>200</ColorLabel>
-        <ColorLabel>300</ColorLabel>
-        <ColorLabel>400</ColorLabel>
-        <ColorLabel tw='font-black'>500</ColorLabel>
-        <ColorLabel>600</ColorLabel>
-        <ColorLabel>700</ColorLabel>
-        <ColorLabel>800</ColorLabel>
-        <ColorLabel>900</ColorLabel>
-      </ColorsRow>
-      <ColorsRow>
-        <ColorSwatch style={{backgroundColor: colors['50']  }} />
-        <ColorSwatch style={{backgroundColor: colors['100'] }} />
-        <ColorSwatch style={{backgroundColor: colors['200'] }} />
-        <ColorSwatch style={{backgroundColor: colors['300'] }} />
-        <ColorSwatch style={{backgroundColor: colors['400'] }} />
-        <ColorSwatch style={{backgroundColor: colors['500'] }} />
-        <ColorSwatch style={{backgroundColor: colors['600'] }} />
-        <ColorSwatch style={{backgroundColor: colors['700'] }} />
-        <ColorSwatch style={{backgroundColor: colors['800'] }} />
-        <ColorSwatch style={{backgroundColor: colors['900'] }} />
-      </ColorsRow>
-      <ColorsRow>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['50']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['100'] }</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['200']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['300']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['400']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['500']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['600']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['700']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['800']}</ColorHexLabel>
-        <ColorHexLabel tw='mb-0 mt-2 text-secondary'>{colors['900']}</ColorHexLabel>
+        <SwatchItem>
+          <SwatchInfo label='50' hex={colors['50']} />
+          <ColorSwatch style={{backgroundColor: colors['50']  }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='100' hex={colors['100']} />
+          <ColorSwatch style={{backgroundColor: colors['100'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='200' hex={colors['200']} />
+          <ColorSwatch style={{backgroundColor: colors['200'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='300' hex={colors['300']} />
+          <ColorSwatch style={{backgroundColor: colors['300'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='400' hex={colors['400']} />
+          <ColorSwatch style={{backgroundColor: colors['400'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='500' hex={colors['500']} highlight={true} />
+          <ColorSwatch style={{backgroundColor: colors['500'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='600' hex={colors['600']} />
+          <ColorSwatch style={{backgroundColor: colors['600'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='700' hex={colors['700']} />
+          <ColorSwatch style={{backgroundColor: colors['700'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='800' hex={colors['800']} />
+          <ColorSwatch style={{backgroundColor: colors['800'] }} />
+        </SwatchItem>
+        <SwatchItem>
+          <SwatchInfo label='900' hex={colors['900']} />
+          <ColorSwatch style={{backgroundColor: colors['900'] }} />
+        </SwatchItem>
       </ColorsRow>
       <br />
       <br />
+    </div>
+  )
+}
+
+function SwatchInfo({label, hex, highlight}) {
+  return (
+    <div>
+      <ColorLabel style={{fontWeight: highlight ? '900' : '500'}}>{label}</ColorLabel>
+      <ColorHexLabel>{hex}</ColorHexLabel>
     </div>
   )
 }

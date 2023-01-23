@@ -8,7 +8,7 @@ import Hero from '../../../hbui/components/hero/Hero'
 import {
   P,
   PSmall,
-  Body,
+  PLarge,
   H1,
   H6,
 } from '../../../hbui/elements/typography'
@@ -21,7 +21,7 @@ const Brand = () => (
       <H1 isBold>CoinAlpha Brand</H1>
     </Hero>
     <MainContent>
-      <Body>Our brand and product logos are clear, impactful and recognizable. In everything we do, we aim to bring focus and clarity to teams without distracting, so our logos and symbols are direct, clear, and impactful. To accomplish this, we adhere to the guidelines below.</Body>
+      <PLarge>Our brand and product logos are clear, impactful and recognizable. In everything we do, we aim to bring focus and clarity to teams without distracting, so our logos and symbols are direct, clear, and impactful. To accomplish this, we adhere to the guidelines below.</PLarge>
       <br />
       <P>The CoinAlpha logo is available in two color schemes: black and white. The black version works best on a white or light background. The white version should be used on dark backgrounds.</P>
       <br />

@@ -9,7 +9,7 @@ import {
   PNano,
   PTiny,
   PSmall,
-  Body,
+  PLarge,
   PrimaryColor,
   H6,
   H5,
@@ -98,15 +98,15 @@ const Typography = () => (
       <CodeBlock code={codeLabel} />
       <br />
       <br />
-      <H4>Body</H4>
+      <H4>PLarge</H4>
       <P>Slightly larger typography unit, to be used in bodies of text for enhanced readability. Font: Satoshi.</P>
       <Separator />
       <br />
-      <P tw='text-green dark:text-terminal'>Body</P>
+      <P tw='text-green dark:text-terminal'>PLarge</P>
       <br />
-      <Body>The quick brown fox jumps over the lazy dog</Body>
+      <PLarge>The quick brown fox jumps over the lazy dog</PLarge>
       <br />
-      <CodeBlock code={codeBody} />
+      <CodeBlock code={codePLarge} />
       <br />
       <br />
       <H4>Headlines</H4>
@@ -192,9 +192,9 @@ const codeParagraphNano = String.raw`import { PNano } from '@hummingbot/hbui/ele
 <PNano>The quick brown fox jumps over the lazy dog</PNano>`
 
 
-const codeBody = String.raw`import { Body } from '@hummingbot/hbui/elements/typography'
+const codePLarge = String.raw`import { PLarge } from '@hummingbot/hbui/elements/typography'
 
-<Body>The quick brown fox jumps over the lazy dog</Body>`
+<PLarge>The quick brown fox jumps over the lazy dog</PLarge>`
 
 
 const codeH6 = String.raw`import { H5 } from '@hummingbot/hbui/elements/typography'

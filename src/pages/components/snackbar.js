@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, P, Body } from '../../../hbui/elements/typography'
+import { H1, P, PLarge } from '../../../hbui/elements/typography'
 import Snackbar from '../../../hbui/components/snackbar'
 import Hero from '../../../hbui/components/hero/Hero'
 
@@ -15,31 +15,31 @@ const SnackBar = () => (
       <P>The Snackbar component is used to display notifications in various states.</P>
     </Hero>
     <MainContent>
-      <Body>Import Snackbar element (adjust path)</Body>
+      <PLarge>Import Snackbar element (adjust path)</PLarge>
       <CodeBlock code={codeImport} />
       <br />
       <br />
-      <Body>Default state</Body>
+      <PLarge>Default state</PLarge>
       <Snackbar label="Default" />
       <br />
       <CodeBlock code={codeDefault} />
       <br />
-      <Body>Active state</Body>
+      <PLarge>Active state</PLarge>
       <Snackbar label="Success" type="success" />
       <br />
       <CodeBlock code={codeSuccess} />
       <br />
-      <Body>Info state</Body>
+      <PLarge>Info state</PLarge>
       <Snackbar label="Info" type="info" />
       <br />
       <CodeBlock code={codeInfo} />
       <br />
-      <Body>Warning state</Body>
+      <PLarge>Warning state</PLarge>
       <Snackbar label="Warning" type="warning" />
       <br />
       <CodeBlock code={codeWarning} />
       <br />
-      <Body>Danger state</Body>
+      <PLarge>Danger state</PLarge>
       <Snackbar label="Danger" type="danger" />
       <br />
       <CodeBlock code={codeDanger} />

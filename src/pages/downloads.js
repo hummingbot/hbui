@@ -2,7 +2,7 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
 import Layout from '../components/layout'
-import { H1, H6, H5, P, Body, PTiny } from '../../hbui/elements/typography'
+import { H1, H6, H5, P, PLarge, PTiny } from '../../hbui/elements/typography'
 import { PageRoot, Separator } from '../../hbui/elements/layout'
 import { Button } from '../../hbui/elements/buttons'
 import { MainContent } from '../components/elements/layout'
@@ -16,7 +16,7 @@ const DesignTokens = () => (
     <MainContent>
       <br />
       <br />
-      <Body>In addition to the assets provided here we also offer additional design resources in our Figma workspace. <a href='mailto:support@hummingbot.io'>Contact our support</a> if you need access to Figma.</Body>
+      <PLarge>In addition to the assets provided here we also offer additional design resources in our Figma workspace. <a href='mailto:support@hummingbot.io'>Contact our support</a> if you need access to Figma.</PLarge>
       <br />
       <br />
       <H5 isBold>Brand Assets</H5>

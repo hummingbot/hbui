@@ -67,9 +67,9 @@ export const P = styled.p(
   sharedTransforms,
 )
 
-export const Body = styled.p(
+export const PLarge = styled.p(
   {},
-  props => [tw`pb-1 md:pb-8 text-lg md:text-xl`],
+  props => [tw`text-lg md:text-xl`],
   sharedTransforms,
 )
 

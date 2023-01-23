@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../components/layout'
 import { MainContent } from '../components/elements/layout'
 import { Container } from '../../hbui/elements/layout'
-import { H1, Body, P, H4 } from '../../hbui/elements/typography'
+import { H1, PLarge, P, H4 } from '../../hbui/elements/typography'
 import { Button } from '../../hbui/elements/buttons'
 import Hero from '../../hbui/components/hero/Hero'
 
@@ -15,7 +15,7 @@ const IndexPage = () => (
       <H4>The Hummingbot Design System</H4>
     </Hero>
     <MainContent>
-      <Body>Welcome to the Hummingbot Design System</Body>
+      <PLarge>Welcome to the Hummingbot Design System</PLarge>
       <br />
       <P>
         1. The original source of this design system is a <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407' target='_blank' rel="noreferrer">Figma document</a> containing
@@ -50,7 +50,7 @@ const IndexPage = () => (
       <br />
       <br />
       <br />
-      <Body>Useful links:</Body>
+      <PLarge>Useful links:</PLarge>
       <P>
         <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407' target='_blank' rel="noreferrer">
           Figma source

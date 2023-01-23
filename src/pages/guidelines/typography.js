@@ -8,7 +8,6 @@ import {
   P,
   PSmall,
   PTiny,
-  Body,
   H1,
   H2,
   H4,

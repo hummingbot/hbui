@@ -4,7 +4,7 @@ import tw from 'twin.macro'
 import Layout from '../components/layout'
 import { MainContent } from '../components/elements/layout'
 import Hero from '../../hbui/components/hero/Hero'
-import { H1, Body, P, H5, Bold } from '../../hbui/elements/typography'
+import { H1, P, H5, Bold } from '../../hbui/elements/typography'
 import { Separator } from '../../hbui/elements/layout'
 import { Section, Container } from '../../hbui/elements/layout'
 
