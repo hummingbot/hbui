@@ -7,6 +7,7 @@ export function CardC({
   iconElement,
   headerText,
   descriptionText,
+  customChildren,
   linkURL,
   external,
   linkClass,
@@ -28,6 +29,7 @@ export function CardC({
           }
         </HeaderSection>
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </HoverlessRoot>
     )
   }
@@ -44,10 +46,15 @@ export function CardC({
               {iconElement}
             </div>
           }
-          <Header isBold>{headerText}</Header>
+          {headerText &&
+            <HeaderSection>
+              <Header isBold>{headerText}</Header>
+            </HeaderSection>
+          }
           {external && <ExternalLinkIcon tw='absolute top-xs right-xs' />}
         </HeaderSection>
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </Root>
     </LinkElement>
   )

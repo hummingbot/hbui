@@ -5,6 +5,7 @@ import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
 import { H1, H4, P } from '../../../hbui/elements/typography'
+import { Button } from '../../../hbui/elements/buttons'
 import { CardA } from '../../../hbui/components/cards/CardA'
 import { CardB } from '../../../hbui/components/cards/CardB'
 import { CardC } from '../../../hbui/components/cards/CardC'
@@ -21,7 +22,7 @@ const CardsPage = () => (
       <H4>CardA</H4>
       <P>Most standard Card style</P>
       <br />
-      <div tw='w-full flex content-between'>
+      <div tw='w-full grid grid-cols-1 gap-0 gap-y-4 lg:(grid-cols-3 gap-1 gap-y-0)'>
         <CardA
           tw='mr-xs'
           imgSrc="https://picsum.photos/id/1/328/200"
@@ -37,7 +38,12 @@ const CardsPage = () => (
           imgSrc="https://picsum.photos/id/1/328/200"
           imgAlt="Test"
           headerText="External Link"
-          descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+          descriptionText="Card with custom content."
+          customChildren={
+            <div>
+              <Button variant='info' tw='mb-2'>Button 1</Button>
+            </div>
+          }
           linkURL="https://www.google.com"
           external={true}
         />
@@ -51,11 +57,13 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardA} />
       <br />
+      <CodeBlock code={paramsCodeCardA} />
+      <br />
       <br />
       <H4>CardB</H4>
       <P>Using an icon instead of an image</P>
       <br />
-      <div tw='w-full flex content-between'>
+      <div tw='w-full grid grid-cols-1 gap-0 gap-y-4 lg:(grid-cols-3 gap-1 gap-y-0)'>
         <CardB
           tw='mr-xs'
           iconElement={<IconA/>}
@@ -68,8 +76,13 @@ const CardsPage = () => (
         <CardB
           tw='mr-xs'
           iconElement={<IconB/>}
-          headerText="Icon Card 2"
-          descriptionText="With external link. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+          headerText="Icon Card 2"          
+          descriptionText="Card with custom content."
+          customChildren={
+            <div>
+              <Button variant='info' tw='mb-2'>Button 1</Button>
+            </div>
+          }
           linkURL="https://www.google.com"
           external={true}
         />
@@ -82,6 +95,8 @@ const CardsPage = () => (
       </div>
       <br />
       <CodeBlock code={codeCardB} />
+      <br />
+      <CodeBlock code={paramsCodeCardBC} />
       <br />
       <br />
       <H4>CardC</H4>
@@ -99,7 +114,12 @@ const CardsPage = () => (
         <CardC
           iconElement={<IconB/>}
           headerText="Internal Link Card 2"
-          descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+          descriptionText="Card with custom content."
+          customChildren={
+            <div>
+              <Button variant='info' tw='mb-2'>Button 1</Button>
+            </div>
+          }
           linkURL="/"
           external={false}
           linkClass={Link}
@@ -123,12 +143,36 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardC} />
       <br />
+      <CodeBlock code={paramsCodeCardBC} />
+      <br />
       <br />
     </MainContent>
   </Layout>
 )
 
 export default CardsPage
+
+const paramsCodeCardA = String.raw`Parameters:
+
+imgSrc (String: optional) // URL to image
+imgAlt (String: optional) // ALT image description
+headerText (String: optional) // card title
+descriptionText (String: optional) // card description
+customChildren (JSX: optional) // custom JSX content
+linkURL (String: optional) // link destination URL
+linkClass (String: required when link is internal) // for internal links, pass the "Link" class you are using, eg. from react-router-dom or gatsby
+external (Boolean: required when link is external) // when a link is external, pass {true}
+...props (props: optional)`
+
+const paramsCodeCardBC = String.raw`Parameters:
+
+headerText (String: optional) // card title
+descriptionText (String: optional) // card description
+customChildren (JSX: optional) // custom JSX content
+linkURL (String: optional) // link destination URL
+linkClass (String: required when link is internal) // for internal links, pass the "Link" class you are using, eg. from react-router-dom or gatsby
+external (Boolean: required when link is external) // when a link is external, pass {true}
+...props (props: optional)`
 
 const codeCardA = String.raw`import { CardA } from '@hummingbot/hbui/components/cards/CardA'
 import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
@@ -149,7 +193,13 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     imgSrc="https://picsum.photos/id/1/328/200"
     imgAlt="Test"
     headerText="External Link"
-    descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+    descriptionText="Card with custom content."
+    customChildren={
+      <div>
+        <Button variant='info' tw='mb-2'>Button 1</Button>
+        <Button variant='info'>Button 2</Button>
+      </div>
+    }
     linkURL="https://www.google.com"
     external={true}
   />

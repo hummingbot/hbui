@@ -7,6 +7,7 @@ export function CardB({
   iconElement,
   headerText,
   descriptionText,
+  customChildren,
   linkURL,
   external,
   linkClass,
@@ -22,6 +23,7 @@ export function CardB({
           </HeaderSection>
         }
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </HoverlessRoot>
     )
   }
@@ -33,11 +35,14 @@ export function CardB({
     <LinkElement to={linkURL} href={linkURL} target={external ? '_blank' : null} rel={external ? "noreferrer" : null}>
       <Root {...props}>
         { iconElement && <div tw='mb-xs'>{iconElement}</div> }
-        <HeaderSection>
-          <Header isBold>{headerText}</Header>
-          {external && <ExternalLinkIcon tw='ml-xs' />}
-        </HeaderSection>
+        {headerText &&
+          <HeaderSection>
+            <Header isBold>{headerText}</Header>
+            {external && <ExternalLinkIcon tw='ml-xs' />}
+          </HeaderSection>
+        }
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </Root>
     </LinkElement>
   )

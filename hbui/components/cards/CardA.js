@@ -8,21 +8,23 @@ export function CardA({
   imgAlt,
   headerText,
   descriptionText,
+  customChildren,
   linkURL,
-  external,
   linkClass,
+  external,
   ...props
   }) {
   if(!linkURL) {
     return (
       <HoverlessRoot {...props}>
-        {imgSrc && <Image src={imgSrc} alt={imgAlt} />}
+        {imgSrc && <Image src={imgSrc} alt={imgAlt || (headerText || 'image')} />}
         {headerText &&
           <HeaderSection>
             <Header isBold>{headerText}</Header>
           </HeaderSection>
         }
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </HoverlessRoot>
     )
   }
@@ -33,12 +35,15 @@ export function CardA({
   return (
     <LinkElement to={linkURL} href={linkURL} target={external ? '_blank' : null} rel={external ? "noreferrer" : null}>
       <Root {...props}>
-        {imgSrc && <Image src={imgSrc} alt={imgAlt} />}
-        <HeaderSection>
-          <Header isBold>{headerText}</Header>
-          {external && <ExternalLinkIcon tw='ml-xs' />}
-        </HeaderSection>
+        {imgSrc && <Image src={imgSrc} alt={imgAlt || (headerText || 'image')} />}
+        {headerText &&
+          <HeaderSection>
+            <Header isBold>{headerText}</Header>
+            {external && <ExternalLinkIcon tw='ml-xs' />}
+          </HeaderSection>
+        }
         {descriptionText && <Description>{descriptionText}</Description>}
+        {customChildren && <div tw='mt-4'>{customChildren}</div>}
       </Root>
     </LinkElement>
   )
