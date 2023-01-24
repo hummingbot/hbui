@@ -11,13 +11,14 @@ var _react = _interopRequireDefault(require("react"));
 var _typography = require("../../elements/typography");
 var _buttons = require("../buttons");
 var _templateObject;
-var _excluded = ["iconElement", "headerText", "descriptionText", "linkURL", "external", "linkClass"];
+var _excluded = ["iconElement", "headerText", "descriptionText", "customChildren", "linkURL", "external", "linkClass"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function CardC(_ref) {
   var iconElement = _ref.iconElement,
     headerText = _ref.headerText,
     descriptionText = _ref.descriptionText,
+    customChildren = _ref.customChildren,
     linkURL = _ref.linkURL,
     external = _ref.external,
     linkClass = _ref.linkClass,
@@ -25,7 +26,7 @@ function CardC(_ref) {
   if (!linkURL) {
     return /*#__PURE__*/_react["default"].createElement(HoverlessRoot, props, /*#__PURE__*/_react["default"].createElement(HeaderSection, null, iconElement && /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, iconElement), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
       isBold: true
-    }, headerText))), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText));
+    }, headerText))), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, customChildren));
   }
   var LinkElement = ExternalA;
   if (!external) {
@@ -36,9 +37,9 @@ function CardC(_ref) {
     href: linkURL,
     target: external ? '_blank' : null,
     rel: external ? "noreferrer" : null
-  }, /*#__PURE__*/_react["default"].createElement(Root, props, /*#__PURE__*/_react["default"].createElement(HeaderSection, null, iconElement && /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, iconElement), /*#__PURE__*/_react["default"].createElement(Header, {
+  }, /*#__PURE__*/_react["default"].createElement(Root, props, /*#__PURE__*/_react["default"].createElement(HeaderSection, null, iconElement && /*#__PURE__*/_react["default"].createElement(_StyledDiv3, null, iconElement), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
     isBold: true
-  }, headerText), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText)));
+  }, headerText)), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv4, null, customChildren)));
 }
 var ExternalA = _styledComponents["default"].a.withConfig({
   displayName: "CardC__ExternalA",
@@ -134,13 +135,25 @@ var _StyledDiv2 = (0, _styledComponents["default"])("div").withConfig({
   displayName: "CardC___StyledDiv2",
   componentId: "sc-v9rx65-7"
 })({
+  "marginTop": "1rem"
+});
+var _StyledDiv3 = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "CardC___StyledDiv3",
+  componentId: "sc-v9rx65-8"
+})({
   "paddingRight": "16px"
 });
 var _StyledExternalLinkIcon = (0, _styledComponents["default"])(_buttons.ExternalLinkIcon).withConfig({
   displayName: "CardC___StyledExternalLinkIcon",
-  componentId: "sc-v9rx65-8"
+  componentId: "sc-v9rx65-9"
 })({
   "position": "absolute",
   "top": "16px",
   "right": "16px"
+});
+var _StyledDiv4 = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "CardC___StyledDiv4",
+  componentId: "sc-v9rx65-10"
+})({
+  "marginTop": "1rem"
 });

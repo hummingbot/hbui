@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 var _typography = require("../../elements/typography");
 var _buttons = require("../buttons");
 var _templateObject;
-var _excluded = ["imgSrc", "imgAlt", "headerText", "descriptionText", "linkURL", "external", "linkClass"];
+var _excluded = ["imgSrc", "imgAlt", "headerText", "descriptionText", "customChildren", "linkURL", "linkClass", "external"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function CardA(_ref) {
@@ -19,17 +19,18 @@ function CardA(_ref) {
     imgAlt = _ref.imgAlt,
     headerText = _ref.headerText,
     descriptionText = _ref.descriptionText,
+    customChildren = _ref.customChildren,
     linkURL = _ref.linkURL,
-    external = _ref.external,
     linkClass = _ref.linkClass,
+    external = _ref.external,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref, _excluded);
   if (!linkURL) {
     return /*#__PURE__*/_react["default"].createElement(HoverlessRoot, props, imgSrc && /*#__PURE__*/_react["default"].createElement(Image, {
       src: imgSrc,
-      alt: imgAlt
+      alt: imgAlt || headerText || 'image'
     }), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
       isBold: true
-    }, headerText)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText));
+    }, headerText)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, customChildren));
   }
   var LinkElement = ExternalA;
   if (!external) {
@@ -42,10 +43,10 @@ function CardA(_ref) {
     rel: external ? "noreferrer" : null
   }, /*#__PURE__*/_react["default"].createElement(Root, props, imgSrc && /*#__PURE__*/_react["default"].createElement(Image, {
     src: imgSrc,
-    alt: imgAlt
-  }), /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
+    alt: imgAlt || headerText || 'image'
+  }), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
     isBold: true
-  }, headerText), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText)));
+  }, headerText), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, customChildren)));
 }
 var ExternalA = _styledComponents["default"].a.withConfig({
   displayName: "CardA__ExternalA",
@@ -139,9 +140,21 @@ var Description = (0, _styledComponents["default"])(_typography.P).withConfig({
     "color": "var(--text-secondary)"
   }];
 });
-var _StyledExternalLinkIcon = (0, _styledComponents["default"])(_buttons.ExternalLinkIcon).withConfig({
-  displayName: "CardA___StyledExternalLinkIcon",
+var _StyledDiv = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "CardA___StyledDiv",
   componentId: "sc-kwttha-7"
 })({
+  "marginTop": "1rem"
+});
+var _StyledExternalLinkIcon = (0, _styledComponents["default"])(_buttons.ExternalLinkIcon).withConfig({
+  displayName: "CardA___StyledExternalLinkIcon",
+  componentId: "sc-kwttha-8"
+})({
   "marginLeft": "16px"
+});
+var _StyledDiv2 = (0, _styledComponents["default"])("div").withConfig({
+  displayName: "CardA___StyledDiv2",
+  componentId: "sc-kwttha-9"
+})({
+  "marginTop": "1rem"
 });

@@ -141,7 +141,7 @@ function NavBar(_ref) {
     variant: containerVariant
   }, /*#__PURE__*/_react["default"].createElement(LeftSide, null, /*#__PURE__*/_react["default"].createElement(LinkClass, {
     to: "/"
-  }, /*#__PURE__*/_react["default"].createElement(LogoContainer, null, processLogo(), /*#__PURE__*/_react["default"].createElement(_typography.Body, null, /*#__PURE__*/_react["default"].createElement(_typography.Bold, null, siteNameA), " ", siteNameB))), /*#__PURE__*/_react["default"].createElement(LinksLeft, null, linksLeft && linksLeft.map(function (link) {
+  }, /*#__PURE__*/_react["default"].createElement(LogoContainer, null, processLogo(), /*#__PURE__*/_react["default"].createElement(_typography.PLarge, null, /*#__PURE__*/_react["default"].createElement(_typography.Bold, null, siteNameA), " ", siteNameB))), /*#__PURE__*/_react["default"].createElement(LinksLeft, null, linksLeft && linksLeft.map(function (link) {
     return processLink(link);
   }))), /*#__PURE__*/_react["default"].createElement(RightSide, null, showThemeToggle && /*#__PURE__*/_react["default"].createElement(_ThemeToggle["default"], {
     style: {

@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 var _typeof = require("@babel/runtime/helpers/typeof");
 exports.__esModule = true;
-exports.Underline = exports.Red = exports.PrimaryColor = exports.PTiny = exports.PSmall = exports.PNano = exports.P = exports.Orange = exports.Medium = exports.LabelTiny = exports.LabelSmall = exports.LabelNano = exports.Label = exports.H6 = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.Green = exports.Bold = exports.Body = exports.Blue = void 0;
+exports.Underline = exports.Red = exports.PrimaryColor = exports.PTiny = exports.PSmall = exports.PNano = exports.PLarge = exports.P = exports.Orange = exports.Medium = exports.LabelTiny = exports.LabelSmall = exports.LabelNano = exports.Label = exports.H6 = exports.H5 = exports.H4 = exports.H3 = exports.H2 = exports.H1 = exports.Green = exports.Bold = exports.Blue = void 0;
 var _taggedTemplateLiteralLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteralLoose"));
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _colors = require("../../constants/colors");
@@ -104,20 +104,18 @@ var P = _styledComponents["default"].p.withConfig({
   }];
 }, sharedTransforms);
 exports.P = P;
-var Body = _styledComponents["default"].p.withConfig({
-  displayName: "typography__Body",
+var PLarge = _styledComponents["default"].p.withConfig({
+  displayName: "typography__PLarge",
   componentId: "sc-9kw1vl-4"
 })({}, function (props) {
   return [{
-    "paddingBottom": "0.25rem",
     "fontSize": "1.125rem",
     "@media (min-width: 768px)": {
-      "paddingBottom": "2rem",
       "fontSize": "1.25rem"
     }
   }];
 }, sharedTransforms);
-exports.Body = Body;
+exports.PLarge = PLarge;
 var H6 = _styledComponents["default"].h6.withConfig({
   displayName: "typography__H6",
   componentId: "sc-9kw1vl-5"
