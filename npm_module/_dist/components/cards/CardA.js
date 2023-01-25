@@ -11,7 +11,7 @@ var _react = _interopRequireDefault(require("react"));
 var _typography = require("../../elements/typography");
 var _buttons = require("../buttons");
 var _templateObject;
-var _excluded = ["imgSrc", "imgAlt", "headerText", "descriptionText", "customChildren", "linkURL", "linkClass", "external"];
+var _excluded = ["imgSrc", "imgAlt", "headerText", "descriptionText", "children", "linkURL", "linkClass", "external"];
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 function CardA(_ref) {
@@ -19,7 +19,7 @@ function CardA(_ref) {
     imgAlt = _ref.imgAlt,
     headerText = _ref.headerText,
     descriptionText = _ref.descriptionText,
-    customChildren = _ref.customChildren,
+    children = _ref.children,
     linkURL = _ref.linkURL,
     linkClass = _ref.linkClass,
     external = _ref.external,
@@ -30,7 +30,7 @@ function CardA(_ref) {
       alt: imgAlt || headerText || 'image'
     }), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
       isBold: true
-    }, headerText)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, customChildren));
+    }, headerText)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), children && /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, children));
   }
   var LinkElement = ExternalA;
   if (!external) {
@@ -46,7 +46,7 @@ function CardA(_ref) {
     alt: imgAlt || headerText || 'image'
   }), headerText && /*#__PURE__*/_react["default"].createElement(HeaderSection, null, /*#__PURE__*/_react["default"].createElement(Header, {
     isBold: true
-  }, headerText), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), customChildren && /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, customChildren)));
+  }, headerText), external && /*#__PURE__*/_react["default"].createElement(_StyledExternalLinkIcon, null)), descriptionText && /*#__PURE__*/_react["default"].createElement(Description, null, descriptionText), children && /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, children)));
 }
 var ExternalA = _styledComponents["default"].a.withConfig({
   displayName: "CardA__ExternalA",
