@@ -7,7 +7,7 @@ export function CardC({
   iconElement,
   headerText,
   descriptionText,
-  customChildren,
+  children,
   linkURL,
   external,
   linkClass,
@@ -29,7 +29,7 @@ export function CardC({
           }
         </HeaderSection>
         {descriptionText && <Description>{descriptionText}</Description>}
-        {customChildren && <div tw='mt-4'>{customChildren}</div>}
+        {children && <div tw='mt-4'>{children}</div>}
       </HoverlessRoot>
     )
   }
@@ -54,7 +54,7 @@ export function CardC({
           {external && <ExternalLinkIcon tw='absolute top-xs right-xs' />}
         </HeaderSection>
         {descriptionText && <Description>{descriptionText}</Description>}
-        {customChildren && <div tw='mt-4'>{customChildren}</div>}
+        {children && <div tw='mt-xs'>{children}</div>}
       </Root>
     </LinkElement>
   )
@@ -71,7 +71,7 @@ const HoverlessRoot = styled.div(() => [
 ])
 
 const HeaderSection = styled.div(() => [
-  tw`w-full flex items-center pb-xs`,
+  tw`w-full flex items-center`,
 ])
 
 const Header = styled(H6)(() => [
@@ -82,5 +82,5 @@ const Header = styled(H6)(() => [
 ])
 
 const Description = styled(P)(() => [
-  tw`text-secondary leading-tight`,
+  tw`text-secondary leading-tight mt-xxs`,
 ])

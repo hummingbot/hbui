@@ -8,7 +8,7 @@ export function CardA({
   imgAlt,
   headerText,
   descriptionText,
-  customChildren,
+  children,
   linkURL,
   linkClass,
   external,
@@ -24,7 +24,7 @@ export function CardA({
           </HeaderSection>
         }
         {descriptionText && <Description>{descriptionText}</Description>}
-        {customChildren && <div tw='mt-4'>{customChildren}</div>}
+        {children && <div tw='mt-4'>{children}</div>}
       </HoverlessRoot>
     )
   }
@@ -43,7 +43,7 @@ export function CardA({
           </HeaderSection>
         }
         {descriptionText && <Description>{descriptionText}</Description>}
-        {customChildren && <div tw='mt-4'>{customChildren}</div>}
+        {children && <div tw='mt-4'>{children}</div>}
       </Root>
     </LinkElement>
   )
