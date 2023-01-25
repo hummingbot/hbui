@@ -229,7 +229,12 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     tw='mr-xs'
     iconElement={<IconB/>}
     headerText="Icon Card 2"
-    descriptionText="With external link. Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+    descriptionText="Card with custom content."
+    customChildren={
+      <div>
+        <Button variant='info' tw='mb-2'>Button 1</Button>
+      </div>
+    }
     linkURL="https://www.google.com"
     external={true}
   />
@@ -297,6 +302,12 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     iconElement={<IconB/>}
     headerText="Internal Link Card 2"
     descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
+    descriptionText="Card with custom content."
+    customChildren={
+      <div>
+        <Button variant='info' tw='mb-2'>Button 1</Button>
+      </div>
+    }
     linkURL="/"
     external={false}
     linkClass={Link}
