@@ -19,8 +19,8 @@ const Elements = () => (
       </P>
       <br />
       <P>
-        These do not have JavaScript logic attached. They are simply declared
-        Emotion.js elements.
+        These do not have JavaScript logic attached. They are simply
+        "styled-elements" HTML elements.
       </P>
     </MainContent>
   </Layout>
