@@ -1,16 +1,18 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import React from 'react'
-import tw from 'twin.macro'
+import tw, { styled } from 'twin.macro'
 import Layout from '../../components/layout'
 import { MainContent } from '../../components/elements/layout'
 import CodeBlock from '../../../hbui/components/code/CodeBlock'
-import { H1, H4, P } from '../../../hbui/elements/typography'
+import { H1, H4, H6, PSmall, P } from '../../../hbui/elements/typography'
 import { Button } from '../../../hbui/elements/buttons'
+import { Separator } from '../../../hbui/elements/layout'
 import { CardA } from '../../../hbui/components/cards/CardA'
 import { CardB } from '../../../hbui/components/cards/CardB'
 import { CardC } from '../../../hbui/components/cards/CardC'
 import { Link } from 'gatsby'
 import Hero from '../../../hbui/components/hero/Hero'
+import { PropertiesTable, PropertiesTableRow } from '../../../hbui/components/table/PropertiesTable'
 
 const CardsPage = () => (
   <Layout>
@@ -39,7 +41,7 @@ const CardsPage = () => (
           imgAlt="Test"
           headerText="External Link"
           descriptionText="Card with custom content."
-          customChildren={
+          children={
             <div>
               <Button variant='info'>Button</Button>
             </div>
@@ -57,7 +59,62 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardA} />
       <br />
-      <CodeBlock code={paramsCodeCardA} />
+      <br />
+      <PropertiesTable title='CardA Parameters'>
+        <PropertiesTableRow
+          propName='imgSrc'
+          type='String'
+          required='optional'
+          description='URL to image'
+        />
+        <PropertiesTableRow
+          propName='imgAlt'
+          type='String'
+          required='optional'
+          description='ALT image description'
+        />
+        <PropertiesTableRow
+          propName='headerText'
+          type='String'
+          required='optional'
+          description='card title'
+        />
+        <PropertiesTableRow
+          propName='descriptionText'
+          type='String'
+          required='optional'
+          description='card description'
+        />
+        <PropertiesTableRow
+          propName='children'
+          type='JSX'
+          required='optional'
+          description='Custom JSX content'
+        />
+        <PropertiesTableRow
+          propName='linkURL'
+          type='String'
+          required='optional'
+          description='link destination URL'
+        />
+        <PropertiesTableRow
+          propName='external'
+          type='Boolean'
+          required='conditional'
+          description='when a link is external, pass {true}'
+        />
+        <PropertiesTableRow
+          propName='linkClass'
+          type='Class'
+          required='conditional'
+          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+        />
+      </PropertiesTable>
+      <br />
+      <br />
+      <br />
+      <Separator />
+      <br />
       <br />
       <br />
       <H4>CardB</H4>
@@ -78,7 +135,7 @@ const CardsPage = () => (
           iconElement={<IconB/>}
           headerText="Icon Card 2"          
           descriptionText="Card with custom content."
-          customChildren={
+          children={
             <div>
               <Button variant='info'>Button</Button>
             </div>
@@ -96,7 +153,50 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardB} />
       <br />
-      <CodeBlock code={paramsCodeCardBC} />
+      <br />
+      <PropertiesTable title='CardB Parameters'>
+        <PropertiesTableRow
+          propName='headerText'
+          type='String'
+          required='optional'
+          description='card title'
+        />
+        <PropertiesTableRow
+          propName='descriptionText'
+          type='String'
+          required='optional'
+          description='card description'
+        />
+        <PropertiesTableRow
+          propName='children'
+          type='JSX'
+          required='optional'
+          description='Custom JSX content'
+        />
+        <PropertiesTableRow
+          propName='linkURL'
+          type='String'
+          required='optional'
+          description='link destination URL'
+        />
+        <PropertiesTableRow
+          propName='external'
+          type='Boolean'
+          required='conditional'
+          description='when a link is external, pass {true}'
+        />
+        <PropertiesTableRow
+          propName='linkClass'
+          type='Class'
+          required='conditional'
+          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+        />
+      </PropertiesTable>
+      <br />
+      <br />
+      <br />
+      <Separator />
+      <br />
       <br />
       <br />
       <H4>CardC</H4>
@@ -115,7 +215,7 @@ const CardsPage = () => (
           iconElement={<IconB/>}
           headerText="Internal Link Card 2"
           descriptionText="Card with custom content."
-          customChildren={
+          children={
             <div>
               <Button variant='info'>Button</Button>
             </div>
@@ -143,7 +243,44 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardC} />
       <br />
-      <CodeBlock code={paramsCodeCardBC} />
+      <PropertiesTable title='CardC Parameters'>
+        <PropertiesTableRow
+          propName='headerText'
+          type='String'
+          required='optional'
+          description='card title'
+        />
+        <PropertiesTableRow
+          propName='descriptionText'
+          type='String'
+          required='optional'
+          description='card description'
+        />
+        <PropertiesTableRow
+          propName='children'
+          type='JSX'
+          required='optional'
+          description='Custom JSX content'
+        />
+        <PropertiesTableRow
+          propName='linkURL'
+          type='String'
+          required='optional'
+          description='link destination URL'
+        />
+        <PropertiesTableRow
+          propName='external'
+          type='Boolean'
+          required='conditional'
+          description='when a link is external, pass {true}'
+        />
+        <PropertiesTableRow
+          propName='linkClass'
+          type='Class'
+          required='conditional'
+          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+        />
+      </PropertiesTable>
       <br />
       <br />
     </MainContent>
@@ -151,28 +288,6 @@ const CardsPage = () => (
 )
 
 export default CardsPage
-
-const paramsCodeCardA = String.raw`Parameters:
-
-imgSrc (String: optional) // URL to image
-imgAlt (String: optional) // ALT image description
-headerText (String: optional) // card title
-descriptionText (String: optional) // card description
-customChildren (JSX: optional) // custom JSX content
-linkURL (String: optional) // link destination URL
-linkClass (String: required when link is internal) // for internal links, pass the "Link" class you are using, eg. from react-router-dom or gatsby
-external (Boolean: required when link is external) // when a link is external, pass {true}
-...props (props: optional)`
-
-const paramsCodeCardBC = String.raw`Parameters:
-
-headerText (String: optional) // card title
-descriptionText (String: optional) // card description
-customChildren (JSX: optional) // custom JSX content
-linkURL (String: optional) // link destination URL
-linkClass (String: required when link is internal) // for internal links, pass the "Link" class you are using, eg. from react-router-dom or gatsby
-external (Boolean: required when link is external) // when a link is external, pass {true}
-...props (props: optional)`
 
 const codeCardA = String.raw`import { CardA } from '@hummingbot/hbui/components/cards/CardA'
 import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
@@ -194,7 +309,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     imgAlt="Test"
     headerText="External Link"
     descriptionText="Card with custom content."
-    customChildren={
+    children={
       <div>
         <Button variant='info'>Button</Button>
       </div>
@@ -229,7 +344,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     iconElement={<IconB/>}
     headerText="Icon Card 2"
     descriptionText="Card with custom content."
-    customChildren={
+    children={
       <div>
         <Button variant='info'>Button</Button>
       </div>
@@ -302,7 +417,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     headerText="Internal Link Card 2"
     descriptionText="Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum."
     descriptionText="Card with custom content."
-    customChildren={
+    children={
       <div>
         <Button variant='info'>Button</Button>
       </div>
@@ -345,6 +460,8 @@ function IconB() {
     </svg>
   );
 }`
+
+
 
 function IconA() {
   return (
