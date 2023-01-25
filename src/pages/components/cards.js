@@ -41,7 +41,7 @@ const CardsPage = () => (
           descriptionText="Card with custom content."
           customChildren={
             <div>
-              <Button variant='info' tw='mb-2'>Button 1</Button>
+              <Button variant='info'>Button</Button>
             </div>
           }
           linkURL="https://www.google.com"
@@ -80,7 +80,7 @@ const CardsPage = () => (
           descriptionText="Card with custom content."
           customChildren={
             <div>
-              <Button variant='info' tw='mb-2'>Button 1</Button>
+              <Button variant='info'>Button</Button>
             </div>
           }
           linkURL="https://www.google.com"
@@ -117,7 +117,7 @@ const CardsPage = () => (
           descriptionText="Card with custom content."
           customChildren={
             <div>
-              <Button variant='info' tw='mb-2'>Button 1</Button>
+              <Button variant='info'>Button</Button>
             </div>
           }
           linkURL="/"
@@ -196,8 +196,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     descriptionText="Card with custom content."
     customChildren={
       <div>
-        <Button variant='info' tw='mb-2'>Button 1</Button>
-        <Button variant='info'>Button 2</Button>
+        <Button variant='info'>Button</Button>
       </div>
     }
     linkURL="https://www.google.com"
@@ -232,7 +231,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     descriptionText="Card with custom content."
     customChildren={
       <div>
-        <Button variant='info' tw='mb-2'>Button 1</Button>
+        <Button variant='info'>Button</Button>
       </div>
     }
     linkURL="https://www.google.com"
@@ -305,7 +304,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
     descriptionText="Card with custom content."
     customChildren={
       <div>
-        <Button variant='info' tw='mb-2'>Button 1</Button>
+        <Button variant='info'>Button</Button>
       </div>
     }
     linkURL="/"
