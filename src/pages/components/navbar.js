@@ -46,9 +46,8 @@ const Navigation = () => (
       <P>The NavBar components offers a quick and easy way to set up a working navigation</P>
     </Hero>
     <MainContent>
-      <PLarge>
-        How to use the NavBar
-      </PLarge>
+      <PLarge>How to use the NavBar</PLarge>
+      <br />
       <P>Create a component called <Bold>Navigation.js</Bold> and place it in your app where your navigation should be shown.</P>
       <br />
       <P>Inside that <Bold>Navigation.js</Bold> component, create an instance of <Bold>NavBar</Bold> and pass in the necessary props as explained and exemplified below.</P>

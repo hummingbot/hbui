@@ -16,13 +16,15 @@ const SpinnerPage = () => (
       <P>Versatile SVG-based spinner component to use in loading scenarios</P>
     </Hero>
     <MainContent>
-      <PLarge>
-        Default color: black & white. Custom colors: green, red, orange, blue.{' '}
-      </PLarge>
+      <PLarge>Default color: black & white. Custom colors: green, red, orange, blue.{' '}</PLarge>
+      <br />
+      <br />
       <Separator />
       <br />
       <br />
+      <br />
       <PLarge>Default (grey, 40px radius)</PLarge>
+      <br />
       <Spinner />
       <br />
       <br />
@@ -30,6 +32,7 @@ const SpinnerPage = () => (
       <br />
       <br />
       <PLarge>Custom: red, 50px radius</PLarge>
+      <br />
       <Spinner color="red" radius={50} />
       <br />
       <br />
@@ -37,6 +40,7 @@ const SpinnerPage = () => (
       <br />
       <br />
       <PLarge>Custom: green, 40px radius</PLarge>
+      <br />
       <Spinner color="green" radius={40} />
       <br />
       <br />
@@ -44,6 +48,7 @@ const SpinnerPage = () => (
       <br />
       <br />
       <PLarge>Custom: blue, centered, 30px radius</PLarge>
+      <br />
       <Spinner center color="blue" radius={30} />
       <br />
       <br />

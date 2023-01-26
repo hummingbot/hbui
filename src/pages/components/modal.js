@@ -24,9 +24,14 @@ const ModalPage = () => (
       <P>Two buttons can be configured (one minimum) with optional button variant styles. Each button can have an optional callback function.</P>
       <br />
       <P>The modal also locks the scroll of background content.</P>
+      <br />
+      <br />
       <Separator />
       <br />
+      <br />
+      <br />
       <PLarge>Click to open modal</PLarge>
+      <br />
       <Modal
         contentProps={{
           title: 'Modal title',

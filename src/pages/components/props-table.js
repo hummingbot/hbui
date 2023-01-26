@@ -16,8 +16,6 @@ const PropsTablePage = () => (
       <P>Table components designed to display to prop lists</P>
     </Hero>
     <MainContent>
-      <br />
-      <br />
       <P>Handy component to display props for a component.</P>
       <br />
       <br />
@@ -26,7 +24,6 @@ const PropsTablePage = () => (
       <P>- Header titles can be customised</P>
       <P>- Items' property names can be customised</P>
       <P>- Up to 3 columns can be skipped</P>
-      <br />
       <br />
       <br />
       <Separator />
@@ -46,7 +43,7 @@ const PropsTablePage = () => (
           {
             propName: 'description',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'card description'
           },
@@ -60,7 +57,7 @@ const PropsTablePage = () => (
           {
             propName: 'linkURL',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'link destination URL'
           },
@@ -290,7 +287,7 @@ const codeExample = String.raw`import { PropsTable } from '@hummingbot/hbui/comp
     {
       propName: 'description',
       type: 'String',
-      default: "''",
+      default: "' '",
       required: 'optional',
       description: 'card description'
     },
@@ -304,7 +301,7 @@ const codeExample = String.raw`import { PropsTable } from '@hummingbot/hbui/comp
     {
       propName: 'linkURL',
       type: 'String',
-      default: "''",
+      default: "' '",
       required: 'optional',
       description: 'link destination URL'
     },

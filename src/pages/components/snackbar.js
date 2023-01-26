@@ -20,26 +20,31 @@ const SnackBar = () => (
       <br />
       <br />
       <PLarge>Default state</PLarge>
+      <br />
       <Snackbar label="Default" />
       <br />
       <CodeBlock code={codeDefault} />
       <br />
       <PLarge>Active state</PLarge>
+      <br />
       <Snackbar label="Success" type="success" />
       <br />
       <CodeBlock code={codeSuccess} />
       <br />
       <PLarge>Info state</PLarge>
+      <br />
       <Snackbar label="Info" type="info" />
       <br />
       <CodeBlock code={codeInfo} />
       <br />
       <PLarge>Warning state</PLarge>
+      <br />
       <Snackbar label="Warning" type="warning" />
       <br />
       <CodeBlock code={codeWarning} />
       <br />
       <PLarge>Danger state</PLarge>
+      <br />
       <Snackbar label="Danger" type="danger" />
       <br />
       <CodeBlock code={codeDanger} />

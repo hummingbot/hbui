@@ -19,6 +19,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Default</PLarge>
+      <br />
       <Tag
         label='Default'
         variant='default'
@@ -29,6 +30,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Uppercase</PLarge>
+      <br />
       <Tag
         isUppercase={true}
         label='UPPERCASE'
@@ -40,6 +42,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Success</PLarge>
+      <br />
       <Tag
         label='Success'
         variant='success'
@@ -50,6 +53,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Info</PLarge>
+      <br />
       <Tag
         label='Info'
         variant='info'
@@ -60,6 +64,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Warning</PLarge>
+      <br />
       <Tag
         label='Warning'
         variant='warning'
@@ -70,6 +75,7 @@ const TagPage = () => (
       <br />
       <br />
       <PLarge>Danger</PLarge>
+      <br />
       <Tag
         label='Danger'
         variant='danger'

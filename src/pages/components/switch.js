@@ -19,6 +19,7 @@ const SwitchPage = () => (
       <br />
       <br />
       <PLarge>Default</PLarge>
+      <br />
       <Switch />
       <br />
       <br />

@@ -16,6 +16,7 @@ const ExternalLinkButton = () => (
     </Hero>
     <MainContent>
       <PLarge>External link Button with dark-mode ready icon (before)</PLarge>
+      <br />
       <P>This button includes an "external link" icon on the right side by default</P>
       <br />
       <ExternalLinkButtonComponent

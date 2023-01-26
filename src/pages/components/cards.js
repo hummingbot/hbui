@@ -66,14 +66,14 @@ const CardsPage = () => (
           {
             propName: 'imgSrc',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'URL to image'
           },
           {
             propName: 'imgAlt',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'ALT image description'
           },
@@ -87,7 +87,7 @@ const CardsPage = () => (
           {
             propName: 'descriptionText',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'card description'
           },
@@ -101,7 +101,7 @@ const CardsPage = () => (
           {
             propName: 'linkURL',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'link destination URL'
           },
@@ -178,7 +178,7 @@ const CardsPage = () => (
           {
             propName: 'descriptionText',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'card description'
           },
@@ -192,7 +192,7 @@ const CardsPage = () => (
           {
             propName: 'linkURL',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'link destination URL'
           },
@@ -276,7 +276,7 @@ const CardsPage = () => (
           {
             propName: 'descriptionText',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'card description'
           },
@@ -290,7 +290,7 @@ const CardsPage = () => (
           {
             propName: 'linkURL',
             type: 'String',
-            default: "''",
+            default: "' '",
             required: 'optional',
             description: 'link destination URL'
           },
