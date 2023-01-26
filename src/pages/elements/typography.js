@@ -35,124 +35,64 @@ const Typography = () => (
     </Hero>
     <MainContent>
       <H4>Paragraphs</H4>
-      <P>Most standard typography unit, available in default, small, tiny and nano sizes. Uses the brand's main typeface: Satoshi.</P>
+      <P>The standard typography unit, available in large, default, small, tiny and nano sizes. Uses the brand's main typeface: Satoshi.</P>
       <Separator />
       <br />
-      <P tw='text-green dark:text-terminal'>Paragraph (nano)</P>
-      <br />
-      <PNano>The quick brown fox jumps over the lazy dog</PNano>
-      <br />
-      <CodeBlock code={codeParagraphNano} />
       <br />
       <br />
-      <P tw='text-green dark:text-terminal'>Paragraph (tiny)</P>
+      <PNano>PNano: The quick brown fox jumps over the lazy dog</PNano>
       <br />
-      <PTiny>The quick brown fox jumps over the lazy dog</PTiny>
+      <PTiny>PTiny: The quick brown fox jumps over the lazy dog</PTiny>
       <br />
-      <CodeBlock code={codeParagraphTiny} />
+      <PSmall>PSmall: The quick brown fox jumps over the lazy dog</PSmall>
       <br />
+      <P>P: The quick brown fox jumps over the lazy dog</P>
       <br />
-      <P tw='text-green dark:text-terminal'>Paragraph (small)</P>
+      <PLarge>PLarge: The quick brown fox jumps over the lazy dog</PLarge>
       <br />
-      <PSmall>The quick brown fox jumps over the lazy dog</PSmall>
-      <br />
-      <CodeBlock code={codeParagraphSmall} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>Paragraph (default)</P>
-      <br />
-      <P>The quick brown fox jumps over the lazy dog</P>
-      <br />
-      <CodeBlock code={codeParagraph} />
+      <CodeBlock code={codeParagraphs} />
       <br />
       <br />
-      <H4>Labels</H4>
-      <P>Typography elements for forms. Based on the same sizes as the Paragraph variants, these use the font "Inter" for better readability in small sizes. Available in default, small, tiny and nano sizes.</P>
-      <Separator />
-      <br />
-      <P tw='text-green dark:text-terminal'>Label (nano)</P>
-      <br />
-      <LabelNano>The quick brown fox jumps over the lazy dog</LabelNano>
-      <br />
-      <CodeBlock code={codeLabelNano} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>Label (tiny)</P>
-      <br />
-      <LabelTiny>The quick brown fox jumps over the lazy dog</LabelTiny>
-      <br />
-      <CodeBlock code={codeLabelTiny} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>Label (small)</P>
-      <br />
-      <LabelSmall>The quick brown fox jumps over the lazy dog</LabelSmall>
-      <br />
-      <CodeBlock code={codeLabelSmall} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>Label (default)</P>
-      <br />
-      <Label>The quick brown fox jumps over the lazy dog</Label>
-      <br />
-      <CodeBlock code={codeLabel} />
-      <br />
-      <br />
-      <H4>PLarge</H4>
-      <P>Slightly larger typography unit, to be used in bodies of text for enhanced readability. Font: Satoshi.</P>
-      <Separator />
-      <br />
-      <P tw='text-green dark:text-terminal'>PLarge</P>
-      <br />
-      <PLarge>The quick brown fox jumps over the lazy dog</PLarge>
-      <br />
-      <CodeBlock code={codePLarge} />
       <br />
       <br />
       <H4>Headlines</H4>
       <P>Standard headline elements. Font: Satoshi.</P>
       <Separator />
       <br />
-      <P tw='text-green dark:text-terminal'>H6</P>
-      <br />
-      <H6>The quick brown fox jumps over the lazy dog</H6>
-      <br />
-      <CodeBlock code={codeH6} />
       <br />
       <br />
-      <P tw='text-green dark:text-terminal'>H5</P>
+      <H6>H6: The quick brown fox jumps over the lazy dog</H6>
       <br />
-      <H5>The quick brown fox jumps over the lazy dog</H5>
+      <H5>H5: The quick brown fox jumps over the lazy dog</H5>
       <br />
-      <CodeBlock code={codeH5} />
+      <H4>H4: The quick brown fox jumps over the lazy dog</H4>
       <br />
+      <H3>H3: The quick brown fox jumps over the lazy dog</H3>
       <br />
-      <P tw='text-green dark:text-terminal'>H4</P>
+      <H2>H2: The quick brown fox jumps over the lazy dog</H2>
       <br />
-      <H4>The quick brown fox jumps over the lazy dog</H4>
+      <H1>H1: The quick brown fox jumps over the lazy dog</H1>
       <br />
-      <CodeBlock code={codeH4} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>H3</P>
-      <br />
-      <H3>The quick brown fox jumps over the lazy dog</H3>
-      <br />
-      <CodeBlock code={codeH3} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>H2</P>
-      <br />
-      <H2>The quick brown fox jumps over the lazy dog</H2>
-      <br />
-      <CodeBlock code={codeH2} />
-      <br />
-      <br />
-      <P tw='text-green dark:text-terminal'>H1</P>
-      <br />
-      <H1>The quick brown fox jumps over the lazy dog</H1>
       <br />
       <CodeBlock code={codeH1} />
+      <br />
+      <br />
+      <H4>Labels</H4>
+      <P>Typography elements for forms, these use the font "Inter" for better readability in small sizes. Available in default, small, tiny and nano sizes.</P>
+      <Separator />
+      <br />
+      <br />
+      <br />
+      <LabelNano>LabelNano: The quick brown fox jumps over the lazy dog</LabelNano>
+      <br />
+      <LabelTiny>LabelTiny: The quick brown fox jumps over the lazy dog</LabelTiny>
+      <br />
+      <LabelSmall>LabelSmall: The quick brown fox jumps over the lazy dog</LabelSmall>
+      <br />
+      <Label>Label: The quick brown fox jumps over the lazy dog</Label>
+      <br />
+      <br />
+      <CodeBlock code={codeLabel} />
       <br />
       <br />
     </MainContent>
@@ -161,57 +101,45 @@ const Typography = () => (
 
 export default Typography
 
-const codeLabel = String.raw`import { Label } from '@hummingbot/hbui/elements/typography'
+const codeLabel = String.raw`import {
+  LabelNano,
+  LabelTiny,
+  LabelSmall,
+  Label
+} from '@hummingbot/hbui/elements/typography'
 
+<LabelNano>sdfsfsd</LabelNano>
+<LabelTiny>sdfsfsd</LabelTiny>
+<LabelSmall>sdfsfsd</LabelSmall>
 <Label>sdfsfsd</Label>`
 
-const codeLabelSmall = String.raw`import { LabelSmall } from '@hummingbot/hbui/elements/typography'
+const codeParagraphs = String.raw`import {
+  PNano,
+  PTiny,
+  PSmall,
+  P,
+  PLarge
+} from '@hummingbot/hbui/elements/typography'
 
-<LabelSmall>sdfsfsd</LabelSmall>`
-
-const codeLabelNano = String.raw`import { LabelNano } from '@hummingbot/hbui/elements/typography'
-
-<LabelNano>sdfsfsd</LabelNano>`
-
-const codeLabelTiny = String.raw`import { LabelTiny } from '@hummingbot/hbui/elements/typography'
-
-<LabelTiny>sdfsfsd</LabelTiny>`
-
-
-const codeParagraph = String.raw`import { P } from '@hummingbot/hbui/elements/typography'
-
-<P>The quick brown fox jumps over the lazy dog</P>`
-const codeParagraphSmall = String.raw`import { PSmall } from '@hummingbot/hbui/elements/typography'
-
-<PSmall>The quick brown fox jumps over the lazy dog</PSmall>`
-const codeParagraphTiny = String.raw`import { PTiny } from '@hummingbot/hbui/elements/typography'
-
-<PTiny>The quick brown fox jumps over the lazy dog</PTiny>`
-const codeParagraphNano = String.raw`import { PNano } from '@hummingbot/hbui/elements/typography'
-
-<PNano>The quick brown fox jumps over the lazy dog</PNano>`
-
-
-const codePLarge = String.raw`import { PLarge } from '@hummingbot/hbui/elements/typography'
-
+<PNano>The quick brown fox jumps over the lazy dog</PNano>
+<PTiny>The quick brown fox jumps over the lazy dog</PTiny>
+<PSmall>The quick brown fox jumps over the lazy dog</PSmall>
+<P>The quick brown fox jumps over the lazy dog</P>
 <PLarge>The quick brown fox jumps over the lazy dog</PLarge>`
 
 
-const codeH6 = String.raw`import { H5 } from '@hummingbot/hbui/elements/typography'
+const codeH1 = String.raw`import {
+  H6,
+  H5,
+  H4,
+  H3,
+  H2,
+  H1
+} from '@hummingbot/hbui/elements/typography'
 
-<H5>The quick brown fox jumps over the lazy dog</H5>`
-const codeH5 = String.raw`import { H4 } from '@hummingbot/hbui/elements/typography'
-
-<H4>The quick brown fox jumps over the lazy dog</H4>`
-const codeH4 = String.raw`import { H4 } from '@hummingbot/hbui/elements/typography'
-
-<H4>The quick brown fox jumps over the lazy dog</H4>`
-const codeH3 = String.raw`import { H3 } from '@hummingbot/hbui/elements/typography'
-
-<H3>The quick brown fox jumps over the lazy dog</H3>`
-const codeH2 = String.raw`import { H2 } from '@hummingbot/hbui/elements/typography'
-
-<H2>The quick brown fox jumps over the lazy dog</H2>`
-const codeH1 = String.raw`import { H1 } from '@hummingbot/hbui/elements/typography'
-
+<H6>The quick brown fox jumps over the lazy dog</H6>
+<H5>The quick brown fox jumps over the lazy dog</H5>
+<H4>The quick brown fox jumps over the lazy dog</H4>
+<H3>The quick brown fox jumps over the lazy dog</H3>
+<H2>The quick brown fox jumps over the lazy dog</H2>
 <H1>The quick brown fox jumps over the lazy dog</H1>`
