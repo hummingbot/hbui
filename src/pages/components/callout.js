@@ -17,6 +17,7 @@ import {
   CalloutNote,
 } from '../../../hbui/components/callout'
 import Layout from '../../components/layout'
+import PropsTable from '../../../hbui/components/table/PropsTable'
 
 const CalloutPage = () => (
   <Layout>
@@ -105,6 +106,25 @@ const CalloutPage = () => (
       <CodeBlock code={codeNote} />
       <br />
       <br />
+      <PropsTable
+        title='CAllout Props'
+        items={[
+          {
+            propName: 'title',
+            type: 'String',
+            default: "' '",
+            required: 'required',
+            description: 'The title of the callout.'
+          },
+          {
+            propName: 'text',
+            type: 'String',
+            default: "' '",
+            required: 'required',
+            description: 'The description of the callout.)'
+          },
+        ]}
+      />
     </MainContent>
   </Layout>
 )

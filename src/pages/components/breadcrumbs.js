@@ -9,6 +9,7 @@ import { Separator } from '../../../hbui/elements/layout'
 import {BreadcrumbsBar} from '../../../hbui/components/navigation'
 import { Link }from 'gatsby'
 import Hero from '../../../hbui/components/hero/Hero'
+import PropsTable from '../../../hbui/components/table/PropsTable'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },
@@ -26,12 +27,9 @@ function BreadcrumbsPage() {
       </Hero>
       <MainContent>
         <PLarge>
-          The breadcrumbs bar takes 1 mandatory
-          argument: <Bold>links</Bold> - an array of url / label pairs.
-          <br />
-          <br />
-          It uses the React <Bold>NavLink</Bold> internally - a link will be highlighted when a route matches the URL.
+          Simple breadcrumbs bar for internal site navigation
         </PLarge>
+        <br />
         <Separator tw='mb-[2px]' />
         <BreadcrumbsBar
           links={breadcrumbLinks}
@@ -42,6 +40,25 @@ function BreadcrumbsPage() {
         <CodeBlock code={code} />
         <br />
         <br />
+        <PropsTable
+          title='Breadcrumbs Props'
+          items={[
+            {
+              propName: 'links',
+              type: 'Array',
+              default: "null",
+              required: 'required',
+              description: 'The array of links you intend to display, ads shown in the example above'
+            },
+            {
+              propName: 'linkClass',
+              type: 'Class',
+              default: "null",
+              required: 'required',
+              description: 'Pass the { Link } class you are using in your site eg. from "react-router-dom" or "gatsby"'
+            },
+          ]}
+        />
       </MainContent>
     </Layout>
   )
@@ -50,6 +67,7 @@ function BreadcrumbsPage() {
 export default BreadcrumbsPage
 
 const code = String.raw`import BreadcrumbsBar from '@hummingbot/hbui/components/navigation/BreadcrumbsBar'
+import { Link } from 'gatsby'
 
 const breadcrumbLinks = [
   { url: "/launchpad", label: "Launchpad" },
@@ -61,5 +79,6 @@ const breadcrumbLinks = [
 return (
   <BreadcrumbsBar
     links={breadcrumbLinks}
+    linkClass={Link}
   />
 )`

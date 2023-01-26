@@ -11,6 +11,7 @@ import MenuDropdown from '../../../hbui/components/menudropdown'
 import Layout from '../../components/layout'
 import Hero from '../../../hbui/components/hero/Hero'
 import { Link } from 'gatsby'
+import PropsTable from '../../../hbui/components/table/PropsTable'
 
 const Button = () => (
   <Layout>
@@ -20,6 +21,7 @@ const Button = () => (
     </Hero>
     <MainContent>
       <PLarge>Button with loading state</PLarge>
+      <br />
       <ButtonComponent
         loading={true}
         variant='secondary'
@@ -30,6 +32,7 @@ const Button = () => (
       <br />
       <br />
       <PLarge>Button with dark-mode ready icon (before)</PLarge>
+      <br />
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -40,6 +43,7 @@ const Button = () => (
       <br />
       <br />
       <PLarge>Button with dark-mode ready icon (after)</PLarge>
+      <br />
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -50,6 +54,7 @@ const Button = () => (
       <br />
       <br />
       <PLarge>Button with dark-mode ready icon (before and after)</PLarge>
+      <br />
       <ButtonComponent
         variant='secondary'
         label="Button"
@@ -60,7 +65,8 @@ const Button = () => (
       <CodeBlock code={codeWithIconBeforeAndAfter} />
       <br />
       <br />
-      <PLarge>Button with "success" state and custom icon color</PLarge>
+      <PLarge>Button with "success" variant and custom icon color</PLarge>
+      <br />
       <ButtonComponent
         variant='success'
         label="Button"
@@ -69,6 +75,48 @@ const Button = () => (
       />
       <br />
       <CodeBlock code={codeWithCustomIconColor} />
+      <br />
+      <br />
+      <PropsTable
+        title='Button Props'
+        items={[
+          {
+            propName: 'label',
+            type: 'String',
+            default: "' '",
+            required: 'required',
+            description: 'The label of the button.'
+          },
+          {
+            propName: 'variant',
+            type: 'String',
+            default: "default",
+            required: 'optional',
+            description: 'The variant identifies the type of the Button (success, info, danger etc.)'
+          },
+          {
+            propName: 'iconBefore',
+            type: 'SVG JSX',
+            default: "null",
+            required: 'optional',
+            description: 'Optional icon to show before the label'
+          },
+          {
+            propName: 'iconAfter',
+            type: 'SVG JSX',
+            default: "null",
+            required: 'optional',
+            description: 'Optional icon to show after the label'
+          },
+          {
+            propName: 'iconColor',
+            type: 'HEX String',
+            default: "null",
+            required: 'optional',
+            description: "If iconBefore or iconAfter is passed, this color will be applied to it's fill."
+          },
+        ]}
+      />
     </MainContent>
   </Layout>
 )
