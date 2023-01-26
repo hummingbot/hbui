@@ -86,6 +86,10 @@ const tabs = {
   link: '/components/tabs',
   title: 'Tabs',
 }
+const propsTable = {
+  link: '/components/props-table',
+  title: 'PropsTable',
+}
 
 const links =  [
   breadcrumbs,
@@ -102,6 +106,7 @@ const links =  [
   logo,
   modal,
   navbar,
+  propsTable,
   radiogroup,
   snackbar,
   spinner,

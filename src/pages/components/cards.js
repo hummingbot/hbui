@@ -12,7 +12,7 @@ import { CardB } from '../../../hbui/components/cards/CardB'
 import { CardC } from '../../../hbui/components/cards/CardC'
 import { Link } from 'gatsby'
 import Hero from '../../../hbui/components/hero/Hero'
-import { PropertiesTable, PropertiesTableRow } from '../../../hbui/components/table/PropertiesTable'
+import PropsTable from '../../../hbui/components/table/PropsTable'
 
 const CardsPage = () => (
   <Layout>
@@ -60,56 +60,67 @@ const CardsPage = () => (
       <CodeBlock code={codeCardA} />
       <br />
       <br />
-      <PropertiesTable title='CardA Parameters'>
-        <PropertiesTableRow
-          propName='imgSrc'
-          type='String'
-          required='optional'
-          description='URL to image'
-        />
-        <PropertiesTableRow
-          propName='imgAlt'
-          type='String'
-          required='optional'
-          description='ALT image description'
-        />
-        <PropertiesTableRow
-          propName='headerText'
-          type='String'
-          required='optional'
-          description='card title'
-        />
-        <PropertiesTableRow
-          propName='descriptionText'
-          type='String'
-          required='optional'
-          description='card description'
-        />
-        <PropertiesTableRow
-          propName='children'
-          type='JSX'
-          required='optional'
-          description='Custom JSX content'
-        />
-        <PropertiesTableRow
-          propName='linkURL'
-          type='String'
-          required='optional'
-          description='link destination URL'
-        />
-        <PropertiesTableRow
-          propName='external'
-          type='Boolean'
-          required='conditional'
-          description='when a link is external, pass {true}'
-        />
-        <PropertiesTableRow
-          propName='linkClass'
-          type='Class'
-          required='conditional'
-          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
-        />
-      </PropertiesTable>
+      <PropsTable
+        title='CardA Props'
+        items={[
+          {
+            propName: 'imgSrc',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'URL to image'
+          },
+          {
+            propName: 'imgAlt',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'ALT image description'
+          },
+          {
+            propName: 'headerText',
+            type: 'String',
+            default: '"Props"',
+            required: 'optional',
+            description: 'card title'
+          },
+          {
+            propName: 'descriptionText',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'card description'
+          },
+          {
+            propName: 'children',
+            type: 'JSX',
+            default: 'null',
+            required: 'optional',
+            description: 'Custom JSX content'
+          },
+          {
+            propName: 'linkURL',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'link destination URL'
+          },
+          {
+            propName: 'external',
+            type: 'Boolean',
+            default: 'Boolean',
+            required: 'conditional',
+            description: 'when a link is external, pass {true}'
+          },
+          {
+            propName: 'linkClass',
+            type: 'Class',
+            default: 'null',
+            required: 'conditional',
+            description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+          }
+        ]}
+      />
       <br />
       <br />
       <br />
@@ -154,44 +165,53 @@ const CardsPage = () => (
       <CodeBlock code={codeCardB} />
       <br />
       <br />
-      <PropertiesTable title='CardB Parameters'>
-        <PropertiesTableRow
-          propName='headerText'
-          type='String'
-          required='optional'
-          description='card title'
-        />
-        <PropertiesTableRow
-          propName='descriptionText'
-          type='String'
-          required='optional'
-          description='card description'
-        />
-        <PropertiesTableRow
-          propName='children'
-          type='JSX'
-          required='optional'
-          description='Custom JSX content'
-        />
-        <PropertiesTableRow
-          propName='linkURL'
-          type='String'
-          required='optional'
-          description='link destination URL'
-        />
-        <PropertiesTableRow
-          propName='external'
-          type='Boolean'
-          required='conditional'
-          description='when a link is external, pass {true}'
-        />
-        <PropertiesTableRow
-          propName='linkClass'
-          type='Class'
-          required='conditional'
-          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
-        />
-      </PropertiesTable>
+      <PropsTable
+        title='CardB Props'
+        items={[
+          {
+            propName: 'headerText',
+            type: 'String',
+            default: '"Props"',
+            required: 'optional',
+            description: 'card title'
+          },
+          {
+            propName: 'descriptionText',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'card description'
+          },
+          {
+            propName: 'children',
+            type: 'JSX',
+            default: 'null',
+            required: 'optional',
+            description: 'Custom JSX content'
+          },
+          {
+            propName: 'linkURL',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'link destination URL'
+          },
+          {
+            propName: 'external',
+            type: 'Boolean',
+            default: 'Boolean',
+            required: 'conditional',
+            description: 'when a link is external, pass {true}'
+          },
+          {
+            propName: 'linkClass',
+            type: 'Class',
+            default: 'null',
+            required: 'conditional',
+            description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+          }
+        ]}
+      />
       <br />
       <br />
       <br />
@@ -243,44 +263,53 @@ const CardsPage = () => (
       <br />
       <CodeBlock code={codeCardC} />
       <br />
-      <PropertiesTable title='CardC Parameters'>
-        <PropertiesTableRow
-          propName='headerText'
-          type='String'
-          required='optional'
-          description='card title'
-        />
-        <PropertiesTableRow
-          propName='descriptionText'
-          type='String'
-          required='optional'
-          description='card description'
-        />
-        <PropertiesTableRow
-          propName='children'
-          type='JSX'
-          required='optional'
-          description='Custom JSX content'
-        />
-        <PropertiesTableRow
-          propName='linkURL'
-          type='String'
-          required='optional'
-          description='link destination URL'
-        />
-        <PropertiesTableRow
-          propName='external'
-          type='Boolean'
-          required='conditional'
-          description='when a link is external, pass {true}'
-        />
-        <PropertiesTableRow
-          propName='linkClass'
-          type='Class'
-          required='conditional'
-          description='if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
-        />
-      </PropertiesTable>
+      <PropsTable
+        title='CardC Props'
+        items={[
+          {
+            propName: 'headerText',
+            type: 'String',
+            default: '"Props"',
+            required: 'optional',
+            description: 'card title'
+          },
+          {
+            propName: 'descriptionText',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'card description'
+          },
+          {
+            propName: 'children',
+            type: 'JSX',
+            default: 'null',
+            required: 'optional',
+            description: 'Custom JSX content'
+          },
+          {
+            propName: 'linkURL',
+            type: 'String',
+            default: "''",
+            required: 'optional',
+            description: 'link destination URL'
+          },
+          {
+            propName: 'external',
+            type: 'Boolean',
+            default: 'Boolean',
+            required: 'conditional',
+            description: 'when a link is external, pass {true}'
+          },
+          {
+            propName: 'linkClass',
+            type: 'Class',
+            default: 'null',
+            required: 'conditional',
+            description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from react-router-dom or gatsby'
+          }
+        ]}
+      />
       <br />
       <br />
     </MainContent>
