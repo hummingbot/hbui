@@ -19,7 +19,7 @@ const Colors = () => (
     <MainContent>
       <H6 isBold id="primary-colors">Main Colors</H6>
       <br />
-      <P>Each "main color" corresponds to the level "500" of the respective color palette.</P>
+      <P>Each "main color" corresponds to the level "500" of the respective color.</P>
       <br />
       <br />
       <MainColorsRow>
@@ -59,7 +59,7 @@ const Colors = () => (
       <br />
       <br />
       <br />
-      <H6 isBold id="primary-colors">Color Palettes</H6>
+      <H6 isBold id="primary-colors">Color Levels</H6>
       <br />
       <Palette colorName='Green' colors={colorTokens.color_palettes.green} />
       <Palette colorName='Blue' colors={colorTokens.color_palettes.blue} />
