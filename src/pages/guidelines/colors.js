@@ -28,31 +28,31 @@ const Colors = () => (
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.green['500'] }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Terminal' hex={colorTokens.color_palettes.blue['500']} />
+          <SwatchInfo label='Terminal' hex={colorTokens.terminal} />
           <ColorSwatch style={{backgroundColor: colorTokens.terminal }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Blue' hex={colorTokens.color_palettes.purple['500']} />
+          <SwatchInfo label='Blue' hex={colorTokens.color_palettes.blue['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.blue['500']  }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Purple' hex={colorTokens.color_palettes.magenta['500']} />
+          <SwatchInfo label='Purple' hex={colorTokens.color_palettes.purple['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.purple['500'] }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Magenta' hex={colorTokens.color_palettes.red['500']} />
+          <SwatchInfo label='Magenta' hex={colorTokens.color_palettes.magenta['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.magenta['500'] }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Red' hex={colorTokens.color_palettes.orange['500']} />
+          <SwatchInfo label='Red' hex={colorTokens.color_palettes.red['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.red['500'] }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Orange' hex={colorTokens.color_palettes.yellow['500']} />
+          <SwatchInfo label='Orange' hex={colorTokens.color_palettes.orange['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.orange['500'] }} />
         </SwatchItem>
         <SwatchItem>
-          <SwatchInfo label='Yellow' hex={colorTokens.terminal} />
+          <SwatchInfo label='Yellow' hex={colorTokens.color_palettes.yellow['500']} />
           <ColorSwatch style={{backgroundColor: colorTokens.color_palettes.yellow['500'] }} />
         </SwatchItem>
       </MainColorsRow>
