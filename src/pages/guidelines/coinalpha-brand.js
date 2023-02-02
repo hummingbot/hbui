@@ -86,7 +86,7 @@ const Brand = () => (
         </div>
         <div tw="col-span-4">
           <Dont />
-          <PSmall>Apply rotation</PSmall>
+          <PSmall>Apply gradients</PSmall>
         </div>
         <div tw="col-span-4">
           <Dont />
@@ -124,7 +124,7 @@ const Brand = () => (
       <br />
       <CalloutInfo
         title='Color Library'
-        text={<span>These are the colors represented for the AlphaCoin brand. To learn more about the design system color library, see the full <Link to='/guidelines/colors'>color section</Link>.</span>}
+        text={<span>These are the colors represented for the CoinAlpha brand. To learn more about the design system color library, see the full <Link to='/guidelines/colors'>color section</Link>.</span>}
       />
       <br />
       <br />
