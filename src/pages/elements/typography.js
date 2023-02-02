@@ -108,10 +108,10 @@ const codeLabel = String.raw`import {
   Label
 } from '@hummingbot/hbui/elements/typography'
 
-<LabelNano>sdfsfsd</LabelNano>
-<LabelTiny>sdfsfsd</LabelTiny>
-<LabelSmall>sdfsfsd</LabelSmall>
-<Label>sdfsfsd</Label>`
+<LabelNano>LabelNano: The quick brown fox jumps over the lazy dog</LabelNano>
+<LabelTiny>LabelTiny: The quick brown fox jumps over the lazy dog</LabelTiny>
+<LabelSmall>LabelSmall: The quick brown fox jumps over the lazy dog</LabelSmall>
+<Label>Label: The quick brown fox jumps over the lazy dog</Label>`
 
 const codeParagraphs = String.raw`import {
   PNano,
