@@ -8,7 +8,7 @@ import { Button } from '../../hbui/elements/buttons'
 import { MainContent } from '../components/elements/layout'
 import Hero from '../../hbui/components/hero/Hero'
 
-const DesignTokens = () => (
+const Downloads = () => (
   <Layout>
     <Hero tw='bg-window border-b-2 border-green dark:border-terminal'>
       <H1 isBold>Downloads</H1>
@@ -23,7 +23,6 @@ const DesignTokens = () => (
       <Separator />
       <br />
       <br />
-      <div>
       <DownloadCard
         title='CoinAlpha Logotype'
         updatedAt='Feb 2023'
@@ -37,7 +36,6 @@ const DesignTokens = () => (
         downloadLink='/assets/downloads/hummingbot/hummingbot_logotype.zip'
         image='/assets/downloads_page/hummingbot_logotype.png'
       />
-      </div>
       <br />
       <br />
       <br />
@@ -47,23 +45,26 @@ const DesignTokens = () => (
       <Separator />
       <br />
       <br />
-      <div>
       <DownloadCard
         title='Main typeface'
         updatedAt='Feb 2023'
         downloadLink='/assets/downloads/typography/satoshi.zip'
         image='/assets/downloads_page/brand_typeface.png'
       />
-      </div>
       <br />
-      <div>
       <DownloadCard
         title='Typeface for small labels'
         updatedAt='Feb 2023'
         downloadLink='/assets/downloads/typography/inter.zip'
         image='/assets/downloads_page/labels_typeface.png'
       />
-      </div>
+      <br />
+      <DownloadCard
+        title='Monospaced typeface'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/typography/sfmono.zip'
+        image='/assets/downloads_page/monospaced_typeface.png'
+      />
       <br />
       <br />
       <br />
@@ -73,23 +74,19 @@ const DesignTokens = () => (
       <Separator />
       <br />
       <br />
-      <div>
       <DownloadCard
         title='Annotations'
         updatedAt='Feb 2023'
         downloadLink='/assets/downloads/typography/indie_flower.zip'
         image='/assets/downloads_page/annotations_typeface.png'
       />
-      </div>
       <br />
-      <div>
       <DownloadCard
         title='Arrows & Utilities'
         updatedAt='Feb 2023'
         downloadLink='/assets/downloads/typography/pw_new_arrows.zip'
         image='/assets/downloads_page/utilities_typeface.png'
       />
-      </div>
       <br />
       <br />
       <br />
@@ -98,7 +95,7 @@ const DesignTokens = () => (
   </Layout>
 )
 
-export default DesignTokens
+export default Downloads
 
 const DownloadCard = ({title, updatedAt, downloadLink, image}) => {
   return (
@@ -107,7 +104,7 @@ const DownloadCard = ({title, updatedAt, downloadLink, image}) => {
       <div tw='py-2 px-3 lg:(py-4 px-6) grid justify-between content-between '>
         <div>
           <H6 isMedium tw='mb-2'>{title}</H6>
-          <P tw='text-tertiary'>Updated at {updatedAt}</P>
+          <P tw='text-tertiary'>Updated {updatedAt}</P>
         </div>
         <a href={downloadLink} target='_blank' rel='noreferrer'><Button isPrimary>Download</Button></a>
       </div>
