@@ -41,7 +41,7 @@ const Downloads = () => (
       <br />
       <br />
       <br />
-      <H5 isBold>Typeface</H5>
+      <H5 isBold id='typography'>Typeface</H5>
       <Separator />
       <br />
       <br />
