@@ -24,19 +24,19 @@ const DesignTokens = () => (
       <br />
       <br />
       <div>
-        <DownloadCard
-          title='CoinAlpha Logotype'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/coinalpha/coinalpha_logotype.zip'
-          image='/assets/downloads_page/coinalpha_logotype.png'
-        />
-        <br />
-        <DownloadCard
-          title='Hummingbot Logotype'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/hummingbot/hummingbot_logotype.zip'
-          image='/assets/downloads_page/hummingbot_logotype.png'
-        />
+      <DownloadCard
+        title='CoinAlpha Logotype'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/coinalpha/coinalpha_logotype.zip'
+        image='/assets/downloads_page/coinalpha_logotype.png'
+      />
+      <br />
+      <DownloadCard
+        title='Hummingbot Logotype'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/hummingbot/hummingbot_logotype.zip'
+        image='/assets/downloads_page/hummingbot_logotype.png'
+      />
       </div>
       <br />
       <br />
@@ -48,21 +48,21 @@ const DesignTokens = () => (
       <br />
       <br />
       <div>
-        <DownloadCard
-          title='Main typeface'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/typography/satoshi.zip'
-          image='/assets/downloads_page/brand_typeface.png'
-        />
+      <DownloadCard
+        title='Main typeface'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/typography/satoshi.zip'
+        image='/assets/downloads_page/brand_typeface.png'
+      />
       </div>
       <br />
       <div>
-        <DownloadCard
-          title='Typeface for small labels'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/typography/inter.zip'
-          image='/assets/downloads_page/labels_typeface.png'
-        />
+      <DownloadCard
+        title='Typeface for small labels'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/typography/inter.zip'
+        image='/assets/downloads_page/labels_typeface.png'
+      />
       </div>
       <br />
       <br />
@@ -74,21 +74,21 @@ const DesignTokens = () => (
       <br />
       <br />
       <div>
-        <DownloadCard
-          title='Annotations'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/typography/indie_flower.zip'
-          image='/assets/downloads_page/annotations_typeface.png'
-        />
+      <DownloadCard
+        title='Annotations'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/typography/indie_flower.zip'
+        image='/assets/downloads_page/annotations_typeface.png'
+      />
       </div>
       <br />
       <div>
-        <DownloadCard
-          title='Arrows & Utilities'
-          updatedAt='Feb 2023'
-          downloadLink='/assets/downloads/typography/pw_new_arrows.zip'
-          image='/assets/downloads_page/utilities_typeface.png'
-        />
+      <DownloadCard
+        title='Arrows & Utilities'
+        updatedAt='Feb 2023'
+        downloadLink='/assets/downloads/typography/pw_new_arrows.zip'
+        image='/assets/downloads_page/utilities_typeface.png'
+      />
       </div>
       <br />
       <br />
