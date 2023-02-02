@@ -18,7 +18,7 @@ const IndexPage = () => (
       <PLarge>Welcome to the Hummingbot Design System</PLarge>
       <br />
       <P>
-        1. The original source of this design system is a <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407' target='_blank' rel="noreferrer">Figma document</a> containing
+        1. The original source of this design system is a <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">Figma document</a> containing
         all the original styles.
       </P>
       <br />
@@ -52,7 +52,7 @@ const IndexPage = () => (
       <br />
       <PLarge>Useful links:</PLarge>
       <P>
-        <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407' target='_blank' rel="noreferrer">
+        <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">
           Figma source
         </a>
       </P>

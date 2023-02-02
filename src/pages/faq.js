@@ -13,7 +13,7 @@ const FAQ = () => (
     </Hero>
     <MainContent>
       <H6>What is this?</H6>
-      <P>The code and documentation for the <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=305%3A4068'>Hummingbot Design System</a></P>
+      <P>The code and documentation for the <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3'>Hummingbot Design System</a></P>
       <br />
       <H6>Who can use this?</H6>
       <P>Everyone. This is an open-source project</P>

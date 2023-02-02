@@ -22,7 +22,7 @@ const DesignTokens = () => (
       </P>
       <br />
       <P>
-        Below are the design tokens of the original <a href='https://www.figma.com/file/0XddWJM8ObnpxEqZQyGLZ4/CoinAlpha-Design-System-1.2?node-id=724%3A7407' target='_blank' rel="noreferrer">HBUI Figma document</a>.
+        Below are the design tokens of the original <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">HBUI Figma document</a>.
       </P>
       <br />
       <CodeBlock

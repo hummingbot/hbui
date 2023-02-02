@@ -16,31 +16,43 @@ const DesignTokens = () => (
     <MainContent>
       <br />
       <br />
-      <PLarge>In addition to the assets provided here we also offer additional design resources in our Figma workspace. <a href='mailto:support@hummingbot.io'>Contact our support</a> if you need access to Figma.</PLarge>
+      <PLarge>In addition to the assets provided here, there are additional design resources available in our <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">Figma workspace</a>.</PLarge>
+      <PLarge>In addition to the assets provided here, there are additional design resources available in our <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">Figma workspace</a>.</PLarge>
       <br />
       <br />
-      <H5 isBold>Brand Assets</H5>
+      <H5 isBold>Logo</H5>
       <Separator />
       <br />
       <br />
       <div tw='w-full grid grid-cols-1 xl:grid-cols-2 gap-8'>
         <DownloadCard
-          title='CoinAlpha Brand Typeface'
-          updatedAt='15.1.2022'
-          downloadLink='/downloads_page/typography/satoshi.zip'
-          image='/assets/downloads_page/brand_typeface.png'
-        />
-        <DownloadCard
           title='CoinAlpha Logotype'
           updatedAt='15.1.2022'
-          downloadLink='/downloads_page/coinalpha/coinalpha_logotype.zip'
+          downloadLink='/assets/downloads/coinalpha/coinalpha_logotype.zip'
           image='/assets/downloads_page/coinalpha_logotype.png'
         />
         <DownloadCard
           title='Hummingbot Logotype'
           updatedAt='15.1.2022'
-          downloadLink='/downloads_page/hummingbot/hummingbot_logotype.zip'
+          downloadLink='/assets/downloads/hummingbot/hummingbot_logotype.zip'
           image='/assets/downloads_page/hummingbot_logotype.png'
+        />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <H5 isBold>Typeface</H5>
+      <Separator />
+      <br />
+      <br />
+      <div tw='w-full grid grid-cols-1 xl:grid-cols-2 gap-8'>
+        <DownloadCard
+          title='Satoshi: The main CoinAlpha typeface'
+          updatedAt='15.1.2022'
+          downloadLink='/assets/downloads/typography/satoshi.zip'
+          image='/assets/downloads_page/brand_typeface.png'
         />
       </div>
       <br />
