@@ -1,15 +1,14 @@
 import React from 'react'
-import { Global } from '@emotion/react'
+import { createGlobalStyle } from 'styled-components'
 import { GlobalStyles as BaseStyles } from 'twin.macro'
 import darkModeConfig from './darkModeConfig'
-import '../assets/fonts/inter/inter.css'
-import '../assets/fonts/satoshi/satoshi.css'
-import '../assets/fonts/sfmono/sfmono.css'
+
+const CustomStyles = createGlobalStyle({darkModeConfig})
 
 const GlobalStyles = () => (
   <>
     <BaseStyles />
-    <Global styles={darkModeConfig} />
+    <CustomStyles />
   </>
 )
 

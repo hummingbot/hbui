@@ -1,5 +1,4 @@
-import { css } from '@emotion/react'
-import tw from 'twin.macro'
+import tw, { css } from 'twin.macro'
 import tokens from '../tokens/index.json'
 const colors = tokens.colors
 const colorPalettes = colors.color_palettes

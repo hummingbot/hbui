@@ -6,6 +6,10 @@ import { ThemeProvider } from '../../hbui/system/ThemeContext'
 import HBUIGlobalStyles from '../../hbui/system/GlobalStyles'
 import DSMSidebar from './sidebar/DSMSidebar'
 
+import '../../hbui/assets/fonts/inter/inter.css'
+import '../../hbui/assets/fonts/satoshi/satoshi.css'
+import '../../hbui/assets/fonts/sfmono/sfmono.css'
+
 const Layout = ({ children, navigationPage, ...rest }) => (
   <div {...rest} tw='bg-body'>
     <HBUIGlobalStyles />
