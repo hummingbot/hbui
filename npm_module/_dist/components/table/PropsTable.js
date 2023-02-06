@@ -71,7 +71,6 @@ var getLastPVariant = function getLastPVariant(skipColumn2, skipColumn3, skipCol
   if (skipColumn2) skipColumnsNum++;
   if (skipColumn3) skipColumnsNum++;
   if (skipColumn4) skipColumnsNum++;
-  console.log('skipColumnsNum', skipColumnsNum);
   if (skipColumnsNum === 0) return 'default';
   return "skip" + skipColumnsNum + "Columns";
 };
