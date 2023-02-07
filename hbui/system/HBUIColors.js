@@ -1,11 +1,12 @@
-import tw, { css } from 'twin.macro'
+import tw from 'twin.macro'
+import { createGlobalStyle } from 'styled-components'
 import tokens from '../tokens/index.json'
 const colors = tokens.colors
 const colorPalettes = colors.color_palettes
 const colorsDarkTheme = colors.dark
 const colorsLightTheme = colors.light
 
-const darkModeConfig = css`
+const HBUIColors = createGlobalStyle`
   .light {
     color-scheme: light;
     --bg-body: ${colorsLightTheme.body_bg};
@@ -212,4 +213,5 @@ const darkModeConfig = css`
   }
 `
 
-export default darkModeConfig
+
+export default HBUIColors

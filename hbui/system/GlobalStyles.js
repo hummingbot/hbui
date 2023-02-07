@@ -1,14 +1,11 @@
 import React from 'react'
-import { createGlobalStyle } from 'styled-components'
 import { GlobalStyles as BaseStyles } from 'twin.macro'
-import darkModeConfig from './darkModeConfig'
-
-const CustomStyles = createGlobalStyle({darkModeConfig})
+import HBUIColors from './HBUIColors'
 
 const GlobalStyles = () => (
   <>
     <BaseStyles />
-    <CustomStyles />
+    <HBUIColors />
   </>
 )
 
