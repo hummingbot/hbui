@@ -37,6 +37,12 @@ const GettingStarted = () => (
       </P>
       <br />
       <P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
+          Next.js
+        </a>
+      </P>
+      <br />
+      <P>
         These boilerplate projects have the HBUI Design System pre-installed and everything already set up.
         They contain 2 example pages and demonstrate the usage of typography, buttons and navigation.
       </P>

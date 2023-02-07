@@ -77,6 +77,11 @@ const IndexPage = () => (
         </a> (Gatsby app)
       </P>
       <P>
+        <a href='https://github.com/CoinAlpha/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
+        Next.js Boilerplate
+        </a> (Gatsby app)
+      </P>
+      <P>
         <a href='https://github.com/CoinAlpha/hbui' target='_blank' rel="noreferrer">
           Github repo
         </a> of this project

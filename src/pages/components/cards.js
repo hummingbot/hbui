@@ -319,7 +319,7 @@ const CardsPage = () => (
 export default CardsPage
 
 const codeCardA = String.raw`import { CardA } from '@hummingbot/hbui/components/cards/CardA'
-import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects or from 'next/link' in Next.js projects
 
 <div tw='w-full grid grid-cols-1 gap-0 gap-y-4 lg:(grid-cols-3 gap-1 gap-y-0)'>
   <CardA
@@ -356,7 +356,7 @@ import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsb
 </div>`
 
 const codeCardB = String.raw`import { CardB } from '@hummingbot/hbui/components/cards/CardB'
-import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects or from 'next/link' in Next.js projects
 
 <div tw='w-full grid grid-cols-1 gap-0 gap-y-4 lg:(grid-cols-3 gap-1 gap-y-0)'>
   <CardB
@@ -430,7 +430,7 @@ function IconB() {
 }`
 
 const codeCardC = String.raw`import { CardC } from '@hummingbot/hbui/components/cards/CardC'
-import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects
+import { Link } from 'react-router-dom' // import from 'gatsby' package in Gatsby projects or from 'next/link' in Next.js projects
 
 <div tw='grid grid-cols-1 gap-xs lg:grid-cols-2 w-full content-between'>
   <CardC

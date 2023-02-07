@@ -119,7 +119,7 @@ const Navigation = () => (
 export default Navigation
 
 const code = String.raw`import NavBar from '@hummingbot/hbui/components/navigation/NavBar'
-import { Link } from 'react-router-dom' // or import { Link } from "gatsby" (in gatsby projects)
+import { Link } from 'react-router-dom' // or import { Link } from "gatsby" (in gatsby projects) or or import Link from "next/link" (in Next.js projects)
 
 const siteNameA = 'Hummingbot'
 const siteNameB = 'Prime'

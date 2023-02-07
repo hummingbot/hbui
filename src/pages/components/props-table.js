@@ -73,7 +73,7 @@ const PropsTablePage = () => (
             type: 'Class',
             default: 'null',
             required: 'conditional',
-            description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from "react-router-dom" or "gatsby"'
+            description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from "react-router-dom" or "gatsby" or "next/link"'
           }
         ]}
       />
@@ -317,7 +317,7 @@ const codeExample = String.raw`import { PropsTable } from '@hummingbot/hbui/comp
       type: 'Class',
       default: 'null',
       required: 'conditional',
-      description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from "react-router-dom" or "gatsby"'
+      description: 'if "linkUrl" is given and refers to an internal link, pass the "Link" class you are using, eg. imported from "react-router-dom" or "gatsby" or "next/link"'
     }
   ]}
 />`
