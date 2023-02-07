@@ -46,7 +46,8 @@ function NavBar(_ref) {
       return /*#__PURE__*/_react["default"].createElement(FirstLevelItem, {
         key: link.url + link.label
       }, /*#__PURE__*/_react["default"].createElement(NavItem, null, /*#__PURE__*/_react["default"].createElement(LinkClass, {
-        to: link.url
+        to: link.url,
+        href: link.url
       }, /*#__PURE__*/_react["default"].createElement(NavP, null, link.label))));
     }
     // following code executes if link has property "subLinks"
@@ -71,7 +72,8 @@ function NavBar(_ref) {
     return /*#__PURE__*/_react["default"].createElement(FirstLevelItem, {
       key: link.url + link.label
     }, !link.subLinks ? /*#__PURE__*/_react["default"].createElement(LinkClass, {
-      to: link.url
+      to: link.url,
+      href: link.url
     }, /*#__PURE__*/_react["default"].createElement(NavMobileH4, {
       onClick: function onClick() {
         return setMobileOpen(false);
@@ -140,7 +142,8 @@ function NavBar(_ref) {
   }, /*#__PURE__*/_react["default"].createElement(_StyledContainer, {
     variant: containerVariant
   }, /*#__PURE__*/_react["default"].createElement(LeftSide, null, /*#__PURE__*/_react["default"].createElement(LinkClass, {
-    to: "/"
+    to: "/",
+    href: "/"
   }, /*#__PURE__*/_react["default"].createElement(LogoContainer, null, processLogo(), /*#__PURE__*/_react["default"].createElement(_typography.PLarge, null, /*#__PURE__*/_react["default"].createElement(_typography.Bold, null, siteNameA), " ", siteNameB))), /*#__PURE__*/_react["default"].createElement(LinksLeft, null, linksLeft && linksLeft.map(function (link) {
     return processLink(link);
   }))), /*#__PURE__*/_react["default"].createElement(RightSide, null, showThemeToggle && /*#__PURE__*/_react["default"].createElement(_ThemeToggle["default"], {
@@ -289,10 +292,7 @@ var NavBarRoot = (0, _styledComponents["default"])(_layout.Section).withConfig({
     "top": "0px",
     "left": "0px",
     "zIndex": "50"
-  },
-  // tw`z-50 fixed top-0 left-0 flex w-full`,
-  // tw`py-2 px-2 md:px-4`,
-  {
+  }, {
     "borderBottomWidth": "1px",
     "borderColor": "var(--border-body)"
   }, (0, _styledComponents.css)(_templateObject6 || (_templateObject6 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    height: 50px;\n  "])))];
