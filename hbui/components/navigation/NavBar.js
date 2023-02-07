@@ -32,7 +32,7 @@ function NavBar({
       return (
         <FirstLevelItem key={link.url + link.label}>
           <NavItem>
-            <LinkClass to={link.url}>
+            <LinkClass to={link.url} href={link.url}>
               <NavP>{link.label}</NavP>
             </LinkClass>
           </NavItem>
@@ -69,7 +69,7 @@ function NavBar({
     return (
       <FirstLevelItem key={link.url + link.label}>
         {!link.subLinks ?
-          <LinkClass to={link.url}>
+          <LinkClass to={link.url} href={link.url}>
             <NavMobileH4 onClick={() => setMobileOpen(false)}>{link.label}</NavMobileH4>
           </LinkClass>
           :
@@ -151,7 +151,7 @@ function NavBar({
     <NavBarRoot style={{backgroundColor: bgColor || 'transparent', position: position}}>
       <Container variant={containerVariant} tw='flex flex-row justify-between items-center'>
         <LeftSide>
-          <LinkClass to='/'>
+          <LinkClass to='/' href='/'>
             <LogoContainer>
               { processLogo() }
               <PLarge><Bold>{siteNameA}</Bold> {siteNameB}</PLarge>
@@ -281,8 +281,6 @@ const FirstLevelItem = styled.div(() => [
 
 const NavBarRoot = styled(Section)(({ isUppercase, isDisabled }) => [
   tw`z-50 fixed top-0 left-0`,
-  // tw`z-50 fixed top-0 left-0 flex w-full`,
-  // tw`py-2 px-2 md:px-4`,
   tw`border-b border-body`,
   css`
     height: 50px;
