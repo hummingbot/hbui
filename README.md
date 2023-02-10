@@ -14,6 +14,8 @@ The original design of this design system lives in a [Figma document](https://ww
 
 To use the HBUI design system, all you need is the [HBUI NPM module](https://www.npmjs.com/package/@hummingbot/hbui). But we recommend you start from one of the HBUI boilerplate projects (below) where everything is already set up for you. We have two types of boilerplate projects available:
 
+[Next.js](https://github.com/CoinAlpha/hbui-boilerplate-nextjs)
+
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby)
 
 [Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack)
