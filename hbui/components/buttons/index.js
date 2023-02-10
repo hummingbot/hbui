@@ -51,7 +51,7 @@ export function ExternalLinkIcon({...props}) {
   );
 }
 
-const CustomExternalLinkButton = styled(ButtonElement)(() => [
+export const CustomExternalLinkButton = styled(ButtonElement)(() => [
   tw`flex justify-between rounded-sm! border`,
   tw`font-medium text-base text-white hover:text-green! dark:text-terminal`,
   tw`bg-green border-green hover:(bg-transparent border-green) active:(bg-transparent border-green/30)`,
