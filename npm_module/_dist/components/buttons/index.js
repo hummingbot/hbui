@@ -2,7 +2,7 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 exports.__esModule = true;
-exports.Button = void 0;
+exports.CustomExternalLinkButton = exports.Button = void 0;
 exports.ExternalLinkButton = ExternalLinkButton;
 exports.ExternalLinkIcon = ExternalLinkIcon;
 var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
@@ -120,6 +120,7 @@ var CustomExternalLinkButton = (0, _styledComponents["default"])(_buttons.Button
     }
   }];
 });
+exports.CustomExternalLinkButton = CustomExternalLinkButton;
 function ExternalLinkButton(_ref3) {
   var label = _ref3.label,
     props = (0, _objectWithoutPropertiesLoose2["default"])(_ref3, _excluded2);

@@ -169,7 +169,7 @@ const HeaderNote = styled(Header)(({ type }) => [
 ])
 
 const Text = styled.div(() => [
-  tw`font-medium text-grey-dark-scale-200 dark:text-white px-4 pb-4 pt-2`,
+  tw`font-medium text-grey-dark-scale-200 dark:text-white px-4 pb-4 pt-2 break-words`,
   css`
     a {
       text-decoration: underline;

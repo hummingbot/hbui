@@ -369,6 +369,7 @@ var Text = _styledComponents["default"].div.withConfig({
   componentId: "sc-19ipjvn-18"
 })(function () {
   return [{
+    "overflowWrap": "break-word",
     "paddingLeft": "1rem",
     "paddingRight": "1rem",
     "paddingBottom": "1rem",
