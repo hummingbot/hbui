@@ -9,7 +9,6 @@ var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/
 var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 var _react = _interopRequireDefault(require("react"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
 var _buttons = require("../../elements/buttons");
 var _spinner = _interopRequireDefault(require("../spinner"));
 var _excluded = ["label", "iconBefore", "iconAfter", "variant", "loading"],
@@ -33,22 +32,6 @@ var Button = function Button(_ref) {
   }));
 };
 exports.Button = Button;
-Button.propTypes = {
-  // Button types
-  variant: _propTypes["default"].string,
-  // disabled state
-  isDisabled: _propTypes["default"].bool,
-  // Button label content
-  label: _propTypes["default"].string.isRequired,
-  // Click handler
-  onClick: _propTypes["default"].func
-};
-Button.defaultProps = {
-  variant: 'default',
-  label: 'Button',
-  isDisabled: false,
-  onClick: null
-};
 function ExternalLinkIcon(_ref2) {
   var props = Object.assign({}, ((0, _objectDestructuringEmpty2["default"])(_ref2), _ref2));
   return /*#__PURE__*/_react["default"].createElement("svg", Object.assign({}, props, {
