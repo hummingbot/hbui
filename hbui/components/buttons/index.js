@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import tw, { styled } from 'twin.macro'
 import { Button as ButtonElement } from '../../elements/buttons'
 import Spinner from '../spinner'
@@ -14,25 +13,6 @@ export const Button = ({ label, iconBefore, iconAfter, variant, loading, ...prop
     </ButtonElement>
   )
 }
-
-Button.propTypes = {
-  // Button types
-  variant: PropTypes.string,
-  // disabled state
-  isDisabled: PropTypes.bool,
-  // Button label content
-  label: PropTypes.string.isRequired,
-  // Click handler
-  onClick: PropTypes.func,
-}
-
-Button.defaultProps = {
-  variant: 'default',
-  label: 'Button',
-  isDisabled: false,
-  onClick: null,
-}
-
 
 export function ExternalLinkIcon({...props}) {
   return (
