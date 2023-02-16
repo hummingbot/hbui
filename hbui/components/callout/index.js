@@ -169,8 +169,9 @@ const HeaderNote = styled(Header)(({ type }) => [
 ])
 
 const Text = styled.div(() => [
-  tw`font-medium text-grey-dark-scale-200 dark:text-white px-4 pb-4 pt-2 break-words`,
+  tw`font-medium text-grey-dark-scale-200 dark:text-white px-4 pb-4 pt-2`,
   css`
+    overflow-wrap: anywhere;
     a {
       text-decoration: underline;
     }

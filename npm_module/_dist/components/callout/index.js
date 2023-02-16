@@ -369,7 +369,6 @@ var Text = _styledComponents["default"].div.withConfig({
   componentId: "sc-19ipjvn-18"
 })(function () {
   return [{
-    "overflowWrap": "break-word",
     "paddingLeft": "1rem",
     "paddingRight": "1rem",
     "paddingBottom": "1rem",
@@ -381,5 +380,5 @@ var Text = _styledComponents["default"].div.withConfig({
       "--tw-text-opacity": "1",
       "color": "rgb(255 255 255 / var(--tw-text-opacity))"
     }
-  }, (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    a {\n      text-decoration: underline;\n    }\n  "])))];
+  }, (0, _styledComponents.css)(_templateObject2 || (_templateObject2 = (0, _taggedTemplateLiteralLoose2["default"])(["\n    overflow-wrap: anywhere;\n    a {\n      text-decoration: underline;\n    }\n  "])))];
 });
