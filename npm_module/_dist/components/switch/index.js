@@ -58,14 +58,13 @@ stylesB[false] = {
 function SwitchElement(_ref) {
   var _ref$active = _ref.active,
     active = _ref$active === void 0 ? false : _ref$active,
+    _ref$onChange = _ref.onChange,
+    onChange = _ref$onChange === void 0 ? null : _ref$onChange,
     _ref$disabled = _ref.disabled,
     disabled = _ref$disabled === void 0 ? false : _ref$disabled;
-  var _useState = (0, _react.useState)(active),
-    enabled = _useState[0],
-    setEnabled = _useState[1];
   return /*#__PURE__*/_react["default"].createElement(_StyledSwitch, {
-    checked: enabled,
-    onChange: setEnabled,
+    checked: active,
+    onChange: onChange,
     style: disabled ? {
       pointerEvents: 'none',
       opacity: 0.5
