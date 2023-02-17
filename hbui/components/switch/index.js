@@ -17,11 +17,11 @@ function SwitchElement({active=false, onChange=null, disabled=false}) {
       checked={active}
       onChange={onChange}
       tw='transition'
-      css={stylesA[enabled]}
+      css={stylesA[active]}
       style={disabled ? {pointerEvents: 'none', opacity: 0.5} : null}
     >
       <span
-        css={stylesB[enabled]}
+        css={stylesB[active]}
       />
     </Switch>
   )
