@@ -11,12 +11,11 @@ const stylesB = {}
 stylesB[true] = tw`translate-x-6 inline-block h-4 w-4 transform rounded-full bg-body`
 stylesB[false] = tw`translate-x-1 inline-block h-4 w-4 transform rounded-full bg-body`
 
-function SwitchElement({active=false, disabled=false}) {
-  const [enabled, setEnabled] = useState(active)
+function SwitchElement({active=false, onChange=null, disabled=false}) {
   return (
     <Switch
-      checked={enabled}
-      onChange={setEnabled}
+      checked={active}
+      onChange={onChange}
       tw='transition'
       css={stylesA[enabled]}
       style={disabled ? {pointerEvents: 'none', opacity: 0.5} : null}
