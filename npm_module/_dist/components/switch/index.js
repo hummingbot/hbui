@@ -73,9 +73,9 @@ function SwitchElement(_ref) {
       "transitionProperty": "color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter",
       "transitionTimingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
       "transitionDuration": "150ms"
-    }, stylesA[enabled]]
+    }, stylesA[active]]
   }, /*#__PURE__*/_react["default"].createElement(_StyledSpan, {
-    $_css2: stylesB[enabled]
+    $_css2: stylesB[active]
   }));
 }
 var _default = SwitchElement;
