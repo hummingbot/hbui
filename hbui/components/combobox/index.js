@@ -57,7 +57,15 @@ export default function ComboBox({items, selected, setSelected, placeholderName,
             autoComplete="off"
           />
           <Combobox.Button tw="absolute inset-y-0 right-0 flex items-center pr-2">
-            { hasSelection() && <XIcon tw="w-5 h-5 text-tertiary" aria-hidden="true" onClick={() => setSelected(props.multiple ? [] : null)}/>}
+            { hasSelection() && <XIcon tw="w-5 h-5 text-tertiary" aria-hidden="true" 
+            onClick={
+              () => {
+                setSelected(props.multiple ? [] : null)
+                setQuery('')
+                }
+              }
+              />
+            }
             <SelectorIcon
               tw="w-5 h-5 text-tertiary"
               aria-hidden="true"
