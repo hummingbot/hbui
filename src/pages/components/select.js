@@ -48,11 +48,11 @@ const code = String.raw`import React, { useState } from 'react'
 import Select from '@hummingbot/hbui/components/select'
 
 const items = [
-  { id: 1, name: 'Durward Reynolds', disabled: false },
-  { id: 2, name: 'Kenton Towne', disabled: false },
-  { id: 3, name: 'Therese Wunsch', disabled: false },
-  { id: 4, name: 'Benedict Kessler', disabled: true },
-  { id: 5, name: 'Katelyn Rohan', disabled: false },
+  { id: 1, label: 'Durward Reynolds', disabled: false },
+  { id: 2, label: 'Kenton Towne', disabled: false },
+  { id: 3, label: 'Therese Wunsch', disabled: false },
+  { id: 4, label: 'Benedict Kessler', disabled: true },
+  { id: 5, label: 'Katelyn Rohan', disabled: false },
 ]
 
 const [selected, setSelected] = useState(items[0])
