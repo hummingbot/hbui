@@ -67,7 +67,8 @@ function ComboBox(_ref) {
   }), /*#__PURE__*/_react["default"].createElement(_StyledComboboxButton, null, hasSelection() && /*#__PURE__*/_react["default"].createElement(_StyledXIcon, {
     "aria-hidden": "true",
     onClick: function onClick() {
-      return setSelected(props.multiple ? [] : null);
+      setSelected(props.multiple ? [] : null);
+      setQuery('');
     }
   }), /*#__PURE__*/_react["default"].createElement(_StyledSelectorIcon, {
     "aria-hidden": "true"
