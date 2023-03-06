@@ -1,6 +1,6 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import tw from 'twin.macro'
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import Transition from '../../system/Transition'
 import { Button } from '../../elements/buttons'
@@ -14,7 +14,7 @@ import { Separator } from '../../elements/layout'
  */
 
 export default function Modal({
-  showOpen=false, // modal state
+  showOpen, // modal state
   clickElement, // JSX - the element to click to open the Modal
   title, // String
   description, // String
@@ -23,21 +23,29 @@ export default function Modal({
   overlayProps, // any React props
   titleProps, // any React props
   descriptionProps, // any React props
+  dialogOnClose, // dialog onClose callback
 }) {
   let [isOpen, setIsOpen] = useState(showOpen)
   function closeModal() {
     setIsOpen(false)
+    dialogOnClose?.()
   }
   function openModal() {
     setIsOpen(true)
   }
-  return(
+
+  useEffect(() => {
+    setIsOpen(showOpen)
+  }, [showOpen])
+
+  console.log({ showOpen })
+  return (
     <div>
-      { isOpen &&
+      {(showOpen || isOpen) && (
         <Dialog
           tw="fixed inset-0 z-10 overflow-y-auto"
           onClose={closeModal}
-          open={isOpen}
+          open={showOpen || isOpen}
         >
           <div tw="min-h-screen px-4 text-center">
             <Dialog.Overlay
@@ -53,18 +61,21 @@ export default function Modal({
                 options={options}
                 titleProps={titleProps}
                 descriptionProps={descriptionProps}
-                closeModal={() => setIsOpen(false)}
+                closeModal={() => {
+                  setIsOpen(false)
+                  dialogOnClose?.()
+                }}
               />
             </div>
           </div>
         </Dialog>
-      }
-      { clickElement &&
+      )}
+      {clickElement && (
         /* eslint-disable-next-line */
-        <div onClick={ () => setIsOpen(!isOpen) } tw='inline-flex'>
+        <div onClick={() => setIsOpen(!isOpen)} tw="inline-flex">
           {clickElement}
         </div>
-      }
+      )}
     </div>
   )
 }
@@ -79,13 +90,15 @@ function Content({
   closeModal,
 }) {
   if (!options || !options.length || !options[0]) {
-    options = [{
-      callBack: () => closeModal(),
-      label: 'Close',
-      variant: 'secondary',
-    }]
+    options = [
+      {
+        callBack: () => closeModal(),
+        label: 'Close',
+        variant: 'secondary',
+      },
+    ]
   }
-  const handleOption = (callBack) => {
+  const handleOption = callBack => {
     if (callBack) {
       callBack()
     }
@@ -93,30 +106,30 @@ function Content({
   }
   return (
     <Fragment>
-      <Dialog.Title
-        as={H6}
-        {...titleProps}
-      >
+      <Dialog.Title as={H6} {...titleProps}>
         {title}
       </Dialog.Title>
-      { description &&
-        <Dialog.Description {...descriptionProps} as={P} tw='text-tertiary leading-tight'>
+      {description && (
+        <Dialog.Description
+          {...descriptionProps}
+          as={P}
+          tw="text-tertiary leading-tight"
+        >
           {description}
         </Dialog.Description>
-      }
-      <Separator tw='my-xs' />
+      )}
+      <Separator tw="my-xs" />
       <div tw="text-sm text-grey-light-scale-500">{content}</div>
       <div tw="mt-8 flex gap-4 justify-end">
-        {
-          options.map(option => 
-            <Button
-              key={option.label}
-              onClick={() => handleOption(option.callBack)}
-              variant={option.variant || 'default'}>
-              {option.label || 'Close'}
-            </Button>
-          )
-        }
+        {options.map(option => (
+          <Button
+            key={option.label}
+            onClick={() => handleOption(option.callBack)}
+            variant={option.variant || 'default'}
+          >
+            {option.label || 'Close'}
+          </Button>
+        ))}
       </div>
     </Fragment>
   )
