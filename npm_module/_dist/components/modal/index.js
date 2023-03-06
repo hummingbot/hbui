@@ -17,18 +17,22 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 /**
  * HeadlessUI "Dialog (Modal)"
- * Customized for twin.macro + typescript
  * https://headlessui.dev/react/dialog
+ * Customized for twin.macro
  */
 
 function Modal(_ref) {
-  var children = _ref.children,
-    dialogProps = _ref.dialogProps,
-    contentProps = _ref.contentProps,
-    dialogOverlayProps = _ref.dialogOverlayProps,
+  var _ref$showOpen = _ref.showOpen,
+    showOpen = _ref$showOpen === void 0 ? false : _ref$showOpen,
+    clickElement = _ref.clickElement,
+    title = _ref.title,
+    description = _ref.description,
+    content = _ref.content,
+    options = _ref.options,
+    overlayProps = _ref.overlayProps,
     titleProps = _ref.titleProps,
     descriptionProps = _ref.descriptionProps;
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(showOpen),
     isOpen = _useState[0],
     setIsOpen = _useState[1];
   function closeModal() {
@@ -37,69 +41,64 @@ function Modal(_ref) {
   function openModal() {
     setIsOpen(true);
   }
-  function handleChildenKeyDown(e) {
-    console.log('e', e);
-    console.log('e.target.key', e.target.key);
-  }
-  return /*#__PURE__*/_react["default"].createElement("div", null, isOpen && /*#__PURE__*/_react["default"].createElement(_StyledDialog, Object.assign({
+  return /*#__PURE__*/_react["default"].createElement("div", null, isOpen && /*#__PURE__*/_react["default"].createElement(_StyledDialog, {
     onClose: closeModal,
     open: isOpen
-  }, dialogProps), /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, /*#__PURE__*/_react["default"].createElement(_StyledDialogOverlay, dialogOverlayProps), /*#__PURE__*/_react["default"].createElement(CenterAlignmentHack, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, /*#__PURE__*/_react["default"].createElement(Content, Object.assign({}, contentProps, {
+  }, /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, /*#__PURE__*/_react["default"].createElement(_StyledDialogOverlay, overlayProps), /*#__PURE__*/_react["default"].createElement(CenterAlignmentHack, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, /*#__PURE__*/_react["default"].createElement(Content, {
+    title: title,
+    description: description,
+    content: content,
+    options: options,
     titleProps: titleProps,
     descriptionProps: descriptionProps,
     closeModal: function closeModal() {
       return setIsOpen(false);
     }
-  }))))), /*#__PURE__*/_react["default"].createElement(_StyledDiv3, {
+  })))), clickElement &&
+  /*#__PURE__*/
+  /* eslint-disable-next-line */
+  _react["default"].createElement(_StyledDiv3, {
     onClick: function onClick() {
       return setIsOpen(!isOpen);
     }
-  }, children));
+  }, clickElement));
 }
 function Content(_ref2) {
   var title = _ref2.title,
-    subtitle = _ref2.subtitle,
+    description = _ref2.description,
     content = _ref2.content,
-    closeModal = _ref2.closeModal,
-    closeLabel = _ref2.closeLabel,
-    closeLabelB = _ref2.closeLabelB,
+    options = _ref2.options,
     titleProps = _ref2.titleProps,
     descriptionProps = _ref2.descriptionProps,
-    closeLabelVariant = _ref2.closeLabelVariant,
-    closeLabelBVariant = _ref2.closeLabelBVariant,
-    closeLabelCallback = _ref2.closeLabelCallback,
-    closeLabelBCallback = _ref2.closeLabelBCallback;
-  var handleButtonA = function handleButtonA() {
-    closeModal();
-    if (closeLabelCallback) {
-      closeLabelCallback();
+    closeModal = _ref2.closeModal;
+  if (!options || !options.length || !options[0]) {
+    options = [{
+      callBack: function callBack() {
+        return closeModal();
+      },
+      label: 'Close',
+      variant: 'secondary'
+    }];
+  }
+  var handleOption = function handleOption(callBack) {
+    if (callBack) {
+      callBack();
     }
-  };
-  var handleButtonB = function handleButtonB() {
     closeModal();
-    if (closeLabelBCallback) {
-      closeLabelBCallback();
-    }
   };
   return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement(_react2.Dialog.Title, Object.assign({
     as: _typography.H6
-  }, titleProps), title), subtitle && /*#__PURE__*/_react["default"].createElement(_StyledDialogDescription, Object.assign({}, descriptionProps, {
+  }, titleProps), title), description && /*#__PURE__*/_react["default"].createElement(_StyledDialogDescription, Object.assign({}, descriptionProps, {
     as: _typography.P
-  }), subtitle), /*#__PURE__*/_react["default"].createElement(_StyledSeparator, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv4, null, content), /*#__PURE__*/_react["default"].createElement(_StyledDiv5, null, closeLabelB && /*#__PURE__*/_react["default"].createElement(_buttons.Button, {
-    onClick: handleButtonB,
-    variant: closeLabelBVariant || 'secondary'
-  }, closeLabelB), /*#__PURE__*/_react["default"].createElement(_buttons.Button, {
-    onClick: handleButtonA,
-    variant: closeLabelVariant || 'success'
-  }, closeLabel)));
-}
-function Trigger(_ref3) {
-  var label = _ref3.label,
-    openModal = _ref3.openModal;
-  return /*#__PURE__*/_react["default"].createElement(_StyledButton, {
-    type: "button",
-    onClick: openModal
-  }, label);
+  }), description), /*#__PURE__*/_react["default"].createElement(_StyledSeparator, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv4, null, content), /*#__PURE__*/_react["default"].createElement(_StyledDiv5, null, options.map(function (option) {
+    return /*#__PURE__*/_react["default"].createElement(_buttons.Button, {
+      key: option.label,
+      onClick: function onClick() {
+        return handleOption(option.callBack);
+      },
+      variant: option.variant || 'default'
+    }, option.label || 'Close');
+  })));
 }
 
 /* This element is to trick the browser into centering the modal contents. */
@@ -236,7 +235,7 @@ var _StyledDialogDescription = (0, _styledComponents["default"])(_react2.Dialog.
   displayName: "modal___StyledDialogDescription",
   componentId: "sc-8tkzsr-5"
 })({
-  "lineHeight": "1",
+  "lineHeight": "1.25",
   "color": "var(--text-tertiary)"
 });
 var _StyledSeparator = (0, _styledComponents["default"])(_layout.Separator).withConfig({
@@ -263,38 +262,9 @@ var _StyledDiv5 = (0, _styledComponents["default"])("div").withConfig({
   "justifyContent": "flex-end",
   "gap": "1rem"
 });
-var _StyledButton = (0, _styledComponents["default"])("button").withConfig({
-  displayName: "modal___StyledButton",
-  componentId: "sc-8tkzsr-9"
-})({
-  "--tw-bg-opacity": "0.2",
-  "backgroundColor": "rgb(0 0 0 / var(--tw-bg-opacity))",
-  "paddingLeft": "1rem",
-  "paddingRight": "1rem",
-  "paddingTop": "0.5rem",
-  "paddingBottom": "0.5rem",
-  "fontSize": "0.8125rem",
-  "fontWeight": "500",
-  "--tw-text-opacity": "1",
-  "color": "rgb(255 255 255 / var(--tw-text-opacity))",
-  ":hover": {
-    "--tw-bg-opacity": "0.3"
-  },
-  ":focus": {
-    "outline": "2px solid transparent",
-    "outlineOffset": "2px"
-  },
-  ":focus-visible": {
-    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
-    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
-    "boxShadow": "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
-    "--tw-ring-opacity": "0.75",
-    "--tw-ring-color": "rgb(255 255 255 / var(--tw-ring-opacity))"
-  }
-});
 var _StyledSpan = (0, _styledComponents["default"])("span").withConfig({
   displayName: "modal___StyledSpan",
-  componentId: "sc-8tkzsr-10"
+  componentId: "sc-8tkzsr-9"
 })({
   "display": "inline-block",
   "height": "100vh",

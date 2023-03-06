@@ -9,6 +9,7 @@ import Modal from '../../../hbui/components/modal'
 import {Button} from '../../../hbui/elements/buttons'
 import {Separator} from '../../../hbui/elements/layout'
 import Hero from '../../../hbui/components/hero/Hero'
+import PropsTable from '../../../hbui/components/table/PropsTable'
 
 const ModalPage = () => (
   <Layout>
@@ -19,42 +20,169 @@ const ModalPage = () => (
     <MainContent>
       <br />
       <br />
-      <P>Fully configurable modal component, with keyboard control. Press ESC or click outside the modal to close it.</P>
+      <P>Content-agnostic: only shows the content you pass in.</P>
       <br />
-      <P>Two buttons can be configured (one minimum) with optional button variant styles. Each button can have an optional callback function.</P>
+      <P>Press ESC or click outside the modal to close it.</P>
       <br />
-      <P>The modal also locks the scroll of background content.</P>
+      <P>Locks the scroll of background content.</P>
+      <br />
+      <P>Can be triggered with or without the click of a button.</P>
+      <br />
+      <P>Multiple "options" (buttons) can be configured. Each 
+      button can take an optional callback function.</P>
+      <br />
+      <P>If no options are passed to the Modal, it will automatically generate a single 
+      "Close" option, that simply closes the Modal.</P>
+      <br />
       <br />
       <br />
       <Separator />
       <br />
       <br />
       <br />
+      <PLarge>Example triggered with button, with two options: "Accept" and "Close".</PLarge>
+      <br />
+      <PLarge>Click to open modal:</PLarge>
+      <br />
+      <Modal
+        title='Modal title'
+        description='Description of the modal context or purpose'
+        content={
+          <P>
+            Your application has been successfully submitted. Please review your 
+            order and if all looks good, click "Accept" to proceed.
+          </P>
+        }
+        options={[
+          {
+            label: "Cancel",
+            variant: "secondary",
+          },
+          {
+            label: "Accept",
+            variant: "success",
+            callBack: () => console.log('Clicked: Accept Option')
+          }
+        ]}
+        clickElement={
+          <Button variant='success'>Open modal</Button>
+        }
+      />
+      <br />
+      <br />
+      <CodeBlock code={codeWithTwoOptions} />
+      <br />
+      <br />
+      <Separator />
+      <br />
+      <br />
+      <br />
+      <PLarge>Example triggered with button, without providing any button options: A "Close" button is automatically generated.</PLarge>
+      <br />
       <PLarge>Click to open modal</PLarge>
       <br />
       <Modal
-        contentProps={{
-          title: 'Modal title',
-          subtitle: 'Praesent commodo cursus magna.',
-          content: (
-            <P tw='leading-tight'>
-              Your payment has been successfully submitted. We’ve sent you an
-              email with all of the details of your order.
-            </P>
-          ),
-          closeLabel: 'Option A',
-          closeLabelVariant: 'success',
-          closeLabelCallback: () => console.log('Clicked option A'),
-          closeLabelB: 'Option B',
-          closeLabelBVariant: 'secondary',
-          closeLabelBCallback: () => console.log('Clicked option B'),
-        }}
-      >
-        <Button variant='success'>Open modal</Button>
-      </Modal>
+        title='Modal title'
+        description='Description of the modal context or purpose'
+        content={
+          <P>
+            Your application has been successfully submitted.
+          </P>
+        }
+        clickElement={
+          <Button variant='success'>Open modal</Button>
+        }
+      />
       <br />
       <br />
-      <CodeBlock code={codeDefault} />
+      <CodeBlock code={codeWithoutOptions} />
+      <br />
+      <br />
+      <br />
+      <Separator />
+      <br />
+      <br />
+      <br />
+      <PLarge>Example triggered with code: Pass in "showOpen" and omit "clickElement".</PLarge>
+      <br />
+      <br />
+      <CodeBlock code={codeWithoutClickElement} />
+      <br />
+      <br />
+      <br />
+      <Separator />
+      <br />
+      <br />
+      <br />
+      <br />
+      <PropsTable
+        title='Modal Props'
+        items={[
+          {
+            propName: 'showOpen',
+            type: 'Boolean',
+            default: "false",
+            required: 'false',
+            description: "The state of the Modal. Pass 'true' to show the modal without having to click a button"
+          },
+          {
+            propName: 'clickElement',
+            type: 'JSX',
+            default: "null",
+            required: 'false',
+            description: 'The React element to click to show the Modal - usually a button - used when you want to use a button to trigger the Modal'
+          },
+          {
+            propName: 'title',
+            type: 'String',
+            default: "' '",
+            required: 'true',
+            description: 'Modal title'
+          },
+          {
+            propName: 'description',
+            type: 'String',
+            default: "' '",
+            required: 'false',
+            description: 'Optional sentence explaining the Modal intent or purpose'
+          },
+          {
+            propName: 'content',
+            type: 'JSX',
+            default: "null",
+            required: 'true',
+            description: 'The content for the modal. Without it, the Modal will have nothing to show except the title and subtitle.'
+          },
+          {
+            propName: 'options',
+            type: 'Array',
+            default: "null",
+            required: 'false',
+            description: 'The options define the buttons the Modal will have. Every button will close the Modal but will also trigger a custom callBack is one is provided.'
+          },
+          {
+            propName: 'overlayProps',
+            type: 'React props',
+            default: "null",
+            required: 'false',
+            description: "To use in case you want to pass extra props to the Modal overlay element. Eg. change the background color"
+          },
+          {
+            propName: 'titleProps',
+            type: 'React props',
+            default: "null",
+            required: 'false',
+            description: "To use in case you want to pass extra props to the Modal title element. Eg. style it differently."
+          },
+          {
+            propName: 'descriptionProps',
+            type: 'React props',
+            default: "null",
+            required: 'false',
+            description: "To use in case you want to pass extra props to the Modal description element. Eg. style it differently."
+          },
+        ]}
+      />
       <br />
       <br />
     </MainContent>
@@ -63,26 +191,62 @@ const ModalPage = () => (
 
 export default ModalPage
 
-const codeDefault = String.raw`import Modal from '@hummingbot/hbui/components/modal'
+const codeWithTwoOptions = String.raw`import Modal from '@hummingbot/hbui/components/modal'
+import { P } from '@hummingbot/hbui/elements/typography'
+import { Button  } from '@hummingbot/hbui/elements/buttons'
+
+<Modal
+  title='Modal title'
+  description='Description of the modal context or purpose'
+  content={
+    <P>
+      Your application has been successfully submitted. Please review your 
+      order and if all looks good, click "Accept" to proceed.
+    </P>
+  }
+  options={[
+    {
+      label: "Cancel",
+      variant: "secondary",
+    },
+    {
+      label: "Accept",
+      variant: "success",
+      callBack: () => console.log('Clicked: Accept Option')
+    }
+  ]}
+  clickElement={
+    <Button variant='success'>Open modal</Button>
+  }
+/>`
+
+const codeWithoutOptions = String.raw`import Modal from '@hummingbot/hbui/components/modal'
+import { P } from '@hummingbot/hbui/elements/typography'
+import { Button  } from '@hummingbot/hbui/elements/buttons'
+
+<Modal
+  title='Modal title'
+  description='Description of the modal context or purpose'
+  content={
+    <P>
+      Your application has been successfully submitted.
+    </P>
+  }
+  clickElement={
+    <Button variant='success'>Open modal</Button>
+  }
+/>`
+
+const codeWithoutClickElement = String.raw`import Modal from '@hummingbot/hbui/components/modal'
 import { P } from '@hummingbot/hbui/elements/typography'
 
 <Modal
-  contentProps={{
-    title: 'Modal title',
-    subtitle: 'Praesent commodo cursus magna.',
-    content: (
-      <P tw='leading-tight'>
-        Your payment has been successfully submitted. We’ve sent you an
-        email with all of the details of your order.
-      </P>
-    ),
-    closeLabel: 'Option A',
-    closeLabelVariant: 'success',
-    closeLabelCallback: () => console.log('Clicked option A'),
-    closeLabelB: 'Option B',
-    closeLabelBVariant: 'secondary',
-    closeLabelBCallback: () => console.log('Clicked option B'),
-  }}
->
-  <Button variant='success'>Open modal</Button>
-</Modal>`
+  showOpen={true}
+  title='Modal title'
+  description='Description of the modal context or purpose'
+  content={
+    <P>
+      Your application has been successfully submitted.
+    </P>
+  }
+/>`

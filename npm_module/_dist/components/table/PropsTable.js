@@ -56,9 +56,67 @@ var lastPVariants = {
   skip2Columns: skip2ColumnsStyle,
   skip3Columns: skip3ColumnsStyle
 };
+var CustomP = (0, _styledComponents["default"])(_typography.P).withConfig({
+  displayName: "PropsTable__CustomP",
+  componentId: "sc-1lfobs4-3"
+})(function () {
+  return [{
+    "overflow": "hidden",
+    "textOverflow": "ellipsis",
+    "whiteSpace": "nowrap"
+  }];
+});
+var _StyledCustomP8 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP8",
+  componentId: "sc-1lfobs4-4"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP7 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP7",
+  componentId: "sc-1lfobs4-5"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP6 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP6",
+  componentId: "sc-1lfobs4-6"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP5 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP5",
+  componentId: "sc-1lfobs4-7"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP4 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP4",
+  componentId: "sc-1lfobs4-8"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP3 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP3",
+  componentId: "sc-1lfobs4-9"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP2 = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP2",
+  componentId: "sc-1lfobs4-10"
+})({
+  "gridColumn": "span 2 / span 2"
+});
+var _StyledCustomP = (0, _styledComponents["default"])(CustomP).withConfig({
+  displayName: "PropsTable___StyledCustomP",
+  componentId: "sc-1lfobs4-11"
+})({
+  "gridColumn": "span 2 / span 2"
+});
 var LastP = (0, _styledComponents["default"])(_typography.P).withConfig({
   displayName: "PropsTable__LastP",
-  componentId: "sc-1lfobs4-3"
+  componentId: "sc-1lfobs4-12"
 })(function () {
   return [function (_ref) {
     var _ref$variant = _ref.variant,
@@ -108,13 +166,13 @@ function PropsTable(_ref2) {
     _ref2$skipColumn3 = _ref2.skipColumn4,
     skipColumn4 = _ref2$skipColumn3 === void 0 ? false : _ref2$skipColumn3;
   var lastPVariant = getLastPVariant(skipColumn2, skipColumn3, skipColumn4);
-  return /*#__PURE__*/_react["default"].createElement("div", null, !omitTitle && /*#__PURE__*/_react["default"].createElement(_typography.H6, null, title || 'Props'), !omitTitle && /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement(_StyledPropsTableRowElement, null, /*#__PURE__*/_react["default"].createElement(_StyledP, {
+  return /*#__PURE__*/_react["default"].createElement("div", null, !omitTitle && /*#__PURE__*/_react["default"].createElement(_typography.H6, null, title || 'Props'), !omitTitle && /*#__PURE__*/_react["default"].createElement("br", null), /*#__PURE__*/_react["default"].createElement(_StyledPropsTableRowElement, null, /*#__PURE__*/_react["default"].createElement(_StyledCustomP, {
     isBold: true
-  }, col1Name), !skipColumn2 && /*#__PURE__*/_react["default"].createElement(_StyledP2, {
+  }, col1Name), !skipColumn2 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP2, {
     isBold: true
-  }, col2Name), !skipColumn3 && /*#__PURE__*/_react["default"].createElement(_StyledP3, {
+  }, col2Name), !skipColumn3 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP3, {
     isBold: true
-  }, col3Name), !skipColumn4 && /*#__PURE__*/_react["default"].createElement(_StyledP4, {
+  }, col3Name), !skipColumn4 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP4, {
     isBold: true
   }, col4Name), /*#__PURE__*/_react["default"].createElement(LastP, {
     isBold: true,
@@ -122,60 +180,12 @@ function PropsTable(_ref2) {
   }, col5Name)), items.map(function (item, index) {
     return /*#__PURE__*/_react["default"].createElement(_StyledPropsTableRowElement2, {
       key: index
-    }, /*#__PURE__*/_react["default"].createElement(_StyledP5, {
+    }, /*#__PURE__*/_react["default"].createElement(_StyledCustomP5, {
       isBold: true
-    }, item[param1Name]), !skipColumn2 && /*#__PURE__*/_react["default"].createElement(_StyledP6, null, item[param2Name]), !skipColumn3 && /*#__PURE__*/_react["default"].createElement(_StyledP7, null, item[param3Name]), !skipColumn4 && /*#__PURE__*/_react["default"].createElement(_StyledP8, null, item[param4Name]), /*#__PURE__*/_react["default"].createElement(LastP, {
+    }, item[param1Name]), !skipColumn2 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP6, null, item[param2Name]), !skipColumn3 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP7, null, item[param3Name]), !skipColumn4 && /*#__PURE__*/_react["default"].createElement(_StyledCustomP8, null, item[param4Name]), /*#__PURE__*/_react["default"].createElement(LastP, {
       variant: lastPVariant
     }, item[param5Name]));
   }));
 }
 var _default = PropsTable;
 exports["default"] = _default;
-var _StyledP = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP",
-  componentId: "sc-1lfobs4-4"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP2 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP2",
-  componentId: "sc-1lfobs4-5"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP3 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP3",
-  componentId: "sc-1lfobs4-6"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP4 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP4",
-  componentId: "sc-1lfobs4-7"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP5 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP5",
-  componentId: "sc-1lfobs4-8"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP6 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP6",
-  componentId: "sc-1lfobs4-9"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP7 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP7",
-  componentId: "sc-1lfobs4-10"
-})({
-  "gridColumn": "span 2 / span 2"
-});
-var _StyledP8 = (0, _styledComponents["default"])(_typography.P).withConfig({
-  displayName: "PropsTable___StyledP8",
-  componentId: "sc-1lfobs4-11"
-})({
-  "gridColumn": "span 2 / span 2"
-});
