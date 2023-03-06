@@ -69,7 +69,7 @@ import { P } from '@hummingbot/hbui/elements/typography'
 <Modal
   contentProps={{
     title: 'Modal title',
-    subtitle: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.',
+    subtitle: 'Praesent commodo cursus magna.',
     content: (
       <P tw='leading-tight'>
         Your payment has been successfully submitted. We’ve sent you an
@@ -77,12 +77,12 @@ import { P } from '@hummingbot/hbui/elements/typography'
       </P>
     ),
     closeLabel: 'Option A',
-    closeLabelVariant: 'success', // default - 'success'
+    closeLabelVariant: 'success',
     closeLabelCallback: () => console.log('Clicked option A'),
     closeLabelB: 'Option B',
-    closeLabelBVariant: 'secondary', // default - 'secondary'
+    closeLabelBVariant: 'secondary',
     closeLabelBCallback: () => console.log('Clicked option B'),
   }}
 >
-  <Button variant='info'>Open dialog</Button>
+  <Button variant='success'>Open modal</Button>
 </Modal>`
