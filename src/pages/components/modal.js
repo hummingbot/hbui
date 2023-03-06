@@ -38,8 +38,8 @@ const ModalPage = () => (
           subtitle: 'Praesent commodo cursus magna.',
           content: (
             <P tw='leading-tight'>
-              Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus
-              magna, vel scelerisque nisl consectetur et.
+              Your payment has been successfully submitted. We’ve sent you an
+              email with all of the details of your order.
             </P>
           ),
           closeLabel: 'Option A',
