@@ -22,8 +22,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
  */
 
 function Modal(_ref) {
-  var _ref$showOpen = _ref.showOpen,
-    showOpen = _ref$showOpen === void 0 ? false : _ref$showOpen,
+  var showOpen = _ref.showOpen,
     clickElement = _ref.clickElement,
     title = _ref.title,
     description = _ref.description,
@@ -31,19 +30,27 @@ function Modal(_ref) {
     options = _ref.options,
     overlayProps = _ref.overlayProps,
     titleProps = _ref.titleProps,
-    descriptionProps = _ref.descriptionProps;
+    descriptionProps = _ref.descriptionProps,
+    dialogOnClose = _ref.dialogOnClose;
   var _useState = (0, _react.useState)(showOpen),
     isOpen = _useState[0],
     setIsOpen = _useState[1];
   function closeModal() {
     setIsOpen(false);
+    dialogOnClose === null || dialogOnClose === void 0 ? void 0 : dialogOnClose();
   }
   function openModal() {
     setIsOpen(true);
   }
-  return /*#__PURE__*/_react["default"].createElement("div", null, isOpen && /*#__PURE__*/_react["default"].createElement(_StyledDialog, {
+  (0, _react.useEffect)(function () {
+    setIsOpen(showOpen);
+  }, [showOpen]);
+  console.log({
+    showOpen: showOpen
+  });
+  return /*#__PURE__*/_react["default"].createElement("div", null, (showOpen || isOpen) && /*#__PURE__*/_react["default"].createElement(_StyledDialog, {
     onClose: closeModal,
-    open: isOpen
+    open: showOpen || isOpen
   }, /*#__PURE__*/_react["default"].createElement(_StyledDiv, null, /*#__PURE__*/_react["default"].createElement(_StyledDialogOverlay, overlayProps), /*#__PURE__*/_react["default"].createElement(CenterAlignmentHack, null), /*#__PURE__*/_react["default"].createElement(_StyledDiv2, null, /*#__PURE__*/_react["default"].createElement(Content, {
     title: title,
     description: description,
@@ -52,7 +59,8 @@ function Modal(_ref) {
     titleProps: titleProps,
     descriptionProps: descriptionProps,
     closeModal: function closeModal() {
-      return setIsOpen(false);
+      setIsOpen(false);
+      dialogOnClose === null || dialogOnClose === void 0 ? void 0 : dialogOnClose();
     }
   })))), clickElement &&
   /*#__PURE__*/
