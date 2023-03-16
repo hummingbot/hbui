@@ -126,6 +126,13 @@ const ModalPage = () => (
             description: "The state of the Modal. Pass 'true' to show the modal without having to click a button"
           },
           {
+            propName: 'dialogOnClose',
+            type: 'React props',
+            default: "() => {}",
+            required: 'false',
+            description: "The function to run when the Modal is closed. Usually used to set the 'showOpen' state to 'false'"
+          },
+          {
             propName: 'clickElement',
             type: 'JSX',
             default: "null",
@@ -242,6 +249,7 @@ import { P } from '@hummingbot/hbui/elements/typography'
 
 <Modal
   showOpen={true}
+  dialogOnClose={() => console.log('Modal closed')}
   title='Modal title'
   description='Description of the modal context or purpose'
   content={

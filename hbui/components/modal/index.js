@@ -38,7 +38,7 @@ export default function Modal({
     setIsOpen(showOpen)
   }, [showOpen])
 
-  console.log({ showOpen })
+ 
   return (
     <div>
       {(showOpen || isOpen) && (
