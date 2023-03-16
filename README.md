@@ -10,9 +10,9 @@ This repository holds the source code and documentation of the [HBUI Hummingbot 
 
 The original design of this design system lives in a [Figma document](https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3). This package contains a custom script that extracts the design tokens from the Figma document (colors, fonts, spacings, breakpoints, shadows) and saves them in a `./hbui/tokens.js` file, which is then used to create a custom [TailwindCSS](https://tailwindcss.com/) configuration. This project also uses [twin.macro](https://github.com/ben-rogerson/twin.macro) to make use of TailwindCSS in a React-friendly manner. Finally, this project exports an [NPM module](https://www.npmjs.com/package/@hummingbot/hbui) that is in turn consumed by other projects.
 
-### Use or try out out the HBUI Hummingbot design system
+### Use or try out the HBUI Hummingbot design system
 
-To use the HBUI design system, all you need is the [HBUI NPM module](https://www.npmjs.com/package/@hummingbot/hbui). But we recommend you start from one of the HBUI boilerplate projects (below) where everything is already set up for you. We have two types of boilerplate projects available:
+To use the HBUI design system, all you need is the [HBUI NPM module](https://www.npmjs.com/package/@hummingbot/hbui). But we recommend you start from one of the HBUI boilerplate projects (below) where everything is already set up for you. We have four types of boilerplate projects available:
 
 [Next.js](https://github.com/CoinAlpha/hbui-boilerplate-nextjs)
 
@@ -69,9 +69,9 @@ FIGMA_FILE_ID=hf03Mn2cecwA1ioUxlHg9P
 
 The FIGMA_FILE_ID in the code above is our original Figma file for the HBUI design system. 
 
-(If you are trying this outside Hummingbot, and you want to create your own NPM module, you should make a copy of our Figma file to get started, grab the file ID from your copy and replace the FIGMA_FILE_ID in the code above. You will also have to change the module name, author etc in the file `./npm_module/package.json`.)
+(If you are trying this outside Hummingbot and you want to create your own NPM module, you should make a copy of our Figma file to get started, grab the file ID from your copy and replace the FIGMA_FILE_ID in the code above. You will also have to change the module name, author etc in the file `./npm_module/package.json` in order to publish your own NPM module.)
 
-4/5: You need to be logged into NPM as a user with authorisation to make updates to the @hummingbot space (or your own space if you're building your own NPM module).
+4/5: You need to be logged into NPM as a user with authorization to make updates to the @hummingbot space (or your own space if you're building your own NPM module).
 
 ```shell
 npm login
@@ -121,6 +121,8 @@ yarn develop
 
 HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 
+[Next.js](https://github.com/CoinAlpha/hbui-boilerplate-nextjs) HBUI Boilerplate
+
 [Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby) HBUI Boilerplate
 
 [Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack) HBUI Boilerplate
@@ -128,6 +130,8 @@ HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 [Webpack (TypeScript)](https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts) HBUI Boilerplate
 
 ### Useful references
+
+[Next.js Documentation](https://nextjs.org/docs)
 
 [Gatsby Documentation](https://www.gatsbyjs.com/docs/)
 
