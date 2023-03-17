@@ -1,11 +1,19 @@
 /* eslint no-unused-vars: [ "off", { "argsIgnorePattern": "tw" } ] */
 import tw from 'twin.macro'
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import { Combobox } from '@headlessui/react'
 import { CheckIcon, XIcon, SelectorIcon } from '@heroicons/react/solid'
 
 export default function ComboBox({items, selected, setSelected, placeholderName, ...props}) {
   const [query, setQuery] = useState('')
+
+  // reset to empty query when selected is no longer valid value 
+  useEffect(()=>{
+    if (!selected){
+      setQuery('')
+    }
+  },[selected])
+
   const filteredItems =
     query === ''
       ? items
