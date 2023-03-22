@@ -21,6 +21,13 @@ function ComboBox(_ref) {
   var _useState = (0, _react.useState)(''),
     query = _useState[0],
     setQuery = _useState[1];
+
+  // reset to empty query when selected is no longer valid value 
+  (0, _react.useEffect)(function () {
+    if (!selected) {
+      setQuery('');
+    }
+  }, [selected]);
   var filteredItems = query === '' ? items : items.filter(function (item) {
     return item.label.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''));
   });

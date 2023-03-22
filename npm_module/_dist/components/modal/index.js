@@ -45,9 +45,6 @@ function Modal(_ref) {
   (0, _react.useEffect)(function () {
     setIsOpen(showOpen);
   }, [showOpen]);
-  console.log({
-    showOpen: showOpen
-  });
   return /*#__PURE__*/_react["default"].createElement("div", null, (showOpen || isOpen) && /*#__PURE__*/_react["default"].createElement(_StyledDialog, {
     onClose: closeModal,
     open: showOpen || isOpen
