@@ -66,7 +66,18 @@ function renderItems({ count, currentPage, setCurrentPage, onPageChange }) {
         </PaginationItem>,
       )
       if (startPage > 2) {
-        pages.push(<PaginationItem key="ellipsis-start">...</PaginationItem>)
+        pages.push(
+          <PaginationItem
+            key="ellipsis-start"
+            onClick={() => {
+              setCurrentPage(startPage - 1)
+              onPageChange?.(startPage - 1)
+            }}
+            active={undefined}
+          >
+            ...
+          </PaginationItem>,
+        )
       }
     }
 
@@ -88,7 +99,18 @@ function renderItems({ count, currentPage, setCurrentPage, onPageChange }) {
 
     if (endPage < totalPages) {
       if (endPage < totalPages - 1) {
-        pages.push(<PaginationItem key="ellipsis-end">...</PaginationItem>)
+        pages.push(
+          <PaginationItem
+            key="ellipsis-end"
+            onClick={() => {
+              setCurrentPage(endPage + 1)
+              onPageChange?.(endPage + 1)
+            }}
+            active={undefined}
+          >
+            ...
+          </PaginationItem>,
+        )
       }
       pages.push(
         <PaginationItem
@@ -139,7 +161,7 @@ const PaginationRoot = styled.div(() => [
 const PaginationItem = styled.li(({ active, dimmed }) => [
   tw`flex justify-center  items-center`,
   tw`pl-5 pr-5 h-full w-full`,
-  tw`text-tertiary hover:text-primary `,
+  tw`text-tertiary hover:text-primary`,
   tw`dark:hover:fill-white fill-grey-dark-scale-100 hover:fill-black`,
   tw`font-bold`,
 
@@ -148,7 +170,8 @@ const PaginationItem = styled.li(({ active, dimmed }) => [
       opacity: 20%;
     `,
 
-  active && tw`text-terminal`,
+  active && tw`text-green`,
+
   css`
     user-select: none;
 
