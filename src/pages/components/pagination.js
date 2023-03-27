@@ -25,7 +25,7 @@ const RadioGroupPage = () => {
         <br />
         <br />
         <Pagination
-          count={10}
+          count={30}
           defaultPage={currentPage}
           onPageChange={number => setCurrentPage(number)}
         />
