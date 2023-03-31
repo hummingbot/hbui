@@ -90,8 +90,12 @@ const propsTable = {
   link: '/components/props-table',
   title: 'PropsTable',
 }
+const pagination = {
+  link: '/components/pagination',
+  title: 'Pagination',
+}
 
-const links =  [
+const links = [
   breadcrumbs,
   button,
   callout,
@@ -115,6 +119,7 @@ const links =  [
   windowComponent,
   tabs,
   tag,
+  pagination,
 ]
 
 export default links
