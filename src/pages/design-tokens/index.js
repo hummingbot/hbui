@@ -22,7 +22,7 @@ const DesignTokens = () => (
       </P>
       <br />
       <P>
-        Below are the design tokens of the original <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">HBUI Figma document</a>.
+        Below are the design tokens of the original <a href='https://www.figma.com/file/wGsUfjWDOPnB5zsP5fALAJ/Hummingbot-Design-System?node-id=306%3A4148&t=kNmH4IzlUc8bHFdV-1' target='_blank' rel="noreferrer">HBUI Figma document</a>.
       </P>
       <br />
       <CodeBlock

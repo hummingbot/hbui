@@ -11,7 +11,7 @@ function DSMSidebar({...props}) {
   return (
     <div {...props} tw='relative'>
       <Sidebar>
-        <a tw='block flex justify-end' href='https://github.com/CoinAlpha/hbui' target='_blank' rel='noreferrer'>
+        <a tw='block flex justify-end' href='https://github.com/hummingbot/hbui' target='_blank' rel='noreferrer'>
           <GithubIcon />
         </a>
         <SidebarBrand>

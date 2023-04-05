@@ -19,25 +19,25 @@ const GettingStarted = () => (
       </P>
       <br />
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
           Webpack
         </a>
       </P>
       <br />
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
           Webpack (TypeScript)
         </a>
       </P>
       <br />
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
           Gatsby
         </a>
       </P>
       <br />
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
           Next.js
         </a>
       </P>
