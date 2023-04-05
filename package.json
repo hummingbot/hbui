@@ -2,7 +2,7 @@
   "name": "HBUI_DS",
   "description": "HBUI library - The Hummingbot Design System",
   "homepage": "https://github.com/CoinAlpha/hbui",
-  "version": "1.9.3",
+  "version": "1.9.6",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import tw, { css, styled } from 'twin.macro'
-// import GlobalSwitcherIcon from './GlobalSwitcherIcon'
-import TriangleRight from './TriangleRight'
 import { P, PSmall } from '../../../hbui/elements/typography'
 import navigation from './navigation'
 
@@ -33,7 +31,6 @@ function DSMSidebar({...props}) {
                 to={navItem.link}
               >
                 <P>{navItem.title}</P>
-                {navItem.subItems && <TriangleRight />}
               </SidebarNavItem>
               { navItem.subItems &&
                 navItem.subItems.map(subItem => (
@@ -58,7 +55,7 @@ function DSMSidebar({...props}) {
 export default DSMSidebar
 
 const Sidebar = styled.div(() => [
-  tw`bg-window p-2 lg:p-5`,
+  tw`bg-window p-2 lg:p-5 border-r-2 border-green dark:border-terminal`,
   css`
     overflow-y: scroll;
     height: 100vh;
