@@ -93,102 +93,120 @@ const Typography = () => (
       <Separator />
       <br />
       <br />
-      <P>Use these font weights to change how thin or heavy the weight is for our font.</P>
+      <P>Use these transforms to set the font weight:</P>
       <br />
       <br />
       <br />
-      <div tw="grid grid-cols-12 gap-4 bg-window">
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>Example</PSmall>
+      <div tw="hidden md:grid grid-cols-3 gap-4 border-b-2 border-window">
+        <div tw="grid col-span-1">
+          <PSmall tw='py-2 font-medium'>Example</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>Description</PSmall>
+        <div tw="grid col-span-1">
+          <PSmall tw='py-2 font-medium'>Variant</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>Transform</PSmall>
+        <div tw="grid col-span-1">
+          <PSmall tw='py-2 font-medium'>Transform</PSmall>
         </div>
       </div>
       <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 isLight tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 isLight tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>Light</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>{'<H4 isLight>Aa</H4>'}</PSmall>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
-        </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
-        </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>None (default)</PSmall>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='font-mono text-green dark:text-terminal'>isLight</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>{'<H4 isLight>Aa</H4>'}</PSmall>
         </div>
       </div>
       <br />
       <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 isMedium tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>default</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>{'<H4 isMedium>Aa</H4>'}</PSmall>
-        </div>
-      </div>
-      <br />
-      <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 isBold tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
-        </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
-        </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>{'<H4 isBold>Aa</H4>'}</PSmall>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>None (default)</PSmall>
+          <PSmall>{'<H4>Aa</H4>'}</PSmall>
         </div>
       </div>
       <br />
       <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 isExtraBold tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 isMedium tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>Medium</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>{'<H4 isExtraBold>Aa</H4>'}</PSmall>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='font-mono text-green dark:text-terminal'>isMedium</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>{'<H4 isMedium>Aa</H4>'}</PSmall>
         </div>
       </div>
       <br />
       <br />
-      <div tw="grid grid-cols-12 gap-4">
-        <div tw="grid col-span-12 md:col-span-4">
-          <H4 isHeavy tw='py-2 pl-3'>Aa</H4>
-          <PTiny tw='py-2 pl-3 font-medium'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 isBold tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PTiny tw='py-2 pl-3 font-medium'>Default font-family for CoinAplha DSM products</PTiny>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>Bold</PSmall>
         </div>
-        <div tw="grid col-span-12 md:col-span-4">
-          <PSmall tw='py-2 pl-3 font-medium'>{'<H4 isHeavy>Aa</H4>'}</PSmall>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='font-mono text-green dark:text-terminal'>isBold</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>{'<H4 isBold>Aa</H4>'}</PSmall>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 isExtraBold tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+        </div>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>ExtraBold</PSmall>
+        </div>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='font-mono text-green dark:text-terminal'>isExtraBold</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>{'<H4 isExtraBold>Aa</H4>'}</PSmall>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div tw="block md:grid grid-cols-3 gap-4">
+        <div tw="block md:(grid col-span-1)">
+          <H4 isHeavy tw='py-2'>Aa</H4>
+          <PTiny tw='py-2 font-medium pr-3'>Satoshi Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'</PTiny>
+        </div>
+        <div tw="items-center md:col-span-1 pb-2">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Variant:</PSmall>
+          <PSmall tw='font-medium'>Heavy</PSmall>
+        </div>
+        <div tw="block md:col-span-1">
+          <PSmall tw="block md:hidden md:col-span-1 mr-2">Transform:</PSmall>
+          <PSmall tw='font-mono text-green dark:text-terminal'>isHeavy</PSmall>
+          <PSmall tw='py-2 font-medium font-mono'>{'<H4 isHeavy>Aa</H4>'}</PSmall>
         </div>
       </div>
       <br />
