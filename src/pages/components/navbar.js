@@ -75,7 +75,7 @@ const Navigation = () => (
       <br />
       <P><Bold>siteNameB:</Bold> (string) (optional) extra label to append to the main label - for example "Prime" in "Hummingbot Prime". This will be showin in a thinner font style.</P>
       <br />
-      <P><Bold>logo:</Bold> (string) default is "hummingbot" - pass in "coinalpha" instead to show the CoinAlpha logo.</P>
+      <P><Bold>logo:</Bold> (string) default is "hummingbot".</P>
       <br />
       <P><Bold>showThemeToggle:</Bold> (boolean) (default: "false") If true, the NavBar will display an icon to toggle the app between dark and light modes. Do not use this if your app is not ready to deal with these color modes.</P>
       <br />

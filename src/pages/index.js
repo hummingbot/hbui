@@ -18,7 +18,7 @@ const IndexPage = () => (
       <PLarge>Welcome to the Hummingbot Design System</PLarge>
       <br />
       <P>
-        1. The original source of this design system is a <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">Figma document</a> containing
+        1. The original source of this design system is a <a href='https://www.figma.com/file/wGsUfjWDOPnB5zsP5fALAJ/Hummingbot-Design-System?node-id=306%3A4148&t=kNmH4IzlUc8bHFdV-1' target='_blank' rel="noreferrer">Figma document</a> containing
         all the original styles.
       </P>
       <br />
@@ -41,7 +41,7 @@ const IndexPage = () => (
       <br />
       <P>
         5. By using this NPM module, we achieve the goal of standardising the visual language across all 
-        Hummingbot and CoinAlpha projects, as well as drastically accelerating development time.
+        Hummingbot projects, as well as drastically accelerating development time.
       </P>
       <br />
       <P>
@@ -52,7 +52,7 @@ const IndexPage = () => (
       <br />
       <PLarge>Useful links:</PLarge>
       <P>
-        <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">
+        <a href='https://www.figma.com/file/wGsUfjWDOPnB5zsP5fALAJ/Hummingbot-Design-System?node-id=306%3A4148&t=kNmH4IzlUc8bHFdV-1' target='_blank' rel="noreferrer">
           Figma source
         </a>
       </P>
@@ -62,27 +62,27 @@ const IndexPage = () => (
         </a>
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-webpack' target='_blank' rel="noreferrer">
         Webpack Boilerplate
         </a> (Webpack React app)
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-webpack-ts' target='_blank' rel="noreferrer">
         Webpack Boilerpate (TS)
         </a> (TypeScript-ready Webpack React app)
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-gatsby' target='_blank' rel="noreferrer">
         Gatsby Boilerplate
         </a> (Gatsby app)
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui-boilerplate-nextjs' target='_blank' rel="noreferrer">
         Next.js Boilerplate
         </a> (Gatsby app)
       </P>
       <P>
-        <a href='https://github.com/CoinAlpha/hbui' target='_blank' rel="noreferrer">
+        <a href='https://github.com/hummingbot/hbui' target='_blank' rel="noreferrer">
           Github repo
         </a> of this project
       </P>

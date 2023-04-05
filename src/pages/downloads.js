@@ -16,19 +16,12 @@ const Downloads = () => (
     <MainContent>
       <br />
       <br />
-      <PLarge>In addition to the assets provided here, there are additional design resources available in our <a href='https://www.figma.com/file/hf03Mn2cecwA1ioUxlHg9P/Hummingbot-Design-System-1.3' target='_blank' rel="noreferrer">Figma workspace</a>.</PLarge>
+      <PLarge>In addition to the assets provided here, there are additional design resources available in our <a href='https://www.figma.com/file/wGsUfjWDOPnB5zsP5fALAJ/Hummingbot-Design-System?node-id=306%3A4148&t=kNmH4IzlUc8bHFdV-1' target='_blank' rel="noreferrer">Figma workspace</a>.</PLarge>
       <br />
       <br />
       <H5 isBold>Logo</H5>
       <Separator />
       <br />
-      <br />
-      <DownloadCard
-        title='CoinAlpha Logotype'
-        updatedAt='Feb 2023'
-        downloadLink='/assets/downloads/coinalpha/coinalpha_logotype.zip'
-        image='/assets/downloads_page/coinalpha_logotype.png'
-      />
       <br />
       <DownloadCard
         title='Hummingbot Logotype'

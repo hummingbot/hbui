@@ -15,7 +15,7 @@ const GuidelinesIndex = () => (
     <MainContent>
       <br />
       <br />
-      <PLarge>The Hummingbot Design System reflects the patterns and components that underpin the CoinAlpha and Hummingbot products. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the CoinAlpha / Hummingbot ecosystem.</PLarge>
+      <PLarge>The Hummingbot Design System reflects the patterns and components that underpin the Hummingbot design language. These patterns and components provide a unified language and consistent look and feel when designing apps and products within the Hummingbot ecosystem.</PLarge>
       <br />
       <br />
       <H5 isBold>Principles <span tw='text-tertiary'>#</span></H5>
