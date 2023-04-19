@@ -13,7 +13,7 @@ function MenuDropdown({links, linkClass, side='right', type='kebab', ...props}) 
       <KebabMenuContent className='kebab-menu-content' side={side}>
         {links.map(link => {
           return (
-            <LinkClass to={link.to} href={link.to} key={link.label} onClick={link.onClick}>
+            <LinkClass to={link.to} href={link.to} key={link.label} onClick={link.onClick} state={link.state}>
               <KebabMenuItem>{link.label}</KebabMenuItem>
             </LinkClass>
           )
