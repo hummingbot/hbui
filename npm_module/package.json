@@ -16,10 +16,10 @@
     }
   },
   "description": "HBUI library",
-  "homepage": "https://github.com/CoinAlpha/hbui#readme",
+  "homepage": "https://github.com/hummingbot/hbui#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CoinAlpha/hbui.git"
+    "url": "git+https://github.com/hummingbot/hbui.git"
   },
   "keywords": [
     "hummingbot",
@@ -33,7 +33,7 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CoinAlpha/hbui/issues"
+    "url": "https://github.com/hummingbot/hbui/issues"
   },
   "dependencies": {
     "@babel/core": "^7.13.8",

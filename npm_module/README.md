@@ -14,6 +14,6 @@ import { Button } from '@hummingbot/hbui/elements/buttons'
 </Button>
 ```
 
-Learn more at the documentation website: https://hbui.netlify.app/
+Learn more at the documentation website: https://hummingbot-ui.netlify.com/
 
-HBUI main repository: https://github.com/CoinAlpha/hbui
+HBUI main repository: https://github.com/hummingbot/hbui

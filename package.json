@@ -1,7 +1,7 @@
 {
   "name": "HBUI_DS",
   "description": "HBUI library - The Hummingbot Design System",
-  "homepage": "https://github.com/CoinAlpha/hbui",
+  "homepage": "https://github.com/hummingbot/hbui",
   "version": "1.9.7",
   "babelMacros": {
     "twin": {
@@ -49,7 +49,7 @@
   ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CoinAlpha/hbui/issues"
+    "url": "https://github.com/hummingbot/hbui/issues"
   },
   "dependencies": {
     "@babel/core": "^7.13.8",

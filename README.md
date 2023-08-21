@@ -2,9 +2,9 @@
 
 ## HBUI - The Hummingbot Design System
 
-This repository holds the source code and documentation of the [HBUI Hummingbot Design System](https://hbui.netlify.app/)
+This repository holds the source code and documentation of the [HBUI Hummingbot Design System](https://hummingbot-ui.netlify.com/)
 
-[Visit the documentation site](https://hbui.netlify.app/)
+[Visit the documentation site](https://hummingbot-ui.netlify.com/)
 
 ### The flow
 
@@ -14,13 +14,13 @@ The original design of this design system lives in a [Figma document](https://ww
 
 To use the HBUI design system, all you need is the [HBUI NPM module](https://www.npmjs.com/package/@hummingbot/hbui). But we recommend you start from one of the HBUI boilerplate projects (below) where everything is already set up for you. We have four types of boilerplate projects available:
 
-[Next.js](https://github.com/CoinAlpha/hbui-boilerplate-nextjs)
+[Next.js](https://github.com/hummingbot/hbui-boilerplate-nextjs)
 
-[Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby)
+[Gatsby](https://github.com/hummingbot/hbui-boilerplate-gatsby)
 
-[Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack)
+[Webpack](https://github.com/hummingbot/hbui-boilerplate-webpack)
 
-[Webpack (TypeScript)](https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts)
+[Webpack (TypeScript)](https://github.com/hummingbot/hbui-boilerplate-webpack-ts)
 
 These are ready-to-run apps with everything already configured and ready to go.
 
@@ -67,7 +67,7 @@ FIGMA_API_TOKEN=your-access-token
 FIGMA_FILE_ID=hf03Mn2cecwA1ioUxlHg9P
 ```
 
-The FIGMA_FILE_ID in the code above is our original Figma file for the HBUI design system. 
+The FIGMA_FILE_ID in the code above is our original Figma file for the HBUI design system.
 
 (If you are trying this outside Hummingbot and you want to create your own NPM module, you should make a copy of our Figma file to get started, grab the file ID from your copy and replace the FIGMA_FILE_ID in the code above. You will also have to change the module name, author etc in the file `./npm_module/package.json` in order to publish your own NPM module.)
 
@@ -117,17 +117,17 @@ yarn develop
 
 ### Relevant links to this project
 
-[HBUI Hummingbot Design System](https://hbui.netlify.app/) Documentation
+[HBUI Hummingbot Design System](https://hummingbot-ui.netlify.com/) Documentation
 
 HBUI [NPM module](https://www.npmjs.com/package/@hummingbot/hbui)
 
-[Next.js](https://github.com/CoinAlpha/hbui-boilerplate-nextjs) HBUI Boilerplate
+[Next.js](https://github.com/hummingbot/hbui-boilerplate-nextjs) HBUI Boilerplate
 
-[Gatsby](https://github.com/CoinAlpha/hbui-boilerplate-gatsby) HBUI Boilerplate
+[Gatsby](https://github.com/hummingbot/hbui-boilerplate-gatsby) HBUI Boilerplate
 
-[Webpack](https://github.com/CoinAlpha/hbui-boilerplate-webpack) HBUI Boilerplate
+[Webpack](https://github.com/hummingbot/hbui-boilerplate-webpack) HBUI Boilerplate
 
-[Webpack (TypeScript)](https://github.com/CoinAlpha/hbui-boilerplate-webpack-ts) HBUI Boilerplate
+[Webpack (TypeScript)](https://github.com/hummingbot/hbui-boilerplate-webpack-ts) HBUI Boilerplate
 
 ### Useful references
 
